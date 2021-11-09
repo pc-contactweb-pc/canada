@@ -233,78 +233,144 @@
 <body vocab="http://schema.org/" class="" typeof="WebPage" resource="#wb-webpage">
     <!-- Possibly add .cnt-wdth-lmtd -->
     <!-- End treasury board content -->
-    <!-- Start CDTS top-en -->
-    <ul id="wb-tphp">
-        <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-        <li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About this site"</a></li>
-    </ul>
+
+    <!-- Start content-en header -->
     <header>
         <div id="wb-bnr" class="container">
             <div class="row">
                 <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
                     <h2 class="wb-inv">Language selection</h2>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="list-inline mrgn-bttm-0">
-                                <!-- <li><a href="canada.ca">Canada.ca</a></li> -->
-                                <li>
-                                    <a lang="fr" href="/fr.html">
-                                        
-                                            <span class="hidden-xs">Français</span>
-                                            <abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
-                                        
-                                        
-                                    </a>
-                                </li>
-                                
-                                
-                            </ul>
-                        </div>
-                    </div>
+                    <ul class="list-inline mrgn-bttm-0">
+                        <li>
+                            <a lang="fr" hreflang="fr" href="content-fr.html">
+                                <span class="hidden-xs">Français</span>
+                                <abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+                            </a>
+                        </li>
+                    </ul>
                 </section>
-                <div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization"> <a href="https://www.canada.ca/en.html" property="url"><img src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/assets/sig-blk-en.svg" alt="" property="logo" /> <span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
-                    <meta property="areaServed" typeOf="Country" content="Canada" />
-                    <link property="logo" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/assets/wmms-blk.svg" />
+
+                <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+                    <a href="https://wet-boew.github.io/gcweb/" property="url">
+                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+                    </a>
+                    <meta property="name" content="Government of Canada">
+                    <meta property="areaServed" typeof="Country" content="Canada">
+                    <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg">
                 </div>
-                <section id="wb-srch" class="col-lg-8 text-right">
+
+
+                <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
                     <h2>Search</h2>
-                    <form action="https://www.canada.ca/en/sr.html" method="get" name="cse-search-box" role="search" class="form-inline">
-                        <div class="form-group">
+                    <form action="#" method="post" name="cse-search-box" role="search">
+                        <div class="form-group wb-srch-qry">
                             <label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
-                            <input name="cdn" value="canada" type="hidden">
-                            <input name="st" value="s" type="hidden">
-                            <input name="num" value="10" type="hidden">
-                            <input name="langs" value="en" type="hidden">
-                            <input name="st1rt" value="1" type="hidden">
-                            <input name="s5bm3ts21rch" value="x" type="hidden">
                             <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca">
-                            <input type="hidden" name="_charset_" value="UTF-8">
-                            <datalist id="wb-srch-q-ac">
-                                <!--[if lte IE 9]><select><![endif]-->
-                                <!--[if lte IE 9]></select><![endif]-->
-                            </datalist>
+                            <datalist id="wb-srch-q-ac"></datalist>
                         </div>
                         <div class="form-group submit">
-                            <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+                            <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+                                <span class="glyphicon-search glyphicon"></span>
+                                <span class="wb-inv">Search</span>
+                            </button>
                         </div>
                     </form>
                 </section>
+
             </div>
         </div>
+        <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="wb-auto-2">
+            <div class="container">
+                <h2 class="wb-inv">Menu</h2>
+                <button type="button" aria-haspopup="true" aria-expanded="false" aria-label="Press the SPACEBAR to expand or the escape key to collapse this menu. Use the Up and Down arrow keys to choose a submenu item. Press the Enter or Right arrow key to expand it, or the Left arrow or Escape key to collapse it. Use the Up and Down arrow keys to choose an item on that level and the Enter key to access it."><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+                <ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html" class="wb-init wb-data-ajax-replace-inited" id="wb-auto-3">
+                    <li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs" aria-expanded="false" href="#">Activities and experiences</a>
+                        <ul id="gc-mnu-jobs" role="menu" aria-orientation="vertical">
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs.html">Activities and experiences<span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
+                            <li role="separator"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Trails</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Event calendar</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Red Chairs</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Tours and programs</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Itineraries</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Volunteer</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">School programs</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Learning experiences</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Fishing</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Parks Canada Xplorers</a></li>
+                            <li role="separator" aria-orientation="vertical"></li>
+                            <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
+                                <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Red Chairs</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Tours and programs</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Itineraries</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-cit" aria-expanded="false" href="#">Immigration and citizenship</a>
+                        <ul id="gc-mnu-cit" role="menu" aria-orientation="vertical">
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs.html">Activities and experiences<span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
+                            <li role="separator"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Trails</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Event calendar</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Red Chairs</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Tours and programs</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Itineraries</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Volunteer</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">School programs</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Learning experiences</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Fishing</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Parks Canada Xplorers</a></li>
+                            <li role="separator" aria-orientation="vertical"></li>
+                            <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
+                                <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Red Chairs</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Tours and programs</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Itineraries</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-travel" aria-expanded="false" href="#">Travel and tourism</a>
+                        <ul id="gc-mnu-travel" role="menu" aria-orientation="vertical">
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs.html">Activities and experiences<span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
+                            <li role="separator"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Trails</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Event calendar</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Red Chairs</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Tours and programs</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Itineraries</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Volunteer</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">School programs</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Learning experiences</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Fishing</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Parks Canada Xplorers</a></li>
+                            <li role="separator" aria-orientation="vertical"></li>
+                            <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
+                                <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Red Chairs</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Tours and programs</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Itineraries</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <nav id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
             <div class="container">
-                <div class="row">
-                    <ol class="breadcrumb">
-                        <li><a href="https://www.canada.ca/en.html">Home</a></li>
-                        <li><a href="https://www.canada.ca/en.html">Default page</a></li>
-                        
-                    </ol>
-                </div>
+                <ol class="breadcrumb">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                </ol>
             </div>
         </nav>
+
     </header>
-    <!-- End CDTS top-en -->
+    <!-- End content-en header -->
 
 
 
@@ -331,16 +397,16 @@
                 </div>
             </div>
         </div>
-            <div class="row">
-                <section class="col-md-12">
-                    
-<!-- Start main content -->
+        <div class="row">
+            <section class="col-md-12">
+
+                <!-- Start main content -->
 
 
-    <!-- End main content -->
-                </section>
-            </div>
-        
+                <!-- End main content -->
+            </section>
+        </div>
+
     </main>
     <!-- End main -->
 
