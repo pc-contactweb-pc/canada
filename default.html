@@ -231,7 +231,9 @@
 </head>
 
 <body vocab="http://schema.org/" class="" typeof="WebPage" resource="#wb-webpage">
-    <!-- Possibly add .cnt-wdth-lmtd -->
+    <nav><ul id="wb-tphp" class="wb-init wb-disable-inited">
+        <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li><li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to About this site</a></li><li class="wb-slc"><a class="wb-sl" href="?wbdisable=true" rel="alternate">Switch to basic HTML version</a></li></ul></nav>
+    
     <!-- End treasury board content -->
 
     <!-- Start content-en header -->
@@ -280,6 +282,9 @@
             </div>
         </div>
         <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="wb-auto-2">
+            <!-- 
+                **TODO: Track down why opening the menu shifts body left
+             -->
             <div class="container">
                 <h2 class="wb-inv">Menu</h2>
                 <button type="button" aria-haspopup="true" aria-expanded="false" aria-label="Press the SPACEBAR to expand or the escape key to collapse this menu. Use the Up and Down arrow keys to choose a submenu item. Press the Enter or Right arrow key to expand it, or the Left arrow or Escape key to collapse it. Use the Up and Down arrow keys to choose an item on that level and the Enter key to access it."><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
@@ -370,9 +375,8 @@
         <div class="provisional profile">
             <div class="container">
                 <div class="row">
-
-                    <!-- change col-md-6 to col-md-12 if not using an image -->
-                    <div class="intro col-md-12 col-sm-12 mrgn-bttm-md">
+                    
+                    <div class="intro col-md-12 col-sm-12 mrgn-bttm-md" data-bg-img="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg">
                         <h1 property="name" id="wb-cont">Default page</h1>
                         <p class="pagetag">A default page to be the default for pages.</p>
                     </div>
