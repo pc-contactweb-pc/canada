@@ -680,8 +680,10 @@
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             const showSites = urlParams.has('showsites');
+            console.log(showSites);
                 if (showSites) {
                     let elements = document.getElementsByClassName('siteUl');
+                    log(elements)
                     elements.forEach(element => {
                         element.classList.remove("hidden")
                         element.classList.add("visible");
