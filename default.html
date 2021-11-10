@@ -373,22 +373,52 @@
 
 
 
+<style>
+    div.banner-container{
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+    img.banner-image {
+        filter: brightness(50%);
+    }
 
+    div.banner-text{
+        position: absolute;
+        left:0%;
+        top:50%;
+        transform:translate(0%, -50%);
+
+    }
+
+</style>
 
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage" class="container">
         <div class="provisional profile">
+
+            <div class="banner-container">
+                <img class="banner-image" src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt="">
+                <div class="banner-text text-white">
+                    <h1 property="name" id="wb-cont">Default page</h1>
+                    <p class="pagetag">A default page to be the default for pages.</p>
+                </div>
+            </div>
+<!-- 
             <div class="container">
                 <div class="row">
                     
 
                     <div id="banner-image" style="display: inline-block; vertical-align: middle;">
                         <img src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt="" style="filter: brightness(50%); width: 100vw; margin-left: calc(50% - 50vw); position: relative;">
-                        <div class="mrgn-bttm-md text-white align-middle" style="">
+                        <div class="mrgn-bttm-md text-white align-middle" style="position:absolute; left:0; right:0; top:0; bottom: 0; margin: auto;">
                             <h1 property="name" id="wb-cont">Default page</h1>
                             <p class="pagetag">A default page to be the default for pages.</p>
                         </div>
-                    </div>
+                    </div> -->
                 <!-- <div class="row">
                     <div id="banner-image" style="display: inline-block; vertical-align: middle;">
                         <img src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt="" style="z-index: 2; filter: brightness(50%); width: 100vw; margin-left: calc(50% - 50vw);">
