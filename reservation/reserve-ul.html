@@ -303,7 +303,8 @@
                     <!-- <a href="https://wet-boew.github.io/gcweb/" property="url"> -->
                     <div>
 
-                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+                        <!-- ToDo: Data toggling is for mockup only -->
+                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo" class="wb-toggle" data-toggle='{"selector": ".versioning", "stateOn": "visible", "stateOff": "hidden"}'><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
                         <!-- </a> -->
                     </div>
                     <meta property="name" content="Government of Canada">
@@ -328,7 +329,19 @@
                         </div>
                     </form>
                 </section>
-                
+                <div class="container versioning hidden">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="wb-toggle" data-toggle='{"selector": ".sitedetail", "group": ".siteversion", "stateOn": "visible", "stateOff": "hidden"}'>Toggle detail / list</button>
+                            
+                            <button type="button" class="wb-toggle" data-toggle='{"selector": ".siteul", "group": ".siteversion", "stateOn": "visible", "stateOff": "hidden"}'>Toggle sitelist</button>
+                            <button type="button" class="wb-toggle" data-toggle='{"selector": ".showsites", "stateOn": "visible", "stateOff": "hidden"}'>Toggle showsite button</button>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="wb-auto-2">
             <div class="container">
