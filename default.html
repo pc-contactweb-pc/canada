@@ -225,6 +225,39 @@
         .pc-h1-brass {
             border-bottom-color: #ecb731;
         }
+
+        /* Banner image */
+        
+    div.banner-container{
+        height:660px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Alternate for div background instead of img element. 99vw was still needed to avoid horizontal scrollbar */
+    /* div.banner-image {
+        background-image: url('https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 99vw;
+        height:660px;
+        filter: brightness(50%);
+    } */
+    img.banner-image {
+        filter: brightness(50%);
+        width:99vw;
+    }
+
+    div.banner-text{
+        position: absolute;
+        left:0%;
+        top:50%;
+        transform:translate(0%, -50%);
+
+    }
     </style>
     <!-- End custom CSS -->
 
@@ -372,40 +405,6 @@
 
 
 
-
-<style>
-    div.banner-container{
-        height:660px;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-    }
-    /* div.banner-image {
-        background-image: url('https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 99vw;
-        height:660px;
-        filter: brightness(50%);
-    } */
-    img.banner-image {
-        filter: brightness(50%);
-        width:99vw;
-    }
-
-    div.banner-text{
-        position: absolute;
-        left:0%;
-        top:50%;
-        transform:translate(0%, -50%);
-
-    }
-
-</style>
-
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage" class="container">
         <div class="provisional profile">
@@ -414,7 +413,7 @@
                 <!-- <div class="banner-image"></div> -->
                 <img class="banner-image" src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt="">
                 <div class="banner-text text-white">
-                    <h1 property="name" id="wb-cont">Default page</h1>
+                    <h1 property="name" id="wb-cont" class="pc-h1-brass">Default page</h1>
                     <p class="pagetag">A default page to be the default for pages.</p>
                 </div>
             </div>
