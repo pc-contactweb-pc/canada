@@ -416,6 +416,16 @@
 
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage" class="container">
+        <div class="container">
+            <div class="row">
+                <div id="versioning" class="col-md-12">
+                    
+<button type="button" class="wb-toggle" data-toggle="{'selector': '.siteul'}">Toggle sitelist</button>
+<button type="button" class="wb-toggle" data-toggle="{'selector': '.showsites'}">Toggle showsite button</button>
+
+                </div>
+            </div>
+        </div>
         <div class="provisional profile">
 
             <div class="banner-container">
@@ -511,6 +521,8 @@
                 <h2>Reservation launch dates by province or territory</h2>
                 <p>You can now make reservations for trips between May 2021 and March 2022.</p>
             </section>
+            
+<button type="button" class="wb-toggle hidden showsites" data-toggle="{'selector': '.siteul'}">Show sites</button>
             <section class="gc-srvinfo col-md-12">
                 <div class="wb-eqht row wb-init mrgn-bttm-md">
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
@@ -678,26 +690,26 @@
             // console.log(tempString);
 
             // Version testing
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            const showSites = urlParams.has('showsites');
-            if (showSites) {
-                showClass('siteul');
-            }
+            // const queryString = window.location.search;
+            // const urlParams = new URLSearchParams(queryString);
+            // const showSites = urlParams.has('showsites');
+            // if (showSites) {
+            //     showClass('siteul');
+            // }
             
             
-            function showClass(className) {
-                const hasParam = urlParams.has(className);
-                if (hasParam) {
-                    let elements = document.getElementsByClassName(className);
-                    let i = 0;
-                    while (i<elements.length) {
-                        elements[i].className = `${className} visible`;
-                        i++;
-                    }
-                } 
-            }
-            });
+            // function showClass(className) {
+            //     const hasParam = urlParams.has(className);
+            //     if (hasParam) {
+            //         let elements = document.getElementsByClassName(className);
+            //         let i = 0;
+            //         while (i<elements.length) {
+            //             elements[i].className = `${className} visible`;
+            //             i++;
+            //         }
+            //     } 
+            // }
+            // });
     </script>
     <!-- End custom script -->
 </body>
