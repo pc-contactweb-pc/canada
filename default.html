@@ -229,7 +229,8 @@
         /* Banner image */
         
     div.banner-container{
-        height:660px;
+        max-height: 660px;
+        
         display: flex;
         flex-direction: column;
         position: relative;
@@ -249,6 +250,8 @@
     img.banner-image {
         filter: brightness(50%);
         width:99vw;
+        /* TODO: Decide how we want to handle >1920 screen widths. Currently, without the max-width below the img expands up and over the breadcrumb/top content */
+        max-width:1920px;
     }
 
     div.banner-text{
