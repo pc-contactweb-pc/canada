@@ -302,7 +302,9 @@
                 <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
                     <!-- <a href="https://wet-boew.github.io/gcweb/" property="url"> -->
                     <div>
-                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo" data-toggle="{'selector': '.versioning', 'stateOn': 'visible', 'stateOff': 'hidden'}"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+
+                        <!-- ToDo: Data toggling is for mockup only -->
+                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo" class="wb-toggle" data-toggle='{"selector": ".versioning", "stateOn": "visible", "stateOff": "hidden"}'><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
                         <!-- </a> -->
                     </div>
                     <meta property="name" content="Government of Canada">
@@ -330,9 +332,8 @@
                 <div class="container versioning hidden">
                     <div class="row">
                         <div class="col-md-12">
-
-                            <button type="button" class="wb-toggle" data-toggle="{'selector': '.siteul, 'stateOn': 'visible', 'stateOff': 'hidden'}">Toggle sitelist</button>
-                            <button type="button" class="wb-toggle" data-toggle="{'selector': '.showsites', 'stateOn': 'visible', 'stateOff': 'hidden'}">Toggle showsite button</button>
+                            <button type="button" class="wb-toggle" data-toggle='{"selector": ".siteul", "stateOn": "visible", "stateOff": "hidden"}'>Toggle sitelist</button>
+                            <button type="button" class="wb-toggle" data-toggle='{"selector": ".showsites", "stateOn": "visible", "stateOff": "hidden"}'>Toggle showsite button</button>
 
                         </div>
                     </div>
@@ -432,6 +433,7 @@
             <div class="banner-container">
                 <!-- <div class="banner-image"></div> -->
                 <!-- 1920x400 version -->
+                
                 <img class="banner-image" src="https://user-images.githubusercontent.com/45856706/141172443-f4cf7e9f-eb86-45de-b90e-fcc1e93443e8.jpg" alt="">
                 <!-- 1920 x 600ish based on mockup: -->
                 <!-- <img class="banner-image" src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt=""> -->
@@ -522,9 +524,10 @@
                 <h2>Reservation launch dates by province or territory</h2>
                 <p>You can now make reservations for trips between May 2021 and March 2022.</p>
             </section>
-            <button class="wb-toggle" data-toggle='{"selector": ".siteul", "stateOn": "visible", "stateOff": "hidden"}'>Hide Sites</button>
-            
-            
+            <div class="col-sm-3 pull-right text-right">
+                <button class="wb-toggle" data-toggle='{"selector": ".siteul", "stateOn": "visible", "stateOff": "hidden"}'>Show sites</button>
+            </div>
+
             <section class="gc-srvinfo col-md-12">
                 <div class="wb-eqht row wb-init mrgn-bttm-md">
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
@@ -711,7 +714,7 @@
             //         }
             //     } 
             // }
-             });
+            // });
     </script>
     <!-- End custom script -->
 </body>
