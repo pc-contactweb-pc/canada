@@ -680,10 +680,10 @@
             // Version testing
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
-            const keys = urlParams.keys()
-            keys.forEach(key => {
-                showClass(key);
-            });
+            const showSites = urlParams.has('showsites');
+            if (showSites) {
+                showClass('siteul');
+            }
             
             
             function showClass(className) {
