@@ -334,6 +334,7 @@
                         <div class="col-md-12">
                             <button type="button" class="wb-toggle" data-toggle='{"selector": ".siteul", "stateOn": "visible", "stateOff": "hidden"}'>Toggle sitelist</button>
                             <button type="button" class="wb-toggle" data-toggle='{"selector": ".showsites", "stateOn": "visible", "stateOff": "hidden"}'>Toggle showsite button</button>
+                            <button type="button" class="wb-toggle" data-toggle='{"selector": ".sitedetail", "stateOn": "visible", "stateOff": "hidden"}'>Toggle site dropdowns</button>
 
                         </div>
                     </div>
@@ -541,6 +542,17 @@
                             <li><a href="#">Wood Buffalo National Park</a></li>
 
                         </ul>
+                        <details class="sitedetail hidden"><summary>Alberta sites</summary>
+                            <ul>
+                                <li><a href="#">Banff National Park</a></li>
+                                <li><a href="#">Elk Island National Park</a></li>
+                                <li><a href="#">Jasper National Park</a></li>
+                                <li><a href="#">Rocky Mountain House NHS</a></li>
+                                <li><a href="#">Waterton Lakes National Park</a></li>
+                                <li><a href="#">Wood Buffalo National Park</a></li>
+    
+                            </ul>
+                        </details>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
                         <h3><a href="#">British Columbia</a></h3>
@@ -554,11 +566,21 @@
                             <li><a href="#">Pacific Rim National Park</a></li>
                             <li><a href="#">Yoho National Park</a></li>
                         </ul>
+                        <details class="sitedetail hidden"><summary>British Columbia sites</summary>
+<ul><li><a href="#">Fort Langley NHS</a></li>
+    <li><a href="#">Fort Rodd Hill NHS</a></li>
+    <li><a href="#">Glacier National Park</a></li>
+    <li><a href="#">Gulf Islands National Park Reserve</a></li>
+    <li><a href="#">Kootenay National Park</a></li>
+    <li><a href="#">Mount Revelstoke National Park</a></li>
+    <li><a href="#">Pacific Rim National Park</a></li>
+    <li><a href="#">Yoho National Park</a></li></ul>
+                        </details>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
                         <h3><a href="#">Manitoba</a></h3>
-                        <ul class="hidden siteul">
-                            <li>Riding Mountain National Park</li>
+                        <ul class="hidden siteul sitedetail">
+                            <li><a href="#">Riding Mountain National Park</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
@@ -566,8 +588,13 @@
                         <ul class="hidden siteul">
                             <li><a href="#">Fort Beausejour - Fort Cumberland NHS</a></li>
                             <li><a href="#">Fundy National Park</a></li>
-                            <li>Kouchibouguac National Park</li>
+                            <li><a href="#">Kouchibouguac National Park</a></li>
                         </ul>
+                        <details class="sitedetail hidden"><summary>New Brunswick sites</summary>
+<ul><li><a href="#">Fort Beausejour - Fort Cumberland NHS</a></li>
+    <li><a href="#">Fundy National Park</a></li>
+    <li><a href="#">Kouchibouguac National Park</a></li></ul>
+                        </details>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
                         <h3><a href="#">Newfoundland and Labrador</a></h3>
@@ -575,6 +602,10 @@
                             <li><a href="#">Gros Morne National Park</a></li>
                             <li><a href="#">Terra Nova National Park</a></li>
                         </ul>
+                        <details class="sitedetail hidden"><summary>Newfoundland and Labrador sites</summary>
+<ul><li><a href="#">Gros Morne National Park</a></li>
+    <li><a href="#">Terra Nova National Park</a></li></ul>
+                        </details>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
                         <h3><a href="#">Nova Scotia</a></h3>
@@ -583,6 +614,11 @@
                             <li><a href="#">Grand-Pré NHS</a></li>
                             <li><a href="#">Kejimkujik National Park and NHS</a></li>
                         </ul>
+                        <details class="sitedetail hidden"><summary>Nova Scotia sites</summary>
+<ul> <li><a href="#">Cape Breton Highlands National Park</a></li>
+    <li><a href="#">Grand-Pré NHS</a></li>
+    <li><a href="#">Kejimkujik National Park and NHS</a></li></ul>
+                        </details>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
                         <h3><a href="#">Ontario</a></h3>
@@ -596,11 +632,21 @@
                             <li><a href="#">Thousand Islands National Park</a></li>
                             <li><a href="#">Trent-Severn Waterway NHS</a></li>
                         </ul>
+                        <details class="sitedetail hidden"><summary>Ontario sites</summary>
+<ul><li><a href="#">Bruce Peninsula National Park</a></li>
+    <li><a href="#">Fathom Five National Marine Park</a></li>
+    <li><a href="#">Georgian Bay Islands national Park</a></li>
+    <li><a href="#">Point Pelee National Park</a></li>
+    <li><a href="#">Pukaskwa National Park</a></li>
+    <li><a href="#">Rideau Canal NHS</a></li>
+    <li><a href="#">Thousand Islands National Park</a></li>
+    <li><a href="#">Trent-Severn Waterway NHS</a></li></ul>
+                        </details>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
                         <h3><a href="#">Prince Edward Island</a></h3>
-                        <ul class="hidden siteul">
-                            <li>Prince Edward Island National Park</li>
+                        <ul class="hidden siteul sitedetail">
+                            <li><a href="#">Prince Edward Island National Park</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
@@ -610,24 +656,32 @@
                             <li><a href="#">La Mauricie National Park</a></li>
                             <li><a href="#">Mingan Archipelago National Park Reserve</a></li>
                             <li><a href="#">Saint-Ours Canal NHS</a></li>
-                        </ul>
+                        </ul><details class="sitedetail hidden"><summary>Quebec sites</summary>
+<ul><li><a href="#">Forillon National Park</a></li>
+    <li><a href="#">La Mauricie National Park</a></li>
+    <li><a href="#">Mingan Archipelago National Park Reserve</a></li>
+    <li><a href="#">Saint-Ours Canal NHS</a></li></ul>
+                        </details>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
                         <h3><a href="#">Saskatchewan</a></h3>
                         <ul class="hidden siteul">
                             <li><a href="#">Grasslands National Park</a></li>
                             <li><a href="#">Prince Albert National Park</a></li>
-                        </ul>
+                        </ul><details class="sitedetail hidden"><summary>Saskatchewan sites</summary>
+<ul><li><a href="#">Grasslands National Park</a></li>
+    <li><a href="#">Prince Albert National Park</a></li></ul>
+                        </details>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
                         <h3><a href="#">Northwest Territories</a></h3>
-                        <ul class="hidden siteul">
+                        <ul class="hidden siteul sitedetail">
                             <li><a href="#">Wood Buffalo National Park</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
                         <h3><a href="#">Yukon</a></h3>
-                        <ul class="hidden siteul">
+                        <ul class="hidden siteul sitedetail">
                             <li><a href="#">Kluane National Park and Reserve</a></li>
                         </ul>
                     </div>
