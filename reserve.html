@@ -299,11 +299,12 @@
                         </li>
                     </ul>
                 </section>
-
                 <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-                    <a href="https://wet-boew.github.io/gcweb/" property="url">
-                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
-                    </a>
+                    <!-- <a href="https://wet-boew.github.io/gcweb/" property="url"> -->
+                    <div>
+                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo" data-toggle="{'selector': '.versioning', 'stateOn': 'visible', 'stateOff': 'hidden'}"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+                        <!-- </a> -->
+                    </div>
                     <meta property="name" content="Government of Canada">
                     <meta property="areaServed" typeof="Country" content="Canada">
                     <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg">
@@ -326,7 +327,16 @@
                         </div>
                     </form>
                 </section>
+                <div class="container versioning hidden">
+                    <div class="row">
+                        <div class="col-md-12">
 
+                            <button type="button" class="wb-toggle" data-toggle="{'selector': '.siteul, 'stateOn': 'visible', 'stateOff': 'hidden'}">Toggle sitelist</button>
+                            <button type="button" class="wb-toggle" data-toggle="{'selector': '.showsites', 'stateOn': 'visible', 'stateOff': 'hidden'}">Toggle showsite button</button>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="wb-auto-2">
@@ -416,16 +426,7 @@
 
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage" class="container">
-        <div class="container">
-            <div class="row">
-                <div id="versioning" class="col-md-12">
-                    
-<button type="button" class="wb-toggle" data-toggle="{'selector': '.siteul'}">Toggle sitelist</button>
-<button type="button" class="wb-toggle" data-toggle="{'selector': '.showsites'}">Toggle showsite button</button>
 
-                </div>
-            </div>
-        </div>
         <div class="provisional profile">
 
             <div class="banner-container">
@@ -473,7 +474,7 @@
 
                 <!-- Start main content -->
                 <!-- Potentially rename this section to emphasize that it all relates to Camping 101 -->
-            <!-- <h2>Camping 101</h2> -->
+                <!-- <h2>Camping 101</h2> -->
                 <section class="col-md-12">
                     <div class="wb-eqht row wb-init">
                         <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
@@ -521,8 +522,8 @@
                 <h2>Reservation launch dates by province or territory</h2>
                 <p>You can now make reservations for trips between May 2021 and March 2022.</p>
             </section>
-            
-<button type="button" class="wb-toggle hidden showsites" data-toggle="{'selector': '.siteul'}">Show sites</button>
+
+            <button type="button" class="wb-toggle hidden showsites" data-toggle="{'selector': '.siteul'}">Show sites</button>
             <section class="gc-srvinfo col-md-12">
                 <div class="wb-eqht row wb-init mrgn-bttm-md">
                     <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
@@ -643,7 +644,7 @@
 
 
 
-    
+
 
     <!--Start CDTS serverBottom-en -->
     <footer id="wb-info">
@@ -684,7 +685,7 @@
     <!-- Start custom script -->
     <script>
         $(document).ready(function () {
-            
+
             // $("#siteSearch").find("input").removeAttr("required");
             // let tempString = ("#siteSearch").find("input");
             // console.log(tempString);
@@ -696,8 +697,8 @@
             // if (showSites) {
             //     showClass('siteul');
             // }
-            
-            
+
+
             // function showClass(className) {
             //     const hasParam = urlParams.has(className);
             //     if (hasParam) {
