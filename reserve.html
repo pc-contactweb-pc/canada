@@ -4,7 +4,7 @@
 <head prefix="og: http://ogp.me/ns#">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>Parks Canada</title>
+    <title>Parks Canada reservations</title>
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
     <link rel="canonical" href="" />
@@ -225,255 +225,404 @@
         .pc-h1-brass {
             border-bottom-color: #ecb731;
         }
+
+        /* Banner image */
+
+        div.banner-container {
+            max-height: 660px;
+
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Alternate for div background instead of img element. 99vw was still needed to avoid horizontal scrollbar */
+        /* div.banner-image {
+        background-image: url('https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 99vw;
+        height:660px;
+        filter: brightness(50%);
+    } */
+        img.banner-image {
+            filter: brightness(50%);
+            width: 99vw;
+            /* TODO: Decide how we want to handle >1920 screen widths. Currently, without the max-width below the img expands up and over the breadcrumb/top content */
+            max-width: 1920px;
+        }
+
+        div.banner-text {
+            position: absolute;
+            left: 0%;
+            top: 50%;
+            transform: translate(0%, -50%);
+            /* Recreate .cnt-wdth-lmtd */
+            max-width: 63ch;
+
+        }
+
+        div.banner-text h1 {
+            border-width: thick;
+        }
     </style>
     <!-- End custom CSS -->
 
 </head>
 
 <body vocab="http://schema.org/" class="" typeof="WebPage" resource="#wb-webpage">
-    <!-- Possibly add .cnt-wdth-lmtd -->
+    <nav>
+        <ul id="wb-tphp" class="wb-init wb-disable-inited">
+            <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+            <li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to About this site</a></li>
+            <li class="wb-slc"><a class="wb-sl" href="?wbdisable=true" rel="alternate">Switch to basic HTML version</a></li>
+        </ul>
+    </nav>
+
     <!-- End treasury board content -->
-    <!-- Start CDTS top-en -->
-    <ul id="wb-tphp">
-        <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-        <li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About this site"</a></li>
-    </ul>
+
+    <!-- Start content-en header -->
     <header>
         <div id="wb-bnr" class="container">
             <div class="row">
-                <div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization"> <a href="https://www.canada.ca/en.html" property="url"><img src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/assets/sig-blk-en.svg" alt="" property="logo" /> <span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
-                    <meta property="areaServed" typeOf="Country" content="Canada" />
-                    <link property="logo" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/assets/wmms-blk.svg" />
+                <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+                    <h2 class="wb-inv">Language selection</h2>
+                    <ul class="list-inline mrgn-bttm-0">
+                        <li>
+                            <a lang="fr" hreflang="fr" href="content-fr.html">
+                                <span class="hidden-xs">Français</span>
+                                <abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+                    <a href="https://wet-boew.github.io/gcweb/" property="url">
+                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+                    </a>
+                    <meta property="name" content="Government of Canada">
+                    <meta property="areaServed" typeof="Country" content="Canada">
+                    <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg">
                 </div>
-                <section id="wb-srch" class="col-lg-8 text-right">
+
+
+                <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
                     <h2>Search</h2>
-                    <form action="https://www.canada.ca/en/sr.html" method="get" name="cse-search-box" role="search" class="form-inline">
-                        <div class="form-group">
+                    <form action="#" method="post" name="cse-search-box" role="search">
+                        <div class="form-group wb-srch-qry">
                             <label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
-                            <input name="cdn" value="canada" type="hidden">
-                            <input name="st" value="s" type="hidden">
-                            <input name="num" value="10" type="hidden">
-                            <input name="langs" value="en" type="hidden">
-                            <input name="st1rt" value="1" type="hidden">
-                            <input name="s5bm3ts21rch" value="x" type="hidden">
                             <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca">
-                            <input type="hidden" name="_charset_" value="UTF-8">
-                            <datalist id="wb-srch-q-ac">
-                                <!--[if lte IE 9]><select><![endif]-->
-                                <!--[if lte IE 9]></select><![endif]-->
-                            </datalist>
+                            <datalist id="wb-srch-q-ac"></datalist>
                         </div>
                         <div class="form-group submit">
-                            <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+                            <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+                                <span class="glyphicon-search glyphicon"></span>
+                                <span class="wb-inv">Search</span>
+                            </button>
                         </div>
                     </form>
                 </section>
+
             </div>
         </div>
+        <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="wb-auto-2">
+            <div class="container">
+                <h2 class="wb-inv">Menu</h2>
+                <button type="button" aria-haspopup="true" aria-expanded="false" aria-label="Press the SPACEBAR to expand or the escape key to collapse this menu. Use the Up and Down arrow keys to choose a submenu item. Press the Enter or Right arrow key to expand it, or the Left arrow or Escape key to collapse it. Use the Up and Down arrow keys to choose an item on that level and the Enter key to access it."><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+                <ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html" class="wb-init wb-data-ajax-replace-inited" id="wb-auto-3">
+                    <li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs" aria-expanded="false" href="#">Plan your visit</a>
+                        <ul id="gc-mnu-jobs" role="menu" aria-orientation="vertical">
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Plan your visit<span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
+                            <li role="separator"></li>
+
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Locations</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">All activities and experiences</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Safety and guidelines</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Accessible For All</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Tips and ideas</a></li>
+
+
+                            <li role="separator" aria-orientation="vertical"></li>
+                            <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
+                                <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Camping and overnight accommodations</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Hiking</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Biking and running</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-cit" aria-expanded="false" href="#">National Parks</a>
+                        <ul id="gc-mnu-cit" role="menu" aria-orientation="vertical">
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">National Parks<span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
+                            <li role="separator"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Alberta</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">British Columbia</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">...</a></li>
+
+
+                            <li role="separator" aria-orientation="vertical"></li>
+                            <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
+                                <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Banff National Park</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Bruce Penninsula National Park</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">La Mauricie National Park</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-cit" aria-expanded="false" href="#">National Historic Sites</a>
+                        <ul id="gc-mnu-cit" role="menu" aria-orientation="vertical">
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">National Historic Sites<span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
+                            <li role="separator"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Alberta</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">British Columbia</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">...</a></li>
+
+
+                            <li role="separator" aria-orientation="vertical"></li>
+                            <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
+                                <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Cave and Basin National Historic Site</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Trent-Severn Waterway National Historic Site</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Fortress of Louisbourg National Historic Site</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <nav id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
             <div class="container">
-                <div class="row">
-                    <ol class="breadcrumb">
-                        <li><a href="https://www.canada.ca/en.html">Home</a></li>
-                        <li><a href="https://www.canada.ca/en.html">Plan your visit</a></li>
-                        <li><a href="https://www.canada.ca/en.html">Reservation Service</a></li>
-                    </ol>
-                </div>
+                <ol class="breadcrumb">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Plan your visit</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Parks Canada reservations</a></li>
+                </ol>
             </div>
         </nav>
+
     </header>
-    <!-- End CDTS top-en -->
+    <!-- End content-en header -->
 
 
 
 
-
-
-
-    <!-- Start main content -->
+    <!-- Start main  -->
     <main role="main" property="mainContentOfPage" class="container">
         <div class="provisional profile">
-            <div class="container">
-                <div class="row">
 
-                    <!-- change col-md-6 to col-md-12 if not using an image -->
-                    <div class="intro col-md-6 col-sm-12 mrgn-bttm-md">
-                        <h1 property="name" id="wb-cont">Parks Canada reservations</h1>
-                        <p class="pagetag">Reserve camping, accommodations, and more, at Parks Canada destinations</p>
-                    </div>
-
-                    <!-- remove this div if you do not want an image -->
-                    <div class="col-md-6 hidden-sm hidden-xs">
-                        <img alt="#" src="https://user-images.githubusercontent.com/45856706/140824215-fb1f8930-ac45-4fe9-a281-dd4d7aa2c9d7.jpg" style="max-width: 825px;">
-                    </div>
+            <div class="banner-container">
+                <!-- <div class="banner-image"></div> -->
+                <!-- 1920x400 version -->
+                <img class="banner-image" src="https://user-images.githubusercontent.com/45856706/141172443-f4cf7e9f-eb86-45de-b90e-fcc1e93443e8.jpg" alt="">
+                <!-- 1920 x 600ish based on mockup: -->
+                <!-- <img class="banner-image" src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt=""> -->
+                <div class="banner-text text-white">
+                    <h1 property="name" id="wb-cont" class="pc-h1-brass">Making a reservation</h1>
+                    <p class="pagetag ">General information about reserving with us.</p>
                 </div>
             </div>
-        </div>
+            <!-- 
+            <div class="container">
+                <div class="row">
+                    
 
-
-        <div class="container">
-            <div class="row">
-                <section class="col-md-12">
-                    <!-- Potentially rename this section to emphasize that it all relates to Camping 101 -->
-                    <h2>Making a reservation</h2>
-                    <p>General information about reserving with us.</p>
-                    <section class="col-md-12">
-                        <div class="wb-eqht row wb-init">
-                            <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                                <h3><a href="https://www.pc.gc.ca/en/voyage-travel/hebergement-accommodation/camping-101#reserve">How to reserve</a></h3>
-                                <p>First time booking? What you need to know before making a reservation with Parks Canada.</p>
-                            </div>
-                            <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                                <h3><a href="https://www.pc.gc.ca/en/voyage-travel/hebergement-accommodation/camping-101#types">Camping types</a></h3>
-                                <p>Frontcountry, backcountry, or comfort? We have your camping style covered.</p>
-                            </div>
-                            <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                                <h3><a href="https://www.pc.gc.ca/en/voyage-travel/hebergement-accommodation/camping-101#services">Services and amenities</a></h3>
-                                <p>Not sure of the difference between serviced and unserviced? What’s offered at our campsites.</p>
-                            </div>
+                    <div id="banner-image" style="display: inline-block; vertical-align: middle;">
+                        <img src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt="" style="filter: brightness(50%); width: 100vw; margin-left: calc(50% - 50vw); position: relative;">
+                        <div class="mrgn-bttm-md text-white align-middle" style="position:absolute; left:0; right:0; top:0; bottom: 0; margin: auto;">
+                            <h1 property="name" id="wb-cont">Default page</h1>
+                            <p class="pagetag">A default page to be the default for pages.</p>
                         </div>
-                    </section>
+                    </div> -->
+            <!-- <div class="row">
+                    <div id="banner-image" style="display: inline-block; vertical-align: middle;">
+                        <img src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt="" style="z-index: 2; filter: brightness(50%); width: 100vw; margin-left: calc(50% - 50vw);">
+                        <div class="mrgn-bttm-md" style="z-index: 3">
+                            <h1 property="name" id="wb-cont">Default page</h1>
+                            <p class="pagetag">A default page to be the default for pages.</p>
+                        </div>
+                    </div> -->
+
+
+            <!-- remove this div if you do not want an image -->
+            <!-- <div class="col-md-6 hidden-sm hidden-xs">
+                        <img alt="#" src="https://user-images.githubusercontent.com/45856706/140824215-fb1f8930-ac45-4fe9-a281-dd4d7aa2c9d7.jpg" style="max-width: 825px;">
+                    </div> -->
+        </div>
+        </div>
+        </div>
+        <div class="row">
+            <section class="col-md-12">
+
+                <!-- Start main content -->
+                <!-- Potentially rename this section to emphasize that it all relates to Camping 101 -->
+            <!-- <h2>Camping 101</h2> -->
+                <section class="col-md-12">
+                    <div class="wb-eqht row wb-init">
+                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                            <h3><a href="https://www.pc.gc.ca/en/voyage-travel/hebergement-accommodation/camping-101#reserve">How to reserve</a></h3>
+                            <p>First time booking? What you need to know before making a reservation with Parks Canada.</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                            <h3><a href="https://www.pc.gc.ca/en/voyage-travel/hebergement-accommodation/camping-101#types">Camping types</a></h3>
+                            <p>Frontcountry, backcountry, or comfort? We have your camping style covered.</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                            <h3><a href="https://www.pc.gc.ca/en/voyage-travel/hebergement-accommodation/camping-101#services">Services and amenities</a></h3>
+                            <p>Not sure of the difference between serviced and unserviced? What’s offered at our campsites.</p>
+                        </div>
+                    </div>
                 </section>
-                <section class="col-md-12 mrgn-tp-sm">
-                    <p>Read our beginner camping guide: <a href="https://www.pc.gc.ca/en/voyage-travel/hebergement-accommodation/camping-101">Camping 101: What to know before staying the night</a></p>
-                </section>
-            </div><div class="row">
-                <section class="contact-us panel panel-default mrgn-tp-md">
-                    <header class="panel-heading">
-                        <h5 class="panel-title">Two ways to reserve</h5>
-                    </header>
-                    <div class="panel-body">
+            </section>
+            <section class="col-md-12 mrgn-tp-sm">
+                <p>Read our beginner camping guide: <a href="https://www.pc.gc.ca/en/voyage-travel/hebergement-accommodation/camping-101">Camping 101: What to know before staying the night</a></p>
+            </section>
+        </div>
+        <div class="row">
+            <section class="contact-us panel panel-default mrgn-tp-md">
+                <header class="panel-heading">
+                    <h5 class="panel-title">Two ways to reserve</h5>
+                </header>
+                <div class="panel-body">
 
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h4 class="mrgn-tp-0">Online &nbsp; <br class="visible-sm visible-xs"><br class="visible-sm visible-xs"> <a type="button" class="btn btn-primary" href="https://reservation.pc.gc.ca"> <span class="fas fa-calendar-check" aria-hidden="true"></span> <span class="wb-inv">External link: </span> Reservation Service</a></h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4 class="mrgn-tp-0">Online &nbsp; <br class="visible-sm visible-xs"><br class="visible-sm visible-xs"> <a type="button" class="btn btn-primary" href="https://reservation.pc.gc.ca"> <span class="fas fa-calendar-check" aria-hidden="true"></span> <span class="wb-inv">External link: </span> Reservation Service</a></h4>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="mrgn-tp-lg visible-sm visible-xs">
                             </div>
-
-                            <div class="col-md-8">
-                                <div class="mrgn-tp-lg visible-sm visible-xs">
-                                </div>
-                                <h4 class="mrgn-tp-0">By phone &nbsp; <br class="visible-sm visible-xs"><br class="visible-sm visible-xs"> <a type="button" class="btn btn-primary" href="tel:18777373783"><span class="fas fa-phone-alt" aria-hidden="true"></span> <span class="wb-inv">Phone:</span> 1-877-737-3783</a> &nbsp; <br class="visible-sm visible-xs"><br class="visible-sm visible-xs"> <a type="button" class="btn btn-primary" href="tel:15198265391"><span class="fas fa-phone-alt" aria-hidden="true"></span> <span class="wb-inv">Phone:</span> 1-519-826-5391 outside North America</a></h4>
-                            </div>
-
+                            <h4 class="mrgn-tp-0">By phone &nbsp; <br class="visible-sm visible-xs"><br class="visible-sm visible-xs"> <a type="button" class="btn btn-primary" href="tel:18777373783"><span class="fas fa-phone-alt" aria-hidden="true"></span> <span class="wb-inv">Phone:</span> 1-877-737-3783</a> &nbsp; <br class="visible-sm visible-xs"><br class="visible-sm visible-xs"> <a type="button" class="btn btn-primary" href="tel:15198265391"><span class="fas fa-phone-alt" aria-hidden="true"></span> <span class="wb-inv">Phone:</span> 1-519-826-5391 outside North America</a></h4>
                         </div>
 
                     </div>
-                </section>
-                <section class="col-md-12">
-                    <h2>Reservation launch dates by province or territory</h2>
-                    <p>You can now make reservations for trips between May 2021 and March 2022.</p>
-                </section>
-                <section class="gc-srvinfo col-md-12">
-                    <div class="wb-eqht row wb-init mrgn-bttm-md">
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">Alberta</a></h3>
-                            <ul>
-                                <li>Banff National Park</li>
-                                <li>Elk Island National Park</li>
-                                <li>Jasper National Park</li>
-                                <li>Rocky Mountain House NHS</li>
-                                <li>Waterton Lakes National Park</li>
-                                <li>Wood Buffalo National Park</li>
 
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">British Columbia</a></h3>
-                            <ul>
-                                <li>Fort Langley NHS</li>
-                                <li>Fort Rodd Hill NHS</li>
-                                <li>Glacier National Park</li>
-                                <li>Gulf Islands National Park Reserve</li>
-                                <li>Kootenay National Park</li>
-                                <li>Mount Revelstoke National Park</li>
-                                <li>Pacific Rim National Park</li>
-                                <li>Yoho National Park</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">Manitoba</a></h3>
-                            <ul>
-                                <li>Riding Mountain National Park</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">New Brunswick</a></h3>
-                            <ul>
-                                <li>Fort Beausejour - Fort Cumberland NHS</li>
-                                <li>Fundy National Park</li>
-                                <li>Kouchibouguac National Park</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">Newfoundland and Labrador</a></h3>
-                            <ul>
-                                <li>Gros Morne National Park</li>
-                                <li>Terra Nova National Park</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">Nova Scotia</a></h3>
-                            <ul>
-                                <li>Cape Breton Highlands National Park</li>
-                                <li>Grand-Pré NHS</li>
-                                <li>Kejimkujik National Park and NHS</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">Ontario</a></h3>
-                            <ul>
-                                <li>Bruce Peninsula National Park</li>
-                                <li>Fathom Five National Marine Park</li>
-                                <li>Georgian Bay Islands national Park</li>
-                                <li>Point Pelee National Park</li>
-                                <li>Pukaskwa National Park</li>
-                                <li>Rideau Canal NHS</li>
-                                <li>Thousand Islands National Park</li>
-                                <li>Trent-Severn Waterway NHS</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">Prince Edward Island</a></h3>
-                            <ul>
-                                <li>Prince Edward Island National Park</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">Quebec</a></h3>
-                            <ul>
-                                <li>Forillon National Park</li>
-                                <li>La Mauricie National Park</li>
-                                <li>Mingan Archipelago National Park Reserve</li>
-                                <li>Saint-Ours Canal NHS</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">Saskatchewan</a></h3>
-                            <ul>
-                                <li>Grasslands National Park</li>
-                                <li>Prince Albert National Park</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">Northwest Territories</a></h3>
-                            <ul>
-                                <li>Wood Buffalo National Park</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
-                            <h3><a href="#">Yukon</a></h3>
-                            <ul>
-                                <li>Kluane National Park and Reserve</li>
-                            </ul>
-                        </div>
+                </div>
+            </section>
+            <section class="col-md-12">
+                <h2>Reservation launch dates by province or territory</h2>
+                <p>You can now make reservations for trips between May 2021 and March 2022.</p>
+            </section>
+            <section class="gc-srvinfo col-md-12">
+                <div class="wb-eqht row wb-init mrgn-bttm-md">
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">Alberta</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Banff National Park</li>
+                            <li>Elk Island National Park</li>
+                            <li>Jasper National Park</li>
+                            <li>Rocky Mountain House NHS</li>
+                            <li>Waterton Lakes National Park</li>
+                            <li>Wood Buffalo National Park</li>
 
+                        </ul>
                     </div>
-                </section>
-            </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">British Columbia</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Fort Langley NHS</li>
+                            <li>Fort Rodd Hill NHS</li>
+                            <li>Glacier National Park</li>
+                            <li>Gulf Islands National Park Reserve</li>
+                            <li>Kootenay National Park</li>
+                            <li>Mount Revelstoke National Park</li>
+                            <li>Pacific Rim National Park</li>
+                            <li>Yoho National Park</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">Manitoba</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Riding Mountain National Park</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">New Brunswick</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Fort Beausejour - Fort Cumberland NHS</li>
+                            <li>Fundy National Park</li>
+                            <li>Kouchibouguac National Park</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">Newfoundland and Labrador</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Gros Morne National Park</li>
+                            <li>Terra Nova National Park</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">Nova Scotia</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Cape Breton Highlands National Park</li>
+                            <li>Grand-Pré NHS</li>
+                            <li>Kejimkujik National Park and NHS</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">Ontario</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Bruce Peninsula National Park</li>
+                            <li>Fathom Five National Marine Park</li>
+                            <li>Georgian Bay Islands national Park</li>
+                            <li>Point Pelee National Park</li>
+                            <li>Pukaskwa National Park</li>
+                            <li>Rideau Canal NHS</li>
+                            <li>Thousand Islands National Park</li>
+                            <li>Trent-Severn Waterway NHS</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">Prince Edward Island</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Prince Edward Island National Park</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">Quebec</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Forillon National Park</li>
+                            <li>La Mauricie National Park</li>
+                            <li>Mingan Archipelago National Park Reserve</li>
+                            <li>Saint-Ours Canal NHS</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">Saskatchewan</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Grasslands National Park</li>
+                            <li>Prince Albert National Park</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">Northwest Territories</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Wood Buffalo National Park</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="vertical-align: top; min-height: 135px;">
+                        <h3><a href="#">Yukon</a></h3>
+                        <ul class="hidden siteUl">
+                            <li>Kluane National Park and Reserve</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- End main content -->
+            </section>
         </div>
+
     </main>
-    <!-- End main content -->
+    <!-- End main -->
+
 
 
 
@@ -488,6 +637,19 @@
             $("#siteSearch").find("input").removeAttr("required");
             let tempString = ("#siteSearch").find("input");
             console.log(tempString);
+
+            // Version testing
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const showSites = urlParams.has('showsites');
+                if (showSites) {
+                    let elements = document.getElementsByClassName('siteUl');
+                    elements.forEach(element => {
+                        element.classList.remove("hidden")
+                        element.classList.add("visible");
+                    });
+
+                }
         });
 
     </script>
