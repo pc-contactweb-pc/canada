@@ -236,6 +236,7 @@
             position: relative;
             align-items: center;
             justify-content: center;
+            margin-bottom: 10px;
         }
 
         /* Alternate for div background instead of img element. 99vw was still needed to avoid horizontal scrollbar */
@@ -262,6 +263,16 @@
             transform: translate(0%, -50%);
 
         }
+
+        div.banner-text h2 {
+            max-width: 35ch;
+        }
+
+        div.banner-description {
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+        }
     </style>
     <!-- End custom CSS -->
 
@@ -282,7 +293,7 @@
     <header>
         <div id="wb-bnr" class="container">
             <div class="row">
-                <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+                <!-- <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline mrgn-bttm-0">
                         <li>
@@ -292,7 +303,7 @@
                             </a>
                         </li>
                     </ul>
-                </section>
+                </section> -->
 
                 <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
                     <a href="https://wet-boew.github.io/gcweb/" property="url">
@@ -417,22 +428,27 @@
                 <img class="banner-image" src="https://user-images.githubusercontent.com/45856706/141214371-1457a3c9-8fd8-4a55-9119-67cd40882891.jpg" alt="">
                 <div class="banner-text text-white">
                     <h1 property="name" id="wb-cont" class="pc-h1-brass">Error 404</h1>
-                    <h2>Sorry we spaced out here</h2>
-                    <div class="well opct-50">
-                    <h3>Image description:</h3>
-                    <p>A Parks Canada interpreter with a telescope during a sunset at Astotin Lake in Elk Island National Park.</p></div>
+                    <h2>We brought out the telescopes, but we couldn't find the page you were looking for.</h2>
+
+                </div>
+                <div class="banner-description text-white">
+                    <p><span class="fas fa-camera" aria-hidden="true"></span> <small>A Parks Canada interpreter with a telescope during a sunset at Astotin Lake in Elk Island National Park.</small></p>
                 </div>
             </div>
-            <p class="pagetag">Sometimes a page gets moved or deleted, but hopefully we can help you find what you're looking for.</p>
-                    <p>Please return to the home page, or browse this list of popular topics:</p>
-                    <ul>
-                        <li>Camping reservations</li>
-                        <li>Seasonal and annual passes</li>
-                        <li>Parks Canada administered locations</li>
-                        <li>Jobs at Parks Canada </li>
-                    </ul>
-                    <p>If you still can’t find what you are looking for, please <a href="">contact us</a>.</p>
-            <!-- 
+        </div>
+        <div class="row">
+            <section class="col-md-12">
+                <p>Sometimes a page gets moved or deleted, but hopefully we can help you find what you're looking for.</p>
+                <p>Please return to the home page, or browse this list of popular topics:</p>
+                <ul>
+                    <li><a href="">Camping reservations</a></li>
+                    <li><a href="">Seasonal and annual passes</a></li>
+                    <li><a href="">Parks Canada administered locations</a></li>
+                    <li><a href="">Jobs at Parks Canada </a></li>
+                </ul>
+                <p>If you still can’t find what you are looking for, please <a href="">contact us</a>.</p>
+
+                <!-- 
             <div class="container">
                 <div class="row">
                     
@@ -444,7 +460,7 @@
                             <p class="pagetag">A default page to be the default for pages.</p>
                         </div>
                     </div> -->
-            <!-- <div class="row">
+                <!-- <div class="row">
                     <div id="banner-image" style="display: inline-block; vertical-align: middle;">
                         <img src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt="" style="z-index: 2; filter: brightness(50%); width: 100vw; margin-left: calc(50% - 50vw);">
                         <div class="mrgn-bttm-md" style="z-index: 3">
@@ -454,17 +470,11 @@
                     </div> -->
 
 
-            <!-- remove this div if you do not want an image -->
-            <!-- <div class="col-md-6 hidden-sm hidden-xs">
+                <!-- remove this div if you do not want an image -->
+                <!-- <div class="col-md-6 hidden-sm hidden-xs">
                         <img alt="#" src="https://user-images.githubusercontent.com/45856706/140824215-fb1f8930-ac45-4fe9-a281-dd4d7aa2c9d7.jpg" style="max-width: 825px;">
                     </div> -->
-        </div>
-        </div>
-        </div>
-        <div class="row">
-            <section class="col-md-12">
-                <p>This is the default page text.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In vel qui corrupti autem at, quam quisquam officiis explicabo! Quidem aperiam vitae dolores quo ut suscipit fugiat libero modi iure nesciunt.</p>
+
                 <!-- Start main content -->
 
 
