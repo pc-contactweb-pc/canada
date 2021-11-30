@@ -4,7 +4,7 @@
 <head prefix="og: http://ogp.me/ns#">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>Default page template</title>
+    <title>Parks Canada reservations</title>
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
     <link rel="canonical" href="" />
@@ -32,7 +32,6 @@
     <noscript>
         <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/wet-boew/css/noscript.min.css" />
     </noscript>
-
     <!-- Start provisional CSS for institutional page-->
     <style>
         .provisional.bg-cover {
@@ -165,7 +164,6 @@
         }
 
         /* remove this section if you do not want the new icons */
-
         .provisional.followus .facebook {
             background: url("https://design.canada.ca/images/social-media/facebook.png") 0 0 / cover no-repeat;
         }
@@ -187,8 +185,6 @@
         }
 
         /* end of new social media icons */
-
-
         @media screen and (max-width: 767px) {
             .provisional.bg-hide-xs {
                 background-image: url("none") !important;
@@ -210,7 +206,6 @@
         }
     </style>
     <!-- End provisional CSS for institutional page-->
-
     <!-- Start custom CSS added by DM -->
     <style>
         .bg-pn-np {
@@ -224,46 +219,23 @@
 
         .pc-h1-brass {
             border-bottom-color: #ecb731;
+            border-bottom-width: medium;
         }
 
         /* Banner image */
-        
-    div.banner-container{
-        max-height: 660px;
-        
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-    }
-    /* Alternate for div background instead of img element. 99vw was still needed to avoid horizontal scrollbar */
-    /* div.banner-image {
-        background-image: url('https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 99vw;
-        height:660px;
-        filter: brightness(50%);
-    } */
-    img.banner-image {
-        filter: brightness(50%);
-        width:99vw;
-        /* TODO: Decide how we want to handle >1920 screen widths. Currently, without the max-width below the img expands up and over the breadcrumb/top content */
-        max-width:1920px;
-    }
+        .pc-banner {
+            padding-top: 5%;
+            padding-bottom: 5%;
+            color: white;
+            background-blend-mode: multiply;
+            background-color: gray;
+        }
 
-    div.banner-text{
-        position: absolute;
-        left:0%;
-        top:50%;
-        transform:translate(0%, -50%);
-
-    }
+        .pc-banner p {
+            width: 65ch;
+        }
     </style>
     <!-- End custom CSS -->
-
 </head>
 
 <body vocab="http://schema.org/" class="" typeof="WebPage" resource="#wb-webpage">
@@ -274,9 +246,7 @@
             <li class="wb-slc"><a class="wb-sl" href="?wbdisable=true" rel="alternate">Switch to basic HTML version</a></li>
         </ul>
     </nav>
-
     <!-- End treasury board content -->
-
     <!-- Start content-en header -->
     <header>
         <div id="wb-bnr" class="container">
@@ -292,17 +262,17 @@
                         </li>
                     </ul>
                 </section>
-
                 <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-                    <a href="https://wet-boew.github.io/gcweb/" property="url">
-                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
-                    </a>
+                    <!-- <a href="https://wet-boew.github.io/gcweb/" property="url"> -->
+                    <div>
+                        <!-- ToDo: Data toggling is for mockup only -->
+                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo" class="wb-toggle" data-toggle='{"selector": ".versioning", "stateOn": "visible", "stateOff": "hidden"}'><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+                        <!-- </a> -->
+                    </div>
                     <meta property="name" content="Government of Canada">
                     <meta property="areaServed" typeof="Country" content="Canada">
                     <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg">
                 </div>
-
-
                 <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
                     <h2>Search</h2>
                     <form action="#" method="post" name="cse-search-box" role="search">
@@ -323,9 +293,6 @@
             </div>
         </div>
         <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="wb-auto-2">
-            <!-- 
-                **TODO: Track down why opening the menu shifts body left
-             -->
             <div class="container">
                 <h2 class="wb-inv">Menu</h2>
                 <button type="button" aria-haspopup="true" aria-expanded="false" aria-label="Press the SPACEBAR to expand or the escape key to collapse this menu. Use the Up and Down arrow keys to choose a submenu item. Press the Enter or Right arrow key to expand it, or the Left arrow or Escape key to collapse it. Use the Up and Down arrow keys to choose an item on that level and the Enter key to access it."><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
@@ -334,14 +301,11 @@
                         <ul id="gc-mnu-jobs" role="menu" aria-orientation="vertical">
                             <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Plan your visit<span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
                             <li role="separator"></li>
-
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">Locations</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">All activities and experiences</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">Safety and guidelines</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">Accessible For All</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">Tips and ideas</a></li>
-
-
                             <li role="separator" aria-orientation="vertical"></li>
                             <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
                                 <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
@@ -359,8 +323,6 @@
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">Alberta</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">British Columbia</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">...</a></li>
-
-
                             <li role="separator" aria-orientation="vertical"></li>
                             <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
                                 <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
@@ -378,8 +340,6 @@
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">Alberta</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">British Columbia</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="">...</a></li>
-
-
                             <li role="separator" aria-orientation="vertical"></li>
                             <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
                                 <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
@@ -398,49 +358,35 @@
             <div class="container">
                 <ol class="breadcrumb">
                     <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Plan your visit</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Parks Canada reservations</a></li>
                 </ol>
             </div>
         </nav>
-
     </header>
     <!-- End content-en header -->
-
-
-
-
     <!-- Start main  -->
-    <main role="main" property="mainContentOfPage" class="container">
-        <div class="provisional profile">
-
-            <div class="banner-container">
-                <!-- <div class="banner-image"></div> -->
-                <img class="banner-image" src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt="">
-                <div class="banner-text text-white">
-                    <h1 property="name" id="wb-cont" class="pc-h1-brass">Default page</h1>
-                    <p class="pagetag">A default page to be the default for pages.</p>
+    <main role="main" property="mainContentOfPage" class="mrgn-bttm-lg">
+        <!-- Full width banner version -->
+        <!-- <div class="provisional profile">
+            <div class="pc-banner provisional bg-cover bg-center bg-norepeat" data-bgimg="https://user-images.githubusercontent.com/45856706/141172443-f4cf7e9f-eb86-45de-b90e-fcc1e93443e8.jpg">
+                <div class="container p-0 p-sm-3 mrgn-bttm-md mrgn-tp-md">
+                    <div class="col-md-12">
+                        <h1 property="name" id="wb-cont" class="pc-h1-brass">Parks Canada reservations</h1>
+                        <p class="pagetag">Reserve camping, accommodations, and more, at Parks Canada destinations.</p>
+                    </div>
                 </div>
             </div>
-<!-- 
+        </div> -->
+        <div class="provisional profile">
             <div class="container">
                 <div class="row">
-                    
 
-                    <div id="banner-image" style="display: inline-block; vertical-align: middle;">
-                        <img src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt="" style="filter: brightness(50%); width: 100vw; margin-left: calc(50% - 50vw); position: relative;">
-                        <div class="mrgn-bttm-md text-white align-middle" style="position:absolute; left:0; right:0; top:0; bottom: 0; margin: auto;">
-                            <h1 property="name" id="wb-cont">Default page</h1>
-                            <p class="pagetag">A default page to be the default for pages.</p>
-                        </div>
-                    </div> -->
-                <!-- <div class="row">
-                    <div id="banner-image" style="display: inline-block; vertical-align: middle;">
-                        <img src="https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg" alt="" style="z-index: 2; filter: brightness(50%); width: 100vw; margin-left: calc(50% - 50vw);">
-                        <div class="mrgn-bttm-md" style="z-index: 3">
-                            <h1 property="name" id="wb-cont">Default page</h1>
-                            <p class="pagetag">A default page to be the default for pages.</p>
-                        </div>
-                    </div> -->
-                    
+                    <!-- change col-md-6 to col-md-12 if not using an image -->
+                    <div class="intro col-md-12 col-sm-12 mrgn-bttm-md">
+                        <h1 property="name" id="wb-cont">Page title</h1>
+                        <p class="pagetag">Page description</p>
+                    </div>
 
                     <!-- remove this div if you do not want an image -->
                     <!-- <div class="col-md-6 hidden-sm hidden-xs">
@@ -449,41 +395,16 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <section class="col-md-12">
-                <p>This is the default page text.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In vel qui corrupti autem at, quam quisquam officiis explicabo! Quidem aperiam vitae dolores quo ut suscipit fugiat libero modi iure nesciunt.</p>
-                <!-- Start main content -->
+        <section class="container">
+            <!-- Main content -->
 
+            <!-- End main content -->
 
-                <!-- End main content -->
-            </section>
-        </div>
-
+        </section>
     </main>
     <!-- End main -->
-
-
-
-
-
-
-
-
-
-    <!-- Start custom script -->
-    <script>
-        $(document).ready(function () {
-            $("#siteSearch").find("input").removeAttr("required");
-            let tempString = ("#siteSearch").find("input");
-            console.log(tempString);
-        });
-
-    </script>
-    <!-- End custom script -->
-
     <!--Start CDTS serverBottom-en -->
-    <footer id="wb-info">
+    <footer id="wb-info" class="mrgn-tp-lg">
         <div class="brand">
             <div class="container">
                 <div class="row">
@@ -507,9 +428,7 @@
         </div>
     </footer>
     <!--End CDTS serverBottom-en -->
-
     <!-- Start Treasury board Script footer -->
-
     <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
     <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
     <script src="https://www.canada.ca/etc/designs/canada/clientlib-publish.min.js"></script>
@@ -517,6 +436,32 @@
     <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
     <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
     <!-- End Treasury board Script footer -->
+    <!-- Start custom script -->
+    <script>
+        $(document).ready(function () {
+            // $("#siteSearch").find("input").removeAttr("required");
+            // let tempString = ("#siteSearch").find("input");
+            // console.log(tempString);
+            // Version testing
+            // const queryString = window.location.search;
+            // const urlParams = new URLSearchParams(queryString);
+            // const showSites = urlParams.has('showsites');
+            // if (showSites) {
+            //     showClass('siteul');
+            // }            // function showClass(className) {
+            //     const hasParam = urlParams.has(className);
+            //     if (hasParam) {
+            //         let elements = document.getElementsByClassName(className);
+            //         let i = 0;
+            //         while (i<elements.length) {
+            //             elements[i].className = `${className} visible`;
+            //             i++;
+            //         }
+            //     } 
+            // }
+        });
+    </script>
+    <!-- End custom script -->
 </body>
 
 </html>
