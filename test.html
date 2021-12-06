@@ -584,10 +584,10 @@
             ];
 
             let i = Math.floor(Math.random() * all404s.length)
-            let bannerImage = document.querySelector('.404-image');
-            let h2s = document.querySelectorall('.404-h2');
-            let descriptions = document.querySelectorAll('.404-description')
-            bannerImage.setAttribute('src', all404s[i].src);
+            let bannerImage = document.querySelector(".404-image");
+            let h2s = document.querySelectorall(".404-h2");
+            let descriptions = document.querySelectorAll(".404-description")
+            bannerImage.setAttribute("src", all404s[i].src);
             h2s.forEach(h2 => {
                 h2.innerHtml = all404s[i].h2
             });
