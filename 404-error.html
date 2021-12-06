@@ -416,32 +416,29 @@
     </header>
     <!-- End content-en header -->
 
-
-
-
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage" class="container">
         <div class="provisional profile">
 
             <div class="banner-container">
                 <!-- <div class="banner-image"></div> -->
-                <img class="banner-image" src="https://user-images.githubusercontent.com/45856706/141214371-1457a3c9-8fd8-4a55-9119-67cd40882891.jpg" alt="">
+                <img class="banner-image 404-image" src="https://user-images.githubusercontent.com/45856706/141214371-1457a3c9-8fd8-4a55-9119-67cd40882891.jpg" alt="">
                 <div class="banner-text text-white">
                     <h1 property="name" id="wb-cont" class="pc-h1-brass">404 Error</h1>
-                    <h2 class="visible-md visible-lg">We brought out the telescopes, but we couldn't find the page you were looking for.</h2>
+                    <h2 class="visible-md visible-lg 404-h2">We brought out the telescopes, but we couldn't find the page you were looking for.</h2>
 
                 </div>
                 <div class="banner-description text-white visible-md visible-lg">
-                    <p><span class="fas fa-camera" aria-hidden="true"></span> <small>A Parks Canada interpreter with a telescope during a sunset at Astotin Lake in Elk Island National Park.</small></p>
+                    <p><span class="fas fa-camera" aria-hidden="true"></span> <small class="404-description">A Parks Canada interpreter with a telescope during a sunset at Astotin Lake in Elk Island National Park.</small></p>
                 </div>
             </div>
         </div>
         <div class="row">
             <section class="col-md-12">
-            <div class="visible-xs visible-sm">
-                <h2>We brought out the telescopes, but we couldn't find the page you were looking for.</h2>
-                
-            </div>
+                <div class="visible-xs visible-sm">
+                    <h2 class="404-h2">We brought out the telescopes, but we couldn't find the page you were looking for.</h2>
+
+                </div>
                 <p>Sometimes a page gets moved or deleted, but hopefully we can help you find what you're looking for.</p>
                 <p>Please return to the home page, or browse this list of popular topics:</p>
                 <ul>
@@ -451,10 +448,11 @@
                     <li><a href="">Jobs at Parks Canada </a></li>
                 </ul>
                 <p>If you still can’t find what you are looking for, please <a href="">contact us</a>.</p>
-                
+
                 <div class="visible-xs visible-sm">
                     <hr>
-                    <p><span class="fas fa-camera" aria-hidden="true"></span> <small>A Parks Canada interpreter with a telescope during a sunset at Astotin Lake in Elk Island National Park.</small></p></div>
+                    <p><span class="fas fa-camera" aria-hidden="true"></span> <small class="404-description">A Parks Canada interpreter with a telescope during a sunset at Astotin Lake in Elk Island National Park.</small></p>
+                </div>
                 <!-- 
             <div class="container">
                 <div class="row">
@@ -503,6 +501,100 @@
     <!-- Start custom script -->
     <script>
         $(document).ready(function () {
+// 404 script
+
+let all404s = [{
+        "src": "https://user-images.githubusercontent.com/45856706/144925745-efb46bd7-6b95-408f-ba65-9f489b4dac8a.jpg",
+        "h2": "Even though this beluga popped up, that page hasn’t.",
+        "desc": "A beluga whale spyhopping",
+        "loc": "Saguenay-St. Lawrence Marine Park, Quebec",
+        "credit": "Wayne Lynch"
+    },
+    {
+        "src": "https://user-images.githubusercontent.com/45856706/144925763-903972db-90dc-4cbf-9d1e-b3bff3a70a40.jpg",
+        "h2": "Oops, this area is now closed.",
+        "desc": "A park warden installs tape to designate a closed area",
+        "loc": "Banff National Park, Alberta",
+        "credit": "Ryan Bray"
+    },
+    {
+        "src": "https://user-images.githubusercontent.com/45856706/144925770-6791c9ed-69ab-4af8-bd2c-a1a5cded522b.jpg",
+        "h2": "We recruited some help, but still can’t find the page you are looking for.",
+        "desc": "Two grizzly bear cubs",
+        "loc": "Glacier National Park, BC",
+        "credit": "Wayne Lynch"
+    },
+    {
+        "src": "https://user-images.githubusercontent.com/45856706/144925777-d61a7b7d-4bb0-4c8f-b582-5765fefd1cdb.jpg",
+        "h2": "We’ve looked all over, but can’t find that page.",
+        "desc": "Children with a GPS find a geocache",
+        "loc": "Elk Island National Park, Alberta",
+        "credit": "Scott Munn"
+    },
+    {
+        "src": "https://user-images.githubusercontent.com/45856706/144925780-4da2b1c3-8f09-4df6-a28b-a88a9c9ff19a.jpg",
+        "h2": "We couldn’t find that page floating around, but we did find this otter.",
+        "desc": "A sea otter floats past",
+        "loc": "Gulf Islands National Park Reserve",
+        "credit": "Wayne Lynch"
+    },
+    {
+        "src": "https://user-images.githubusercontent.com/45856706/144925781-f7ddd453-2e64-4931-9750-17ccec773e7e.jpg",
+        "h2": "We can’t find that page, but here’s a cute __racoon / baby animal etc__",
+        "desc": "A raccoon peaks out from a tree hollow",
+        "loc": "Point Pelee National Park, Ontario",
+        "credit": "Wayne Lynch"
+    },
+    {
+        "src": "https://user-images.githubusercontent.com/45856706/144925783-9f884c3a-993e-4070-be29-3bc390005366.jpg",
+        "h2": "We brought out the telescopes, but couldn't find the page you were looking for.",
+        "desc": "A Parks Canada interpreter with a telescope during a sunset at Astotin Lake",
+        "loc": "Elk Island National Park, Alberta",
+        "credit": "Ryan Bray"
+    },
+    {
+        "src": "https://user-images.githubusercontent.com/45856706/144925785-42184c5f-4cf8-4313-bf91-fe987702e88d.jpg",
+        "h2": "We’re trying to follow the path to that page, but can’t find it.",
+        "desc": "Wolverine tracks in the snow",
+        "loc": "Ukkusiksalik National Park, Nunavut",
+        "credit": "L. Narraway"
+    },
+    {
+        "src": "https://user-images.githubusercontent.com/45856706/144925789-dc977a97-976c-4a21-a0f7-452cf1d4f496.jpg",
+        "h2": "You’ve wandered off the trail!",
+        "desc": "A view of the sun setting over the Atlantic ocean from the top of the Skyline Trail",
+        "loc": "Cape Breton Highlands National Park National Park, Nova Scotia",
+        "credit": "TNS / Adam Cornick"
+    },
+    {
+        "src": "https://user-images.githubusercontent.com/45856706/144925793-28357d49-0f39-487b-867d-1a5939c171fb.jpg",
+        "h2": "Let's get you back on track",
+        "desc": "The White Pass and Yukon Route Railroad steam train at Bennett city",
+        "loc": "Chilkoot Trail National Historic Site, BC",
+        "credit": "Paul Gowdie"
+    },
+    {
+        "src": "https://user-images.githubusercontent.com/45856706/144925798-863086de-64f6-43d1-ab22-dc2dc7f8986c.jpg",
+        "h2": "Although the views are nice here, we can’t find that page.",
+        "desc": "Visitors relax in Red Chairs",
+        "loc": "Pacific Rim National Park Reserve, BC",
+        "credit": "Scott Munn"
+    }
+];
+
+let i = Math.floor(math.random() * all404s.length())
+let bannerImage = document.querySelector('.404-image');
+let h2s = document.querySelectorall('.404-h2');
+let descriptions = document.querySelectorAll('.404-description')
+bannerImage.setAttribute('src', all404s[i].src);
+h2s.forEach(h2 => {
+    h2.innerHtml = all404s[i].h2
+});
+descriptions.forEach(description => {
+    description.innerHtml = `${all404s[i].description}<br> ${all404s[i].loc}<br>Photo: ${all404s[i].credit}`
+})
+
+
             $("#siteSearch").find("input").removeAttr("required");
             let tempString = ("#siteSearch").find("input");
             console.log(tempString);
