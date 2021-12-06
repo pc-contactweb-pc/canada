@@ -590,17 +590,13 @@
             bannerImage.setAttribute("src", all404s[i].src);
             h2s.forEach(h2 => {
                 h2.innerHtml = all404s[i].h2
+                console.log(h2.innerHTML);
             });
             descriptions.forEach(description => {
                 description.innerHtml = `${all404s[i].description}<br> ${all404s[i].loc}<br>Photo: ${all404s[i].credit}`
             })
         }
-        $(document).ready(function () {
-
-            $("#siteSearch").find("input").removeAttr("required");
-            let tempString = ("#siteSearch").find("input");
-            console.log(tempString);
-        });
+        
 
     </script>
     <!-- End custom script -->
