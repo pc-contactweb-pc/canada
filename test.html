@@ -441,8 +441,10 @@
     <script>
 
         function brightnessUpdate(value) {
-            
-            document.getElementsByClassName(".banner-image").style.filter = `brightness(${value})`;
+            let bannerImages = document.querySelectorAll(".banner-image");
+            bannerImages.forEach(banner => {
+                banner.style.filter = `brightness(${value})`;
+            });
             
         }
         document.addEventListener("DOMContentLoaded", domLoaded, false);
