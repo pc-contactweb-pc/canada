@@ -420,6 +420,8 @@
 
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage" class="container">
+<label for="backgroundBrightness">Background brightness: </label>
+        <input type="range" name="backgroundBrightness" id="backgroundBrightness" max="1" step="0.01" onchange="brightnessUpdate(this.value)">
         <div id="insertHere">
 
         </div>
@@ -437,6 +439,12 @@
 
     <!-- Start custom script -->
     <script>
+
+        function brightnessUpdate(value) {
+            
+            document.getElementsByClassName(".banner-image").style.filter = `brightness(${value})`;
+            
+        }
         document.addEventListener("DOMContentLoaded", domLoaded, false);
         // 404 script
         function domLoaded(e) {
