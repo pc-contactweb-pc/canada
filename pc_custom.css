@@ -98,3 +98,8 @@ div.banner-404-container {
         display: block !important;
     }
 }
+/* Heading colours based on Gabe's mockups */
+
+h2 h3 h4 h5 h6 {
+    color: #405849
+}
