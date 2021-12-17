@@ -27,6 +27,8 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9090ff3cfc.js" crossorigin="anonymous"></script>
     <!--	End temp font awesome -->
+    <link rel="stylesheet" href="https://pc-contactweb-pc.github.io/canada/pc_custom.css"> <!-- PC Custom CSS -->
+
     <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>-->
     <link href="https://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon" />
     <noscript>
@@ -211,72 +213,7 @@
     </style>
     <!-- End provisional CSS for institutional page-->
 
-    <!-- Start custom CSS added by DM -->
-    <style>
-        .bg-pn-np {
-            /*Not used yet */
-            background-color: #55833b;
-        }
-
-        .bg-hg {
-            background-color: #2b4635;
-        }
-
-        .pc-h1-brass {
-            border-bottom-color: #ecb731;
-        }
-
-        /* Banner image */
-
-        div.banner-container {
-            max-height: 660px;
-
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-
-        /* Alternate for div background instead of img element. 99vw was still needed to avoid horizontal scrollbar */
-        /* div.banner-image {
-        background-image: url('https://user-images.githubusercontent.com/45856706/141152630-85ad6a38-fdd7-4c69-bfbc-3495ddfa1140.jpg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 99vw;
-        height:660px;
-        filter: brightness(50%);
-    } */
-        img.banner-image {
-            filter: brightness(50%);
-            width: 99vw;
-            /* TODO: Decide how we want to handle >1920 screen widths. Currently, without the max-width below the img expands up and over the breadcrumb/top content */
-            max-width: 1920px;
-            max-height:600px;
-            background-color: #2b4635;
-        }
-
-        div.banner-text {
-            position: absolute;
-            left: 0%;
-            top: 50%;
-            transform: translate(0%, -50%);
-
-        }
-
-        div.banner-text h2 {
-            max-width: 35ch;
-        }
-
-        div.banner-description {
-            position: absolute;
-            right: 0%;
-            bottom: 0%;
-        }
-    </style>
-    <!-- End custom CSS -->
+    
 
 </head>
 
@@ -336,84 +273,6 @@
 
             </div>
         </div>
-        <!-- <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="wb-auto-2">
-          
-            <div class="container">
-                <h2 class="wb-inv">Menu</h2>
-                <button type="button" aria-haspopup="true" aria-expanded="false" aria-label="Press the SPACEBAR to expand or the escape key to collapse this menu. Use the Up and Down arrow keys to choose a submenu item. Press the Enter or Right arrow key to expand it, or the Left arrow or Escape key to collapse it. Use the Up and Down arrow keys to choose an item on that level and the Enter key to access it."><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
-                <ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html" class="wb-init wb-data-ajax-replace-inited" id="wb-auto-3">
-                    <li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs" aria-expanded="false" href="#">Plan your visit</a>
-                        <ul id="gc-mnu-jobs" role="menu" aria-orientation="vertical">
-                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Plan your visit<span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
-                            <li role="separator"></li>
-
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Locations</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">All activities and experiences</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Safety and guidelines</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Accessible For All</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Tips and ideas</a></li>
-
-
-                            <li role="separator" aria-orientation="vertical"></li>
-                            <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
-                                <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Camping and overnight accommodations</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Hiking</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Biking and running</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-cit" aria-expanded="false" href="#">National Parks</a>
-                        <ul id="gc-mnu-cit" role="menu" aria-orientation="vertical">
-                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">National Parks<span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
-                            <li role="separator"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Alberta</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">British Columbia</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">...</a></li>
-
-
-                            <li role="separator" aria-orientation="vertical"></li>
-                            <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
-                                <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Banff National Park</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Bruce Penninsula National Park</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">La Mauricie National Park</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-cit" aria-expanded="false" href="#">National Historic Sites</a>
-                        <ul id="gc-mnu-cit" role="menu" aria-orientation="vertical">
-                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">National Historic Sites<span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
-                            <li role="separator"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">Alberta</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">British Columbia</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="">...</a></li>
-
-
-                            <li role="separator" aria-orientation="vertical"></li>
-                            <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
-                                <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Cave and Basin National Historic Site</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Trent-Severn Waterway National Historic Site</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Fortress of Louisbourg National Historic Site</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav> -->
-        <!--         
-        <nav id="wb-bc" property="breadcrumb">
-            <h2>You are here:</h2>
-            <div class="container">
-                <ol class="breadcrumb">
-                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
-                </ol>
-            </div>
-        </nav> -->
 
     </header>
     <!-- End content-en header -->
@@ -422,19 +281,16 @@
     <main role="main" property="mainContentOfPage" class="container">
         <div class="provisional profile">
 
-            <div class="banner-container">
+            <div class="banner-404-container">
                 <!-- <div class="banner-image"></div> -->
-                <img class="banner-image image-404" src="" alt="">
-                <div class="banner-text text-white">
+                <img class="banner-404-image" src="" alt="">
+                <div class="banner-404-text text-white">
                     <h1 property="name" id="wb-cont" class="pc-h1-brass">404 Error</h1>
                     <h2 class="visible-md visible-lg h2-404">We couldn't find that page</h2>
-                <!-- <img class="banner-image image-404" src="https://user-images.githubusercontent.com/45856706/141214371-1457a3c9-8fd8-4a55-9119-67cd40882891.jpg" alt="">
-                <div class="banner-text text-white">
-                    <h1 property="name" id="wb-cont" class="pc-h1-brass">404 Error</h1>
-                    <h2 class="visible-md visible-lg h2-404">We brought out the telescopes, but we couldn't find the page you were looking for.</h2> -->
+                
 
                 </div>
-                <div class="banner-description text-white visible-md visible-lg">
+                <div class="banner-404-description text-white visible-md visible-lg">
                     <p><small class="description-404"></small></p>
                     <!-- <p><small class="description-404">A Parks Canada interpreter with a telescope during a sunset at Astotin Lake in Elk Island National Park.</small></p> -->
                 </div>
@@ -567,7 +423,7 @@
             ];
 
             let i = Math.floor(Math.random() * all404s.length)
-            let bannerImage = document.querySelector(".image-404");
+            let bannerImage = document.querySelector(".banner-404-image");
             let h2s = document.querySelectorAll(".h2-404");
             let descriptions = document.querySelectorAll(".description-404")
             bannerImage.setAttribute("src", all404s[i].src);

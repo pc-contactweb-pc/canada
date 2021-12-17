@@ -21,6 +21,8 @@
     background-color: gray;
 }
 
+
+
 .pc-banner p {
     width: 65ch;
 }
@@ -30,4 +32,69 @@
 }
 .white-well {
     background-color: #fff;
+}
+/* 404 */
+img.banner-404-image {
+    filter: brightness(50%);
+    width: 99vw;
+    /* TODO: Decide how we want to handle >1920 screen widths. Currently, without the max-width below the img expands up and over the breadcrumb/top content */
+    max-width: 1920px;
+    max-height:600px;
+    background-color: #2b4635;
+}
+
+div.banner-404-text {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+
+}
+
+div.banner-404-text h2 {
+    max-width: 35ch;
+}
+
+div.banner-404-description {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+div.banner-404-container {
+    max-height: 660px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Reservation page */
+.reservation-icon {
+    width: 25px;
+    margin-bottom: 5px;
+}
+
+.reservation-table th {
+    width: 20%
+}
+
+.reservation-hide-md {
+    display: none;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 991px) {
+    .reservation-hide-md {
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .reservation-name {
+        display: block !important;
+    }
 }
