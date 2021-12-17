@@ -1,0 +1,33 @@
+.bg-pn-np {
+    /*Not used yet */
+    background-color: #55833b;
+}
+
+.bg-hg {
+    background-color: #2b4635;
+}
+
+.pc-h1-brass {
+    border-bottom-color: #ecb731;
+    border-bottom-width: medium;
+}
+
+/* Banner image */
+.pc-banner {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: white;
+    background-blend-mode: multiply;
+    background-color: gray;
+}
+
+.pc-banner p {
+    width: 65ch;
+}
+
+#topcontent {
+    background: #f8f8f8;
+}
+.white-well {
+    background-color: #fff;
+}
