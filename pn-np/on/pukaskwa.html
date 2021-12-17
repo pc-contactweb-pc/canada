@@ -28,7 +28,7 @@
     <script src="https://kit.fontawesome.com/9090ff3cfc.js" crossorigin="anonymous"></script>
     <!--	End temp font awesome -->
 
-    
+
     <link rel="stylesheet" href="https://pc-contactweb-pc.github.io/canada/pc_custom.css"> <!-- PC Custom CSS -->
     <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>-->
     <link href="https://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon" />
@@ -209,7 +209,7 @@
         }
     </style>
     <!-- End provisional CSS for institutional page-->
-    
+
 </head>
 
 <body vocab="http://schema.org/" class="" typeof="WebPage" resource="#wb-webpage">
@@ -449,7 +449,9 @@
                                 <p>Contact us, apply for jobs or business licences and consult our plans and policies.</p>
                             </div>
                         </div>
-                        <div id="map-canvas" style="flex: 0 1 1"></div>
+                       
+
+                        <div id="map-canvas" style="width:100%; min-height: 200px; height:100%"></div>
                     </div>
 
                     <!-- Right panels -->
@@ -512,6 +514,44 @@
                 </div>
             </div>
         </section>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmI9BRKR6P8DKuU47LCV9778Fgsn7BAaE&amp;v=3.exp&amp;language=en"></script>
+        <script>
+            var map;
+
+            function initialize() {
+                //var key = Math.floor(Math.random()*90000) + 10000;
+                var key = 180131;
+                var SiteLocation1 = new google.maps.LatLng(48.591665, -86.2963477);
+                var mapOptions = {
+                    center: SiteLocation1,
+                    zoom: 7,
+                    streetViewControl: false
+                };
+                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+                var KMLSource = 'http://www.google.com/maps/d/kml?mid=&rev=' + key;
+                var customKMLLayer = new google.maps.KmlLayer({
+                    url: KMLSource,
+                    suppressInfoWindows: false,
+                    map: map,
+                    preserveViewport: true
+                });
+                customKMLLayer.setMap(map);
+
+                customKMLLayer.addListener('click', function (kmlEvent) {
+                    dataLayer.push({
+                        'event': 'Map click',
+                        'eventCategory': 'Marker click',
+                        'eventAction': document.title,
+                        'eventLabel': kmlEvent.featureData.name,
+                    });
+                });
+
+
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
         <!-- End main content -->
     </main>
     <!-- End main -->
