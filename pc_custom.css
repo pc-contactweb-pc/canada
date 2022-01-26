@@ -42,6 +42,10 @@
     text-decoration: none;
 }
 
+.pc-footer-list {
+    padding-right:25px;
+}
+
 .pc-logo {
     /* Extracted from .brand img (GoC signature) in theme.min.css */
     height:auto;
