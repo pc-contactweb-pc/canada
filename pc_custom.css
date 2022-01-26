@@ -42,6 +42,10 @@
     text-decoration: none;
 }
 
+.pc-footer :is(h2, h3) {
+    margin-bottom:20px;
+}
+
 .pc-footer-list {
     padding-right:25px;
 }
