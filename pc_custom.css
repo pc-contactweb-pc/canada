@@ -49,7 +49,7 @@
 .pc-logo {
     /* Extracted from .brand img (GoC signature) in theme.min.css */
     height:auto;
-    max-height:40px;
+    max-height:50px; /* GoC logo is max-height:40px, but 50px looked better to me - DM */
     margin-bottom: .375em;
 }
 /* End Pukaskwa mockup css */
