@@ -26,7 +26,7 @@
     /* Simulate mrgn-lft-md on sites nearby h3 and p */
 }
 
-.pc-footer a, .pc-footer h3 {
+.pc-footer :is(a, h2, h3, li){
     color: #fff;
 }
 
