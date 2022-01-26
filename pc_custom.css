@@ -22,8 +22,8 @@
     border-color: #d1d1d1;
 }
 
-.pc-brdr-bttm-md {
-    border-bottom-width: 5px;
+.pc-brdr-md {
+    border-width: 5px;
 }
 .sites-nearby-list h3, .sites-nearby-list p {
     margin-left:15px; 
