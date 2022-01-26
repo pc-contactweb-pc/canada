@@ -34,6 +34,10 @@
     color: #fff;
 }
 
+.pc-footer :is(h2, h3) a {
+    text-decoration: none;
+}
+
 /* End Pukaskwa mockup css */
 
 
