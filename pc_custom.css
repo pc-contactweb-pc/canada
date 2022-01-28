@@ -35,10 +35,10 @@
 }
 
 
-/* 
-.sites-nearby-list p a:not(:hover) {
+
+.sites-nearby-list h3 a:not(:hover) {
     text-decoration: none;
-} */
+}
 
 
 .pc-footer {
@@ -49,10 +49,10 @@
     color: #fff;
 }
 
-/* Amazingly, this is redundant to theme.min.css */
-/* .pc-footer h3 a:not(:hover) {
+
+.pc-footer h3 a:not(:hover) {
     text-decoration: none;
-} */
+}
 
 .pc-footer :is(h2, h3) {
     margin-bottom:20px;
