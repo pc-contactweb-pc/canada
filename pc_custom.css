@@ -8,6 +8,9 @@
     background-color: #2b4635;
 }
 
+.bg-accent {
+    background: #f8f8f8;
+}
 .pc-h1-brass {
     /* Combine this with .pc-brdr-brass? */
     border-bottom-color: #ecb731;
@@ -31,9 +34,11 @@
     /* Simulate mrgn-lft-md on sites nearby h3 and p */
 }
 
-.sites-nearby-list a {
+.sites-nearby-list a:not(:hover) {
     text-decoration: none;
 }
+
+
 .pc-footer {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -42,7 +47,7 @@
     color: #fff;
 }
 
-.pc-footer :is(h2, h3) a {
+.pc-footer :is(h2, h3) a:not(:hover) {
     text-decoration: none;
 }
 
@@ -78,9 +83,10 @@
     width: 65ch;
 }
 
+/* 
 #topcontent {
-    background: #f8f8f8;
-}
+    
+} */
 .white-well {
     background-color: #fff;
 }
