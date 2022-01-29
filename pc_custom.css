@@ -59,7 +59,7 @@
     transition: filter 500ms;
 }
 
-.pc-footer h2:not(:hover) {
+.pc-footer h2 a:not(:hover) {
     text-decoration: none;
 }
 
