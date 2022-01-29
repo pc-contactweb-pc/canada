@@ -11,6 +11,7 @@
 .bg-accent {
     background: #f8f8f8;
 }
+
 .pc-h1-brass {
     /* Combine this with .pc-brdr-brass? */
     border-bottom-color: #ecb731;
@@ -21,6 +22,7 @@
 .pc-brdr-brass {
     border-color: #ecb731;
 }
+
 .pc-brdr-grey {
     border-color: #d1d1d1;
 }
@@ -28,9 +30,10 @@
 .pc-brdr-bttm-md {
     border-bottom-width: 5px;
 }
+
 .sites-nearby-list h3, .sites-nearby-list p {
-    margin-left:15px; 
-    margin-right:15px;
+    margin-left: 15px;
+    margin-right: 15px;
     /* Simulate mrgn-lft-md on sites nearby h3 and p */
 }
 
@@ -41,22 +44,32 @@
 /* Nearby site image hover effect */
 .sites-nearby-list img:hover {
     filter: brightness(90%);
-    }
-    
-    .sites-nearby-list img {
-         transition: filter 500ms;
-    }
-    
-    .pc-footer h2:not(:hover) {
-        text-decoration: none;
-    }
+}
+
+.sites-nearby-list img {
+    transition: filter 500ms;
+}
+
+/* Feature tile image hover effect */
+.pc-feature img:hover {
+    filter: brightness(90%);
+}
+
+.pc-feature img {
+    transition: filter 500ms;
+}
+
+.pc-footer h2:not(:hover) {
+    text-decoration: none;
+}
 
 
 .pc-footer {
     padding-top: 25px;
     padding-bottom: 25px;
 }
-.pc-footer :is(a, h2, h3, li){
+
+.pc-footer :is(a, h2, h3, li) {
     color: #fff;
 }
 
@@ -66,19 +79,21 @@
 }
 
 .pc-footer :is(h2, h3) {
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .pc-footer-list {
-    padding-right:25px;
+    padding-right: 25px;
 }
 
 .pc-logo {
     /* Extracted from .brand img (GoC signature) in theme.min.css */
-    height:auto;
-    max-height:50px; /* GoC logo is max-height:40px, but 50px looked better to me - DM */
+    height: auto;
+    max-height: 50px;
+    /* GoC logo is max-height:40px, but 50px looked better to me - DM */
     margin-bottom: .375em;
 }
+
 /* End Pukaskwa mockup css */
 
 
@@ -104,13 +119,14 @@
 .white-well {
     background-color: #fff;
 }
+
 /* 404 */
 img.banner-404-image {
     filter: brightness(50%);
     width: 99vw;
     /* TODO: Decide how we want to handle >1920 screen widths. Currently, without the max-width below the img expands up and over the breadcrumb/top content */
     max-width: 1920px;
-    max-height:600px;
+    max-height: 600px;
     background-color: #2b4635;
 }
 
@@ -131,6 +147,7 @@ div.banner-404-description {
     right: 0%;
     bottom: 0%;
 }
+
 div.banner-404-container {
     max-height: 660px;
 
@@ -169,6 +186,7 @@ div.banner-404-container {
         display: block !important;
     }
 }
+
 /* Heading colours based on Gabe's mockups */
 
 /* h2, h3, h4, h5, h6 {
