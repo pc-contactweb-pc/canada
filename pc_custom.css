@@ -34,11 +34,22 @@
     /* Simulate mrgn-lft-md on sites nearby h3 and p */
 }
 
-
-
 .sites-nearby-list h3 a:not(:hover) {
     text-decoration: none;
 }
+
+/* Nearby site image hover effect */
+.sites-nearby-list img:hover {
+    filter: brightness(90%);
+    }
+    
+    .sites-nearby-list img {
+         transition: filter 500ms;
+    }
+    
+    .pc-footer h2:not(:hover) {
+        text-decoration: none;
+    }
 
 
 .pc-footer {
