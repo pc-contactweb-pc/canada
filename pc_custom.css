@@ -9,9 +9,12 @@
 }
 
 .bg-accent {
-    background: #f8f8f8;
+    background-color: #f8f8f8;
 }
 
+.bg-white {
+    background-color: #ffff ;
+}
 .pc-h1-brass {
     /* Combine this with .pc-brdr-brass? */
     border-bottom-color: #ecb731;
