@@ -70,6 +70,8 @@
 .pc-footer {
     padding-top: 25px;
     padding-bottom: 25px;
+    border-bottom: 1em solid #ecb731 ;
+
 }
 
 .pc-footer :is(a, h2, h3, li) {
@@ -87,6 +89,12 @@
 
 .pc-footer-list {
     padding-right: 25px;
+}
+
+.btn-footer {
+    color: #2b4635;
+    background-color: #fff;
+    border-radius: 0px;
 }
 
 .pc-logo {
