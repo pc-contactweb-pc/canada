@@ -368,7 +368,7 @@
                                 <div class="wb-frmvld nojs-hide hidden show-load">
                                     <form method="get" id="siteSearch">
                                         
-                                        <div class="wb-fieldflow col-sm-6" data-wb-fieldflow='{"noForm": true}'>
+                                        <div class="wb-fieldflow col-sm-6 hidden" data-wb-fieldflow='{"noForm": true}'>
                                             <p>Select province or territory</p>
                                             <ul>
                                                 <li>Alberta
@@ -1254,6 +1254,7 @@
     <!-- Start custom script -->
     <script>
         $(document).ready(function () {
+            console.log('hidden');
             let showOnLoad = document.querySelectorAll('.show-load');
             showOnLoad.forEach(elem => {
                 elem.classList.remove('hidden');
