@@ -365,7 +365,7 @@
                                 <div class="nojs-show">
                                     <p><a href="#3">Find a Parks Canada location</a></p>
                                 </div>
-                                <div class="wb-frmvld nojs-hide">
+                                <div class="wb-frmvld nojs-hide hidden show-load">
                                     <form method="get" id="siteSearch">
                                         
                                         <div class="wb-fieldflow col-sm-6" data-wb-fieldflow='{"noForm": true}'>
@@ -1101,104 +1101,6 @@
         </section>
 
 
-        <!--                         
-                        <div>
-                            <div class="col-xs-12 mrgn-tp-xl">
-                                <h3 class="mrgn-tp-0">Stay connected</h3>
-                            </div>
-                            <div class="col-xs-12">
-                                <ul class="list-unstyled list-inline">
-                                    <li><a class="mrgn-rght-md" href="https://www.facebook.com/PukaskwaNP"><span class="fab fa-facebook-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
-                                    <li><a class="mrgn-rght-md" href="https://twitter.com/PukaskwaNP"><span class="fab fa-twitter-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
-                                    <li><a class="mrgn-rght-md" href="https://www.youtube.com/ParksCanada"><span class="fab fa-youtube-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-        </section>
-        <section class="well well-sm brdr-0 mrgn-bttm-0">
-            <div class="container">
-                <div class="mrgn-bttm-xl">
-                    <section class="sites-nearby-list">
-                        <h2>Sites nearby</h2>
-                        <div class="row wb-eqht">
-                            <div class="col-sm-12 col-md-4 mrgn-bttm-md"><a href="#3"><img class="full-width brdr-bttm pc-brdr-brass pc-brdr-bttm-md" src="https://user-images.githubusercontent.com/45856706/151247663-32ea6df5-55bf-406c-9dd0-60cae6081426.jpg" alt=""></a>
-                                <div class="brdr-tp brdr-bttm  brdr-lft brdr-rght pc-brdr-grey ">
-                                    <div class="eqht-trgt mrgn-bttm-md">
-                                        <h3 class="h5"><a href="#3">
-                                                Lake Superior National Marine Conservation Area
-                                            </a></h3>
-                                        <p>Among the largest protected fresh-water areas, home to more than 70 fish species and 50 shipwrecks.</p>
-                                    </div>
-                                    <div class="brdr-tp pc-brdr-grey">
-                                        <p class="mrgn-tp-sm"><a href="#3">Find out more<span class="wb-inv"> about Lake Superior National Marine Conservation Area</span></a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-4 mrgn-bttm-md"><a href="#3"><img class="full-width brdr-bttm pc-brdr-brass pc-brdr-bttm-md" src="https://user-images.githubusercontent.com/45856706/151247649-f4fed10d-77f7-4da6-9325-92e1aa1a8aa1.jpg" alt=""></a>
-                                <div class="brdr-tp brdr-bttm  brdr-lft brdr-rght pc-brdr-grey">
-                                    <div class="eqht-trgt mrgn-bttm-md">
-                                        <h3 class="h5"><a href="#3">
-                                                Fort St. Joseph National Historic Site
-                                            </a></h3>
-                                        <p>A vital British stronghold on Upper Canada's western front on the southern tip of St. Joseph Island.</p>
-                                    </div>
-                                    <div class="brdr-tp pc-brdr-grey">
-                                        <p class="mrgn-tp-sm"><a href="#3">Find out more<span class="wb-inv"> about Fort St. Joseph National Historic Site</span></a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-4 mrgn-bttm-md"><a href="#3"><img class="full-width brdr-bttm pc-brdr-brass pc-brdr-bttm-md" src="https://user-images.githubusercontent.com/45856706/151247666-448ead24-846c-41af-831d-2afa966aea0f.jpg" alt=""></a>
-                                <div class="brdr-tp brdr-bttm  brdr-lft brdr-rght pc-brdr-grey">
-                                    <div class="eqht-trgt mrgn-bttm-md">
-                                        <h3 class="h5"><a href="#3">
-                                                Sault Ste. Marie Canal National Historic Site
-                                            </a></h3>
-                                        <p>Learn about this innovative piece of engineering and its impact on water transportation in Canada.</p>
-                                    </div>
-                                    <div class="brdr-tp pc-brdr-grey">
-                                        <p class="mrgn-tp-sm"><a href="#3">Find out more<span class="wb-inv"> about Sault Ste. Marie Canal National Historic Site</span></a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmI9BRKR6P8DKuU47LCV9778Fgsn7BAaE&amp;v=3.exp&amp;language=en"></script>
-        <script>
-            var map;            function initialize() {
-                //var key = Math.floor(Math.random()*90000) + 10000;
-                var key = 180131;
-                var SiteLocation1 = new google.maps.LatLng(48.591665, -86.2963477);
-                var mapOptions = {
-                    center: SiteLocation1,
-                    zoom: 7,
-                    streetViewControl: false
-                };
-                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);                var KMLSource = 'http://www.google.com/maps/d/kml?mid=&rev=' + key;
-                var customKMLLayer = new google.maps.KmlLayer({
-                    url: KMLSource,
-                    suppressInfoWindows: false,
-                    map: map,
-                    preserveViewport: true
-                });
-                customKMLLayer.setMap(map);                customKMLLayer.addListener('click', function (kmlEvent) {
-                    dataLayer.push({
-                        'event': 'Map click',
-                        'eventCategory': 'Marker click',
-                        'eventAction': document.title,
-                        'eventLabel': kmlEvent.featureData.name,
-                    });
-                });
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script> -->
         <!-- End main content -->
     </main>
     <!-- End main -->
@@ -1352,6 +1254,10 @@
     <!-- Start custom script -->
     <script>
         $(document).ready(function () {
+            let showOnLoad = document.querySelectorAll('.show-load');
+            showOnLoad.forEach(elem => {
+                elem.classList.remove('hidden');
+            });
             // $("#siteSearch").find("input").removeAttr("required");
             // let tempString = ("#siteSearch").find("input");
             // console.log(tempString);
