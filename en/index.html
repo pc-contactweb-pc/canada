@@ -27,7 +27,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9090ff3cfc.js" crossorigin="anonymous"></script>
     <!--	End temp font awesome -->
-    <link rel="stylesheet" href="https://pc-contactweb-pc.github.io/canada/pc_custom.css?1"> <!-- PC Custom CSS -->
+    <link rel="stylesheet" href="https://pc-contactweb-pc.github.io/canada/pc_custom.css?2"> <!-- PC Custom CSS -->
     <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>-->
     <link href="https://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon" />
     <noscript>
@@ -284,7 +284,8 @@
                 <div class="container p-0 p-sm-3 mrgn-bttm-md mrgn-tp-md">
                     <div class="col-md-7 col-xs-10 col-xs-offset-1 bg-hg" style="padding-top:5px">
                         <h1 property="name" id="wb-cont" class="pc-h1-brass"><img src="https://user-images.githubusercontent.com/45856706/151230155-9d0bfe38-5b23-4bca-a13d-68070f16c396.png" alt="Parks Canada logo" style="max-height:50px; height:auto"> Parks Canada</h1>
-                        <p class="pagetag">450 000 km<sup>2</sup> of memories await!</p>
+                        <p class="pagetag">450 000 km<sup>2</sup> of memories</p>
+                        <p class="pagetag">Discover. Connect. Protect.</p>
                         <p><a href="#3" class="btn btn-default btn-lg mrgn-bttm-md mrgn-tp-md"><strong>Plan your visit</strong></a></p>
                     </div>
                 </div>
@@ -321,55 +322,693 @@
 
                         <div class="wb-eqht row  mrgn-tp-md">
                             <div class="col-md-6">
-                                <h3><a href="#3">Find a park or site</a></h3>
-                                <p>Parks Canada has 450 000 km<sup>2</sup> of protected areas with countless unique experiences to suit your needs.</p>
+                                <h3><a href="#3">Reservations</a></h3>
+                                <p>Reserve campsites, accommodations, and activities.</p>
                             </div>
                             <div class="col-md-6">
-                                <h3><a href="#3">Camping and accommodations</a></h3>
-                                <p>Stay close to nature and history.</p>
+                                <h3><a href="#3">Camping and overnight accommodations</a></h3>
+                                <p>Types of accommodations, camping basics, and recommendations.</p>
                             </div>
                         </div>
                         <div class="wb-eqht row  mrgn-tp-md">
                             <div class="col-md-6">
-                                <h3><a href="">Get a pass or permit</a></h3>
-                                <p>Discover Parks Canada today!</p>
+                                <h3><a href="">Passes, permits and fees</a></h3>
+                                <p>Daily fees, seasonal and annual passes, and boating permits.</p>
                             </div>
                             <div class="col-md-6">
-                                <h3><a href="">Make a reservation</a></h3>
-                                <p>Reserve services at 36 national parks, national marine conservation areas, and historic sites across Canada.</p>
+                                <h3><a href="">Safety and guidelines</a></h3>
+                                <p>Prepare for a safe and enjoyable trip.</p>
                             </div>
                         </div>
                         <div class="wb-eqht row  mrgn-tp-md">
 
                             <div class="col-md-6">
-                                <h3><a href="#3">Indigenous cultures</a></h3>
-                                <p>Parks Canada is fortunate to work with over 300 Indigenous partners and communities to protect special places and share their stories. </p>
+                                <h3><a href="#3">Jobs</a></h3>
+                                <p>Find a job and start your career with Parks Canada!</p>
                             </div>
                             <div class="col-md-6">
-                                <h3><a href="#3">Learn-to Camp</a></h3>
-                                <p>Never camped before? Parks Canada's Learn-to Camp program is here to help.</p>
+                                <h3><a href="#3">Get involved</a></h3>
+                                <p>Volunteer with us, be a citizen scientist, or join a campus club.</p>
                             </div>
                         </div>
-                        <div class="wb-eqht row  mrgn-tp-md">
-                            <div class="col-md-6">
-                                <h3><a href="#3">Contests</a></h3>
-                                <p>Enter for a chance to win the 2020 Discover Canada Contest and Canada's Coolest School Trip!</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h3><a href="#3">Visitor safety</a></h3>
-                                <p>Your safety is important to us.</p>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
 
                 <div class="row mrg-bttm-xl">
-                    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-12 well bg-white">
-                        <h3>Our newsletter</h3>
-                        <p>Receive the seasonal Parks Canada newsletter in one simple email sent right to your inbox. Find out about events, hidden gems, trip planning, conservation and wildlife, contests, promotions and more!</p>
-                        <h4><a href="#3" class="btn text-white bg-hg btn-lg"> Subscribe to our newsletter</a></h4>
+                    <!-- Start of location finder -->
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-12">
+                        <section class="panel panel-default">
+                            <div class="panel-body mrgn-bttm-0">
+                                <h2 class="panel-title"><span class="fas fa-search-location" aria-hidden="true"></span> Find a Parks Canada location</h2>
+                                <div class="wb-frmvld">
+                                    <form method="get" id="siteSearch">
+
+                                        <div class="wb-fieldflow col-sm-6" data-wb-fieldflow='{"noForm": true}'>
+                                            <p>Select province or territory</p>
+                                            <ul>
+                                                <li>Alberta
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Alberta destinations</p>
+                                                        <ul>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#AbbotPassRefugeCabinNationalHistoricSite", "live": true}'>Abbot Pass Refuge Cabin National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#AthabascaPassNationalHistoricSite", "live": true}'>Athabasca Pass National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#BanffNationalPark", "live": true}'>Banff National Park</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#BanffParkMuseumNationalHistoricSite", "live": true}'>Banff Park Museum National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#BanffUpperHotSprings", "live": true}'>Banff Upper Hot Springs</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#BarURanchNationalHistoricSite", "live": true}'>Bar U Ranch National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#CaveandBasinNationalHistoricSite", "live": true}'>Cave and Basin National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#ElkIslandNationalPark", "live": true}'>Elk Island National Park</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#FirstOilWellinWesternCanadaNationalHistoricSite", "live": true}'>First Oil Well in Western Canada National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#FrogLakeNationalHistoricSite", "live": true}'>Frog Lake National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#HowsePassNationalHistoricSite", "live": true}'>Howse Pass National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#JasperHouseNationalHistoricSite", "live": true}'>Jasper House National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#JasperNationalPark", "live": true}'>Jasper National Park</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#JasperParkInformationCentreNationalHistoricSite", "live": true}'>Jasper Park Information Centre National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#MaligneLakeChaletandGuestHouseNationalHistoricSite", "live": true}'>Maligne Lake Chalet and Guest House National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#MietteHotSprings", "live": true}'>Miette Hot Springs</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#RadiumHotSprings", "live": true}'>Radium Hot Springs</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#RockyMountainHouseNationalHistoricSite", "live": true}'>Rocky Mountain House National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#SkokiSkiLodgeNationalHistoricSite", "live": true}'>Skoki Ski Lodge National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#SulphurMountainCosmicRayStationNationalHistoricSite", "live": true}'>Sulphur Mountain Cosmic Ray Station National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#WatertonLakesNationalPark", "live": true}'>Waterton Lakes National Park</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#YellowheadPassNationalHistoricSite", "live": true}'>Yellowhead Pass National Historic Site</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>British Columbia
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>British Columbia destinations</p>
+                                                        <ul>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#BanffUpperHotSprings", "live": true}'>Banff Upper Hot Springs</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#FisgardLighthouseNationalHistoricSite", "live": true}'>Fisgard Lighthouse National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#FortLangleyNationalHistoricSite", "live": true}'>Fort Langley National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#FortRoddHillNationalHistoricSite", "live": true}'>Fort Rodd Hill National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#FortSt.JamesNationalHistoricSite", "live": true}'>Fort St. James National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#GitwangakBattleHillNationalHistoricSite", "live": true}'>Gitwangak Battle Hill National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#GlacierNationalPark", "live": true}'>Glacier National Park</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#GulfIslandsNationalParkReserve", "live": true}'>Gulf Islands National Park Reserve</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#GulfofGeorgiaCanneryNationalHistoricSite", "live": true}'>Gulf of Georgia Cannery National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#GwaiiHaanasNationalParkReserveNationalMarineConservationAreaReserveandHaidaHeritageSite", "live": true}'>Gwaii Haanas National Park Reserve, National Marine Conservation Area Reserve, and Haida Heritage Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#KickingHorsePassNationalHistoricSite", "live": true}'>Kicking Horse Pass National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#KootenaeHouseNationalHistoricSite", "live": true}'>Kootenae House National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#KootenayNationalPark", "live": true}'>Kootenay National Park</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#MietteHotSprings", "live": true}'>Miette Hot Springs</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#MountRevelstokeNationalPark", "live": true}'>Mount Revelstoke National Park</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#PacificRimNationalParkReserve", "live": true}'>Pacific Rim National Park Reserve</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#RadiumHotSprings", "live": true}'>Radium Hot Springs</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#RogersPassNationalHistoricSite", "live": true}'>Rogers Pass National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#SGangGwaayLlnagaay(NanSdins)", "live": true}'>SGang Gwaay Llnagaay (Nan Sdins)</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#StanleyParkNationalHistoricSite", "live": true}'>Stanley Park National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#TwinFallsTeaHouseNationalHistoricSite", "live": true}'>Twin Falls Tea House National Historic Site</li>
+                                                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#YohoNationalPark", "live": true}'>Yoho National Park</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>Manitoba
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Manitoba destinations</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                <li>New Brunswick
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>New Brunswick destinations</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                <li>Newfoundland and Labrador
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Newfoundland and Labrador destinations</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                <li>Northwest Territories
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Northwest Territories destinations</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                <li>Nova Scotia
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Nova Scotia destinations</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                <li>Nunavut Territory
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Nunavut Territory destinations</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                <li>Ontario
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Ontario destinations</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                <li>Prince Edward Island
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Prince Edward Island destinations</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                <li>Quebec
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Quebec destinations</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                <li>Saskatchewan
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Saskatchewan</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                <li>Yukon Territory
+                                                    <div class="wb-fieldflow-sub">
+                                                        <p>Yukon Territory destinations</p>
+                                                        <ul>
+                                                            <li>...</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div id="AbbotPassRefugeCabinNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/yoho/WET4/modules/nhs_Abbot-2_180x90.jpg?modified=20170407235855"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Abbot Pass Refuge Cabin National Historic Site</strong></p>
+                                                    <p>The Abbot Pass Hut is still operational and is one of 24 high alpine huts managed by the ACC. Climbers continue to travel to the hut as a base for ascents up the nearby ranges or as a destination in itself. The ascent, while accessible, should only be attempted by skilled alpine hikers.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/pn-np/bc/yoho/culture/abbot">Go to Abbot Pass Refuge Cabin National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="AthabascaPassNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/ab/athabasca/WET4/modules/AthabascaPass-sitesnearby_180x90.jpg?modified=20170413234825"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Athabasca Pass National Historic Site</strong></p>
+                                                    <p>Surveying routes through uncharted lands with clear mountain rivers and snow-capped mountain passes were all part of the job for David Thompson. Discovering the Athabasca Pass near Jasper, Alberta, was fundamental in linking Canada’s fur traders to the Pacific Ocean. Hikers can still experience the...</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/athabasca">Go to Athabasca Pass National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="BanffNationalPark" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/pn-np/ab/banff/WET4/modules/np-banff-180x90.jpg?modified=20170529161247"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Banff National Park</strong></p>
+                                                    <p>Founded in 1885, Banff is Canada’s first national park and part of the first national park system in the world. With its soaring peaks, azure lakes and abundant wildlife, this Rocky Mountain park attracts millions of visitors every year.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/pn-np/ab/banff">Go to Banff National Park</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="BanffParkMuseumNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/ab/banff/WET4/modules/180x90SitesNearby.jpg?modified=20170407205239"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Banff Park Museum National Historic Site</strong></p>
+                                                    <p>Explore the Victorian-era collection, while admiring the stately 1903 museum, a log masterpiece and the oldest surviving federal building in any Canadian national park.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/banff">Go to Banff Park Museum National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="BanffUpperHotSprings" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/WET4/places/other/Banff-180x90.jpg?modified=20210430163405"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Banff Upper Hot Springs</strong></p>
+                                                    <p>One of Banff National Park's greatest traditions is visiting the Upper Hot Springs for a soothing soak in the hot, mineral-rich water. Relaxing in the outdoor pool among the jagged peaks of Rundle and Cascade Mountains is a magical experience that has drawn visitors to Banff since 1886.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/voyage-travel/promotion/sources-springs/banff">Go to Banff Upper Hot Springs</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="BarURanchNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/ab/baru/WET4/modules/ab-barU-180x90-1.jpg?modified=20170503140142"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Bar U Ranch National Historic Site</strong></p>
+                                                    <p>Ride into history on a wagon pulled by Percheron horses to discover the life of a ranching cowboy from the late 1800s. Back-dropped by the Rocky Mountains - it’s a true Alberta experience!</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/baru">Go to Bar U Ranch National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="CaveandBasinNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/ab/caveandbasin/WET4/modules/ab-cavebasin-180x90.jpg?modified=20170118172701"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Cave and Basin National Historic Site</strong></p>
+                                                    <p>Visit the Cave and Basin National Historic Site to experience the birthplace of Canada’s national parks and learn about the natural and cultural history of the mountains.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/caveandbasin">Go to Cave and Basin National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="ElkIslandNationalPark" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/pn-np/ab/elkisland/WET4/modules/np-elkisland-190x90.jpg?modified=20170106165929"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Elk Island National Park</strong></p>
+                                                    <p>Experience first-hand the story of the bison and how it was saved from near extinction at Elk Island National Park, where an active conservation program replenishes herds around the world.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/pn-np/ab/elkisland">Go to Elk Island National Park</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="FirstOilWellinWesternCanadaNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/pn-np/ab/waterton/WET4/modules/first-oil-well-180.jpg?modified=20170525214354"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>First Oil Well in Western Canada National Historic Site</strong></p>
+                                                    <p>Touch the first oil well in Western Canada and imagine how hard it was to explore for oil so far from civilization. The oil well failed but sparked the passion to explore for oil in Alberta.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/puits-well">Go to First Oil Well in Western Canada National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="FrogLakeNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/WET4/voyage-travel/recherche-tous-parks-all/lhn-nhs-froglake-180x90.jpg?modified=20190905124037"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Frog Lake National Historic Site</strong></p>
+                                                    <p>Just inside the Alberta border, the site of this tragic event is laden with memories of lives lived and lost: archaeological remains, a cemetery, and depressions in the earth representing the church, the mill, the milk house, stables… remnants of old wagon trails still exist. Frog Lake became...</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/froglake">Go to Frog Lake National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="HowsePassNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/WET4/voyage-travel/recherche-tous-parks-all/lhn-nhs-howse-180x90.jpg?modified=20191016141036"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Howse Pass National Historic Site</strong></p>
+                                                    <p>Used by generations of First Nations as a route east from the Columbia River Valley through the rugged Rocky Mountains, Howse Pass now sees fewer travelers.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/pn-np/ab/banff/culture/howse">Go to Howse Pass National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="JasperHouseNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/ab/jasperhouse/WET4/modules/JasperHouse-sitesnearby_180x90.jpg?modified=20180206182820"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Jasper House National Historic Site</strong></p>
+                                                    <p>Jasper House was a trading post serving fur traders, Aboriginal people, and explorers travelling across vast mountain ranges on either side of the continental divide. A viewpoint and commemorative plaque brings this historic era to life.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/jasperhouse">Go to Jasper House National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="JasperNationalPark" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/pn-np/ab/jasper/WET4/modules/np-jasper-180x90.jpg?modified=20170106165521"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Jasper National Park</strong></p>
+                                                    <p>Jasper astonishes visitors with its vast wilderness, dotted with glaciers, lakes, waterfalls, rivers, mountains and deep-cut canyons. Hike, paddle, swim, ski, fish, and take in soothing hot springs, scenic drives and extraordinary wildlife.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/pn-np/ab/jasper">Go to Jasper National Park</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="JasperParkInformationCentreNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/ab/jasperinformation/WET4/modules/Jasper-info-centre-sitesnearby_180x90.jpg?modified=20180206184626"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Jasper Park Information Centre National Historic Site</strong></p>
+                                                    <p>Make the Information Centre your first stop in Jasper, for friendly, knowledgeable advice on everything from hiking trails and campsites, to weather conditions, places to stay, attractions and seasonal events. Also pick up maps, park passes and gifts.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/jasperinformation">Go to Jasper Park Information Centre National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="MaligneLakeChaletandGuestHouseNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/ab/maligne/WET4/lhn-nhs-maligne-180x90.jpg?modified=20190709181234"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Maligne Lake Chalet and Guest House National Historic Site</strong></p>
+                                                    <p>The chalet and guest house represent the prominent role played by outfitters, guides and the competing interests of railways in the development of the national parks. Jasper National Park, Alberta.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/maligne">Go to Maligne Lake Chalet and Guest House National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="MietteHotSprings" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/WET4/places/other/Miette-180x90.jpg?modified=20210430163516"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Miette Hot Springs</strong></p>
+                                                    <p>Miette Hot Springs, located in Alberta’s Jasper National Park, feature the hottest hot springs in the Canadian Rockies.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/voyage-travel/promotion/sources-springs/miette">Go to Miette Hot Springs</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="RockyMountainHouseNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/ab/rockymountain/WET4/modules/nhs-rockymountain-180x90.jpg?modified=20170106195921"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Rocky Mountain House National Historic Site</strong></p>
+                                                    <p>Two centuries ago trappers, traders and the First Nation Peoples shared the rugged western frontier of Canada. At Rocky Mountain House National Historic Site - be a part of the story. Explore, hike, camp and discover their challenges and triumphs.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/rockymountain">Go to Rocky Mountain House National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="SkokiSkiLodgeNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/WET4/voyage-travel/recherche-tous-parks-all/lhn-nhs-skoki-180x90.jpg?modified=20190905131243"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Skoki Ski Lodge National Historic Site</strong></p>
+                                                    <p>Skoki Ski Lodge has been welcoming skiers and hikers to the idyllic Skoki Valley for nearly a century. Built as a backcountry ski lodge in the 1930s, it is both a beautiful example of the rustic building tradition and a living link with the earliest days of ski tourism in Canada. The lodge and its...</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/pn-np/ab/banff/culture/skoki">Go to Skoki Ski Lodge National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="SulphurMountainCosmicRayStationNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/WET4/voyage-travel/recherche-tous-parks-all/lhn-nhs-cosmic-180x90.jpg?modified=20190904192815"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Sulphur Mountain Cosmic Ray Station National Historic Site</strong></p>
+                                                    <p>A cosmic ray station was built on Sulphur Mountain as part of the International Geophysical Year in 1957-1958 and Canadian scientists made important contributions to the research. Geophysicists studied cosmic rays and space particles entering the atmosphere from the station perched above the...</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/pn-np/ab/banff/culture/cosmic">Go to Sulphur Mountain Cosmic Ray Station National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="WatertonLakesNationalPark" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/pn-np/ab/waterton/WET4/modules/waterton-180.jpg?modified=20170525203020"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Waterton Lakes National Park</strong></p>
+                                                    <p>The prairies of Alberta meet the peaks of the Rocky Mountains in Waterton Lakes National Park.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/pn-np/ab/waterton">Go to Waterton Lakes National Park</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="YellowheadPassNationalHistoricSite" class="well hidden">
+                                            <div class="row">
+                                                <div class="col-sm-2"><img class="img-responsive" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/ab/yellowhead/WET4/modules/YellowheadPass-sitesnearby_K,-d-,Gedling.jpg?modified=20170413234609"></div>
+                                                <div class="col-sm-10">
+                                                    <p class="mrgn-tp-0"><strong>Yellowhead Pass National Historic Site</strong></p>
+                                                    <p>Designated a National Historic Site in 1971, the beautiful and scenic Yellowhead Pass is a tribute to the early explorers, fur traders, road builders and travellers who opened the mountainous gateway to the west.</p>
+                                                    <p><a class="btn btn-primary" href="https://pc.gc.ca/en/lhn-nhs/ab/yellowhead">Go to Yellowhead Pass National Historic Site</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- British Columbia -->
+
+
+                                        <div id="FisgardLighthouseNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/fisgard/WET4/modules/nhs-fisgard-180x90.jpg?modified=20170106210333">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Fisgard Lighthouse National Historic Site</strong> <br>Grab the wheel as a “master mariner” at Fisgard Lighthouse, the oldest on the Canadian west coast, and wander through a rare Garry Oak meadow.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/fisgard/WET4/modules/nhs-fisgard-180x90.jpg?modified=20170106210333">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Fisgard Lighthouse National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Grab the wheel as a “master mariner” at Fisgard Lighthouse, the oldest on the Canadian west coast, and wander through a rare Garry Oak meadow.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/lhn-nhs/bc/fortroddhill">Go to Fisgard Lighthouse National Historic Site</a></p>
+                                        </div>
+                                        <div id="FortLangleyNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/GatherContent/Banff-Park-Museum/Image/FortLangley-site,-d-,jpg.jpg?modified=20161208230544">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Fort Langley National Historic Site</strong> <br>Experience life as a 19th century voyageur at Fort Langley, where the colony of British Columbia was born. Mingle with fur traders, pan for gold, learn the blacksmith’s art and camp in an HBC-themed oTENTik.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/GatherContent/Banff-Park-Museum/Image/FortLangley-site,-d-,jpg.jpg?modified=20161208230544">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Fort Langley National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Experience life as a 19th century voyageur at Fort Langley, where the colony of British Columbia was born. Mingle with fur traders, pan for gold, learn the blacksmith’s art and camp in an HBC-themed oTENTik.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/lhn-nhs/bc/langley">Go to Fort Langley National Historic Site</a></p>
+                                        </div>
+                                        <div id="FortRoddHillNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/GatherContent/Banff-Park-Museum/Image/FortRoddHill-site,-d-,jpg.jpg?modified=20161208230542">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Fort Rodd Hill National Historic Site</strong> <br>Tour through secret bunkers, military command posts and original 19th century buildings at Fort Rodd Hill, a west coast artillery fortress on active duty from 1895 to 1956. Be touched by the personal stories of soldiers and their families. Camp overnight in a group-friendly oTENTik.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/GatherContent/Banff-Park-Museum/Image/FortRoddHill-site,-d-,jpg.jpg?modified=20161208230542">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Fort Rodd Hill National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Tour through secret bunkers, military command posts and original 19th century buildings at Fort Rodd Hill, a west coast artillery fortress on active duty from 1895 to 1956. Be touched by the personal stories of soldiers and their families. Camp overnight in a group-friendly oTENTik.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/lhn-nhs/bc/fortroddhill">Go to Fort Rodd Hill National Historic Site</a></p>
+                                        </div>
+                                        <div id="FortSt.JamesNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/stjames/WET4/modules/nhs-fortstjames-180x90.jpg?modified=20170106210311">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Fort St. James National Historic Site</strong> <br>At Fort St. James National Historic Site, handle beaver and muskrat pelts in a fur warehouse restored to the year 1896. Meet costumed interpreters and sleep over in Canada’s only bed and breakfast at a national historic site.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/stjames/WET4/modules/nhs-fortstjames-180x90.jpg?modified=20170106210311">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Fort St. James National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">At Fort St. James National Historic Site, handle beaver and muskrat pelts in a fur warehouse restored to the year 1896. Meet costumed interpreters and sleep over in Canada’s only bed and breakfast at a national historic site.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/lhn-nhs/bc/stjames">Go to Fort St. James National Historic Site</a></p>
+                                        </div>
+                                        <div id="GitwangakBattleHillNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/gitwangak/WET4/modules/nhs-gitwangak-180x90.jpg?modified=20170106210839">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Gitwangak Battle Hill National Historic Site</strong> <br>Climb the mound at Gitwangak Battle Hill and survey the site of a legendary Gitxsan village fort. See the oldest collection of totem poles in British Columbia retained in their original context at nearby Gitwangak Village.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/gitwangak/WET4/modules/nhs-gitwangak-180x90.jpg?modified=20170106210839">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Gitwangak Battle Hill National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Climb the mound at Gitwangak Battle Hill and survey the site of a legendary Gitxsan village fort. See the oldest collection of totem poles in British Columbia retained in their original context at nearby Gitwangak Village.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/lhn-nhs/bc/gitwangak">Go to Gitwangak Battle Hill National Historic Site</a></p>
+                                        </div>
+                                        <div id="GlacierNationalPark" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/glacier/WET4/modules/np-glacier-180x90.jpg?modified=20170106170227">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Glacier National Park</strong> <br>Ski through deep powder, lace up your hiking boots or bike through cedar forests in Glacier National Park. But there’s more than just natural charms: history comes alive at Rogers Pass, the key to completion of Canada’s transcontinental railway.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/glacier/WET4/modules/np-glacier-180x90.jpg?modified=20170106170227">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Glacier National Park</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Ski through deep powder, lace up your hiking boots or bike through cedar forests in Glacier National Park. But there’s more than just natural charms: history comes alive at Rogers Pass, the key to completion of Canada’s transcontinental railway.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/glacier">Go to Glacier National Park</a></p>
+                                        </div>
+                                        <div id="GulfIslandsNationalParkReserve" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/GatherContent/Banff-Park-Museum/Image/GulfIslands-site,-d-,jpg.jpg?modified=20161208230515">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Gulf Islands National Park Reserve</strong> <br>Scattered throughout the Salish Sea, the Gulf Islands teem with wildlife, a haven for rare species and threatened eco-systems and a playground for hikers, campers, cyclists, boaters and kayakers.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/GatherContent/Banff-Park-Museum/Image/GulfIslands-site,-d-,jpg.jpg?modified=20161208230515">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Gulf Islands National Park Reserve</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Scattered throughout the Salish Sea, the Gulf Islands teem with wildlife, a haven for rare species and threatened eco-systems and a playground for hikers, campers, cyclists, boaters and kayakers.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/gulf">Go to Gulf Islands National Park Reserve</a></p>
+                                        </div>
+                                        <div id="GulfofGeorgiaCanneryNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/GatherContent/Banff-Park-Museum/Image/GulfofGeorgiaCannery-site,-d-,jpg.jpg?modified=20161208230505">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Gulf of Georgia Cannery National Historic Site</strong> <br>Tour a historic Fraser River salmon cannery, through a herring reduction plant and interactive fishing displays. Learn about local marine life on the Fish Wall and be inspired by the industrious fishery of BC’s past.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/GatherContent/Banff-Park-Museum/Image/GulfofGeorgiaCannery-site,-d-,jpg.jpg?modified=20161208230505">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Gulf of Georgia Cannery National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Tour a historic Fraser River salmon cannery, through a herring reduction plant and interactive fishing displays. Learn about local marine life on the Fish Wall and be inspired by the industrious fishery of BC’s past.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/lhn-nhs/bc/georgia">Go to Gulf of Georgia Cannery National Historic Site</a></p>
+                                        </div>
+                                        <div id="GwaiiHaanasNationalParkReserveNationalMarineConservationAreaReserveandHaidaHeritageSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/gwaiihaanas/WET4/modules/bc-gwaiihaanas-180x90.jpg?modified=20170118171225">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Gwaii Haanas National Park Reserve, National Marine Conservation Area Reserve, and Haida Heritage Site</strong> <br>Amid lush rainforest islands and seas rich with wildlife, Gwaii Haanas harbours rare sites of carved poles and longhouses, making this park culturally important to the Haida people who co-manage cooperatively manage the region with Parks Canada.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/gwaiihaanas/WET4/modules/bc-gwaiihaanas-180x90.jpg?modified=20170118171225">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Gwaii Haanas National Park Reserve, National Marine Conservation Area Reserve, and Haida Heritage Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Amid lush rainforest islands and seas rich with wildlife, Gwaii Haanas harbours rare sites of carved poles and longhouses, making this park culturally important to the Haida people who co-manage cooperatively manage the region with Parks Canada.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/gwaiihaanas">Go to Gwaii Haanas National Park Reserve, National Marine Conservation Area Reserve, and Haida Heritage Site</a></p>
+                                        </div>
+                                        <div id="KickingHorsePassNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/kickinghorse/WET4/modules/col-kickinghorse-pass_3_180x90.jpg?modified=20170407232305">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Kicking Horse Pass National Historic Site</strong> <br>From the Kicking Horse Pass on the Trans-Canada Highway, look down onto a monumental 19th century transportation corridor to the West. See ingeniously engineered “Spiral Tunnels” burrowing from one elevation to another through the steep Canadian Rockies.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/kickinghorse/WET4/modules/col-kickinghorse-pass_3_180x90.jpg?modified=20170407232305">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Kicking Horse Pass National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">From the Kicking Horse Pass on the Trans-Canada Highway, look down onto a monumental 19th century transportation corridor to the West. See ingeniously engineered “Spiral Tunnels” burrowing from one elevation to another through the steep Canadian Rockies.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/yoho/culture/kickinghorse">Go to Kicking Horse Pass National Historic Site</a></p>
+                                        </div>
+                                        <div id="KootenaeHouseNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/kootenae/WET4/modules/bc-kootenae_180x90.jpg?modified=20170223182947">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Kootenae House National Historic Site</strong> <br>A cairn at Kootenae House National Historic Site marks where the Ktunaxa people traded with the North West Company in the 1800s and celebrated explorer David Thompson launched expeditions to survey the majestic Columbia River.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/kootenae/WET4/modules/bc-kootenae_180x90.jpg?modified=20170223182947">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Kootenae House National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">A cairn at Kootenae House National Historic Site marks where the Ktunaxa people traded with the North West Company in the 1800s and celebrated explorer David Thompson launched expeditions to survey the majestic Columbia River.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/kootenay/culture/kootenae">Go to Kootenae House National Historic Site</a></p>
+                                        </div>
+                                        <div id="KootenayNationalPark" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/kootenay/WET4/modules/np-kootenay-180x90.jpg?modified=20170201183930">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Kootenay National Park</strong> <br>With diverse terrain embracing everything from arid grasslands to glaciers, Kootenay National Park offers the full Rocky Mountain experience along the historic Banff-Windermere Highway. Take a scenic drive or stay and explore the park’s treasures.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/kootenay/WET4/modules/np-kootenay-180x90.jpg?modified=20170201183930">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Kootenay National Park</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">With diverse terrain embracing everything from arid grasslands to glaciers, Kootenay National Park offers the full Rocky Mountain experience along the historic Banff-Windermere Highway. Take a scenic drive or stay and explore the park’s treasures.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/kootenay">Go to Kootenay National Park</a></p>
+                                        </div>
+
+                                        <div id="MountRevelstokeNationalPark" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/revelstoke/WET4/modules/np-revelstoke-180x90.jpg?modified=20170106170349">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Mount Revelstoke National Park</strong> <br>Stroll through brilliant wildflower meadows, or lie back in awe atop a mountain peak. From lush green valley to mountain summit, all is within a leisurely day’s drive at Mount Revelstoke National Park.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/revelstoke/WET4/modules/np-revelstoke-180x90.jpg?modified=20170106170349">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Mount Revelstoke National Park</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Stroll through brilliant wildflower meadows, or lie back in awe atop a mountain peak. From lush green valley to mountain summit, all is within a leisurely day’s drive at Mount Revelstoke National Park.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/revelstoke">Go to Mount Revelstoke National Park</a></p>
+                                        </div>
+                                        <div id="PacificRimNationalParkReserve" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/pacificrim/WET4/modules/np-pacificrim-180x90.jpg?modified=20170106171433">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Pacific Rim National Park Reserve</strong> <br>Catch a wave, or spread a blanket and watch the sun dip below the horizon. From rainforests on land to marine kelp forests at sea, Pacific Rim National Park Reserve embodies the rich natural and cultural heritage of Canada’s west coast.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/pacificrim/WET4/modules/np-pacificrim-180x90.jpg?modified=20170106171433">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Pacific Rim National Park Reserve</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Catch a wave, or spread a blanket and watch the sun dip below the horizon. From rainforests on land to marine kelp forests at sea, Pacific Rim National Park Reserve embodies the rich natural and cultural heritage of Canada’s west coast.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/pacificrim">Go to Pacific Rim National Park Reserve</a></p>
+                                        </div>
+                                        <div id="RadiumHotSprings" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/WET4/places/other/Radium-180x90.jpg?modified=20210430163502">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Radium Hot Springs</strong> <br>One of British Columbia’s top natural hot springs is found in Kootenay National Park. This family-friendly facility offers plenty of space to relax and soak in the expansive hot pool or cool off with the kids in the swimming pool.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/WET4/places/other/Radium-180x90.jpg?modified=20210430163502">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Radium Hot Springs</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">One of British Columbia’s top natural hot springs is found in Kootenay National Park. This family-friendly facility offers plenty of space to relax and soak in the expansive hot pool or cool off with the kids in the swimming pool.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/voyage-travel/promotion/sources-springs/radium">Go to Radium Hot Springs</a></p>
+                                        </div>
+                                        <div id="RogersPassNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/rogers/WET4/modules/bc-roger-180x90.jpg?modified=20170118174215">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Rogers Pass National Historic Site</strong> <br>Discover the role Rogers Pass played in the transcontinental Canadian Pacific Railway. Follow an abandoned rail line to the ruins of a Victorian-era resort, where legendary Swiss mountain guides forged popular trails and climbing routes.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/rogers/WET4/modules/bc-roger-180x90.jpg?modified=20170118174215">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Rogers Pass National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Discover the role Rogers Pass played in the transcontinental Canadian Pacific Railway. Follow an abandoned rail line to the ruins of a Victorian-era resort, where legendary Swiss mountain guides forged popular trails and climbing routes.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/lhn-nhs/bc/rogers">Go to Rogers Pass National Historic Site</a></p>
+                                        </div>
+                                        <div id="SGangGwaayLlnagaay(NanSdins)" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/gwaiihaanas/WET4/modules/SGang_180x90.jpg?modified=20170407233236">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>SGang Gwaay Llnagaay (Nan Sdins)</strong> <br>SGang Gwaay Llnagaay (Nan Sdins) is a UNESCO World Heritage Site and is located in a sheltered bay on the east side of the island. Visitors can explore upright and fallen poles, house pits, and standing posts and beams of longhouses.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/gwaiihaanas/WET4/modules/SGang_180x90.jpg?modified=20170407233236">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>SGang Gwaay Llnagaay (Nan Sdins)</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">SGang Gwaay Llnagaay (Nan Sdins) is a UNESCO World Heritage Site and is located in a sheltered bay on the east side of the island. Visitors can explore upright and fallen poles, house pits, and standing posts and beams of longhouses.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/gwaiihaanas/culture/cultural-sites-culturels/cultural-sites-culturels-5">Go to SGang Gwaay Llnagaay (Nan Sdins)</a></p>
+                                        </div>
+                                        <div id="StanleyParkNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/WET4/voyage-travel/recherche-tous-parks-all/lhn-nhs-stanley-180x90.jpg?modified=20190905131340">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Stanley Park National Historic Site</strong> <br>Stanley Park National Historic Site of Canada is a magnificent green oasis in the midst of the heavily built urban landscape of Vancouver.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/WET4/voyage-travel/recherche-tous-parks-all/lhn-nhs-stanley-180x90.jpg?modified=20190905131340">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Stanley Park National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Stanley Park National Historic Site of Canada is a magnificent green oasis in the midst of the heavily built urban landscape of Vancouver.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.cahttps://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=84">Go to Stanley Park National Historic Site</a></p>
+                                        </div>
+                                        <div id="TwinFallsTeaHouseNationalHistoricSite" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/twin/WET4/modules/bc-twin_180x90.jpg?modified=20170223183007">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Twin Falls Tea House National Historic Site</strong> <br>Book a backcountry stay in a historic log tea house in the Canadian Rockies. Or stop on a day hike at Twin Falls Tea House to view the phenomenal side-by-side cascades of Twin Falls from this historic spot.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/lhn-nhs/bc/twin/WET4/modules/bc-twin_180x90.jpg?modified=20170223183007">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Twin Falls Tea House National Historic Site</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">Book a backcountry stay in a historic log tea house in the Canadian Rockies. Or stop on a day hike at Twin Falls Tea House to view the phenomenal side-by-side cascades of Twin Falls from this historic spot.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/yoho/culture/twin">Go to Twin Falls Tea House National Historic Site</a></p>
+                                        </div>
+                                        <div id="YohoNationalPark" class="well hidden">
+                                            <!-- DESKTOP -->
+                                            <div class="hidden-xs" style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 15%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/yoho/WET4/modules/np-yoho-180x90.jpg?modified=20170221181359">
+                                                <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Yoho National Park</strong> <br>In the shadow of the Great Divide, Yoho’s towering rockwalls, spectacular waterfalls and soaring peaks reveal the secrets of ancient life, the power of ice and water and the stories of plants and animals that continue to evolve today.</p>
+                                            </div> <!-- MOBILE -->
+                                            <div class="visible-xs">
+                                                <div style="display:flex; align-items:center;"> <img class="img-responsive" style="width: 25%; height: auto;" alt="" src="https://pc.gc.ca/-/media/pn-np/bc/yoho/WET4/modules/np-yoho-180x90.jpg?modified=20170221181359">
+                                                    <p class="mrgn-lft-md mrgn-bttm-0"> <strong>Yoho National Park</strong> </p>
+                                                </div>
+                                            </div>
+                                            <p class="visible-xs" style="margin-top: 11.5px;">In the shadow of the Great Divide, Yoho’s towering rockwalls, spectacular waterfalls and soaring peaks reveal the secrets of ancient life, the power of ice and water and the stories of plants and animals that continue to evolve today.</p>
+                                            <p class="mrgn-bttm-0" style="margin-top: 15px;"><a class="btn btn-primary btn-block" href="https://pc.gc.ca/en/pn-np/bc/yoho">Go to Yoho National Park</a></p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
                     </div>
+                    <!-- End of location finder -->
                 </div>
 
 
@@ -382,20 +1021,8 @@
                             </a></h4>
                         <p class="mrgn-tp-0"><small>Minister of Environment and climate change</small></p>
                     </div>
-                    <div class="col-sm-6 col-md-3 col-md-offset-1">
-                        <h3>About</h3>
-                        <ul class="list-unstyled lst-spcd">
-                            <li><a href="#3">National parks</a></li>
-                            <li><a href="#3">National historic sites</a></li>
-                            <li><a href="#3">National marine conservation areas</a></li>
-                            <li><a href="#3">Trip planning tools</a></li>
-                            <li><a href="#3">Historic anniversaries</a></li>
-                            <li><a href="#3">Protecting species</a></li>
-                            <li><a href="#3">Ecological monitoring</a></li>
-                        </ul>
-                    </div>
-                    <div class="clearfix visible-xs"></div>
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-sm-6 col-md-9 col-md-offset-1">
+
                         <div class="row">
                             <div class="col-sm-4">
                                 <h3>Stay connected</h3>
@@ -409,16 +1036,17 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h3>News</h3>
-                                <ul>
-                                    <li><a href="#3">Non-medical masks and face coverings</a></li>
-                                    <li><a href="#3">Camping during COVID-19</a></li>
-                                    <li><a href="#3">Gradual reopening of Parks Canada places</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <h3>About the Parks Canada Agency</h3>
+                        <ul class="list-unstyled lst-spcd">
+                            <li><a href="#3">National historic sites</a></li>
+                            <li><a href="#3">National parks</a></li>
+
+                            <li><a href="#3">National marine conservation areas</a></li>
+                            <li><a href="#3">National urban parks</a></li>
+                            <br>
+                            <li><a href="#3">Science and conservation</a></li>
+                            <li><a href="#3">History and culture</a></li>
+                        </ul>
                     </div>
                 </div>
 
@@ -578,7 +1206,52 @@
                     <img src="https://user-images.githubusercontent.com/45856706/151230155-9d0bfe38-5b23-4bca-a13d-68070f16c396.png" alt="Parks Canada logo" class="pc-logo center-block mrgn-tp-xl">
                 </div>
             </div>
-            <div class="row mrgn-tp-xl mrgn-bttm-xl">
+
+            <div class="row justify-content-around">
+                <div class="col-sm-2"><a href="#3" class="btn btn-footer">Job opportunities</a></div>
+                <div class="col-sm-2"><a href="#3" class="btn btn-footer">Volunteer</a></div>
+                <div class="col-sm-2"><a href="#3" class="btn btn-footer">Partner</a></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2><a href="#3">About the Parks Canada Agency</a></h2>
+                    <ul class="list-unstyled lst-spcd">
+                        <li><a href="#3">Mandate and Charter</a></li>
+                        <li><a href="#3">Message from the Chief Executive Officer</a></li>
+                        <li><a href="#3">Indigenous relations at Parks Canada</a></li>
+
+                        <li><a href="#3">Strategies, plans, reports</a></li>
+                        <li><a href="#3">Transparency</a></li>
+
+                        <li><a href="#3">News releases</a></li>
+                        <li><a href="#3">Media room</a></li>
+                        <li><a href="#3">Contact Parks Canada</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Minister</h2>
+                    <p><a href="#3">The Honourable Steven Guilbeault</a></p>
+                    <small>Minister of Environment and Climate Change</small>
+                    <h2>Follow us</h2>
+
+                    <ul class="list-unstyled list-inline text-white">
+                        <li><a class="mrgn-rght-md" href="https://www.facebook.com/parkscanada"><span class="fab fa-facebook fa-2x" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
+                        <li><a class="mrgn-rght-md" href="https://twitter.com/parkscanada"><span class="fab fa-twitter fa-2x" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
+                        <li><a class="mrgn-rght-md" href="https://www.youtube.com/ParksCanada"><span class="fab fa-youtube fa-2x" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
+                        <li><a class="mrgn-rght-md" href="https://www.instagram.com/ParksCanada"><span class="fab fa-instagram fa-2x" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
+                    </ul>
+                    <ul class="list-unstyled lst-spcd">
+                        <li><a href="#3">Our newsletter</a></li>
+                        <li><a href="#3">Apps</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <!-- Footer V1 - Pre Feb 14, 2022 -->
+            <!-- <div class="row mrgn-tp-xl mrgn-bttm-xl">
                 <div class="col-md-3 pc-footer-list">
                     <h2><a href="#3">About Parks Canada</a></h2>
                     <ul class="list-unstyled lst-spcd">
@@ -621,7 +1294,7 @@
                         <li><a href="#3">Contact us</a></li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </section>
     </footer>
     <footer id="wb-info">
