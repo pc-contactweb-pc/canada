@@ -112,7 +112,7 @@
 
 
 .pc-banner p {
-    width: 65ch;
+    max-width: 65ch;
 }
 
 /* 
