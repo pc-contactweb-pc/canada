@@ -96,7 +96,12 @@
     background-color: #fff;
     border-radius: 0px;
 }
-
+.btn-footer:hover {
+    
+    background-color: rgba(255, 255, 255, 0.616);
+    border-radius: 5px;
+    animation-duration: 50ms;
+}
 .pc-logo {
     /* Extracted from .brand img (GoC signature) in theme.min.css */
     height: auto;
