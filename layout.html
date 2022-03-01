@@ -211,7 +211,7 @@
     <!-- For exploring down the road, possibly darken the banner images on mouseover to improve legibility -->
     <!-- <style>
         div#wb-auto-3:hover {
-            background-color: #444444;
+            background-color: #noTarget" class="wb-lbx44444;
             /* background-blend-mode: luminosity; */
             -webkit-transition: all 500ms ease;
             -moz-transition: all 500ms ease;
@@ -279,14 +279,16 @@
             <h2>You are here:</h2>
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
-                    <li><a href="https://www.canada.ca/en.html">Parks Canada</a></li>
-                    <li><a href="https://www.canada.ca/en.html">{Section}</a></li>
-                    <li><a href="https://www.canada.ca/en.html">{Area}</a></li>
-                    <li><a href="https://www.canada.ca/en.html">{Site}</a></li>
-                    <li><a href="https://www.canada.ca/en.html">{L1}</a></li>
-                    <li><a href="https://www.canada.ca/en.html">{L2}</a></li>
-                    <!-- <li><a href="https://www.canada.ca/en.html">Parks Canada reservations</a></li> -->
+                    <li><a href="#noTarget" class="wb-lbx">Canada.ca</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Parks Canada</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">{Section}</a></li>
+                    <li><a href="#noTarget" class="wb-lbx" id="breadcrumb1">{Area}</a></li>
+                    <li><a href="#noTarget" class="wb-lbx" id="breadcrumb2">{Site}</a></li>
+                    <li><a href="#noTarget" class="wb-lbx" id="breadcrumb3">{L1}</a></li>
+                    <li><a href="#noTarget" class="wb-lbx" id="breadcrumb4">{L2}</a></li>
+                    <li><a href="#noTarget" class="wb-lbx" id="breadcrumb5">{L2}</a></li>
+                    
+                    <!-- <li><a href="#noTarget" class="wb-lbx">Parks Canada reservations</a></li> -->
                 </ol>
             </div>
         </nav>
@@ -346,10 +348,10 @@ let pageContent = [
 
     <main role="main" property="mainContentOfPage">
         <div class="provisional profile">
-            <div class="pc-banner provisional bg-cover bg-center bg-norepeat" data-bgimg="https://pcweb.azureedge.net/-/media/pn-np/ab/jasper/WET4/activ/hiver-winter/JasperNP-Winter-2021-Photoshoot-Credit-Parks-Canada-Matt-Quiring-104-870x290.jpg?modified=20211101175353">
+            <div class="pc-banner provisional bg-cover bg-center bg-norepeat"  id="bannerImage" data-bgimg="https://pcweb.azureedge.net/-/media/pn-np/ab/jasper/WET4/activ/hiver-winter/JasperNP-Winter-2021-Photoshoot-Credit-Parks-Canada-Matt-Quiring-104-870x290.jpg?modified=20211101175353">
                 <div class="container p-0 p-sm-3 mrgn-bttm-md mrgn-tp-md">
-                    <div class="col-md-12">
-                        <h1 property="name" id="wb-cont" class=""><span class="pc-h1-brass">{Heading 1}</span></h1>
+                    <div class="col-md-12" id="wb-cont">
+                        <h1 property="name"  id="h1" class="pc-h1-brass">{Heading 1}</span></h1>
                         
                     </div>
                 </div>
@@ -366,19 +368,19 @@ let pageContent = [
                 </div>
 
                 <div id="doormats" class="mrgn-tp-xl mrgn-bttm-md">
-                    <h2 class="mrgn-tp-0">{Doormat title}</h2>
+                    <h2 id="doormatSectionTitle" class="mrgn-tp-0">{Doormat title}</h2>
                     <div class="wb-eqht row  mrgn-tp-md">
                         <div class="col-md-4">
-                            <h3><a href="#4">{Doormat}</a></h3>
-                            <p>{Doormat text}.</p>
+                            <h3><a href="#noTarget" class="wb-lbx"><span id="doormat1Title">{Doormat}</span></a></h3>
+                            <p id="doormat1text">{Doormat text}.</p>
                         </div>
                         <div class="col-md-4">
-                            <h3><a href="#4">{Doormat}</a></h3>
-                            <p>{Doormat text}.</p>
+                            <h3><a href="#noTarget" class="wb-lbx"><span id="doormat2Title">{Doormat}</span></a></h3>
+                            <p id="doormat2text">{Doormat text}.</p>
                         </div>
                         <div class="col-md-4">
-                            <h3><a href="#4">{Doormat}</a></h3>
-                            <p>{Doormat text}.</p>
+                            <h3><a href="#noTarget" class="wb-lbx"><span id="doormat3Title">{Doormat}</span></a></h3>
+                            <p id="doormat3text">{Doormat text}.</p>
                         </div>
                     </div>
                 </div>
@@ -394,14 +396,14 @@ let pageContent = [
                     </div>
                     <div class="col-md-10">
                         <ul class="wb-eqht colcount-md-2  wb-eqht-inited">
-                            <li><a href="#4">{Item 1}</a></li>
-                            <li><a href="#4">{Item 2}</a></li>
-                            <li><a href="#4">{Item 3}</a></li>
-                            <li><a href="#4">{Item 4}</a></li>
-                            <li><a href="#4">{Item 5}</a></li>
-                            <li><a href="#4">{Item 6}</a></li>
-                            <li><a href="#4">{Item 7}</a></li>
-                            <li><a href="#4">{Item 8}</a></li>
+                            <li><a href="#noTarget" class="wb-lbx" id="mostRequested1">{Item 1}</a></li>
+                            <li><a href="#noTarget" class="wb-lbx" id="mostRequested2">{Item 2}</a></li>
+                            <li><a href="#noTarget" class="wb-lbx" id="mostRequested3">{Item 3}</a></li>
+                            <li><a href="#noTarget" class="wb-lbx" id="mostRequested4">{Item 4}</a></li>
+                            <li><a href="#noTarget" class="wb-lbx" id="mostRequested5">{Item 5}</a></li>
+                            <li><a href="#noTarget" class="wb-lbx" id="mostRequested6">{Item 6}</a></li>
+                            <li><a href="#noTarget" class="wb-lbx" id="mostRequested7">{Item 7}</a></li>
+                            <li><a href="#noTarget" class="wb-lbx" id="mostRequested8">{Item 8}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -410,10 +412,23 @@ let pageContent = [
         <!-- End most requested -->
         <section>
             <div class="container">
-                <p>{Top content}</p>
-                <p>{Bottom content}</p>
+                <div  id="topContent"><p>{Top content}</p></div>
+                <div id="botomContent"><p>{Bottom content}</p></div>
+                
+                <div  id="iconLinks">
                 <p>{Icon links?}</p>
+                </div>
                 <p>{Related links}</p>
+                <ul>
+<li id="relatedLinks1">{Related link}</li>
+<li id="relatedLinks2">{Related link}</li>
+<li id="relatedLinks3">{Related link}</li>
+<li id="relatedLinks4">{Related link}</li>
+<li id="relatedLinks5">{Related link}</li>
+<li id="relatedLinks6">{Related link}</li>
+<li id="relatedLinks7">{Related link}</li>
+<li id="relatedLinks8">{Related link}</li>
+                </ul>
             </div>
         </section>
 
@@ -465,23 +480,23 @@ let pageContent = [
             </div>
             <div class="row">
                 <div class="col-sm-8">
-                    <h2><a href="#4">About the Parks Canada Agency</a></h2>
+                    <h2><a href="#noTarget" class="wb-lbx">About the Parks Canada Agency</a></h2>
                     <ul class="list-unstyled lst-spcd">
-                        <li><a href="#4">Mandate and Charter</a></li>
-                        <li><a href="#4">Message from the Chief Executive Officer</a></li>
-                        <li><a href="#4">Indigenous relations at Parks Canada</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Mandate and Charter</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Message from the Chief Executive Officer</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Indigenous relations at Parks Canada</a></li>
 
-                        <li><a href="#4">Strategies, plans, reports</a></li>
-                        <li><a href="#4">Transparency</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Strategies, plans, reports</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Transparency</a></li>
 
-                        <li><a href="#4">News releases</a></li>
-                        <li><a href="#4">Media room</a></li>
-                        <li><a href="#4">Contact Parks Canada</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">News releases</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Media room</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Contact Parks Canada</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4">
                     <h2>Minister</h2>
-                    <p><a href="#4">The Honourable Steven Guilbeault</a></p>
+                    <p><a href="#noTarget" class="wb-lbx">The Honourable Steven Guilbeault</a></p>
                     <small>Minister of Environment and Climate Change</small>
                     <h2>Follow us</h2>
 
@@ -492,8 +507,8 @@ let pageContent = [
                         <li><a class="mrgn-rght-md" href="https://www.instagram.com/ParksCanada"><span class="fab fa-instagram fa-2x" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
                     </ul>
                     <ul class="list-unstyled lst-spcd">
-                        <li><a href="#4">Our newsletter</a></li>
-                        <li><a href="#4">Apps</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Our newsletter</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Apps</a></li>
                     </ul>
                 </div>
             </div>
@@ -504,45 +519,45 @@ let pageContent = [
             <!-- Footer V1 - Pre Feb 14, 2022 -->
             <!-- <div class="row mrgn-tp-xl mrgn-bttm-xl">
                 <div class="col-md-3 pc-footer-list">
-                    <h2><a href="#4">About Parks Canada</a></h2>
+                    <h2><a href="#noTarget" class="wb-lbx">About Parks Canada</a></h2>
                     <ul class="list-unstyled lst-spcd">
-                        <li><a href="#4">Mandate and Charter</a></li>
-                        <li><a href="#4">Our Minister</a></li>
-                        <li><a href="#4">Message from the CEO</a></li>
-                        <li><a href="#4">Indigenous relations</a></li>
-                        <li><a href="#4">Partners</a></li>
-                        <li><a href="#4">Strategies and plans</a></li>
-                        <li><a href="#4">Reports and statistics</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Mandate and Charter</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Our Minister</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Message from the CEO</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Indigenous relations</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Partners</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Strategies and plans</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Reports and statistics</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 pc-footer-list">
-                    <h2><a href="#4">News</a></h2>
+                    <h2><a href="#noTarget" class="wb-lbx">News</a></h2>
                     <ul class="list-unstyled lst-spcd">
-                        <li><a href="#4">News release</a></li>
-                        <li><a href="#4">Media room</a></li>
-                        <li><a href="#4">Travel media</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">News release</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Media room</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Travel media</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 pc-footer-list">
-                    <h2><a href="#4">Transparency</a></h2>
+                    <h2><a href="#noTarget" class="wb-lbx">Transparency</a></h2>
                     <ul class="list-unstyled lst-spcd">
-                        <li><a href="#4">Proactive disclosure</a></li>
-                        <li><a href="#4">Access to information and privacy</a></li>
-                        <li><a href="#4">Terms and conditions</a></li>
-                        <li><a href="#4">Consultations</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Proactive disclosure</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Access to information and privacy</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Terms and conditions</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Consultations</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 pc-footer-list">
-                    <h2><a href="#4">Stay connected</a></h2>
+                    <h2><a href="#noTarget" class="wb-lbx">Stay connected</a></h2>
                     <ul class="list-unstyled lst-spcd">
-                        <li><a href="#4">Newsletter</a></li>
-                        <li><a href="#4">Apps</a></li>
-                        <li><a href="#4">Facebook</a></li>
-                        <li><a href="#4">Instagram</a></li>
-                        <li><a href="#4">Twitter</a></li>
-                        <li><a href="#4">YouTube</a></li>
-                        <li><a href="#4">Social media in Parks Canada places</a></li>
-                        <li><a href="#4">Contact us</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Newsletter</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Apps</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Facebook</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Instagram</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Twitter</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">YouTube</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Social media in Parks Canada places</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Contact us</a></li>
                     </ul>
                 </div>
             </div> -->
