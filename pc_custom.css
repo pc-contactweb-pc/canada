@@ -114,13 +114,14 @@
 
 
 /* Banner image */
-.pc-banner {
+.pc-banner:not([data-bgimg=""]) {
     padding-top: 5%;
     padding-bottom: 5%;
     color: white;
     background-blend-mode: multiply;
     background-color: gray;
 }
+
 
 
 
