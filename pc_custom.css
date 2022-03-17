@@ -7,7 +7,16 @@
     /* Rename to bg-heritage-green for more semantic? */
     background-color: #2b4635;
 }
+.hg {
+    color:#2b4635
+}
+a.hg:hover, a.hg:focus {
+    color: #545454;
+}
 
+a.hg:visited {
+    color:#2b4635
+}
 .bg-accent {
     background-color: #f8f8f8;
 }
