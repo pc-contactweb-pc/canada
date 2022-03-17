@@ -10,7 +10,7 @@
 .hg {
     color:#2b4635
 }
-a.hg:hover, a.hg:focus {
+a.hg:hover, a.hg:focus, a.hg:visited:focus {
     color: #545454;
 }
 
