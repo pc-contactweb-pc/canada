@@ -588,12 +588,12 @@
                     </dl>
                 </div>
             </section>
-                       <div class="wb-frmvld">
+                       <div class="wb-frmvld" id="siteSelector">
                 <form method="get">
-                    <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true}'>
+                    <div class="wb-fieldflow"  data-wb-fieldflow='{"noForm": true}'>
                         <p>Choose site</p>
                         <ul>
-                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#banff, #elk, #jasper, #rocky, #waterton, #wood", "live": true}'>All Alberta sites</li>
+                            <li data-wb-fieldflow='{"action": "toggle", "toggle": "#banff, #elk, #jasper, #rocky, #waterton, #wood", "live": true}'>All alberta sites</li>
                             <li data-wb-fieldflow='{"action": "toggle", "toggle": "#banff", "live": true}'>Banff National Park</li>
                             <li data-wb-fieldflow='{"action": "toggle", "toggle": "#elk", "live": true}'>Elk Island National Park</li>
                             <li data-wb-fieldflow='{"action": "toggle", "toggle": "#jasper", "live": true}'>Jasper National Park</li>
@@ -610,8 +610,7 @@
                         </p>
                         <div class="hidden-sm hidden-xs">
                             <div class="btn-group btn-group-justified btn-group-lg" role="group" aria-label="Regions Row 1">
-                                <a class="btn btn-default wb-lbx" title="Camping types" href="#types" role="button">Camping
-                                    types</a>
+                                <a class="btn btn-default wb-lbx" title="Camping types" href="#types" role="button">Camping types</a>
                                 <a class="btn btn-default wb-lbx" title="How to reserve" href="#reserve" role="button">How
                                     to reserve</a>
                                 <a class="btn btn-default wb-lbx" title="Services and amenities" href="#services" role="button">Services and amenities</a>
@@ -1256,7 +1255,12 @@
     <!-- End Treasury board Script footer -->
     <!-- Start custom script -->
     <script>
-        $(document).ready(function () {
+        // $(document).ready(function () {
+            $( document ).on( "wb-ready.wb", function( event ) {
+            let defaultSelect = document.getElementById("siteSelector").getElementsByTagName("option");
+            console.log(defaultSelect);
+            defaultSelect[0].setAttribute("disabled", "disabled");
+
             // $("#siteSearch").find("input").removeAttr("required");
             // let tempString = ("#siteSearch").find("input");
             // console.log(tempString);
