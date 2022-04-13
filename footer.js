@@ -111,14 +111,7 @@ let footerHTML=`
             </div>
         </footer>
         <!--End CDTS serverBottom-en -->
-        <!-- Start Treasury board Script footer -->
-        <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
-        <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
-        <script src="https://www.canada.ca/etc/designs/canada/clientlib-publish.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
-        <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
-        <!-- End Treasury board Script footer -->
+        
 
     </section>`
 
@@ -219,14 +212,7 @@ let footerHTMLFR = `
 </footer>
 
 <!--End CDTS serverBottom-en -->
-<!-- Start Treasury board Script footer -->
-<script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
-<script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
-<script src="https://www.canada.ca/etc/designs/canada/clientlib-publish.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
-<script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
-<!-- End Treasury board Script footer -->
+
 </section>
 
 `
