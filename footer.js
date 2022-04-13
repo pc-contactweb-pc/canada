@@ -23,14 +23,9 @@ let footerHTML=`
                         <ul class="list-unstyled lst-spcd colcount-sm-2">
                             <li><a href="#noTarget" class="wb-lbx">Mandate and Charter</a></li>
                             <li><a href="#noTarget" class="wb-lbx">Transparency</a></li>
-
                             <li><a href="#noTarget" class="wb-lbx">Message from the President and Chief Executive Officer</a></li>
-
                             <li><a href="#noTarget" class="wb-lbx">Indigenous relations at Parks Canada</a></li>
-
                             <li><a href="#noTarget" class="wb-lbx">Strategies, plans, reports</a></li>
-
-
                             <li><a href="#noTarget" class="wb-lbx">Terms and conditions</a></li>
                             <li><a href="#noTarget" class="wb-lbx">News</a></li>
                             <!-- split to col 2 -->

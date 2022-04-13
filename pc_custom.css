@@ -224,9 +224,6 @@ a.hg:visited {
     /* Simulate mrgn-lft-md on sites nearby h3 and p */
 }
 
-/* .sites-nearby-list h3 a:not(:hover) {
-    text-decoration: none;
-} */
 
 /* Nearby site image hover effect */
 .sites-nearby-list img:hover {
@@ -246,10 +243,6 @@ a.hg:visited {
     transition: filter 500ms;
 }
 
-/* 
-.pc-footer h2 a:not(:hover) {
-    text-decoration: none;
-} */
 
 
 .pc-footer {
@@ -261,6 +254,16 @@ a.hg:visited {
 
 .pc-footer :is(a, h2, h3, li, small) {
     color: #fff;
+}
+
+
+.pc-footer a:hover {
+    color: white; /* Override default purple color */
+}
+
+.pc-footer a:not(:hover) {
+    text-decoration: none; /* Overide default underline until hover */
+
 }
 
 /* 
