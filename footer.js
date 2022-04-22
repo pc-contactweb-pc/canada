@@ -9,9 +9,9 @@ let footerHTML=`
                     </div>
     
                     <div class="row center-block mrgn-tp-lg">
-                        <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1">Job opportunities</a></div>
-                        <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1">Volunteer</a></div>
-                        <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1">Partner</a></div>
+                        <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1"><strong>Job opportunities</strong></a></div>
+                        <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1"><strong>Volunteer</strong></a></div>
+                        <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1"><strong>Partner</strong></a></div>
                     </div>
                     <div class="mrgn-tp-lg">
                         <h3>Contact us</h3>
@@ -123,13 +123,13 @@ let footerHTMLFR = `
         </div>
        <div class="row center-block mrgn-tp-lg">
             <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1">
-                    <!-- From ECCC -->Opportunités d'emploi
+                    <!-- From ECCC --><strong>Opportunités d'emploi</strong>
                 </a></div>
             <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1">
-                    <!-- From PC -->Bénévolat
+                    <!-- From PC --><strong>Bénévolat</strong>
                 </a></div>
             <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1">
-                    <!-- From PC -->Partenaires
+                    <!-- From PC --><strong>Partenaires</strong>
                 </a></div>
         </div>
         <div class="row">
