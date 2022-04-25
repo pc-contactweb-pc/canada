@@ -1,0 +1,675 @@
+{
+    "parkId": 100373,
+    "parkName": "Riding Mountain National Park",
+    "areas": [
+        {
+            "areaId": 213,
+            "areaName": "Wasagaming and Clear Lake",
+            "description": null,
+            "sortOrder": 1,
+            "trails": [
+                {
+                    "trailId": 392,
+                    "trailName": "South Lake",
+                    "sortOrder": 1,
+                    "sections": [
+                        {
+                            "sectionId": 451,
+                            "sectionName": "South Lake",
+                            "sortOrder": 1,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Spring conditions.",
+                                "surface": "N/A",
+                                "comment": "Icy; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#southlake",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 363,
+                    "trailName": "Ominnik Marsh",
+                    "sortOrder": 7,
+                    "sections": [
+                        {
+                            "sectionId": 408,
+                            "sectionName": "Ominnik Marsh",
+                            "sortOrder": 1,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Use caution; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#ominnik",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 1494,
+                    "trailName": "Wasagaming Campground Trail",
+                    "sortOrder": 10,
+                    "sections": [
+                        {
+                            "sectionId": 1728,
+                            "sectionName": "Wasagaming Campground Trail (long loop)",
+                            "sortOrder": 2,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Closed for the season.",
+                                "surface": "N/A",
+                                "comment": "Not recommended; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#wasagaminglong",
+                            "mapUrl": null
+                        },
+                        {
+                            "sectionId": 1727,
+                            "sectionName": "Wasagaming Campground Trail (medium loop)",
+                            "sortOrder": 3,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Closed for the season.",
+                                "surface": "N/A",
+                                "comment": "Not recommended; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#wasagamingmedium",
+                            "mapUrl": null
+                        },
+                        {
+                            "sectionId": 1726,
+                            "sectionName": "Wasagaming Campground Trail (short loop)",
+                            "sortOrder": 4,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Closed for the season.",
+                                "surface": "N/A",
+                                "comment": "Not recommended; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#wasagamingshort",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 1,
+                    "trailName": "Arrowhead Trail",
+                    "sortOrder": 13,
+                    "sections": [
+                        {
+                            "sectionId": 1,
+                            "sectionName": "Arrowhead Trail",
+                            "sortOrder": 1,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-03-22T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#arrow",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 405,
+                    "trailName": "Compound Ski Trail",
+                    "sortOrder": 14,
+                    "sections": [
+                        {
+                            "sectionId": 464,
+                            "sectionName": "Compound Ski Trail",
+                            "sortOrder": 1,
+                            "rating": "Difficult",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Closed for the season.",
+                                "surface": "N/A",
+                                "comment": "Not recommended; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#compound",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 379,
+                    "trailName": "Grey Owl",
+                    "sortOrder": 16,
+                    "sections": [
+                        {
+                            "sectionId": 432,
+                            "sectionName": "Grey Owl",
+                            "sortOrder": 1,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-03-21T00:00:00",
+                                "condition": "Spring conditions.",
+                                "surface": "N/A",
+                                "comment": "Icy; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#grey",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 383,
+                    "trailName": "Brûlé Trail",
+                    "sortOrder": 17,
+                    "sections": [
+                        {
+                            "sectionId": 440,
+                            "sectionName": "Brûlé Trail",
+                            "sortOrder": 1,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-03-22T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#brule",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 406,
+                    "trailName": "Lake Katherine Ski Trail",
+                    "sortOrder": 18,
+                    "sections": [
+                        {
+                            "sectionId": 465,
+                            "sectionName": "Lake Katherine Ski Trail",
+                            "sortOrder": 1,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Closed for the season.",
+                                "surface": "N/A",
+                                "comment": "Not recommended; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#katherine",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 382,
+                    "trailName": "Kinosao",
+                    "sortOrder": 19,
+                    "sections": [
+                        {
+                            "sectionId": 438,
+                            "sectionName": "Kinosao (TH to Kinosao Lake)",
+                            "sortOrder": 3,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-03-22T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": null,
+                            "mapUrl": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "areaId": 141,
+            "areaName": "Riding Mountain Parkway",
+            "description": null,
+            "sortOrder": 2,
+            "trails": [
+                {
+                    "trailId": 403,
+                    "trailName": "Beach Ridges Trail",
+                    "sortOrder": 1,
+                    "sections": [
+                        {
+                            "sectionId": 462,
+                            "sectionName": "Beach Ridges Trail",
+                            "sortOrder": 1,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-03-21T00:00:00",
+                                "condition": "Spring conditions.",
+                                "surface": "N/A",
+                                "comment": "Icy; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#beach",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 396,
+                    "trailName": "Boreal Trail",
+                    "sortOrder": 2,
+                    "sections": [
+                        {
+                            "sectionId": 455,
+                            "sectionName": "Boreal Trail",
+                            "sortOrder": 1,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-03-22T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#boreal",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 395,
+                    "trailName": "Bead Lakes Trail",
+                    "sortOrder": 3,
+                    "sections": [
+                        {
+                            "sectionId": 454,
+                            "sectionName": "Bead Lakes Trail",
+                            "sortOrder": 1,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-03-22T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#bead",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 401,
+                    "trailName": "Broadleaf Ski Trail",
+                    "sortOrder": 4,
+                    "sections": [
+                        {
+                            "sectionId": 460,
+                            "sectionName": "Broadleaf Ski Trail",
+                            "sortOrder": 1,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Closed for the season.",
+                                "surface": "N/A",
+                                "comment": "Not recommended; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#broadleafski",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 400,
+                    "trailName": "Crawford Creek",
+                    "sortOrder": 5,
+                    "sections": [
+                        {
+                            "sectionId": 459,
+                            "sectionName": "Crawford Creek",
+                            "sortOrder": 1,
+                            "rating": "Difficult",
+                            "report": {
+                                "dateUTC": "2022-03-21T00:00:00",
+                                "condition": "Spring conditions.",
+                                "surface": "N/A",
+                                "comment": "Icy; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#crawford",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 402,
+                    "trailName": "Edwards Creek Trail",
+                    "sortOrder": 6,
+                    "sections": [
+                        {
+                            "sectionId": 461,
+                            "sectionName": "Edwards Creek Trail",
+                            "sortOrder": 1,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-03-21T00:00:00",
+                                "condition": "Spring conditions.",
+                                "surface": "N/A",
+                                "comment": "Icy; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#edwardscreek",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 398,
+                    "trailName": "Hilton Ski Trail",
+                    "sortOrder": 7,
+                    "sections": [
+                        {
+                            "sectionId": 457,
+                            "sectionName": "Hilton Ski Trail",
+                            "sortOrder": 1,
+                            "rating": "Difficult",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Closed for the season.",
+                                "surface": "N/A",
+                                "comment": "Not recommended; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#hilton",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 399,
+                    "trailName": "Kippan's Mill",
+                    "sortOrder": 8,
+                    "sections": [
+                        {
+                            "sectionId": 458,
+                            "sectionName": "Kippan's Mill",
+                            "sortOrder": 1,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-03-22T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#kippans",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 397,
+                    "trailName": "Moon Lake",
+                    "sortOrder": 9,
+                    "sections": [
+                        {
+                            "sectionId": 456,
+                            "sectionName": "Moon Lake",
+                            "sortOrder": 1,
+                            "rating": "Difficult",
+                            "report": {
+                                "dateUTC": "2022-03-22T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#moon",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 404,
+                    "trailName": "Ochre River - Hwy 10 to Cairn's Cabin",
+                    "sortOrder": 10,
+                    "sections": [
+                        {
+                            "sectionId": 463,
+                            "sectionName": "Ochre River - Hwy 10 to Cairn's Cabin",
+                            "sortOrder": 1,
+                            "rating": "Difficult",
+                            "report": {
+                                "dateUTC": "2022-03-22T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#ochre",
+                            "mapUrl": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "areaId": 231,
+            "areaName": "West Side and Lake Audy",
+            "description": null,
+            "sortOrder": 3,
+            "trails": [
+                {
+                    "trailId": 419,
+                    "trailName": "Moose Lake Ski Trail",
+                    "sortOrder": 12,
+                    "sections": [
+                        {
+                            "sectionId": 488,
+                            "sectionName": "Moose Lake Ski Trail",
+                            "sortOrder": 1,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-03-21T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Icy; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#moose",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 1491,
+                    "trailName": "Flat Lake Trail",
+                    "sortOrder": 13,
+                    "sections": [
+                        {
+                            "sectionId": 1722,
+                            "sectionName": "Flat Lake Trail",
+                            "sortOrder": 1,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Spring conditions.",
+                                "surface": "N/A",
+                                "comment": "Icy; "
+                            },
+                            "detailsUrl": null,
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 1490,
+                    "trailName": "Deep Lake Ski Trail",
+                    "sortOrder": 14,
+                    "sections": [
+                        {
+                            "sectionId": 1721,
+                            "sectionName": "Deep Lake Ski Trail",
+                            "sortOrder": 1,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Closed for the season.",
+                                "surface": "N/A",
+                                "comment": "Not recommended; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#deep",
+                            "mapUrl": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "areaId": 230,
+            "areaName": "East Escarpment",
+            "description": null,
+            "sortOrder": 4,
+            "trails": [
+                {
+                    "trailId": 2,
+                    "trailName": "Bald Hill",
+                    "sortOrder": 1,
+                    "sections": [
+                        {
+                            "sectionId": 412,
+                            "sectionName": "Bald Hill (TH to JET intersection)",
+                            "sortOrder": 3,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-03-21T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Icy; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#baldthjet",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 370,
+                    "trailName": "North Escarpment",
+                    "sortOrder": 6,
+                    "sections": [
+                        {
+                            "sectionId": 418,
+                            "sectionName": "North Escarpment (1- TH to Bald Hill Intersection)",
+                            "sortOrder": 2,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#northescarpment",
+                            "mapUrl": null
+                        },
+                        {
+                            "sectionId": 419,
+                            "sectionName": "North Escarpment (2- Bald Hill interestion to JET intersection)",
+                            "sortOrder": 3,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#northescarpment",
+                            "mapUrl": null
+                        },
+                        {
+                            "sectionId": 420,
+                            "sectionName": "North Escarpment (3- JET Intersection to Breezy Hill intersection)",
+                            "sortOrder": 4,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#northescarpment",
+                            "mapUrl": null
+                        },
+                        {
+                            "sectionId": 421,
+                            "sectionName": "North Escarpment (4- Breezy Hill intersection to end of trail)",
+                            "sortOrder": 5,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-04-05T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#northescarpment",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 373,
+                    "trailName": "Burls and Bittersweet Trail",
+                    "sortOrder": 8,
+                    "sections": [
+                        {
+                            "sectionId": 424,
+                            "sectionName": "Burls and Bittersweet Trail",
+                            "sortOrder": 1,
+                            "rating": "Easy",
+                            "report": {
+                                "dateUTC": "2022-03-22T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#burls",
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 1492,
+                    "trailName": "Whirlpool Lake Trail",
+                    "sortOrder": 9,
+                    "sections": [
+                        {
+                            "sectionId": 1723,
+                            "sectionName": "Whirlpool Lake Trail",
+                            "sortOrder": 1,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-03-22T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Slushy sections ; "
+                            },
+                            "detailsUrl": null,
+                            "mapUrl": null
+                        }
+                    ]
+                },
+                {
+                    "trailId": 378,
+                    "trailName": "Oak Ridge",
+                    "sortOrder": 12,
+                    "sections": [
+                        {
+                            "sectionId": 429,
+                            "sectionName": "Oak Ridge",
+                            "sortOrder": 1,
+                            "rating": "Moderate",
+                            "report": {
+                                "dateUTC": "2022-03-21T00:00:00",
+                                "condition": "Spring conditions",
+                                "surface": "N/A",
+                                "comment": "Icy; "
+                            },
+                            "detailsUrl": "https://www.pc.gc.ca/en/pn-np/mb/riding/visit/activ4#oak",
+                            "mapUrl": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
