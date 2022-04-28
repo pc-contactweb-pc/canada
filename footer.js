@@ -134,24 +134,36 @@ let footerHTMLFR = `
         </div>
         <div class="row">
             <div class="col-sm-8">
-                <h2><a href="#4">À propos de l’Agence Parcs Canada</a></h2>
+                <h3>Contact us</h3>
+                <ul class="list-unstyled lst-spcd colcount-sm-2">
+                    <li><a href="#noTarget" class="wb-lbx wb-init wb-lbx-inited" id="wb-auto-41">Contact Parks Canada</a></li>
+                    </ul>
+                <h3><a href="#4">À propos de l’Agence Parcs Canada</a></h3>
                 <ul class="list-unstyled lst-spcd">
                     <li><a href="#4">Le mandat et la charte</a></li>
-                    <li><a href="#4">Message du directeur général de l’Agence</a></li>
+                    <li><a href="#4">Transparence</a></li>
+                    <li><a href="#4">Message du président et chef de la direction</a></li>
                     <li><a href="#4">Les relations avec les peuples autochtones à Parcs Canada</a></li>
                    <li><a href="#4">
                             <!-- From PC footer, but tweaked by Drew -->Stratégies, plans et rapports
                         </a></li>
-                    <li><a href="#4">Transparence</a></li>
+                        <li><a href="#4">Avis</a></li>
+                        <ul class="list-unstyled lst-spcd colcount-sm-2">
                    <li><a href="#4">Nouvelles</a></li>
-                    <li><a href="#4">Salle des médias</a></li>
-                    <li><a href="#4">Contactez-nous</a></li>
+
+                   <!--  -->
+                   <li><a href="#4">Lieux historiques nationaux</a></li>
+                   <li><a href="#4">Parcs nationaux</a></li>
+                   <li><a href="#4">Aires marines nationales de conservation</a></li>
+                   <li><a href="#4">Parcs urbains nationaux</a></li>
+                   <li><a href="#4">Sciences et conservation</a></li>
+                   <li><a href="#4">Histoire et culture</a></li>
                 </ul>
             </div>
             <div class="col-sm-4">
                 <h2>Ministre</h2>
-                <p><a href="#4">L'honorable Steven Guilbeault</a></p>
-                <small>Ministre de l'Environnement et du Changement climatique</small>
+                <p><a href="#4">L'honorable Steven Guilbeault</a><br>
+                <small>Ministre de l'Environnement et du Changement climatique</small></p>
                 <h2>Suivez : </h2>
                <ul class="list-unstyled list-inline nowrap text-white">
                     <li><a class="mrgn-rght-md" href="https://www.facebook.com/parcscanada"><span class="fab fa-facebook fa-2x" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
@@ -159,10 +171,7 @@ let footerHTMLFR = `
                     <li><a class="mrgn-rght-md" href="https://www.youtube.com/ParcsCanada"><span class="fab fa-youtube fa-2x" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
                     <li><a class="mrgn-rght-md" href="https://www.instagram.com/ParcsCanada"><span class="fab fa-instagram fa-2x" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
                 </ul>
-                <ul class="list-unstyled lst-spcd">
-                    <li><a href="#4">Notre infolettre</a></li>
-                    <li><a href="#4">Applications mobiles</a></li>
-                </ul>
+               
             </div>
         </div>
   
