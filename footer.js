@@ -1,4 +1,4 @@
-let footerHTML=`
+let footerHTML = `
 <section id="footerSection">
             <footer class="pc-footer bg-hg">
                 <section class="container">
@@ -121,7 +121,7 @@ let footerHTMLFR = `
                 <img src="https://user-images.githubusercontent.com/45856706/151230155-9d0bfe38-5b23-4bca-a13d-68070f16c396.png" alt="Parks Canada logo" class="pc-logo center-block mrgn-tp-xl">
             </div>
         </div>
-       <div class="row center-block mrgn-tp-lg">
+        <div class="row center-block mrgn-tp-lg">
             <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1">
                     <!-- From ECCC --><strong>Opportunités d'emploi</strong>
                 </a></div>
@@ -137,44 +137,45 @@ let footerHTMLFR = `
                 <h3>Contact us</h3>
                 <ul class="list-unstyled lst-spcd colcount-sm-2">
                     <li><a href="#noTarget" class="wb-lbx wb-init wb-lbx-inited" id="wb-auto-41">Contact Parks Canada</a></li>
-                    </ul>
+                </ul>
                 <h3><a href="#4">À propos de l’Agence Parcs Canada</a></h3>
                 <ul class="list-unstyled lst-spcd">
                     <li><a href="#4">Le mandat et la charte</a></li>
                     <li><a href="#4">Transparence</a></li>
                     <li><a href="#4">Message du président et chef de la direction</a></li>
                     <li><a href="#4">Les relations avec les peuples autochtones à Parcs Canada</a></li>
-                   <li><a href="#4">
+                    <li><a href="#4">
                             <!-- From PC footer, but tweaked by Drew -->Stratégies, plans et rapports
                         </a></li>
-                        <li><a href="#4">Avis</a></li>
-                        <ul class="list-unstyled lst-spcd colcount-sm-2">
-                   <li><a href="#4">Nouvelles</a></li>
+                    <li><a href="#4">Avis</a></li>
+                    
+                        <li><a href="#4">Nouvelles</a></li>
 
-                   <!--  -->
-                   <li><a href="#4">Lieux historiques nationaux</a></li>
-                   <li><a href="#4">Parcs nationaux</a></li>
-                   <li><a href="#4">Aires marines nationales de conservation</a></li>
-                   <li><a href="#4">Parcs urbains nationaux</a></li>
-                   <li><a href="#4">Sciences et conservation</a></li>
-                   <li><a href="#4">Histoire et culture</a></li>
-                </ul>
+                        <!--  -->
+                        <li><a href="#4">Lieux historiques nationaux</a></li>
+                        <li><a href="#4">Parcs nationaux</a></li>
+                        <li><a href="#4">Aires marines nationales de conservation</a></li>
+                        <li><a href="#4">Parcs urbains nationaux</a></li>
+                        <li><a href="#4">Sciences et conservation</a></li>
+                        <li><a href="#4">Histoire et culture</a></li>
+                    </ul>
             </div>
             <div class="col-sm-4">
                 <h2>Ministre</h2>
                 <p><a href="#4">L'honorable Steven Guilbeault</a><br>
-                <small>Ministre de l'Environnement et du Changement climatique</small></p>
+                    <small>Ministre de l'Environnement et du Changement climatique</small>
+                </p>
                 <h2>Suivez : </h2>
-               <ul class="list-unstyled list-inline nowrap text-white">
+                <ul class="list-unstyled list-inline nowrap text-white">
                     <li><a class="mrgn-rght-md" href="https://www.facebook.com/parcscanada"><span class="fab fa-facebook fa-2x" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
                     <li><a class="mrgn-rght-md" href="https://twitter.com/parcscanada"><span class="fab fa-twitter fa-2x" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
                     <li><a class="mrgn-rght-md" href="https://www.youtube.com/ParcsCanada"><span class="fab fa-youtube fa-2x" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
                     <li><a class="mrgn-rght-md" href="https://www.instagram.com/ParcsCanada"><span class="fab fa-instagram fa-2x" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
                 </ul>
-               
+
             </div>
         </div>
-  
+
     </section>
 </footer>
 <footer id="wb-info">
@@ -182,16 +183,16 @@ let footerHTMLFR = `
         <nav class="container wb-navcurr">
             <h2 class="wb-inv">Au sujet du gouvernement</h2>
             <ul class="list-unstyled colcount-sm-2 colcount-md-3">
-              <li><a href="/fr/environnement-changement-climatique/organisation/coordonnees.html">Contactez-nous</a></li>
-            <li><a href="/fr/gouvernement/min.html">Ministères et organismes</a></li>
-            <li><a href="/fr/gouvernement/fonctionpublique.html">Fonction publique et force militaire</a></li>
-            <li><a href="/fr/nouvelles.html">Nouvelles</a></li>
-            <li><a href="/fr/gouvernement/systeme/lois.html">Traités, lois et règlements</a></li>
-            <li><a href="/fr/transparence/rapports.html">Rapports à l'échelle du gouvernement</a></li>
-            <li><a href="https://pm.gc.ca/fr">Premier ministre</a></li>
-            <li><a href="/fr/gouvernement/systeme.html">À propos du gouvernement</a></li>
-            <li><a href="http://ouvert.canada.ca/">Gouvernement ouvert</a></li>
-          </ul>
+                <li><a href="/fr/environnement-changement-climatique/organisation/coordonnees.html">Contactez-nous</a></li>
+                <li><a href="/fr/gouvernement/min.html">Ministères et organismes</a></li>
+                <li><a href="/fr/gouvernement/fonctionpublique.html">Fonction publique et force militaire</a></li>
+                <li><a href="/fr/nouvelles.html">Nouvelles</a></li>
+                <li><a href="/fr/gouvernement/systeme/lois.html">Traités, lois et règlements</a></li>
+                <li><a href="/fr/transparence/rapports.html">Rapports à l'échelle du gouvernement</a></li>
+                <li><a href="https://pm.gc.ca/fr">Premier ministre</a></li>
+                <li><a href="/fr/gouvernement/systeme.html">À propos du gouvernement</a></li>
+                <li><a href="http://ouvert.canada.ca/">Gouvernement ouvert</a></li>
+            </ul>
         </nav>
     </div>
     <div class="brand">
@@ -200,12 +201,12 @@ let footerHTMLFR = `
                 <nav class="col-md-10 ftr-urlt-lnk">
                     <h2 class="wb-inv">À propos de ce site</h2>
                     <ul>
-                      <li><a href="/fr/sociaux.html">Médias sociaux</a></li>
-                    <li><a href="/fr/mobile.html">Applications mobiles</a></li>
-                    <li><a href="/fr/gouvernement/a-propos.html">À propos de Canada.ca</a></li>
-                    <li><a href="/fr/transparence/avis.html">Avis</a></li>
-                    <li><a href="/fr/transparence/confidentialite.html">Confidentialité</a></li>
-               </ul>
+                        <li><a href="/fr/sociaux.html">Médias sociaux</a></li>
+                        <li><a href="/fr/mobile.html">Applications mobiles</a></li>
+                        <li><a href="/fr/gouvernement/a-propos.html">À propos de Canada.ca</a></li>
+                        <li><a href="/fr/transparence/avis.html">Avis</a></li>
+                        <li><a href="/fr/transparence/confidentialite.html">Confidentialité</a></li>
+                    </ul>
                 </nav>
                 <div class="col-xs-6 visible-sm visible-xs tofpg">
                     <a href="#wb-cont">Haut de la page <span class="glyphicon glyphicon-chevron-up"></span></a>
