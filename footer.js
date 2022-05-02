@@ -139,7 +139,7 @@ let footerHTMLFR = `
                     <li><a href="#noTarget" class="wb-lbx wb-init wb-lbx-inited" id="wb-auto-41">Contactez Parcs Canada</a></li>
                 </ul>
                 <h3><a href="#4">À propos de l’Agence Parcs Canada</a></h3>
-                <ul class="list-unstyled lst-spcd">
+                <ul class="list-unstyled lst-spcd colcount-sm-2">
                     <li><a href="#4">Le mandat et la charte</a></li>
                     <li><a href="#4">Transparence</a></li>
                     <li><a href="#4">Message du président et chef de la direction</a></li>
