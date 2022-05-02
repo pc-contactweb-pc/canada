@@ -134,9 +134,9 @@ let footerHTMLFR = `
         </div>
         <div class="row">
             <div class="col-sm-8">
-                <h3>Contact us</h3>
+                <h3>Contactez-nous</h3>
                 <ul class="list-unstyled lst-spcd colcount-sm-2">
-                    <li><a href="#noTarget" class="wb-lbx wb-init wb-lbx-inited" id="wb-auto-41">Contact Parks Canada</a></li>
+                    <li><a href="#noTarget" class="wb-lbx wb-init wb-lbx-inited" id="wb-auto-41">Contactez Parcs Canada</a></li>
                 </ul>
                 <h3><a href="#4">À propos de l’Agence Parcs Canada</a></h3>
                 <ul class="list-unstyled lst-spcd">
