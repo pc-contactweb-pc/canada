@@ -138,31 +138,31 @@ let footerHTMLFR = `
                 <ul class="list-unstyled lst-spcd colcount-sm-2">
                     <li><a href="#noTarget" class="wb-lbx wb-init wb-lbx-inited" id="wb-auto-41">Contactez Parcs Canada</a></li>
                 </ul>
-                <h3><a href="#4">À propos de l’Agence Parcs Canada</a></h3>
+                <h3>À propos de l’Agence Parcs Canada</h3>
                 <ul class="list-unstyled lst-spcd colcount-sm-2">
-                    <li><a href="#4">Le mandat et la charte</a></li>
-                    <li><a href="#4">Transparence</a></li>
-                    <li><a href="#4">Message du président et chef de la direction</a></li>
-                    <li><a href="#4">Les relations avec les peuples autochtones à Parcs Canada</a></li>
-                    <li><a href="#4">
+                    <li><a href="#noTarget" class="wb-lbx">Le mandat et la charte</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Transparence</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Message du président et chef de la direction</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Les relations avec les peuples autochtones à Parcs Canada</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">
                             <!-- From PC footer, but tweaked by Drew -->Stratégies, plans et rapports
                         </a></li>
-                    <li><a href="#4">Avis</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Avis</a></li>
                     
-                        <li><a href="#4">Nouvelles</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Nouvelles</a></li>
 
                         <!--  -->
-                        <li><a href="#4">Lieux historiques nationaux</a></li>
-                        <li><a href="#4">Parcs nationaux</a></li>
-                        <li><a href="#4">Aires marines nationales de conservation</a></li>
-                        <li><a href="#4">Parcs urbains nationaux</a></li>
-                        <li><a href="#4">Sciences et conservation</a></li>
-                        <li><a href="#4">Histoire et culture</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Lieux historiques nationaux</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Parcs nationaux</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Aires marines nationales de conservation</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Parcs urbains nationaux</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Sciences et conservation</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Histoire et culture</a></li>
                     </ul>
             </div>
             <div class="col-sm-4">
                 <h2>Ministre</h2>
-                <p><a href="#4">L'honorable Steven Guilbeault</a><br>
+                <p><a href="#noTarget" class="wb-lbx">L'honorable Steven Guilbeault</a><br>
                     <small>Ministre de l'Environnement et du Changement climatique</small>
                 </p>
                 <h2>Suivez : </h2>
@@ -178,6 +178,14 @@ let footerHTMLFR = `
 
     </section>
 </footer>
+<section id="noTarget" class="mfp-hide modal-dialog modal-content overlay-def">
+                <header class="modal-header">
+                    <h2 class="modal-title">Oops!</h2>
+                </header>
+                <div class="modal-body">
+                    <p>We haven't made this page yet.</p>
+                </div>
+            </section>
 <footer id="wb-info">
     <div class="landscape">
         <nav class="container wb-navcurr">
