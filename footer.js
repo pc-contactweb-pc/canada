@@ -167,10 +167,10 @@ let footerHTMLFR = `
                 </p>
                 <h2>Suivez : </h2>
                 <ul class="list-unstyled list-inline nowrap text-white">
-                    <li><a class="mrgn-rght-md" href="https://www.facebook.com/parcscanada"><span class="fab fa-facebook fa-2x" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
-                    <li><a class="mrgn-rght-md" href="https://twitter.com/parcscanada"><span class="fab fa-twitter fa-2x" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
-                    <li><a class="mrgn-rght-md" href="https://www.youtube.com/ParcsCanada"><span class="fab fa-youtube fa-2x" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
-                    <li><a class="mrgn-rght-md" href="https://www.instagram.com/ParcsCanada"><span class="fab fa-instagram fa-2x" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
+                    <li><a class="mrgn-rght-md" href="https://www.facebook.com/parcscanada"><span class="fab fa-facebook fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
+                    <li><a class="mrgn-rght-md" href="https://twitter.com/parcscanada"><span class="fab fa-twitter fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
+                    <li><a class="mrgn-rght-md" href="https://www.youtube.com/ParcsCanada"><span class="fab fa-youtube fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
+                    <li><a class="mrgn-rght-md" href="https://www.instagram.com/ParcsCanada"><span class="fab fa-instagram fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
                 </ul>
 
             </div>
