@@ -165,7 +165,7 @@ let footerHTMLFR = `
                 <p><a href="#noTarget" class="wb-lbx">L'honorable Steven Guilbeault</a><br>
                     <small>Ministre de l'Environnement et du Changement climatique</small>
                 </p>
-                <h2>Suivez : </h2>
+                <h2>Suivez</h2>
                 <ul class="list-unstyled list-inline nowrap text-white">
                     <li><a class="mrgn-rght-md" href="https://www.facebook.com/parcscanada"><span class="fab fa-facebook fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
                     <li><a class="mrgn-rght-md" href="https://twitter.com/parcscanada"><span class="fab fa-twitter fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
