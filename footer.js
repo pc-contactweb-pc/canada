@@ -56,7 +56,7 @@ let footerHTML = `
                     </div>
                 </section>
             </footer>
-            <section id="noTarget" class="mfp-hide modal-dialog modal-content overlay-def  wb-popup-mid">
+            <section id="noTarget" class="mfp-hide modal-dialog modal-content overlay-def">
                 <header class="modal-header">
                     <h2 class="modal-title">Oops!</h2>
                 </header>
@@ -178,7 +178,7 @@ let footerHTMLFR = `
 
     </section>
 </footer>
-<section id="noTarget" class="mfp-hide modal-dialog modal-content overlay-def wb-popup-mid">
+<section id="noTarget" class="mfp-hide modal-dialog modal-content overlay-def">
                 <header class="modal-header">
                     <h2 class="modal-title">Oops!</h2>
                 </header>
