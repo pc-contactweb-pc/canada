@@ -395,6 +395,10 @@ div.banner-404-container {
     }
 }
 
+a[href^="mailto:"] {
+    line-break: anywhere;
+}
+
 /* Heading colours based on Gabe's mockups */
 
 /* h2, h3, h4, h5, h6 {
