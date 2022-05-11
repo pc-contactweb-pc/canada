@@ -282,13 +282,9 @@ a.hg:visited {
     padding-right: 25px;
 }
 
-.pc-footer li {
+.pc-footer li, .pc-footer small, .pc-footer p {
     margin-bottom: 1em;
     line-height: 1.1em;
-}
-
-.pc-fotter small {
-    line-height:1.1em;
 }
 
 .btn-footer {

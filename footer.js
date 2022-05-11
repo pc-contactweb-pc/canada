@@ -42,7 +42,7 @@ let footerHTML = `
                             </ul>
                         </div>
                         <div class="col-sm-4">
-                            <h3  class="h2">Minister</h3>
+                            <h3 class="h2">Minister</h3>
                             <p><a href="#noTarget" class="wb-lbx">The Honourable Steven Guilbeault</a><br><small>Minister of Environment and Climate Change</small></p>
                             
                             <h3  class="h2">Follow us</h3>
