@@ -282,6 +282,15 @@ a.hg:visited {
     padding-right: 25px;
 }
 
+.pc-footer li {
+    margin-bottom: 1em;
+    line-height: 1.1em;
+}
+
+.pc-fotter small {
+    line-height:1.1em;
+}
+
 .btn-footer {
     color: #2b4635!important;
     background-color: #fff;
@@ -398,6 +407,7 @@ div.banner-404-container {
 a[href^="mailto:"] {
     line-break: anywhere;
 }
+
 
 /* Heading colours based on Gabe's mockups */
 

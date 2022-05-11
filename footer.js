@@ -14,14 +14,14 @@ let footerHTML = `
                         <div class="col-xs-12 col-sm-4 center-block mrgn-bttm-md"><a href="#3" class="btn btn-footer col-xs-12 col-sm-10 col-sm-offset-1"><strong>Partner</strong></a></div>
                     </div>
                     <div class="mrgn-tp-lg">
-                        <h3>Contact us</h3>
+                        <h3 class="h2">Contact us</h3>
                         <ul class="list-unstyled lst-spcd colcount-sm-2">
                         <li><a href="#noTarget" class="wb-lbx">Contact Parks Canada</a></li>
                         </ul>
                     </div>
                     <div class="row">
                         <div class="col-sm-8">
-                            <h3>About the Parks Canada Agency</h3>
+                            <h3 class="h2">About the Parks Canada Agency</h3>
     
                             <ul class="list-unstyled lst-spcd colcount-sm-2">
                                 <li><a href="#noTarget" class="wb-lbx">Mandate and Charter</a></li>
@@ -42,10 +42,10 @@ let footerHTML = `
                             </ul>
                         </div>
                         <div class="col-sm-4">
-                            <h3>Minister</h3>
+                            <h3  class="h2">Minister</h3>
                             <p><a href="#noTarget" class="wb-lbx">The Honourable Steven Guilbeault</a><br><small>Minister of Environment and Climate Change</small></p>
                             
-                            <h3>Follow us</h3>
+                            <h3  class="h2">Follow us</h3>
                             <ul class="list-unstyled list-inline nowrap text-white">
                                 <li><a class="mrgn-rght-md" href="https://www.facebook.com/parkscanada"><span class="fab fa-facebook fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
                                 <li><a class="mrgn-rght-md" href="https://twitter.com/parkscanada"><span class="fab fa-twitter fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
@@ -134,11 +134,11 @@ let footerHTMLFR = `
         </div>
         <div class="row">
             <div class="col-sm-8">
-                <h3>Contactez-nous</h3>
+                <h3 class="h2">Contactez-nous</h3>
                 <ul class="list-unstyled lst-spcd colcount-sm-2">
                     <li><a href="#noTarget" class="wb-lbx wb-init wb-lbx-inited" id="wb-auto-41">Contactez Parcs Canada</a></li>
                 </ul>
-                <h3>À propos de l’Agence Parcs Canada</h3>
+                <h3 class="h2">À propos de l’Agence Parcs Canada</h3>
                 <ul class="list-unstyled lst-spcd colcount-sm-2">
                     <li><a href="#noTarget" class="wb-lbx">Le mandat et la charte</a></li>
                     <li><a href="#noTarget" class="wb-lbx">Transparence</a></li>
@@ -161,11 +161,11 @@ let footerHTMLFR = `
                     </ul>
             </div>
             <div class="col-sm-4">
-                <h2>Ministre</h2>
+                <h3 class="h2">Ministre</h3>
                 <p><a href="#noTarget" class="wb-lbx">L'honorable Steven Guilbeault</a><br>
                     <small>Ministre de l'Environnement et du Changement climatique</small>
                 </p>
-                <h2>Suivez</h2>
+                <h3 class="h2">Suivez</h3>
                 <ul class="list-unstyled list-inline nowrap text-white">
                     <li><a class="mrgn-rght-md" href="https://www.facebook.com/parcscanada"><span class="fab fa-facebook fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
                     <li><a class="mrgn-rght-md" href="https://twitter.com/parcscanada"><span class="fab fa-twitter fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
