@@ -288,9 +288,9 @@
 
                                 <!-- Start Geomap section -->
                                 <!-- {"aoi": { "toggle": true, "extent": "-86, 48, -85, 50" }, -->
-                                <div class="col-sm-8">
-                                    <!-- GeomapStart -->
-                                    <div id="geomap1" class="wb-geomap position scaleline geocoder geolocation mapcontrols" data-wb-geomap='{
+
+                                <!-- GeomapStart -->
+                                <div id="geomap1" class="wb-geomap position scaleline geocoder geolocation mapcontrols" data-wb-geomap='{
                                                         "tables": [{
                                                             "title": "Campgrounds",
                                                             "caption": "Campgrounds at Cape Breton Highlands National Park",
@@ -338,31 +338,27 @@
                                                                 }
                                                         }]
                                                     }'>
-                                        <div class="row">
-                                            <style>
-                                                wb-geomap-map {
-                                                    max-height:300px!important                                                
-                                                }
-                                            </style>
-                                            <div class="col-md-12" style="height:300px">
-                                                <!-- Insert Map Start (mandatory) -->
-                                                <div class="wb-geomap-map mrgn-bttm-lg"></div>
-                                                <!-- Insert Map End -->
-                                            </div>
+                                    <div class="row">
 
-                                            <!-- Insert Legend Start (optional) -->
-                                            <section class="wb-geomap-legend col-md-3 hidden">
-                                                <h3>Legend</h3>
-                                            </section>
-                                            <!-- Insert Legend End -->
+                                        <div class="col-md-8">
+                                            <!-- Insert Map Start (mandatory) -->
+                                            <div class="wb-geomap-map mrgn-bttm-lg"></div>
+                                            <!-- Insert Map End -->
                                         </div>
-                                        <div class="row">
-                                            <section>
-                                                <div class="wb-geomap-layers col-md-12">
 
-                                                    <section>
-                                                        <!-- data-wb-tables=' {"columnDefs": [ {"visible": false, "targets":1} ] }' -->
-                                                        <!-- <table class="wb-tables table table-striped table-hover cg-table" id="cgtable" aria-label="" data-paging='false' data-info='false'>
+                                        <!-- Insert Legend Start (optional) -->
+                                        <section class="wb-geomap-legend col-md-3 hidden">
+                                            <h3>Legend</h3>
+                                        </section>
+                                        <!-- Insert Legend End -->
+                                    </div>
+                                    <div class="row">
+                                        <section>
+                                            <div class="wb-geomap-layers col-md-12">
+
+                                                <section>
+                                                    <!-- data-wb-tables=' {"columnDefs": [ {"visible": false, "targets":1} ] }' -->
+                                                    <!-- <table class="wb-tables table table-striped table-hover cg-table" id="cgtable" aria-label="" data-paging='false' data-info='false'>
                                                             <caption>Campgrounds</caption>
                                                             <thead>
                                                                 <tr>
@@ -415,13 +411,13 @@
                                 
                                                             </tbody>
                                                         </table> -->
-                                                    </section>
-                                                </div>
-                                            </section>
-                                        </div>
+                                                </section>
+                                            </div>
+                                        </section>
                                     </div>
+                                </div>
 
-                                    <!-- <script>
+                                <!-- <script>
                                         $(document).on("geomap.ready", function (event, maps) {
                                             var myMap = maps.geomap1; // return map with specfic id
                                 
@@ -436,12 +432,12 @@
                                             // myMapMap.getView().setCenter( ol.proj.transform( [ -75.70535, 45.3995 ], "EPSG:4326", "EPSG:3978" ) )
                                         });
                                     </script> -->
-                                    <!-- GeomapEnd -->
+                                <!-- GeomapEnd -->
 
-                                    <!-- End geomap section -->
-                                    <!-- <div id="map-canvas" style="width:100%; min-height: 200px;"><img src="https://user-images.githubusercontent.com/45856706/151207794-882bd4bd-a2c8-4a5d-93cc-6981f76287d1.png" alt="" class="img-responsive"></div> -->
-                                    <p><a href="#noTarget" class="wb-lbx">Maps and directions</a></p>
-                                </div>
+                                <!-- End geomap section -->
+                                <!-- <div id="map-canvas" style="width:100%; min-height: 200px;"><img src="https://user-images.githubusercontent.com/45856706/151207794-882bd4bd-a2c8-4a5d-93cc-6981f76287d1.png" alt="" class="img-responsive"></div> -->
+                                <p><a href="#noTarget" class="wb-lbx">Maps and directions</a></p>
+
                                 <!-- 
                                 <div id="locationmap" class="wb-geomap position scaleline geocoder geolocation mapcontrols" data-wb-geomap='{
                                     "tables": [{
