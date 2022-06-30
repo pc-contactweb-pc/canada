@@ -210,8 +210,7 @@
                             </div>
                             <div class="col-md-4">
                                 <h3><a href="#noTarget" class="wb-lbx">Fees and passes</a></h3>
-                                <p>Daily visitor fees, seasonal and annual passes.</p>
-                                <p>Free admission for youth</p>
+                                <p>Daily visitor fees, seasonal and annual passes.<br>Free admission for youth</p>
                             </div>
                         </div>
                         <div class="wb-eqht row  mrgn-tp-md">
@@ -235,7 +234,7 @@
                                 </p>
                             </div>
                             <div class="col-md-4">
-                                <h3><a href="#noTarget" class="wb-lbx">Jobs</a></h3>
+                                <h3><a href="#noTarget" class="wb-lbx">Park management</a></h3>
                                 <p>Jobs, partners, business licenses, public consultations, plans and policies.
                                 </p>
                             </div>
@@ -264,304 +263,83 @@
                             <li><a href="#noTarget" class="wb-lbx">Stories</a></li>
                         </ul> -->
 
-                        <h3 class="mrgn-tp-xl">Contact Pukaskwa National Park</h3>
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <p><span class="fas fa-telephone" aria-hidden="true"></span><span class="nowrap">1-807-229-0801</span> ext. 248</p>
-                                <p><span class="fas fa-email" aria-hidden="true"></span><a href="mailto:pukaskwaont@pc.gc.ca">pukaskwaont@pc.gc.ca</a></p>
-                                <p><strong>For emergencies within the park:</strong>
-                                    <br><span class="fas fa-alert" aria-hidden="true"></span> <span class="nowrap">1-877-852-3100</span>
-                                </p>
-                            </div>
-                            <div class="col-sm-4">
-                                <ul class="list-unstyled list-inline nowrap">
-                                    <li><a class="mrgn-rght-md" href="https://www.facebook.com/PukaskwaNP"><span class="fab fa-facebook-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
-                                    <li><a class="mrgn-rght-md" href="https://twitter.com/PukaskwaNP"><span class="fab fa-twitter-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
-                                    <li><a class="mrgn-rght-md" href="https://www.youtube.com/ParksCanada"><span class="fab fa-youtube-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
 
 
                         <div class="row mrgn-tp-xl">
-                            <div class="col-sm-12">
+                            <div class="col-md-7">
+                                <div id="location_map" class="wb-geomap geolocation geocoder" data-wb-geomap='{
+    "tables": [{
+        "id": "addNRCan",
+        "style": {
+            "type": "symbol",
+            "init": {
+                "pointRadius": 12,
+                "graphicName": "star",
+                "strokeColor": "#FF0000",
+                "fillColor": "#FF0000",
+                "fillOpacity": 0.7
+            }
+        }
+    }]
+}'>
 
-                                <!-- Start Geomap section -->
-                                <!-- {"aoi": { "toggle": true, "extent": "-86, 48, -85, 50" }, -->
 
-                                <!-- GeomapStart -->
-                                <div id="geomap1" class="wb-geomap position scaleline geocoder geolocation mapcontrols" data-wb-geomap='{
-                                                        "tables": [{
-                                                            "title": "Campgrounds",
-                                                            "caption": "Campgrounds at Cape Breton Highlands National Park",
-                                                            "id": "cgtable",
-                                                            "zoom": true,
-                                                            "tab": true,
-                                                            "popups": true,
-                                                            "visible": true,
-                                                            "popupsInfo": {
-                                                                "id": "campgroundPopup",
-                                                                "height": 400,
-                                                                "width": 400,
-                                                                "close": true,
-                                                                "content": "<div style=\"white-space:nowrap;\"><h3>_Campground</h3><p>_Type<br>_Image</p></div>"
-                                                            },
-                                                            "style": {
-                                                                "type": "unique",
-                                                                "field": "Type",
-                                                                "init": {
-                                                                    "Frontcountry - Reservable": {
-                                                                        "externalGraphic": "https://user-images.githubusercontent.com/45856706/174391357-ada98392-94a9-4b55-9846-c7cfb30e9584.png",
-                                                                        "fillOpacity": "1",
-                                                                        "graphicWidth": "25",
-                                                                        "name": "Frontcountry - Reservable"
-                                                                    },
-                                                                    "Frontcountry - First-come; first-served": {
-                                                                        "externalGraphic": "https://user-images.githubusercontent.com/45856706/174391357-ada98392-94a9-4b55-9846-c7cfb30e9584.png",
-                                                                        "fillOpacity": "1",
-                                                                        "graphicWidth": "25",
-                                                                        "name": "Frontcountry - First-come; first-served"
-                                                                    },
-                                                                
-                                                                    "Backcountry - First-come; first-served": {
-                                                                        "externalGraphic": "https://user-images.githubusercontent.com/45856706/174391357-ada98392-94a9-4b55-9846-c7cfb30e9584.png",
-                                                                        "fillOpacity": "1",
-                                                                        "graphicWidth": "25",
-                                                                        "name": "Backcountry - First-come; first-served"
-                                                                    }
-                                                                
-                                                                },
-                                                                "select": {
-                                                                    "externalGraphic": "https://user-images.githubusercontent.com/45856706/174391357-ada98392-94a9-4b55-9846-c7cfb30e9584.png",
-                                                                    "graphicOpacity": "1"
-                                                                }
-                                                                }
-                                                        }]
-                                                    }'>
-                                    <div class="row">
+                                    <div class="wb-geomap-map " id="myGeomap"></div>
 
-                                        <div class="col-md-8">
-                                            <!-- Insert Map Start (mandatory) -->
-                                            <div class="wb-geomap-map mrgn-bttm-lg"></div>
-                                            <!-- Insert Map End -->
-                                        </div>
-
-                                        <!-- Insert Legend Start (optional) -->
-                                        <section class="wb-geomap-legend col-md-3 hidden">
-                                            <h3>Legend</h3>
-                                        </section>
-                                        <!-- Insert Legend End -->
-                                    </div>
-                                    <div class="row">
-                                        <section>
-                                            <div class="wb-geomap-layers col-md-12">
-
-                                                <section>
-                                                    <!-- data-wb-tables=' {"columnDefs": [ {"visible": false, "targets":1} ] }' -->
-                                                    <!-- <table class="wb-tables table table-striped table-hover cg-table" id="cgtable" aria-label="" data-paging='false' data-info='false'>
-                                                            <caption>Campgrounds</caption>
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Campground</th>
-                                                                    <th>Image</th>
-                                                                    <th>Type</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr data-geometry="POINT (-60.9485781 46.6460881)" data-type="wkt">
-                                                                    <td>Chéticamp</td>
-                                                                    <td><img src="https://doc-0k-2c-mymaps.googleusercontent.com/untrusted/hostedimage/tl8pq4m5p1hehg0ap29ghcbj04/7vieo6l244u6s4vdhbbtueiee4/1651181603500/tOw6E0r1FGwe9pMmodSBgl3rcixilYXl/04986887333175085779/5AIsG_vbStBOjJbxjH-LcR1SF-bUJcNXM68SVx9uc5u7PFScgKCoek9p2sLnTFZNJ_BuSo_Qt66di4V-1wMxtEotwyMVpzUacaHCAbQtoLlekB68G88U_v6NcZc8EBjLFWcyE-4ILzi5GHd4VsWu2oNh8yRdM8_voaDqciMkwVp-hqKjDQikBzQgSC-FRo5J0nBq7k20?session=0&fife" class="img-responsivle" alt=""></td>
-                                                                    <td>Frontcountry - Reservable</td>
-                                                                </tr>
-                                                                <tr data-geometry="POINT (-60.9367666 46.7137768)" data-type="wkt">
-                                                                    <td>Cap Rouge / Mkwesaqtuk</td>
-                                                                    <td><img src="https://doc-0k-2c-mymaps.googleusercontent.com/untrusted/hostedimage/tl8pq4m5p1hehg0ap29ghcbj04/och3meiekcoqkgpitpi6131vj8/1651181603500/tOw6E0r1FGwe9pMmodSBgl3rcixilYXl/04986887333175085779/5AIsG_vaq3rBI9aOOc1Nj2QoL8jk3x18S1itioH9DSLma-fA8KacvmKVJiSoqPxk75DToyNrDoVVFUdgOFL_yWu7rpB7SYFlgAarNUkFEqSYxG5fWNe5BYbkDuGMG-p2kz68sM4L3irfcYYmJR3uLiLmt0wOTG9N6RHTWY101NvorknpyWf0EhAM-2SYXwDvrhAxYEow?session=0&fife" class="img-responsivle" alt=""></td>
-                                                                    <td>Frontcountry - Reservable</td>
-                                                                </tr>
-                                                                <tr data-geometry="POINT (-60.9254044 46.7263638)" data-type="wkt">
-                                                                    <td>Corney Brook</td>
-                                                                    <td><img src="https://doc-0k-2c-mymaps.googleusercontent.com/untrusted/hostedimage/tl8pq4m5p1hehg0ap29ghcbj04/8b5fe6nlk0nf6o84gi274063b4/1651181603500/tOw6E0r1FGwe9pMmodSBgl3rcixilYXl/04986887333175085779/5AIsG_vYJ7FAJu4AnAczpwXdtqPhKvUMDcwHpspTbmds7PzbX1y29N0092hhckMbeEtWC9aQjX2DaSnA7XeBDOxQIKwaiXDQmTVXafSpK5-iKkoJa2XB_sRZjo4CItOlKB-BUiqE3hxgcewx0yva2EqwsyYTzsqHXs3JaQCZ7ww_EQdsj6DjJ6KdsZFH91wv51tdtnrE?session=0&fife" class="img-responsivle" alt=""></td>
-                                                                    <td>Frontcountry - First-come; first-served</td>
-                                                                </tr>
-                                                                <tr data-geometry="POINT (-60.7679508 46.8124252)" data-type="wkt">
-                                                                    <td>MacIntosh Brook</td>
-                                                                    <td><img src="https://doc-08-2c-mymaps.googleusercontent.com/untrusted/hostedimage/tl8pq4m5p1hehg0ap29ghcbj04/5eqjkleedbs2jh3is2cks4jt78/1651181603500/tOw6E0r1FGwe9pMmodSBgl3rcixilYXl/04986887333175085779/5AIsG_vbL4wavsflZ4TMhYYjk74Mhs-GrWCv7BK17qRwqVm4cgqqVlBhTzxJ4lREocu6ctlCe_IbrYEeJAZWL4vfr7j9fHmE1lBJ1oaHzbIQ-MOXou50RgQYnH3bSf7VbSO-FDfPLGIVuSHkdYXuwJJ7DrywwPkNbkcF4acNtbPln9zUIt4ZGhPj_A08FuC64xDJqdCU?session=0&fife" class="img-responsivle" alt=""></td>
-                                                                    <td>Frontcountry - First-come; first-served</td>
-                                                                </tr>
-                                                                <tr data-geometry="POINT (-60.6142877 46.8303596)" data-type="wkt">
-                                                                    <td>Big Intervale</td>
-                                                                    <td><img src="https://doc-10-2c-mymaps.googleusercontent.com/untrusted/hostedimage/tl8pq4m5p1hehg0ap29ghcbj04/b848rarus1rm49fjvvjr9k1l2g/1651181603500/tOw6E0r1FGwe9pMmodSBgl3rcixilYXl/04986887333175085779/5AIsG_vbO-_xmo0TSdW7tsyAM9r4yjru3fHUyD--ktShgokT58Ce2bPpBbGohiec_MZz5Ghf2gDTmBTUqwDWxNoTvc5dRIHGUmlBiiwyDFFv3OGDPjSrs_w4LAuXhVc2C1ioMgDLKHcPiFX5wJB_xfz_UV2sOJnRH___GIApvpj9k0a3QEGYjemPPTh0jNakXrE2EoJo?session=0&fife" class="img-responsivle" alt=""></td>
-                                                                    <td>Frontcountry - First-come; first-served</td>
-                                                                </tr>
-                                                                <tr data-geometry="POINT (-60.3663747 46.7100146)" data-type="wkt">
-                                                                    <td>Broad Cove</td>
-                                                                    <td><img src="https://doc-00-2c-mymaps.googleusercontent.com/untrusted/hostedimage/tl8pq4m5p1hehg0ap29ghcbj04/os7u98evt8nc6jiq6pnmo2f4co/1651181603500/tOw6E0r1FGwe9pMmodSBgl3rcixilYXl/04986887333175085779/5AIsG_vZzx5wZ4LIkiytwfJ7sdaTzYGRhA6CVVYz-48ObF6TqiDBOqYuAKA-DbNSdvgMTjDmIOYmqlaNlhXfEZF3LJ-HzLF7CwnXj9E6B5XS6z7RDz3es-V8REV46afr9Y7nEhydgDRbcWhEkuMo59Gak0Ej6rm_y_PyxpwWDmCQWVRYmYacvn1iPYOFrZDMkq-y-Nxs?session=0&fife" class="img-responsivle" alt=""></td>
-                                                                    <td>Frontcountry - Reservable</td>
-                                                                </tr>
-                                                                <tr data-geometry="POINT (-60.3994308 46.6537183)" data-type="wkt">
-                                                                    <td>Ingonish Beach</td>
-                                                                    <td><img src="https://doc-0o-2c-mymaps.googleusercontent.com/untrusted/hostedimage/tl8pq4m5p1hehg0ap29ghcbj04/h28mdav5fnme05f2mhei4buu34/1651181603500/tOw6E0r1FGwe9pMmodSBgl3rcixilYXl/04986887333175085779/5AIsG_va1nzAm7fSPPCW6ItzzVE7SsF1Z48FxuLhRLJXCrYXJmPEdjosmrvD5oziF6JqKL6--NsVzaGfMEm-vOIbhn_xUaXlLxyan6E2qMYXsolXkwb2wzI5S9nx_RxQevRxFRJ90o0fTuMp8c9s-gMNMzpBf-BXV32x0PhkpUDkx13GMvuti9YzPJFWL9cIEyEZrWd4?session=0&fife" class="img-responsivle" alt=""></td>
-                                                                    <td>Frontcountry - Reservable</td>
-                                                                </tr>
-                                                                <tr data-geometry="POINT (-60.8755267 46.7963455)" data-type="wkt">
-                                                                    <td>Fishing Cove</td>
-                                                                    <td><img src="https://doc-04-2c-mymaps.googleusercontent.com/untrusted/hostedimage/tl8pq4m5p1hehg0ap29ghcbj04/2c9buoqkvcvmav2bjs359vioho/1651181603500/tOw6E0r1FGwe9pMmodSBgl3rcixilYXl/04986887333175085779/5AIsG_vZoRjR3kv4Alkc799XMOFUOKrYUG0f6-QBnPqfGKwAZf4MctnS0Swx9eC1Ytpw1AtLFJ7nWiNRy-5S58Gkk6Uq-yaWw1mFs0kQwR4ytap5Hp5ZOnFOpVZZVasEO7-yEqMlwFGx3Z4xAL6YK5YPaGWNSJaCKeN6KZ9jHNlNcAXZBGX1w0dn7r9bJqojYdPHw7kI?session=0&fife" class="img-responsivle" alt=""></td>
-                                                                    <td>Backcountry - First-come; first-served</td>
-                                                                </tr>
-                                
-                                                            </tbody>
-                                                        </table> -->
-                                                </section>
-                                            </div>
-                                        </section>
-                                    </div>
+                                    <!-- Insert Map End -->
                                 </div>
-
-                                <!-- <script>
-                                        $(document).on("geomap.ready", function (event, maps) {
-                                            var myMap = maps.geomap1; // return map with specfic id
-                                
-                                            myMap.zoomToExtent(myMap.getLayer("#cgtable").getDataExtent(), true);
-                                            console.log(myMap.getLayer("#cgtable"));
-                                            myMap.zoomOut();
-                                
-                                            // myMap.view
-                                            console.log(myMap);
-                                            console.log(myMap.map[0]);
-                                            // let myMapMap = myMap.map();
-                                            // myMapMap.getView().setCenter( ol.proj.transform( [ -75.70535, 45.3995 ], "EPSG:4326", "EPSG:3978" ) )
-                                        });
-                                    </script> -->
-                                <!-- GeomapEnd -->
-
-                                <!-- End geomap section -->
-                                <!-- <div id="map-canvas" style="width:100%; min-height: 200px;"><img src="https://user-images.githubusercontent.com/45856706/151207794-882bd4bd-a2c8-4a5d-93cc-6981f76287d1.png" alt="" class="img-responsive"></div> -->
-                                <p><a href="#noTarget" class="wb-lbx">Maps and directions</a></p>
-
-                                <!-- 
-                                <div id="locationmap" class="wb-geomap position scaleline geocoder geolocation mapcontrols" data-wb-geomap='{
-                                    "tables": [{
-                                        "title": "Features",
-                                        "caption": "Map features",
-                                        "id": "mapFeatures",
-                                        "zoom": true,
-                                        "tab": true,
-                                        "popups": true,
-                                        "visible": true,
-                                        "popupsInfo": {
-                                            "id": "featurePopup",
-                                            "height": 400,
-                                            "width": 400,
-                                            "close": true,
-                                            "content": "<div style=\"white-space:nowrap;\"><p>Test</p></div>"
-                                        },
-                                        "style": {
-                                            "type": "unique",
-                                            "field": "type",
-                                            "init": {
-                                                "Entrance": {
-                                                    "externalGraphic": "https://user-images.githubusercontent.com/45856706/174391357-ada98392-94a9-4b55-9846-c7cfb30e9584.png",
-                                                    "fillOpacity": "1",
-                                                    "graphicWidth": "25",
-                                                    "name": "Entrance"
-                                                },
-                                                "InformationCentre": {
-                                                    "externalGraphic": "https://user-images.githubusercontent.com/45856706/174391357-ada98392-94a9-4b55-9846-c7cfb30e9584.png",
-                                                    "fillOpacity": "1",
-                                                    "graphicWidth": "25",
-                                                    "name": "InformationCentre"
-                                                }
-                                            },
-                                            "select": {
-                                                "externalGraphic": "https://user-images.githubusercontent.com/45856706/174391357-ada98392-94a9-4b55-9846-c7cfb30e9584.png",
-                                                "graphicOpacity": "1"
-                                            }
-                                            }
-                                    }]
-                                }'>
-                            -->
-                                <!-- <div class="row"> -->
-                                <!-- <div class="col-md-12"> -->
-                                <!-- Insert Map Start (mandatory) -->
-                                <!-- <div class="wb-geomap-map mrgn-bttm-lg"></div> -->
-                                <!-- Insert Map End -->
-                                <!-- </div> -->
-                                <!--  -->
-                                <!-- Insert legend (optional) -->
-                                <!-- <section class="wb-geomap-legend col-md-3"> -->
-                                <!-- <h3>Legend</h3> -->
-                                <!-- </section> -->
                                 <!-- Insert Layer Data Start (mandatory) -->
-                                <!--  -->
-                                <!-- <div class="wb-geomap-layers col-md-12"> -->
-                                <!-- <table id="mapFeatures" aria-label=""> -->
-                                <!-- <caption class="wb-inv">Map details</caption> -->
-                                <!-- <thead> -->
-                                <!-- <tr> -->
-                                <!-- <th>type</th> -->
-                                <!-- <th>Name</th> -->
-                                <!-- <th>Detail</th> -->
-                                <!--  -->
-                                <!-- </tr> -->
-                                <!-- </thead> -->
-                                <!-- <tbody> -->
-                                <!-- <tr data-geometry="POINT (-86.2926568 48.5902927)" data-type="wkt"> -->
-                                <!-- <td>InformationCentre</td> -->
-                                <!-- <td>Pukaskwa National Park Visitor Center</td> -->
-                                <!-- <td>Our visitor center staff will be happy to help you plan your best trip to Pukaskwa National Park</td> -->
-                                <!-- </tr> -->
-                                <!-- <tr data-geometry="POINT (-86.289493 48.607231)" data-type="wkt"> -->
-                                <!-- <td>Entrance</td> -->
-                                <!-- <td>Pukaskwa National Park entrance</td> -->
-                                <!-- <td>Take Road 627 from the Trans-Canada Highway</td> -->
-                                <!-- </tr> -->
-                                <!-- </tbody> -->
-                                <!-- </table> -->
-                                <!-- </div> -->
-                                <!-- Insert Layer Data End -->
-                                <!-- </div> -->
-                                <!-- </div>  -->
-
-
-                                <!-- GeomapEnd -->
-
-                                <!-- End geomap section -->
-                                <!-- <div id="map-canvas" style="width:100%; min-height: 200px;"><img src="https://user-images.githubusercontent.com/45856706/151207794-882bd4bd-a2c8-4a5d-93cc-6981f76287d1.png" alt="" class="img-responsive"></div> -->
-                                <!-- <p><a href="#noTarget" class="wb-lbx">Maps and directions</a></p> -->
-                                <!-- </div> -->
-
+                                <div class="wb-geomap-layers col-md-12 hidden">
+                                    <table id="addNRCan" aria-label="NRCan Ottawa office adress" class="table">
+                                        <caption class="wb-inv">Natural Resources Canada Ottawa office adress</caption>
+                                        <thead>
+                                            <tr>
+                                                <th>Adress</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-geometry="POINT (-86.2926568 48.5902892)" data-type="wkt">
+                                                <td>615 Booth St.,<br />Ottawa (ON),<br />Canada,<br />K1A 0E8</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p><a href="">Maps and directions</a></p>
                             </div>
+                            <div class="col-sm-5">
+                                <h3 class="mrgn-tp-0">Contact Pukaskwa National Park</h3>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        
+                                       
+                                        <p><strong>General inquiries</strong>:<br><span class="fas fa-telephone" aria-hidden="true"></span><span class="nowrap">1-807-229-0801</span> ext. 248</p>
+                                        <p><span class="fas fa-email" aria-hidden="true"></span><a href="mailto:pukaskwaont@pc.gc.ca">pukaskwaont@pc.gc.ca</a></p>
+                                        <p><strong>For emergencies within the park:</strong>
+                                            <br><span class="fas fa-alert" aria-hidden="true"></span><span class="nowrap">1-877-852-3100</span>
+                                        </p>
 
+                                        <h3>Hours of operation</h3>
+                                        <p>Access to the site: May 15 to October 15<br>
+                                        Information centre and campgrounds: <a href="">See all hours</a></p>
+                                        <h3>#PukaskwaNP</h3>
+                                        
+                                        <ul class="list-unstyled list-inline nowrap mrgn-bttm-0">
+                                            <li><a class="mrgn-rght-md" href="https://www.facebook.com/PukaskwaNP"><span class="fab fa-facebook-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
+                                            <li><a class="mrgn-rght-md" href="https://twitter.com/PukaskwaNP"><span class="fab fa-twitter-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
+                                            <li><a class="mrgn-rght-md" href="https://www.youtube.com/ParksCanada"><span class="fab fa-youtube-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
+                                        </ul>
+                                        <!-- <p class="mrgn-tp-0">#PukaskwaNP</p> -->
 
-
-
-                            <!-- <p><a href="" class="btn btn-primary">Subscribe to our newsletter</a></p> -->
+                                    </div>
+                                   
+                                </div>
+                            </div>
                         </div>
 
-
-
-
-                        <aside class="col-xs-12 col-sm-4 mrgn-bttm-md">
-                            <!-- Right panels -->
-
-
-                            <!-- Video -->
-                            <!-- <div class="img-responsive">
-                            <figure class="wb-mltmd img-responsive" data-wb-mltmd='{"shareUrl": "https://www.youtube.com/watch?v=bA1HMU4mFbY"}'>
-                                <video title="Pukaskwa in 360">
-                                    <source type="video/youtube" src="https://www.youtube.com/watch?v=bA1HMU4mFbY" />
-                                </video>
-                                <figcaption class="wb-inv">
-                                    <p>Share this video</p>
-                                </figcaption>
-                            </figure>
-                        </div> -->
-                            <div>
-
-                            </div>
-                        </aside>
                     </div>
                 </div>
+            </div>
+
         </section>
         <section class="well well-sm brdr-0 mrgn-bttm-0">
             <div class="container">
