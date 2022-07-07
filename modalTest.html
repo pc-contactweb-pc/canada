@@ -311,17 +311,40 @@
         </div>
         <section class="container">
             <!-- Main content -->
-            <a class="wb-lbx" title="View larger" href="#largerImage1"><img src="https://user-images.githubusercontent.com/45856706/177870024-88689942-60fe-4126-a398-b8682f3e28f4.jpg" alt="Image 1" /></a>
-            <section id="largerImage1" class="mfp-hide modal-dialog modal-content overlay-def">
-                <header class="modal-header">
-                    <h2 class="modal-title">Image 1</h2>
-                </header>
-                <div class="modal-body" >
-                    <div style="overflow:auto; width:100%">
-                    <img style="max-width: 200vw; max-height:200vw;" src="https://user-images.githubusercontent.com/45856706/177870024-88689942-60fe-4126-a398-b8682f3e28f4.jpg" alt="">
-                </div>
-                <p><a href="https://user-images.githubusercontent.com/45856706/177870024-88689942-60fe-4126-a398-b8682f3e28f4.jpg">Download full resolution image</a></p>
-                </div>
+            <style>
+                div.mfp-content {
+                    width: 95%;
+                }
+            
+                img.mfp-img {
+                    max-width: 100%!important;
+                    max-height:100%!important;  /* Need to overwrite the auto applied max-height */
+                    
+                }
+            </style>
+            <!-- 
+            <a class="wb-lbx" href="https://user-images.githubusercontent.com/45856706/177870024-88689942-60fe-4126-a398-b8682f3e28f4.jpg" title="Image 1">
+                <img src="https://user-images.githubusercontent.com/45856706/177870024-88689942-60fe-4126-a398-b8682f3e28f4.jpg" alt="Image 1" />
+            </a>
+            
+            <div>
+                <img src="https://user-images.githubusercontent.com/45856706/177870024-88689942-60fe-4126-a398-b8682f3e28f4.jpg" alt="Image 1" />
+            </div> -->
+            
+            
+            <a class="wb-lbx" title="View larger" href="#largerImage1"><img src="https://user-images.githubusercontent.com/45856706/177870024-88689942-60fe-4126-a398-b8682f3e28f4.jpg" class="img-responsive" alt="Image 1" /></a>
+                    <section id="largerImage1" class="mfp-hide modal-dialog modal-content overlay-def">
+                        <header class="modal-header">
+                            <h2 class="modal-title">Image 1</h2>
+                        </header>
+                        <div class="modal-body" >
+                            <div style="overflow:auto; width:100%">
+                            <img style="max-width: 200vw; max-height:200vw;" src="https://user-images.githubusercontent.com/45856706/177870024-88689942-60fe-4126-a398-b8682f3e28f4.jpg" alt="">
+                        </div>
+                        <p><a href="https://user-images.githubusercontent.com/45856706/177870024-88689942-60fe-4126-a398-b8682f3e28f4.jpg">Download full resolution image</a></p>
+                        </div>
+                        
+                    </section>
                 
             </section>
             <!-- End main content -->
