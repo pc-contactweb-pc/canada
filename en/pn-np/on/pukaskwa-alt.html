@@ -2,6 +2,7 @@
 <!-- Start Treasury board content -->
 
 <head prefix="og: http://ogp.me/ns#">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
     <title>Pukaskwa National Park</title>
@@ -267,21 +268,21 @@
 
                         <div class="row mrgn-tp-xl">
                             <div class="col-md-7">
-                                <div id="location_map" class="wb-geomap geolocation geocoder" data-wb-geomap='{
-    "tables": [{
-        "id": "addNRCan",
-        "style": {
-            "type": "symbol",
-            "init": {
-                "pointRadius": 12,
-                "graphicName": "star",
-                "strokeColor": "#FF0000",
-                "fillColor": "#FF0000",
-                "fillOpacity": 0.7
-            }
-        }
-    }]
-}'>
+                                <div id="location_map" class="wb-geomap geolocation geocoder" data-geomap-zoom="3" data-wb-geomap='{
+                                    "tables": [{
+                                        "id": "addPCLocation",
+                                        "style": {
+                                            "type": "symbol",
+                                            "init": {
+                                                "pointRadius": 12,
+                                                "graphicName": "star",
+                                                "strokeColor": "#FF0000",
+                                                "fillColor": "#FF0000",
+                                                "fillOpacity": 0.7
+                                            }
+                                        }
+                                    }]
+                                }'>
 
 
                                     <div class="wb-geomap-map " id="myGeomap"></div>
@@ -290,11 +291,11 @@
                                 </div>
                                 <!-- Insert Layer Data Start (mandatory) -->
                                 <div class="wb-geomap-layers col-md-12 hidden">
-                                    <table id="addNRCan" aria-label="NRCan Ottawa office adress" class="table">
-                                        <caption class="wb-inv">Natural Resources Canada Ottawa office adress</caption>
+                                    <table id="addPCLocation" aria-label="Location information" class="table">
+                                        <caption class="wb-inv">Location information</caption>
                                         <thead>
                                             <tr>
-                                                <th>Adress</th>
+                                                <th>Address</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -310,8 +311,8 @@
                                 <h3 class="mrgn-tp-0">Contact Pukaskwa National Park</h3>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        
-                                       
+
+
                                         <p><strong>General inquiries</strong>:<br><span class="fas fa-telephone" aria-hidden="true"></span><span class="nowrap">1-807-229-0801</span> ext. 248</p>
                                         <p><span class="fas fa-email" aria-hidden="true"></span><a href="mailto:pukaskwaont@pc.gc.ca">pukaskwaont@pc.gc.ca</a></p>
                                         <p><strong>For emergencies within the park:</strong>
@@ -320,9 +321,9 @@
 
                                         <h3>Hours of operation</h3>
                                         <p>Park access: May 15 to October 15<br>
-                                        Information centre and campgrounds: <a href="">See all hours</a></p>
+                                            Information centre and campgrounds: <a href="">See all hours</a></p>
                                         <h3>#PukaskwaNP</h3>
-                                        
+
                                         <ul class="list-unstyled list-inline nowrap mrgn-bttm-0">
                                             <li><a class="mrgn-rght-md" href="https://www.facebook.com/PukaskwaNP"><span class="fab fa-facebook-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
                                             <li><a class="mrgn-rght-md" href="https://twitter.com/PukaskwaNP"><span class="fab fa-twitter-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
@@ -331,7 +332,7 @@
                                         <!-- <p class="mrgn-tp-0">#PukaskwaNP</p> -->
 
                                     </div>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -399,36 +400,6 @@
             </div>
         </section>
 
-        <!--
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmI9BRKR6P8DKuU47LCV9778Fgsn7BAaE&amp;v=3.exp&amp;language=en"></script>
-        <script>
-            var map;            function initialize() {
-                //var key = Math.floor(Math.random()*90000) + 10000;
-                var key = 180131;
-                var SiteLocation1 = new google.maps.LatLng(48.591665, -86.2963477);
-                var mapOptions = {
-                    center: SiteLocation1,
-                    zoom: 7,
-                    streetViewControl: false
-                };
-                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);                var KMLSource = 'http://www.google.com/maps/d/kml?mid=&rev=' + key;
-                var customKMLLayer = new google.maps.KmlLayer({
-                    url: KMLSource,
-                    suppressInfoWindows: false,
-                    map: map,
-                    preserveViewport: true
-                });
-                customKMLLayer.setMap(map);                customKMLLayer.addListener('click', function (kmlEvent) {
-                    dataLayer.push({
-                        'event': 'Map click',
-                        'eventCategory': 'Marker click',
-                        'eventAction': document.title,
-                        'eventLabel': kmlEvent.featureData.name,
-                    });
-                });
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script> -->
         <!-- End main content -->
     </main>
     <!-- End main -->
@@ -452,18 +423,16 @@
 
     <!-- Geomap start -->
     <script>
-        wb.doc.on("geomap.ready", function (event, maps) {
-            var myMap = maps.locationmap; // return map with specfic id
+        $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
 
-            myMap.zoomToExtent(myMap.getLayer("#mapFeatures").getDataExtent(), true);
-            console.log(myMap.getLayer("#mapFeatures"));
-            myMap.zoomOut();
 
-            // myMap.view
-            console.log(myMap);
-            console.log(myMap.map[0]);
-            // let myMapMap = myMap.map();
-            // myMapMap.getView().setCenter( ol.proj.transform( [ -75.70535, 45.3995 ], "EPSG:4326", "EPSG:3978" ) )
+            let desiredZoom = document.getElementById("location_map").getAttribute("data-geomap-zoom");
+
+            let myMap = map;
+            myMap.zoomToExtent(myMap.getLayer("#addPCLocation").getDataExtent(), true);
+
+            myMap.getView().setZoom(desiredZoom);
+
         });
     </script>
     <!-- Geomap end -->
