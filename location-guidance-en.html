@@ -615,7 +615,7 @@
                         <!--  ** Map ** -->
                         <div class="row mrgn-tp-xl">
                             <div class="col-md-7">
-                                <div id="location_map" class="wb-geomap geolocation geocoder" data-wb-geomap='{
+                                <div id="location_map" class="wb-geomap geolocation geocoder" data-geomap-zoom="3" data-wb-geomap='{
     "tables": [{
         "id": "addPCLoc",
         "style": {
@@ -784,16 +784,17 @@
 
     <!-- Geomap start -->
     <script>
-        $(document).on( "wb-ready.wb-geomap", "#location_map", function( event, map ) {
-	// Get the map to use in zoomFeature function
-	var myMap = map;
-	myMap.getView().setCenter( -75.70535, 45.3995 );
+        $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
 
-	// if reprojection is needed
-	// myMap.getView().setCenter( ol.proj.transform( [ -75.70535, 45.3995 ], "EPSG:4326", "EPSG:3978" ) );
 
-	myMap.getView().setZoom( 5 );
-});
+            let desiredZoom = document.getElementById("location_map").getAttribute("data-geomap-zoom");
+
+            let myMap = map;
+            myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
+
+            myMap.getView().setZoom(desiredZoom);
+
+        });
 
         $(document).on("wb-ready.wb", function (event) {
             // let myMap = $("#location_map");
@@ -801,7 +802,7 @@
             //     console.log(val);
             // })
 
-            
+
             $("#top-bar").trigger("open.wb-overlay");
             //show guidance button
             $("#show-guidance-toggle").click(function () {
