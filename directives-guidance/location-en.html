@@ -766,6 +766,45 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td><strong>Activities and experiences</strong></td>
+                                <td>n/a</td>
+                                <td>(Things to do)</td>
+                                <td>
+                                    <ul>
+                                        <li><strong>Description text:</strong>
+                                            <ul>
+                                                <li>Start the sentence with "Things to do" (mandatory), followed with general activities and experience items relevant for your location.<ul>
+                                                        <li>E.g.: instead of hiking trails, bike trails, and ski trails, just use trails.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Text sequence: Things to do, ACTIVITY OR EXP., ACTIVITY OR EXP., ACTIVITY OR EXP., etc. , and ACTIVITY OR EXP..</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan your visit</strong></td>
+                                <td>n/a</td>
+                                <td>Plan your visit</td>
+                                <td><strong>Description text:</strong>
+                                    <ul>
+                                        <li>Start the sentence with "Maps and directions" (mandatory), followed with general Plan your visit items relevant for your location.</li>
+                                        <li>Text sequence: Maps and directions, PLANNING VISIT ITEM, PLANNING VISIT ITEM, PLANNING VISIT ITEM, etc. , and PLANNING VISIT ITEM.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Camping and overnight accommodations</strong></td>
+                                <td>n/a</td>
+                                <td>(New)</td>
+                                <td>
+                                    <ul>
+                                        <li>Optional, include if applicable</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td><strong>Tours and programs</strong></td>
                                 <td>n/a</td>
                                 <td>n/a</td>
@@ -803,17 +842,6 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><strong>Plan your visit</strong></td>
-                                <td>n/a</td>
-                                <td>Plan your visit</td>
-                                <td><strong>Description text:</strong>
-                                    <ul>
-                                        <li>Start the sentence with "Maps and directions" (mandatory), followed with general Plan your visit items relevant for your location.</li>
-                                        <li>Text sequence: Maps and directions, PLANNING VISIT ITEM, PLANNING VISIT ITEM, PLANNING VISIT ITEM, etc. , and PLANNING VISIT ITEM.</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td><strong>Fees</strong></td>
                                 <td>n/a</td>
                                 <td>n/a</td>
@@ -821,34 +849,6 @@
                                     <ul>
                                         <li>Optional, include if applicable</li>
                                         <li>Remove non-applicable items</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><strong>Camping and overnight accommodations</strong></td>
-                                <td>n/a</td>
-                                <td>(New)</td>
-                                <td>
-                                    <ul>
-                                        <li>Optional, include if applicable</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><strong>Activities and experiences</strong></td>
-                                <td>n/a</td>
-                                <td>(Things to do)</td>
-                                <td>
-                                    <ul>
-                                        <li><strong>Description text:</strong>
-                                            <ul>
-                                                <li>Start the sentence with "Things to do" (mandatory), followed with general activities and experience items relevant for your location.<ul>
-                                                        <li>E.g.: instead of hiking trails, bike trails, and ski trails, just use trails.</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Text sequence: Things to do, ACTIVITY OR EXP., ACTIVITY OR EXP., ACTIVITY OR EXP., etc. , and ACTIVITY OR EXP..</li>
-                                            </ul>
-                                        </li>
                                     </ul>
                                 </td>
                             </tr>
@@ -1092,17 +1092,17 @@
                     <!--  ** Contact, hours, and social ** -->
                     <div class="col-sm-5">
                         <section class="placeholder-content">
-                            <h3 class="mrgn-tp-0">Contact [Site name]</h3>
+                            <h3 class="mrgn-tp-0">Contact [Location name]</h3>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <p><strong>General inquiries</strong>:<br><span class="fas fa-telephone" aria-hidden="true"></span><span class="nowrap">1-234-567-8910</span> ext. 123</p>
-                                    <p><span class="fas fa-email" aria-hidden="true"></span><a href="mailto:pukaskwaont@pc.gc.ca">pukaskwaont@pc.gc.ca</a></p>
-                                    <p><strong>For emergencies within the park:</strong>
+                                    <p><span class="fas fa-email" aria-hidden="true"></span><a href="mailto:email@pc.gc.ca">email@pc.gc.ca</a></p>
+                                    <p><strong>For emergencies within the [park/site]:</strong>
                                         <br><span class="fas fa-alert" aria-hidden="true"></span><span class="nowrap">1-987-654-3210</span>
                                     </p>
                                     <h3>Hours of operation</h3>
-                                    <p>Park access: May 15 to October 15<br>
-                                        Information centre and campgrounds: <a href="">See all hours</a></p>
+                                    <p>[Location type] access: [MM DD (YYYY optional)] tp [MM DD (YYYY optional)<br>
+                                        [Facilities type] and [Facilities type]: <a href="">See all hours</a></p>
                                     <h3>[#SiteTag or Social]</h3>
                                     <ul class="list-unstyled list-inline nowrap mrgn-bttm-0">
                                         <li><a class="mrgn-rght-md" href="https://www.facebook.com/PukaskwaNP"><span class="fab fa-facebook-square fa-2x black" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
@@ -1459,7 +1459,7 @@
     <!-- Geomap start -->
     <script>
         $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
-            let desiredZoom = document.getElementById("location_map").getAttribute("data-geomap-zoom"); 
+            let desiredZoom = document.getElementById("location_map").getAttribute("data-geomap-zoom");
             let myMap = map;
             myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
             myMap.getView().setZoom(desiredZoom);
