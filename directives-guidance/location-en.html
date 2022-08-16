@@ -1503,6 +1503,7 @@
                 $('.placeholder-content').removeClass("hidden");
                 $('.park1-content').addClass("hidden");
                 $('.nhs1-content').addClass("hidden");
+                $( ".wb-eqht" ).trigger( "wb-update.wb-eqht" );
             });
             $("#show-park1-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
@@ -1510,6 +1511,7 @@
                 $('.placeholder-content').addClass("hidden");
                 $('.park1-content').removeClass("hidden");
                 $('.nhs1-content').addClass("hidden");
+                $( ".wb-eqht" ).trigger( "wb-update.wb-eqht" );
 
             }); $("#show-nonopnhs-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
@@ -1517,7 +1519,7 @@
                 $('.placeholder-content').addClass("hidden");
                 $('.park1-content').addClass("hidden");
                 $('.nhs1-content').removeClass("hidden");
-
+                $( ".wb-eqht" ).trigger( "wb-update.wb-eqht" );
             });
         });
     </script>
