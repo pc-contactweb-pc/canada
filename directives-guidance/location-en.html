@@ -164,26 +164,20 @@
             </span>
             <span class="nhs1-content hidden">
                 <img src="https://user-images.githubusercontent.com/45856706/184727025-efd32265-5e7b-439e-b845-9853c9c3ff1b.jpg" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;">
-                
+
             </span>
         </div>
 
         <section class="container">
 
-            <section class="park1-content hidden">
+            <section class="park1-content nhs1-content  hidden">
                 <div class="wb-dismissable">
                     <div class="alert alert-info mrgn-tp-0 mrgn-bttm-0">
                         <p>Location content is for illustrative purposes only. Content has not been reviewed by locations. </p>
                     </div>
                 </div>
             </section>
-            <section class="nhs1-content hidden">
-                <div class="wb-dismissable">
-                    <div class="alert alert-info mrgn-tp-0 mrgn-bttm-0">
-                        <p>Location content is for illustrative purposes only. Content has not been reviewed by locations. </p>
-                    </div>
-                </div>
-            </section>
+
             </div>
             <!-- ** Title and pagetag ** -->
             <h1 property="name" id="wb-cont" class="pc-h1-brass">
@@ -1503,26 +1497,27 @@
             $("#show-placeholder-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
                 $("#show-placeholder-toggle").addClass("active");
-                $('.placeholder-content').removeClass("hidden");
                 $('.park1-content').addClass("hidden");
                 $('.nhs1-content').addClass("hidden");
-                $( ".wb-eqht" ).trigger( "wb-update.wb-eqht" );
+                $('.placeholder-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
             });
             $("#show-park1-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
                 $("#show-park1-toggle").addClass("active");
                 $('.placeholder-content').addClass("hidden");
-                $('.park1-content').removeClass("hidden");
                 $('.nhs1-content').addClass("hidden");
-                $( ".wb-eqht" ).trigger( "wb-update.wb-eqht" );
+                $('.park1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
 
-            }); $("#show-nonopnhs-toggle").click(function () {
+            }); 
+            $("#show-nonopnhs-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
                 $("#show-nonopnhs-toggle").addClass("active");
                 $('.placeholder-content').addClass("hidden");
                 $('.park1-content').addClass("hidden");
                 $('.nhs1-content').removeClass("hidden");
-                $( ".wb-eqht" ).trigger( "wb-update.wb-eqht" );
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
             });
         });
     </script>
