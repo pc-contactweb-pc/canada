@@ -26,9 +26,12 @@
                 </div>
                 <div class="btn-group">
                     <button class="location-toggles btn btn-default active" id="show-placeholder-toggle">Placeholders</button>
-                    <!-- <button class="location-toggles btn btn-default" id="show-park1-toggle">Large park #1</button>
+                    <button class="location-toggles btn btn-default" id="show-park1-toggle">Large park #1</button>
+                    <button class="location-toggles btn btn-default" id="show-nhs-toggle">Non-operational historic site</button>
+                    <!-- 
+                        
                     <button class="location-toggles btn btn-default" id="show-park2-toggle">Large park #2</button>
-                    <button class="location-toggles btn btn-default" id="show-nhs-toggle">Operational historic site</button>
+                    
                     <button class="location-toggles btn btn-default" id="show-nonopnhs-toggle">Non-operational historic site</button> -->
                 </div>
             </div>
@@ -138,17 +141,17 @@
                     <li><a href="https://www.canada.ca/en.html">
                             <span class="placeholder-content">[Program]</span>
                             <span class="park1-content hidden">National parks</span>
-                            <span class="park2-content hidden">National parks</span>
+                            
+                            
                             <span class="nhs1-content hidden">National historic sites</span>
-                            <span class="nhs2-content hidden">National historic sites</span>
                         </a></li>
 
 
                     <li><a href="https://www.canada.ca/en.html"><span class="placeholder-content">[Province / Territory]</span>
                             <span class="park1-content hidden">Ontario</span>
-                            <span class="park2-content hidden">Nova Scotia</span>
-                            <span class="nhs1-content hidden">Nova Scotia</span>
-                            <span class="nhs2-content hidden">Saskatchewan</span></a></li>
+                            
+                            
+                            <span class="nhs1-content hidden">Saskatchewan</span></a></li>
 
                 </ol>
             </div>
@@ -161,8 +164,8 @@
                 <span class="placeholder-content"></span>
                 <span class="park1-content hidden"></span>
                 <span class="park2-content hidden"></span>
+                
                 <span class="nhs1-content hidden"></span>
-                <span class="nhs2-content hidden"></span>
             -->
 
     <!-- 
@@ -189,13 +192,9 @@
             <span class="park1-content hidden">
                 <img src="https://user-images.githubusercontent.com/45856706/184726253-e4dbc094-f1eb-40eb-bcbd-0b34d2353157.jpg" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;">
             </span>
-            <span class="park2-content hidden">
-                <img src="https://user-images.githubusercontent.com/45856706/184384747-3f658cbb-4253-4203-a2a3-5ae24bd92293.jpg" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;">
-            </span>
-            <span class="nhs1-content hidden">
-                <img src="https://user-images.githubusercontent.com/45856706/184727025-efd32265-5e7b-439e-b845-9853c9c3ff1b.jpg" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;">
-            </span>
-            <span class="nhs2-content hidden"><img src="" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;"></span>
+           
+            
+            <span class="nhs1-content hidden"><img src="" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;"></span>
 
 
         </div>
@@ -268,9 +267,9 @@
 
                 $('.placeholder-content').removeClass("hidden");
                 $('.park1-content').addClass("hidden");
-                $('.park2-content').addClass("hidden");
+                
+                
                 $('.nhs1-content').addClass("hidden");
-                $('.nhs2-content').addClass("hidden");
             });
             $("#show-park1-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
@@ -278,40 +277,22 @@
 
                 $('.placeholder-content').addClass("hidden");
                 $('.park1-content').removeClass("hidden");
-                $('.park2-content').addClass("hidden");
+                
+                
                 $('.nhs1-content').addClass("hidden");
-                $('.nhs2-content').addClass("hidden");
             });
-            $("#show-park2-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-park2-toggle").addClass("active");
-
-                $('.placeholder-content').addClass("hidden");
-                $('.park1-content').addClass("hidden");
-                $('.park2-content').removeClass("hidden");
-                $('.nhs1-content').addClass("hidden");
-                $('.nhs2-content').addClass("hidden");
-            });
+           
             $("#show-nhs-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
                 $("#show-nhs-toggle").addClass("active");
 
                 $('.placeholder-content').addClass("hidden");
                 $('.park1-content').addClass("hidden");
-                $('.park2-content').addClass("hidden");
-                $('.nhs1-content').removeClass("hidden");
-                $('.nhs2-content').addClass("hidden");
-            });
-            $("#show-nonopnhs-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-nonopnhs-toggle").addClass("active");
-
-                $('.placeholder-content').addClass("hidden");
-                $('.park1-content').addClass("hidden");
-                $('.park2-content').addClass("hidden");
+                
+                
                 $('.nhs1-content').addClass("hidden");
-                $('.nhs2-content').removeClass("hidden");
             });
+           
         });
     </script>
     <style>

@@ -139,16 +139,16 @@
                             <span class="placeholder-content">[Program]</span>
                             <span class="park1-content hidden">National parks</span>
                             <span class="park2-content hidden">National parks</span>
+                            
                             <span class="nhs1-content hidden">National historic sites</span>
-                            <span class="nhs2-content hidden">National historic sites</span>
                         </a></li>
 
 
                     <li><a href="https://www.canada.ca/en.html"><span class="placeholder-content">[Province / Territory]</span>
                             <span class="park1-content hidden">Ontario</span>
                             <span class="park2-content hidden">Nova Scotia</span>
-                            <span class="nhs1-content hidden">Nova Scotia</span>
-                            <span class="nhs2-content hidden">Saskatchewan</span></a></li>
+                            
+                            <span class="nhs1-content hidden">Saskatchewan</span></a></li>
 
                 </ol>
             </div>
@@ -161,8 +161,8 @@
                 <span class="placeholder-content"></span>
                 <span class="park1-content hidden"></span>
                 <span class="park2-content hidden"></span>
+
                 <span class="nhs1-content hidden"></span>
-                <span class="nhs2-content hidden"></span>
             -->
 
     <!-- 
@@ -191,10 +191,8 @@
             <span class="park2-content hidden">
                 <img src="https://user-images.githubusercontent.com/45856706/184384747-3f658cbb-4253-4203-a2a3-5ae24bd92293.jpg" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;">
             </span>
-            <span class="nhs1-content hidden">
-                <img src="https://user-images.githubusercontent.com/45856706/184727025-efd32265-5e7b-439e-b845-9853c9c3ff1b.jpg" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;">
-            </span>
-            <span class="nhs2-content hidden"><img src="" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;"></span>
+            
+            <span class="nhs1-content hidden"></span>
 
 
         </div>
@@ -204,16 +202,16 @@
                 <span class="placeholder-content">[Site name]</span>
                 <span class="park1-content hidden">Pukaskwa National Park</span>
                 <span class="park2-content hidden">Kejimkujik National Park and National Historic Site</span>
-                <span class="nhs1-content hidden">Beaubassin National Historic Site</span>
-                <span class="nhs2-content hidden">Batoche National Historic Site</span>
+                
+                <span class="nhs1-content hidden">Batoche National Historic Site</span>
             </h1>
             <p class="pagetag">
 
                 <span class="placeholder-content">[1 - 2 sentences that provide a sense of place]</span>
                 <span class="park1-content hidden">A wilderness woven with Canadian Shield, enriched by Anishinaabe First Nations culture.</span>
                 <span class="park2-content hidden">Generations of families have paddled, hiked, camped, and connected with nature and Mi’kmaw culture at Kejimkujik National Park and National Historic Site. When the sun sets, the skies over Kejimkujik reveal a beautiful panorama of tens of thousands of stars in Nova Scotia’s only Dark Sky Preserve.</span>
-                <span class="nhs1-content hidden">Beaubassin National Historic Site</span>
-                <span class="nhs2-content hidden">Journey back to 19th century Métis settler life on the banks of the South Saskatchewan River. Learn about how a traditional way of life changed forever at the final battlefield of the Northwest Resistance of 1885, scene of Louis Riel’s last stand.</span>
+                
+                <span class="nhs1-content hidden">Journey back to 19th century Métis settler life on the banks of the South Saskatchewan River. Learn about how a traditional way of life changed forever at the final battlefield of the Northwest Resistance of 1885, scene of Louis Riel’s last stand.</span>
 
             </p>
             <details class="guidance-details">
@@ -318,8 +316,8 @@
                     </div>
                 </div>
             </div>
+            
             <div class="nhs1-content hidden"></div>
-            <div class="nhs2-content hidden"></div>
 
 
             <details class="guidance-details">
@@ -437,30 +435,8 @@
                 </div>
             </section>
         </div>
+        
         <div class="nhs1-content hidden">
-            <section class="provisional most-requested-bullets brdr-0 well well-sm">
-                <div class="container mrgn-tp-lg mrgn-bttm-lg">
-                    <div class="row">
-                        <div class="pddng-r-0 col-md-2">
-                            <h2 class="mrgn-tp-0">Most requested</h2>
-                        </div>
-                        <div class="col-md-10">
-                            <ul class="wb-eqht colcount-md-2  wb-eqht-inited">
-                                <li><a href="#noTarget" class="wb-lbx">[Item 1]</a></li>
-                                <li><a href="#noTarget" class="wb-lbx">[Item 2]</a></li>
-                                <li><a href="#noTarget" class="wb-lbx">[Item 3]</a></li>
-                                <li><a href="#noTarget" class="wb-lbx">[Item 4]</a></li>
-                                <li><a href="#noTarget" class="wb-lbx">[Item 5]</a></li>
-                                <li><a href="#noTarget" class="wb-lbx">[Item 6]</a></li>
-                                <li><a href="#noTarget" class="wb-lbx">[Item 7]</a></li>
-                                <li><a href="#noTarget" class="wb-lbx">[Item 8]</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="nhs2-content hidden">
             <section class="provisional most-requested-bullets brdr-0 well well-sm">
                 <div class="container mrgn-tp-lg mrgn-bttm-lg">
                     <div class="row">
@@ -1418,9 +1394,9 @@
 
                 $('.placeholder-content').removeClass("hidden");
                 $('.park1-content').addClass("hidden");
-                $('.park2-content').addClass("hidden");
+                
+                
                 $('.nhs1-content').addClass("hidden");
-                $('.nhs2-content').addClass("hidden");
             });
             $("#show-park1-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
@@ -1428,39 +1404,20 @@
 
                 $('.placeholder-content').addClass("hidden");
                 $('.park1-content').removeClass("hidden");
-                $('.park2-content').addClass("hidden");
+                
+                
                 $('.nhs1-content').addClass("hidden");
-                $('.nhs2-content').addClass("hidden");
             });
-            $("#show-park2-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-park2-toggle").addClass("active");
-
-                $('.placeholder-content').addClass("hidden");
-                $('.park1-content').addClass("hidden");
-                $('.park2-content').removeClass("hidden");
-                $('.nhs1-content').addClass("hidden");
-                $('.nhs2-content').addClass("hidden");
-            });
-            $("#show-nhs-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-nhs-toggle").addClass("active");
-
-                $('.placeholder-content').addClass("hidden");
-                $('.park1-content').addClass("hidden");
-                $('.park2-content').addClass("hidden");
-                $('.nhs1-content').removeClass("hidden");
-                $('.nhs2-content').addClass("hidden");
-            });
+            
             $("#show-nonopnhs-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
                 $("#show-nonopnhs-toggle").addClass("active");
 
                 $('.placeholder-content').addClass("hidden");
                 $('.park1-content').addClass("hidden");
-                $('.park2-content').addClass("hidden");
-                $('.nhs1-content').addClass("hidden");
-                $('.nhs2-content').removeClass("hidden");
+                
+                
+                $('.nhs1-content').removeClass("hidden");
             });
         });
     </script>
