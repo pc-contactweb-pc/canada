@@ -1,45 +1,13 @@
-<html class="no-js" dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html class="no-js" dir="ltr" lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 <!-- Start Treasury board content -->
-<section class="wb-inview bar-demo" data-inview="top-bar">
-    <section id="top-bar" class="wb-overlay modal-content overlay-def wb-bar-t outside-off">
-        <div class="row center-block container">
-            <div class="guidance-options">
-                <div class="btn-group">
-                    <button id="show-guidance-toggle" class="guidance-toggle btn btn-default active">
-                        <span class="fas fa-laptop-code "></span>&nbsp;Show guidance
-                    </button>
-                    <button id="hide-guidance-toggle" class="guidance-toggle btn btn-default wb-toggle" data-toggle="
-                                [
-                                    {
-                                        'selector':'#show-guidance-toggle',
-                                        'stateOn':'active', 'state':'on'
-                                    },
-                                    {
-                                        'stateOn':'active',
-                                        'state':'off'
-                                    }
-                                ]" aria-controls="hide-guidance-toggle">
-                        <span class="fas fa-pen-square"></span>&nbsp;Hide guidance
-                    </button>
-                </div>
-                <div class="btn-group">
-                    <button class="location-toggles btn btn-default active" id="show-placeholder-toggle">Placeholders</button>
-                    <button class="location-toggles btn btn-default" id="show-park1-toggle">Pukaskwa</button>
-                    <!-- <button class="location-toggles btn btn-default" id="show-park2-toggle">Large park #2</button> -->
-                    <!-- <button class="location-toggles btn btn-default" id="show-nhs-toggle">Operational historic site</button> -->
-                    <button class="location-toggles btn btn-default" id="show-nonopnhs-toggle">Batoche</button>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-</section>
+
 
 
 <head prefix="og: http://ogp.me/ns#">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>Directives de page de renvoi des lieux</title>
+    <title>Modèle « Accueil – Lieu » avec directives</title>
+    <!-- <title>Directives de page de renvoi des lieux</title> -->
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
     <link rel="canonical" href="" />
@@ -71,27 +39,63 @@
 </head>
 
 <body vocab="http://schema.org/" class="" typeof="WebPage" resource="#wb-webpage">
+
     <nav>
-        <ul id="wb-tphp" class=" wb-disable-inited">
-            <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-            <li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to About this
-                    site</a></li>
-            <li class="wb-slc"><a class="wb-sl" href="?wbdisable=true" rel="alternate">Switch to basic HTML version</a>
+        <ul id="wb-tphp">
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-cont">Passer au contenu principal</a>
+            </li>
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-info">Passer à «&#160;Au sujet du gouvernement&#160;»</a>
             </li>
         </ul>
     </nav>
     <!-- End treasury board content -->
+    <section class="wb-inview bar-demo" data-inview="top-bar">
+        <section id="top-bar" class="wb-overlay modal-content overlay-def wb-bar-t outside-off">
+            <div class="row center-block container">
+                <div class="guidance-options">
+                    <div class="btn-group">
+                        <button id="show-guidance-toggle" class="guidance-toggle btn btn-default active">
+                            <span class="fas fa-laptop-code "></span>&nbsp;Montrer les conseils
+                        </button>
+                        <button id="hide-guidance-toggle" class="guidance-toggle btn btn-default wb-toggle" data-toggle="
+                                        [
+                                            {
+                                                'selector':'#show-guidance-toggle',
+                                                'stateOn':'active', 'state':'on'
+                                            },
+                                            {
+                                                'stateOn':'active',
+                                                'state':'off'
+                                            }
+                                        ]" aria-controls="hide-guidance-toggle">
+                            <span class="fas fa-pen-square"></span>&nbsp;Cacher les conseils
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="location-toggles btn btn-default active" id="show-placeholder-toggle">Espaces réservés</button>
+                        <button class="location-toggles btn btn-default" id="show-park1-toggle">Pukaskwa</button>
+                        <!-- <button class="location-toggles btn btn-default" id="show-park2-toggle">Large park #2</button> -->
+                        <!-- <button class="location-toggles btn btn-default" id="show-nhs-toggle">Operational historic site</button> -->
+                        <button class="location-toggles btn btn-default" id="show-nonopnhs-toggle">Batoche</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </section>
     <!-- Start content-en header -->
     <header>
         <div id="wb-bnr" class="container">
             <div class="row">
                 <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
-                    <h2 class="wb-inv">Language selection</h2>
+                    <h2 class="wb-inv">Sélection de la langue</h2>
                     <ul class="list-inline mrgn-bttm-0">
                         <li>
-                            <a lang="fr" hreflang="fr" href="https://pc-contactweb-pc.github.io/canada/directives-guidance/location-fr.html">
-                                <span class="hidden-xs">Français</span>
-                                <abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+                            <a lang="fr" hreflang="fr" href="https://pc-contactweb-pc.github.io/canada/directives-guidance/location-en.html">
+                                <span class="hidden-xs">English</span>
+                                <abbr title="English" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">en</abbr>
                             </a>
                         </li>
                     </ul>
@@ -103,17 +107,17 @@
                     <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg">
                 </div>
                 <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
-                    <h2>Search</h2>
+                    <h2>Rechercher</h2>
                     <form action="#" method="post" name="cse-search-box" role="search">
                         <div class="form-group wb-srch-qry">
-                            <label for="wb-srch-q" class="wb-inv">Search Parks Canada</label>
-                            <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Parks Canada">
+                            <label for="wb-srch-q" class="wb-inv">Recherher dans Canada.ca</label>
+                            <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca">
                             <datalist id="wb-srch-q-ac"></datalist>
                         </div>
                         <div class="form-group submit">
                             <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
                                 <span class="glyphicon-search glyphicon"></span>
-                                <span class="wb-inv">Search</span>
+                                <span class="wb-inv">Rechercher</span>
                             </button>
                         </div>
                     </form>
@@ -121,11 +125,11 @@
             </div>
         </div>
         <nav id="wb-bc" property="breadcrumb">
-            <h2>You are here:</h2>
+            <h2>Vous êtes ici&nbsp;:</h2>
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
-                    <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parcs Canada</a></li>
+                    <li><a href="https://www.canada.ca/fr.html">Canada.ca</a></li>
+                    <li><a href="https://pc-contactweb-pc.github.io/canada/fr/index.html">Parcs Canada</a></li>
                     <li><a href="https://www.canada.ca/en.html">
                             <span class="placeholder-content">[Program]</span>
                             <span class="park1-content hidden">Parcs nationaux</span> <span class="nhs1-content hidden">Lieux historiques nationaux</span>
@@ -138,20 +142,20 @@
     </header>
     <!-- End content-en header -->
     <!-- 
-                <span class="placeholder-content"></span>
-                <span class="park1-content hidden"></span>                
-                <span class="nhs1-content hidden"></span>
-            -->
+                    <span class="placeholder-content"></span>
+                    <span class="park1-content hidden"></span>                
+                    <span class="nhs1-content hidden"></span>
+                -->
     <!-- 
-        <details class="guidance-details">
-            <summary><strong>Guidance:</strong> </summary>
-            <dl class="dl-horizontal">
-                <dt></dt>
-                <dd></dd>
-                <span class="label label-success">Optional</span>
-                <span class="label label-primary">Mandatory</span>
-            </dl>
-        </details>         -->
+            <details class="guidance-details">
+                <summary><strong>Guidance:</strong> </summary>
+                <dl class="dl-horizontal">
+                    <dt></dt>
+                    <dd></dd>
+                    <span class="label label-success">Optional</span>
+                    <span class="label label-primary">Mandatory</span>
+                </dl>
+            </details>         -->
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage">
         <div style="background-color: #f5f5f5;">
@@ -185,8 +189,8 @@
                 <span class="park1-content hidden">Parc national Pukaskwa</span>
                 <span class="nhs1-content hidden">Lieu historique national de Batoche</span>
             </h1>
-            <p class="pagetag"> <span class="placeholder-content">[1 ou 2 phrases courtes qui fournissent le sentiment du lieu]             
-            </span>
+            <p class="pagetag"> <span class="placeholder-content">[1 ou 2 phrases courtes qui fournissent le sentiment du lieu]
+                </span>
                 <span class="park1-content hidden">Les vagues déferlent sur les rives reculées de l’immense lac Supérieur et se brisent contre les affleurements de granit. Des forêts de pins et d’épinettes balayées par les vents s’étendent à perte de vue au sommet d’imposantes falaises et le long des plages de sable.
                 </span>
                 <span class="nhs1-content hidden">Remontez au XIXe siècle et laissez un Métis vous raconter à quoi ressemblait la vie au bord de la rivière Saskatchewan-Sud à cette époque. Imaginez les bouleversements survenus au moment du combat. Observez les trous laissés par les balles de fusil sur le champ de la dernière bataille, théâtre de la rébellion du Nord-Ouest en 1885.
@@ -224,7 +228,7 @@
                             </li>
                             <li>Il est possible d’utiliser le texte d’introduction existant</li>
                             <li>Lieux non-opérationnel : Isi vous établissez un lien avec historicplaces.ca, utilisez la description du lieu patrimonial fournie pour chaque site sur le site Web : <a href="https://historicplaces.ca">historicplaces.ca</a></li>
-                            <li>Limite de caractères : 
+                            <li>Limite de caractères :
                                 <ul>
                                     <li>300 caractères au maximum (espaces compris)</li>
                                     <li>Si la page précédente comportait plus de 300 caractères, celle-ci sera acceptée pour le moment. Le texte devra être raccourci ultérieurement.</li>
@@ -298,11 +302,11 @@
                 <summary><strong>Directives :</strong> Promotions <span class="label label-success">Optionnel</span></summary>
                 <p><strong>Que sont les promotions?</strong></p>
                 <p> Les promotions sont des éléments de la page qui sont propres au contexte de la page et sont pertinents.</p>
-                <p>Les directives de Parcs Canada remplacent les directives de Canada.ca sur la  <a href="https://conception.canada.ca/configurations-conception-communes/vignettes-promotionnelles.html">configuration de conception des promotions</a> (trois promotions)</p>
+                <p>Les directives de Parcs Canada remplacent les directives de Canada.ca sur la <a href="https://conception.canada.ca/configurations-conception-communes/vignettes-promotionnelles.html">configuration de conception des promotions</a> (trois promotions)</p>
                 <p><strong>Directives :</strong></p>
                 <ul>
                     <li>Indiquez les promotions que vous souhaitez mettre en valeur, qui peuvent être liées à l’expérience du visiteur, à la conservation, à la sécurité ou autre</li>
-                    <li>Nombre de promotions : 3 
+                    <li>Nombre de promotions : 3
                         <ul>
                             <li>Il est acceptable d’en présenter 1 ou 2 s’il n’y a pas d’autre contenu pertinent</li>
                             <li>Si vous n’avez pas de promotion, n’utilisez pas cette configuration</li>
@@ -411,7 +415,7 @@
             <p><strong>Qu’est-ce que la rubrique En demande?</strong></p>
             <ul>
                 <li>1-8 items de textes très courts liés à vos tâches les plus demandées, sur la base des données</li>
-                <li>Ne faudrait pas que ce soit le seul lien de navigation vers ce contenu  </li>
+                <li>Ne faudrait pas que ce soit le seul lien de navigation vers ce contenu </li>
                 <li>Devraient être revues de façon saisonnière</li>
             </ul>
             <p>Les directives de Parcs Canada remplacent les directives de Canada.ca sur la <a href="https://conception.canada.ca/configurations-conception-communes/en-demande.html">configuration de conception En demande</a></p>
@@ -425,7 +429,7 @@
                 <dt>Étiquette</dt>
                 <dd>
                     <li>Limite de caractères : 58 caractères (espaces compris)</li>
-                    <li>Nombre de liens :                       
+                    <li>Nombre de liens :
                         <ul>
                             <li>1 à 8</li>
                         </ul>
@@ -693,7 +697,7 @@
                         </ul>
                         <dl class="dl-horizontal">
                             <!-- <span class="label label-success">Optional</span>
-                                    <span class="label label-primary">Mandatory</span> -->
+                                        <span class="label label-primary">Mandatory</span> -->
                             <dt>Link text</dt>
                             <dd>
                                 <li>These links may be featured elsewhere on the same page</li>
@@ -948,7 +952,7 @@
                         </ul>
                         <dl class="dl-horizontal">
                             <!-- <span class="label label-success">Optional</span>
-                                    <span class="label label-primary">Mandatory</span> -->
+                                        <span class="label label-primary">Mandatory</span> -->
                             <dt>Link text</dt>
                             <dd>
                                 <ul>
@@ -1001,9 +1005,9 @@
                     <!-- End generic doormat navigation guidance -->
                     <dl class="dl-horizontal">
                         <!-- 
-                                      <span class="label label-success">Optional</span>
-                                <span class="label label-primary">Mandatory</span>
-                                 -->
+                                          <span class="label label-success">Optional</span>
+                                    <span class="label label-primary">Mandatory</span>
+                                     -->
                         <dt>Heading</dt>
                         <dd>
                             <ul>
@@ -1068,22 +1072,22 @@
                 <div class="row mrgn-tp-xl">
                     <div class="col-md-7">
                         <div id="location_map" class="wb-geomap geolocation geocoder" data-geomap-zoom="2" data-wb-geomap='{
-                                    "tables": [{
-                                        "id": "addPCLoc",
-                                        "style": {
-                                            "type": "symbol",
-                                            "init": {
-                                                "pointRadius": 12,
-                                                "graphicName": "star",
-                                                "strokeColor": "#FF0000",
-                                                "fillColor": "#FF0000",
-                                                "fillOpacity": 0.7
-                                            }
-                                        
+                                        "tables": [{
+                                            "id": "addPCLoc",
+                                            "style": {
+                                                "type": "symbol",
+                                                "init": {
+                                                    "pointRadius": 12,
+                                                    "graphicName": "star",
+                                                    "strokeColor": "#FF0000",
+                                                    "fillColor": "#FF0000",
+                                                    "fillOpacity": 0.7
+                                                }
                                             
-                                        }
-                                    }]
-                                }'>
+                                                
+                                            }
+                                        }]
+                                    }'>
                             <div class="wb-geomap-map " id="myGeomap"></div> <!-- Inserted Map End -->
                         </div>
                         <!-- Inserted Layer Data Start (mandatory) -->
@@ -1178,7 +1182,7 @@
                     <p>This feature gives an overview of the location on a map, and general contacts and hours of operations. Users can find additional details by selecting the links.</p>
                     <dl class="dl-horizontal">
                         <!-- <span class="label label-success">Optional</span>
-                                <span class="label label-primary">Mandatory</span> -->
+                                    <span class="label label-primary">Mandatory</span> -->
                         <dt>Use</dt>
                         <dd>
                             <ul>
@@ -1416,7 +1420,7 @@
                         <p>Parks Canada guidance supersedes the Canada.ca guidance on <a href="https://design.canada.ca/common-design-patterns/related-links.html">Related links</a></p>
                         <dl class="dl-horizontal">
                             <!-- <span class="label label-success">Optional</span>
-                            <span class="label label-primary">Mandatory</span> -->
+                                <span class="label label-primary">Mandatory</span> -->
                             <dt>Use</dt>
                             <dd>
                                 <ul>
@@ -1463,7 +1467,7 @@
     <script src="https://pc-contactweb-pc.github.io/canada/footer.js?2"></script>
     <script>
         (function () {
-            document.getElementsByTagName("main")[0].innerHTML += footerHTML;
+            document.getElementsByTagName("main")[0].innerHTML += footerHTMLFR;
         })();
     </script> <!-- Start Treasury board Script footer -->
     <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
@@ -1487,13 +1491,13 @@
             //     console.log(val);
             // })
             $("#top-bar").trigger("open.wb-overlay");
-            //show guidance button
+            //Montrer les conseils button
             $("#show-guidance-toggle").click(function () {
                 $('#show-guidance-toggle').addClass("active");
                 $('#hide-guidance-toggle').removeClass("active");
                 $('.guidance-details').removeClass("hidden");
             });
-            //hide guidance button
+            //Cacher les conseils button
             $("#hide-guidance-toggle").click(function () {
                 $('#show-guidance-toggle').removeClass("active");
                 $('#hide-guidance-toggle').addClass("active");
@@ -1516,7 +1520,7 @@
                 $('.park1-content').removeClass("hidden");
                 $(".wb-eqht").trigger("wb-update.wb-eqht");
 
-            }); 
+            });
             $("#show-nonopnhs-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
                 $("#show-nonopnhs-toggle").addClass("active");

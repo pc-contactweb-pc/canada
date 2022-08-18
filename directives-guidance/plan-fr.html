@@ -1,10 +1,11 @@
-<html class="no-js" dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- /plan -->
+<html class="no-js" dir="ltr" lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 <!-- Start Treasury board content -->
 
 <head prefix="og: http://ogp.me/ns#">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>Location plan your visit - template with guidance</title>
+    <title>Modèle « Planifiez votre visite – Lieu » avec directives</title>
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
     <link rel="canonical" href="" />
@@ -38,11 +39,12 @@
 
 <body vocab="http://schema.org/" class="" typeof="WebPage" resource="#wb-webpage">
     <nav>
-        <ul id="wb-tphp" class=" wb-disable-inited">
-            <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-            <li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to About this
-                    site</a></li>
-            <li class="wb-slc"><a class="wb-sl" href="?wbdisable=true" rel="alternate">Switch to basic HTML version</a>
+        <ul id="wb-tphp">
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-cont">Passer au contenu principal</a>
+            </li>
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-info">Passer à «&#160;Au sujet du gouvernement&#160;»</a>
             </li>
         </ul>
     </nav>
@@ -56,7 +58,7 @@
                 <div class="guidance-options">
                     <div class="btn-group">
                         <button id="show-guidance-toggle" class="guidance-toggle btn btn-default active">
-                            <span class="fas fa-laptop-code "></span>&nbsp;Show guidance
+                            <span class="fas fa-laptop-code "></span>&nbsp;Montrer les conseils
                         </button>
                         <button id="hide-guidance-toggle" class="guidance-toggle btn btn-default wb-toggle" data-toggle="
                                 [
@@ -69,11 +71,11 @@
                                         'state':'off'
                                     }
                                 ]" aria-controls="hide-guidance-toggle">
-                            <span class="fas fa-pen-square"></span>&nbsp;Hide guidance
+                            <span class="fas fa-pen-square"></span>&nbsp;Cacher les conseils
                         </button>
                     </div>
                     <div class="btn-group">
-                        <button class="location-toggles btn btn-default active" id="show-placeholder-toggle">Placeholders</button>
+                        <button class="location-toggles btn btn-default active" id="show-placeholder-toggle">Espaces réservés</button>
                         <button class="location-toggles btn btn-default" id="show-park1-toggle">Gros Morne</button>
 
                         <!--
@@ -91,12 +93,12 @@
         <div id="wb-bnr" class="container">
             <div class="row">
                 <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
-                    <h2 class="wb-inv">Language selection</h2>
+                    <h2 class="wb-inv">Sélection de la langue</h2>
                     <ul class="list-inline mrgn-bttm-0">
                         <li>
-                            <a lang="fr" hreflang="fr" href="https://pc-contactweb-pc.github.io/canada/directives-guidance/plan-fr.html">
-                                <span class="hidden-xs">Français</span>
-                                <abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+                            <a lang="fr" hreflang="fr" href="https://pc-contactweb-pc.github.io/canada/directives-guidance/plan-en.html">
+                                <span class="hidden-xs">English</span>
+                                <abbr title="English" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">en</abbr>
                             </a>
                         </li>
                     </ul>
@@ -113,17 +115,17 @@
                     <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg">
                 </div>
                 <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
-                    <h2>Search</h2>
+                    <h2>Rechercher</h2>
                     <form action="#" method="post" name="cse-search-box" role="search">
                         <div class="form-group wb-srch-qry">
-                            <label for="wb-srch-q" class="wb-inv">Search Parks Canada</label>
-                            <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Parks Canada">
+                            <label for="wb-srch-q" class="wb-inv">Recherher dans Canada.ca</label>
+                            <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca">
                             <datalist id="wb-srch-q-ac"></datalist>
                         </div>
                         <div class="form-group submit">
                             <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
                                 <span class="glyphicon-search glyphicon"></span>
-                                <span class="wb-inv">Search</span>
+                                <span class="wb-inv">Rechercher</span>
                             </button>
                         </div>
                     </form>
@@ -131,13 +133,16 @@
             </div>
         </div>
         <nav id="wb-bc" property="breadcrumb">
-            <h2>You are here:</h2>
+            <h2>Vous êtes ici&nbsp;:</h2>
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
-                    <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parks Canada</a></li>
-                    <li><a href="https://www.canada.ca/en.html"><span class="placeholder-content">[Program]</span><span class="park1-content hidden">National parks</span></a></li>
-                    <li><a href="https://www.canada.ca/en.html"><span class="placeholder-content">[Province / Territory]</span><span class="park1-content hidden">Newfoundland and Labrador</span></a>
+                    <li><a href="https://www.canada.ca/fr.html">Canada.ca</a></li>
+                    <li><a href="https://pc-contactweb-pc.github.io/canada/fr/index.html">Parcs Canada</a></li>
+                    <li><a href="https://www.canada.ca/en.html">
+                            <span class="placeholder-content">[Program]</span>
+                            <span class="park1-content hidden">Parcs nationaux</span> <span class="nhs1-content hidden">Lieux historiques nationaux</span>
+                        </a></li>
+                    <li><a href="https://www.canada.ca/en.html"><span class="placeholder-content">[Province / Territoire]</span><span class="park1-content hidden">Newfoundland and Labrador</span></a>
                 </ol>
             </div>
         </nav>
@@ -162,7 +167,7 @@
             <section class="park1-content hidden">
                 <div class="wb-dismissable" id="dismiss1">
                     <div class="alert alert-info mrgn-tp-0 mrgn-bttm-0">
-                        <p>Location content is for illustrative purposes only. Content has not been reviewed by locations. </p>
+                        <p>Le contenu des gabarits est donné à titre d’exemple et peut ne pas refléter les renseignements exacts de chaque site (il n’a pas été revu par les unités de gestion).</p>
                     </div>
                 </div>
             </section>
@@ -556,50 +561,7 @@
                 </details>
             </div>
             <h3>Facilities and services</h3>
-            <style>
-                div.icon-list img {
-                    background-color: black;
-                    width: 25px;
-                    margin-right: 10px;
-                    border-radius: 5px;
-                }
 
-                div.icon-list a img {
-                    background-color: #00609C
-                }
-
-
-                div.icon-list a {
-                    text-decoration: none;
-                }
-
-                div.icon-list a:hover div {
-                    background-color: #EAEBED;
-                }
-
-                div.icon-list a div {
-                    color: #555555;
-                    background-color: #FFFFFF;
-                    border: #DDDDDD 1px solid;
-                    border-radius: 4px;
-                }
-
-                div.icon-list div {
-                    padding: 10px;
-                    font-size: 17px;
-                    color: black;
-                    font-weight: bold;
-                    background-color: none;
-                    border: none;
-                    padding-bottom: 15px;
-                    margin-right: 8.3%;
-                    margin-bottom: 15px;
-                } 
-                
-                div.icon-list {
-                    margin-left:0px;
-                }
-            </style>
 
             <div class="placeholder-content">
                 <div class="row icon-list">
@@ -839,7 +801,7 @@
     <script src="https://pc-contactweb-pc.github.io/canada/footer.js?2"></script>
     <script>
         (function () {
-            document.getElementsByTagName("main")[0].innerHTML += footerHTML;
+            document.getElementsByTagName("main")[0].innerHTML += footerHTMLFR;
         })();
     </script>
 
@@ -863,13 +825,13 @@
         });
         $(document).on("wb-ready.wb", function (event) {
             $("#top-bar").trigger("open.wb-overlay");
-            //show guidance button
+            //Montrer les conseils button
             $("#show-guidance-toggle").click(function () {
                 $('#show-guidance-toggle').addClass("active");
                 $('#hide-guidance-toggle').removeClass("active");
                 $('.guidance-details').removeClass("hidden");
             });
-            //hide guidance button
+            //Cacher les conseils button
             $("#hide-guidance-toggle").click(function () {
                 $('#show-guidance-toggle').removeClass("active");
                 $('#hide-guidance-toggle').addClass("active");
