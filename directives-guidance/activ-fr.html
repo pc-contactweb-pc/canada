@@ -4,7 +4,7 @@
 <head prefix="og: http://ogp.me/ns#">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>Activ - Fr</title>
+    <title>Location activities and experiences - template with guidance</title>
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
     <link rel="canonical" href="" />
@@ -33,11 +33,991 @@
     <noscript>
         <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/wet-boew/css/noscript.min.css" />
     </noscript>
+
 </head>
 
 <body vocab="http://schema.org/" class="" typeof="WebPage" resource="#wb-webpage">
-    <img src="https://user-images.githubusercontent.com/45856706/184948896-3233a1e7-7d96-40a8-884c-8bb4d2726621.png" alt="" style="width:100%">
+    <nav>
+        <ul id="wb-tphp" class=" wb-disable-inited">
+            <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+            <li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to About this
+                    site</a></li>
+            <li class="wb-slc"><a class="wb-sl" href="?wbdisable=true" rel="alternate">Switch to basic HTML version</a>
+            </li>
+        </ul>
+    </nav>
 
+    <section class="wb-inview bar-demo" data-inview="top-bar">
+        <section id="top-bar" class="wb-overlay modal-content overlay-def wb-bar-t outside-off">
+            <div class="row center-block container">
+
+                <div class="guidance-options">
+                    <div class="btn-group">
+                        <button id="show-guidance-toggle" class="guidance-toggle btn btn-default active">
+                            <span class="fas fa-laptop-code "></span>&nbsp;Show guidance
+                        </button>
+                        <button id="hide-guidance-toggle" class="guidance-toggle btn btn-default wb-toggle" data-toggle="
+                                [
+                                    {
+                                        'selector':'#show-guidance-toggle',
+                                        'stateOn':'active', 'state':'on'
+                                    },
+                                    {
+                                        'stateOn':'active',
+                                        'state':'off'
+                                    }
+                                ]" aria-controls="hide-guidance-toggle">
+                            <span class="fas fa-pen-square"></span>&nbsp;Hide guidance
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="location-toggles btn btn-default active" id="show-placeholder-toggle">Placeholders</button>
+                        <button class="location-toggles btn btn-default" id="show-park1-toggle">Kluane</button>
+
+                        <!--
+                    <button class="location-toggles btn btn-default" id="show-park2-toggle">Large park #2</button>
+                    <button class="location-toggles btn btn-default" id="show-nhs-toggle">Operational historic site</button>
+                    <button class="location-toggles btn btn-default" id="show-nonopnhs-toggle">Non-operational historic site</button> -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </section>
+    <!-- End treasury board content -->
+    <!-- Start content-en header -->
+    <header>
+        <div id="wb-bnr" class="container">
+            <div class="row">
+                <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+                    <h2 class="wb-inv">Language selection</h2>
+                    <ul class="list-inline mrgn-bttm-0">
+                        <li>
+                            <a lang="fr" hreflang="fr" href="https://pc-contactweb-pc.github.io/canada/directives-guidance/activ-fr.html">
+                                <span class="hidden-xs">Français</span>
+                                <abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+
+                    <div>
+
+                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+
+                    </div>
+                    <meta property="name" content="Government of Canada">
+                    <meta property="areaServed" typeof="Country" content="Canada">
+                    <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg">
+                </div>
+                <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+                    <h2>Search</h2>
+                    <form action="#" method="post" name="cse-search-box" role="search">
+                        <div class="form-group wb-srch-qry">
+                            <label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
+                            <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca">
+                            <datalist id="wb-srch-q-ac"></datalist>
+                        </div>
+                        <div class="form-group submit">
+                            <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+                                <span class="glyphicon-search glyphicon"></span>
+                                <span class="wb-inv">Search</span>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <nav id="wb-bc" property="breadcrumb">
+            <h2>You are here:</h2>
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                    <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parks Canada</a></li>
+                    <li><a href="https://www.canada.ca/en.html">
+                            <span class="placeholder-content">[Program]</span>
+                            <span class="park1-content hidden">National parks</span>
+                        </a></li>
+                    <li><a href="https://www.canada.ca/en.html">
+                            <span class="placeholder-content">[Province / Territory]</span>
+                            <span class="park1-content hidden">Yukon</span>
+                        </a>
+                </ol>
+            </div>
+        </nav>
+    </header>
+    <!-- End content-en header -->
+
+
+    <!-- 
+                <span class="placeholder-content"></span>
+                <span class="park1-content hidden"></span>
+                <span class="park2-content hidden"></span>
+                <span class="nhs1-content hidden"></span>
+                <span class="nhs2-content hidden"></span>
+            -->
+
+    <!-- 
+        <details class="guidance-details">
+            <summary><strong>Guidance:</strong> </summary>
+            <dl class="dl-horizontal">
+                <dt></dt>
+                <dd></dd>
+                <span class="label label-success">Optional</span>
+                <span class="label label-primary">Mandatory</span>
+            </dl>
+        </details>
+
+         -->
+
+    <!-- Start main  -->
+    <main role="main" property="mainContentOfPage">
+        <div style="background-color: #f5f5f5;">
+            <!--  ** Banner image **  -->
+            <span class="placeholder-content">
+
+                <img src="https://user-images.githubusercontent.com/45856706/184354256-1d8feac7-0cea-421d-92bc-38a83b076394.png" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;">
+            </span>
+            <span class="park1-content hidden">
+                <img src="https://user-images.githubusercontent.com/45856706/185162123-0b917a21-1241-479f-a6c6-6add24029ad5.png" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;">
+            </span>
+
+
+        </div>
+        <!-- 
+        <input type="button" value="Reset box 1" onclick="localStorage.removeItem( 'dismiss1' );" class="btn btn-primary">
+         -->
+
+        <section class="container mrgn-bttm-lg">
+            <section class="park1-content hidden">
+                <div class="wb-dismissable" id="dismiss1">
+                    <div class="alert alert-info mrgn-tp-0 mrgn-bttm-0">
+                        <p>Location content is for illustrative purposes only. Content has not been reviewed by locations. </p>
+                    </div>
+                </div>
+            </section>
+            <h1 property="name" id="wb-cont" class="pc-h1-brass">Activities and experiences</h1>
+            <h2 class="h3 mrgn-tp-sm" style="color: #6f6f6f;"><span class="placeholder-content">[Location name]</span><span class="park1-content hidden">Kluane National Park and Reserve</span></h2>
+        </section>
+        <section class="container mrgn-bttm-xl">
+            <p class="placeholder-content">
+                [1 to 2 sentences that describe the topics and top tasks on this page.]
+            </p>
+            <p class="park1-content hidden">Home to 17 of Canada’s 20 highest peaks, Kluane is known worldwide for wilderness recreation, especially mountaineering. Raft past glaciers on the Alsek River, explore high mountain passes or find more accessible great hikes just off the highway at Kathleen Lake. </p>
+
+            <details class="guidance-details">
+                <summary><strong>Guidance:</strong> Banner, title, and intro text <span class="label label-primary">Mandatory</span></summary>
+                <dl class="dl-horizontal" id="banner">
+                    <dt>Banner image</dt>
+                    <dd>
+                        <ul>
+                            <li>Choose an image that features an activity or experience</li>
+                            <li>Update seasonally (recommended)</li>
+                            <li><a href="#noTarget" class="wb-lbx">Mandatory image dimensions</a></li>
+                        </ul>
+
+                    </dd>
+                    <dt>Page title</dt>
+                    <dd>Activities and experiences</dd>
+                    <dt>Sub-title</dt>
+                    <dd>
+                        <ul>
+                            <li>[Location name]</li>
+                            <li>The location name will automatically populate in Sitecore.</li>
+                        </ul>
+                    </dd>
+
+                    <dt>Intro text</dt>
+                    <dd>
+                        <ul>
+                            <li>1 to 2 sentences that describe the topics and top tasks on this page</li>
+                            <li>Recommend 300 characters or less, including spaces</li>
+                        </ul>
+            </details>
+            <div class="placeholder-content">
+                <div class="wb-eqht row mrgn-tp-xl mrgn-bttm-md pc-feature">
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <a href="#noTarget" class="wb-lbx"><img src="https://user-images.githubusercontent.com/45856706/181797330-12ddb37f-072f-442f-9c4b-c63484bb1874.jpg" alt="" class="img-responsive"></a>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">[Feature title/link]</a></h3>
+                        <p>[Include features that relate to activities and experiences]</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <a href="#noTarget" class="wb-lbx"><img src="https://user-images.githubusercontent.com/45856706/181797330-12ddb37f-072f-442f-9c4b-c63484bb1874.jpg" alt="" class="img-responsive"></a>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">[Feature title/link]</a></h3>
+                        <p>[Include features that relate to activities and experiences]</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <a href="#noTarget" class="wb-lbx"><img src="https://user-images.githubusercontent.com/45856706/181797330-12ddb37f-072f-442f-9c4b-c63484bb1874.jpg" alt="" class="img-responsive"></a>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">[Feature title/link]</a></h3>
+                        <p>[Include features that relate to activities and experiences]</p>
+                    </div>
+                </div>
+                <div class="wb-eqht row mrgn-tp-xl mrgn-bttm-md pc-feature">
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <a href="#noTarget" class="wb-lbx"><img src="https://user-images.githubusercontent.com/45856706/181797330-12ddb37f-072f-442f-9c4b-c63484bb1874.jpg" alt="" class="img-responsive"></a>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">[Feature title/link]</a></h3>
+                        <p>[Include features that relate to activities and experiences]</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <a href="#noTarget" class="wb-lbx"><img src="https://user-images.githubusercontent.com/45856706/181797330-12ddb37f-072f-442f-9c4b-c63484bb1874.jpg" alt="" class="img-responsive"></a>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">[Feature title/link]</a></h3>
+                        <p>[Include features that relate to activities and experiences]</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <a href="#noTarget" class="wb-lbx"><img src="https://user-images.githubusercontent.com/45856706/181797330-12ddb37f-072f-442f-9c4b-c63484bb1874.jpg" alt="" class="img-responsive"></a>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">[Feature title/link]</a></h3>
+                        <p>[Include features that relate to activities and experiences]</p>
+                    </div>
+                </div>
+            </div>
+            <section class="park1-content hidden">
+                <div class="wb-eqht row mrgn-tp-xl mrgn-bttm-md pc-feature">
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <a href="#noTarget" class="wb-lbx"><img src="https://pcweb.azureedge.net/-/media/pn-np/yt/kluane/WET4/activ/Hiking-TTD_PC-FMueller.jpg" alt="" class="full-width"></a>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Hiking</a></h3>
+                        <p>Kluane's most popular activity, from short strolls to multi-day route-finding adventures. Get out for an hour, a day, or a week.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <a href="#noTarget" class="wb-lbx"><img src="https://pcweb.azureedge.net/-/media/pn-np/yt/kluane/WET4/activ/TTD-Kath-Camping-Mueller.jpg" alt="" class="full-width"></a>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Camp at Kathleen Lake</a></h3>
+                        <p>Pitch your tent and bask in the legendary midnight sun. Just a short drive from town, where sparkling waters are backed by the Kluane Range.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <a href="#noTarget" class="wb-lbx"><img src="https://pcweb.azureedge.net/-/media/pn-np/yt/kluane/WET4/activ/Alsek-rafting/on-the-river/Alsek-rafting-TTD-Elliott.jpg" alt="" class="full-width"></a>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Rafting the Alsek River</a></h3>
+                        <p>Fed by glacial meltwaters from the world’s second highest coastal mountain range, the Alsek River offers extraordinary wilderness travel.</p>
+                    </div>
+                </div>
+            </section>
+            <details class="guidance-details" >
+                <summary><strong>Guidance:</strong> Features <span class="label label-success">Optional</span></summary>
+                <p id="features">Features are specific and relevant to the context of the page.</p>
+
+                <p>Parks Canada guidance supersedes the <a href="https://design.canada.ca/common-design-patterns/feature-tiles.html">Canada.ca guidance on features design pattern</a>, with regards to the number of features permitted on this page. </p>
+                <ul>
+                    <li>Include features that relate to activities and experiences</li>
+                    <li>Maximum: 6 features on this page<ul>
+                            <li>1 or 2 is acceptable if no other relevant content</li>
+                            <li>If you have no features, do not use this section</li>
+                        </ul>
+                    </li>
+                </ul>
+            </details>
+        </section>
+
+        <section class="well" style="margin-bottom:0px">
+
+            <style>
+                div.activ-list img {
+                    background-color: black;
+                    width: 25px;
+                    margin-right: 10px;
+                    border-radius: 5px;
+                }
+
+                div.activ-list a img {
+                    background-color: #00609C
+                }
+
+
+                div.activ-list a {
+                    text-decoration: none;
+
+                }
+
+                div.activ-list a:hover div {
+                    background-color: #EAEBED;
+                }
+
+                div.activ-list a div {
+
+                    color: #555555;
+                    background-color: #FFFFFF;
+                    border: #DDDDDD 1px solid;
+
+
+                }
+
+                div.activ-list div {
+                    padding: 10px;
+                    font-size: 17px;
+                    color: black;
+                    font-weight: bold;
+                    background-color: none;
+                    border: none;
+                    padding-bottom: 15px;
+                    margin-right: 8.3%;
+                    margin-bottom: 15px;
+                }
+            </style>
+            <div class="container">
+
+                <h2>Camping and overnight accommodations</h2>
+                <section class="placeholder-content">
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3"><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">[Camping or overnight accommodations]</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">[Camping or overnight accommodations]</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">[Camping or overnight accommodations]</div>
+                        </a>
+                    </div>
+
+                </section>
+                <section class="park1-content hidden">
+
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3"><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Backcountry camping</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Camping</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">oTENTik</div>
+                        </a>
+                    </div>
+                </section>
+
+                <details class="guidance-details">
+                    <summary><strong>Guidance:</strong> Camping and accommodations <span class="label label-success">Optional</span></summary>
+
+                    <ul id="camping">
+                        <li>Include this section if applicable</li>
+                        <li>List all camping and accommodation types in alphabetical order</li>
+                    </ul>
+                </details>
+
+                <h2>Things to do</h2>
+                <div class="placeholder-content">
+                    <div class="row activ-list">
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Animal watching</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Backcountry camping</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Beach</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Bird watching</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Bison watching</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Boat tour</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Boating</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Cabin</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Camping</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Canoe camping</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Canoeing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Cross country skiing</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Cycling</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Dog sledding</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Dog walking</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Downhill skiing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Fatbike</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Fishing</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Flying</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Geocaching</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Golf</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Hiking</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Horse drawn wagon</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Horseback riding</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Hot springs</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Ice climbing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Ice skating</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">In line skating</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Interpretive trail</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Kayaking</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Kite surfing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Lookout</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Mooring</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Motorboating</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Mountain biking</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Mountain climbing</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Museum</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Oasis</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">oTENTik</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Paddling</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Paragliding</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Parking</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Photography</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Picnicking</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Playground</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Rafting</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Restaurant or cafe</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Sailboating</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Scuba diving</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Ski touring</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Snowmobiling</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Snowshoeing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Stargazing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Stay overnight</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Summer day camp</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Surfing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Swimming</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Tennis</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Theatre</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Tobogganing</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Tours and programs</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Traction kiting</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Water skiing</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Whale watching</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Windsurfing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Yurt</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="park1-content hidden">
+                    <div class="row activ-list">
+
+                        <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Bird watching</div>
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Boating</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Canoeing</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Events calendar</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Cross country skiing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Cycling</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Fishing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Flightseeing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Hiking</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Interpretive programs</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Kathleen Lake</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Kayaking</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+
+                        <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Motorboating</div>
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Mountain biking</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Mountaineering</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+
+                        <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Northern lights</div>
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Packrafting</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Photography</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Picnicking</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Rafting the Alsek River</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Red chairs</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Scenic viewpoints</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Ski touring</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Snowmobiling</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Snowshoeing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Tours and programs</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Traditional harvesting activities</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Winter</div>
+                        </a>
+
+                    </div>
+                </div>
+                <details class="guidance-details">
+                    <summary><strong>Guidance:</strong> Things to do <span class="label label-primary">Mandatory</span></summary>
+
+                    <ul id="things">
+                        <li>Mandatory section</li>
+                        <li>List all activities and experiences in alphabetical order.</li>
+                        <li>The activity or experience goes in 'Things to do' (e.g. hiking or picnicking), whereas the service or amenity goes in the section below (e.g. trails or picnic areas)</li>
+                        <li>Link text should be short and concise</li>
+                    </ul>
+                </details>
+                <h2>Services and amenities</h2>
+                <div class="placeholder-content">
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Accessible services</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Bank or ATM</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Beaches</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Charging station</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Gift Shop</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Bus parking</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Camping</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Dive base</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Docking</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Dogs on leash</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Exhibit Indoor</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Gift shop</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Accommodations</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Historic Stay</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Information</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">No Dogs</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Interpretation</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Lookout</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Parking</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Pay Parking</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Picnic area</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Picnic shelter</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Playground</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Warden Station</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">First Aid</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Rentals-canoeing</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Rentals-cycling</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Rentals-kayaking</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Restaurant or cafe</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Restrooms</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Safari Tent</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Accessible Parking</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Swimming pool</div>
+                        </a>
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Toilet</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Accessible Toilet</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Wi-Fi</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="park1-content hidden">
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Exhibits</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Interpretive trail</div>
+                        </a>
+
+                        <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Roadside attractions</div>
+
+                    </div>
+                    <div class="row activ-list">
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Theatre</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Trails</div>
+                        </a>
+                        <a href="#noTarget" class="wb-lbx">
+                            <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Visitor centres</div>
+                        </a>
+
+                    </div>
+                </div>
+                <details class="guidance-details">
+                    <summary><strong>Guidance:</strong> Services and amenities <span class="label label-success">Optional</span></summary>
+
+                    <ul id="services">
+                        <li>Include this section if applicable</li>
+                        <li>List alphabetically</li>
+                        <li>The service or amenity goes in this section (e.g. trails or picnic areas), whereas the activity or experience goes in 'Things to do' (e.g. hiking or picnicking)</li>
+                        <li>Link text should be short and concise </li>
+                    </ul>
+                </details>
+            </div>
+        </section>
+        <!-- End main content -->
+    </main>
+    <!-- End main -->
+    <!-- Footer include -->
+    <script src="https://pc-contactweb-pc.github.io/canada/footer.js?2"></script>
+    <script>
+        (function () {
+            document.getElementsByTagName("main")[0].innerHTML += footerHTML;
+        })();
+    </script>
+
+    <!-- Start Treasury board Script footer -->
+    <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
+    <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/clientlib-publish.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+    <!-- End Treasury board Script footer -->
+
+
+    <!-- Geomap start -->
+    <script>
+        // $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
+
+
+        //     let desiredZoom = document.getElementById("location_map").getAttribute("data-geomap-zoom");
+
+        //     let myMap = map;
+        //     myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
+
+        //     myMap.getView().setZoom(desiredZoom);
+
+        // });
+
+        $(document).on("wb-ready.wb", function (event) {
+            $("#top-bar").trigger("open.wb-overlay");
+            //show guidance button
+            $("#show-guidance-toggle").click(function () {
+                $('#show-guidance-toggle').addClass("active");
+                $('#hide-guidance-toggle').removeClass("active");
+                $('.guidance-details').removeClass("hidden");
+            });
+            //hide guidance button
+            $("#hide-guidance-toggle").click(function () {
+                $('#show-guidance-toggle').removeClass("active");
+                $('#hide-guidance-toggle').addClass("active");
+                $('.guidance-details').addClass("hidden");
+            });
+
+            $("#show-placeholder-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-placeholder-toggle").addClass("active");
+                $('.park1-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.placeholder-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+            });
+            $("#show-park1-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-park1-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.park1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+
+            });
+            $("#show-nonopnhs-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-nonopnhs-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.park1-content').addClass("hidden");
+                $('.nhs1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+            });
+        });
+    </script>
+    <style>
+        /* Guidance specific scroll fixer */
+        [id] {
+            scroll-margin-top: 100px;
+        }
+    </style>
 </body>
 
 </html>
