@@ -556,7 +556,6 @@
                 </details>
             </div>
             <h3>Facilities and services</h3>
-
             <style>
                 div.activ-list img {
                     background-color: black;
@@ -599,12 +598,6 @@
             </style>
 
             <div class="placeholder-content">
-
-
-                <!-- 
-<a href="#noTarget" class="wb-lbx">
-                        <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">
-                     -->
                 <div class="row activ-list">
                     <a href="#noTarget" class="wb-lbx">
                         <div class="col-sm-3 "><img src="https://user-images.githubusercontent.com/45856706/185249850-c427d2b0-fdb3-4e43-a852-052faeca9261.svg" alt="">Accessible services</div>
@@ -774,7 +767,7 @@
                 </div>
             </div>
 
-            
+
             <h3>Features</h3>
             <!-- <a href="#noTarget" class="wb-lbx"> -->
             <div class="placeholder-content">
@@ -835,83 +828,83 @@
                 </ul>
             </details>
         </section>
+    </main>
+
+    <!-- End main -->
+    <!-- Footer include -->
+    <script src="https://pc-contactweb-pc.github.io/canada/footer.js?2"></script>
+    <script>
+        (function () {
+            document.getElementsByTagName("main")[0].innerHTML += footerHTML;
+        })();
+    </script>
+
+    <!-- Start Treasury board Script footer -->
+    <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
+    <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/clientlib-publish.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+    <!-- End Treasury board Script footer -->
 
 
-        <!-- End main -->
-        <!-- Footer include -->
-        <script src="https://pc-contactweb-pc.github.io/canada/footer.js?2"></script>
-        <script>
-            (function () {
-                document.getElementsByTagName("main")[0].innerHTML += footerHTML;
-            })();
-        </script>
-
-        <!-- Start Treasury board Script footer -->
-        <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
-        <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
-        <script src="https://www.canada.ca/etc/designs/canada/clientlib-publish.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
-        <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
-        <!-- End Treasury board Script footer -->
-
-
-        <!-- Geomap start -->
-        <script>
-            $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
-                let desiredZoom = document.getElementById("location_map").getAttribute("data-geomap-zoom");
-                let myMap = map;
-                myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
-                myMap.getView().setZoom(desiredZoom);
+    <!-- Geomap start -->
+    <script>
+        $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
+            let desiredZoom = document.getElementById("location_map").getAttribute("data-geomap-zoom");
+            let myMap = map;
+            myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
+            myMap.getView().setZoom(desiredZoom);
+        });
+        $(document).on("wb-ready.wb", function (event) {
+            $("#top-bar").trigger("open.wb-overlay");
+            //show guidance button
+            $("#show-guidance-toggle").click(function () {
+                $('#show-guidance-toggle').addClass("active");
+                $('#hide-guidance-toggle').removeClass("active");
+                $('.guidance-details').removeClass("hidden");
             });
-            $(document).on("wb-ready.wb", function (event) {
-                $("#top-bar").trigger("open.wb-overlay");
-                //show guidance button
-                $("#show-guidance-toggle").click(function () {
-                    $('#show-guidance-toggle').addClass("active");
-                    $('#hide-guidance-toggle').removeClass("active");
-                    $('.guidance-details').removeClass("hidden");
-                });
-                //hide guidance button
-                $("#hide-guidance-toggle").click(function () {
-                    $('#show-guidance-toggle').removeClass("active");
-                    $('#hide-guidance-toggle').addClass("active");
-                    $('.guidance-details').addClass("hidden");
-                });
-
-                $("#show-placeholder-toggle").click(function () {
-                    $('.location-toggles').removeClass("active");
-                    $("#show-placeholder-toggle").addClass("active");
-                    $('.park1-content').addClass("hidden");
-                    $('.nhs1-content').addClass("hidden");
-                    $('.placeholder-content').removeClass("hidden");
-                    $(".wb-eqht").trigger("wb-update.wb-eqht");
-                });
-                $("#show-park1-toggle").click(function () {
-                    $('.location-toggles').removeClass("active");
-                    $("#show-park1-toggle").addClass("active");
-                    $('.placeholder-content').addClass("hidden");
-                    $('.nhs1-content').addClass("hidden");
-                    $('.park1-content').removeClass("hidden");
-                    $(".wb-eqht").trigger("wb-update.wb-eqht");
-
-                });
-                $("#show-nonopnhs-toggle").click(function () {
-                    $('.location-toggles').removeClass("active");
-                    $("#show-nonopnhs-toggle").addClass("active");
-                    $('.placeholder-content').addClass("hidden");
-                    $('.park1-content').addClass("hidden");
-                    $('.nhs1-content').removeClass("hidden");
-                    $(".wb-eqht").trigger("wb-update.wb-eqht");
-                });
+            //hide guidance button
+            $("#hide-guidance-toggle").click(function () {
+                $('#show-guidance-toggle').removeClass("active");
+                $('#hide-guidance-toggle').addClass("active");
+                $('.guidance-details').addClass("hidden");
             });
-        </script>
-        <style>
-            /* Guidance specific scroll fixer */
-            [id] {
-                scroll-margin-top: 100px;
-            }
-        </style>
+
+            $("#show-placeholder-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-placeholder-toggle").addClass("active");
+                $('.park1-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.placeholder-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+            });
+            $("#show-park1-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-park1-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.park1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+
+            });
+            $("#show-nonopnhs-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-nonopnhs-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.park1-content').addClass("hidden");
+                $('.nhs1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+            });
+        });
+    </script>
+    <style>
+        /* Guidance specific scroll fixer */
+        [id] {
+            scroll-margin-top: 100px;
+        }
+    </style>
 </body>
 
 </html>
