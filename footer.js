@@ -183,7 +183,7 @@ let footerHTMLFR = `
                     <h2 class="modal-title">Oops!</h2>
                 </header>
                 <div class="modal-body">
-                    <p>We haven't made this page yet.</p>
+                    <p>Nous n'avons pas encore fait ça.</p>
                 </div>
             </section>
 <footer id="wb-info">
