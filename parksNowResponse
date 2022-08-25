@@ -1,0 +1,1560 @@
+
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.50022173001786,
+                    51.248168741557912
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 15,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100092,
+                "LocationName": "Minnewanka RV Lot",
+                "Remarks": "<p>Lake Minnewanka parking for RVs and vehicles with trailers between 6 m (20&#39;) and 14 m (45&#39;) is nearly full.&nbsp;</p>\n\n<p>&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 16:33 EDT",
+                "ModifiedTimestamplocal": "2022-08-26T00:33:12.9539401Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.53378560200744,
+                    51.210108843684552
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 19,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Cascade Ponds Day Use Area",
+                "Remarks": "<p>Parking is available at Cascade Ponds picnic area.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 10:19 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T18:19:57.4529605Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -116.21331611327484,
+                    51.416510825638
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 53,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100092,
+                "LocationName": "Upper Lake Louise",
+                "Remarks": "<p>Parking is <strong>FULL</strong>.</p>\n\n<p>You will likely not be able to find parking, and there is no space to wait for an available stall.</p>\n\n<p>Expect traffic congestion and significant delays. Access to parking lot may be restricted.</p>\n\n<p>Booking a seat on <strong>a Parks Canada shuttle</strong> is the best way to enjoy your visit! Conveniently see both Lake Louise and Moraine Lake with one reservation. Visit the <a href=\"https://reservation.pc.gc.ca/Banff-LakeLouise?Type=7&amp;language=en&amp;_ga=2.106280899.139039898.1651073929-140506452.1649778365\" target=\"_blank\">Parks Canada Reservation System</a> to plan your trip.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 14:01 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T22:01:35.5099231Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.65437021055743,
+                    51.17383133736503
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 60,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Fireside",
+                "Remarks": "<p>Fireside has parking for vehicles under 6 m (20&#39;) only. It is a trailhead and picnic area.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-22 10:11 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T18:11:48.0019244Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.83969730013207,
+                    51.24549538284792
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 76,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100092,
+                "LocationName": "Johnston Canyon Trail P1",
+                "Remarks": "<p>Parking at Johnston P1 is nearly full. Parking is extremely limited in the Johnston Canyon area.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 14:01 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T22:01:09.7914316Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.50150554618698,
+                    51.247794063306827
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 80,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100092,
+                "LocationName": "Minnewanka Car Lot",
+                "Remarks": "<p>Lake Minnewanka parking is available for vehicles under 6 m (20&#39;).</p>\n\n<p>&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 16:33 EDT",
+                "ModifiedTimestamplocal": "2022-08-26T00:33:08.0108136Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.58820973933796,
+                    51.169943541754357
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 112,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Cave and Basin National Historic Site Parking",
+                "Remarks": "<p>Parking is available at Cave and Basin NHS. Alternatively&nbsp;use Roam transit route 4 or walk/bike the pleasant Cave Avenue path.&nbsp;</p>\n\n<p><a href=\"https://www.pc.gc.ca/en/lhn-nhs/ab/caveandbasin/visit/covid-19-info\">https://www.pc.gc.ca/en/lhn-nhs/ab/caveandbasin/visit/covid-19-info</a></p>\n\n<p>&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 10:20 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T18:20:13.2200914Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.83907902245011,
+                    51.243144983639581
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 126,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100092,
+                "LocationName": "Johnston Canyon Trail P2",
+                "Remarks": "<p>Parking at Johnston Canyon P2 is nearly full. Road-side parking is prohibited near Johnston Canyon.&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 14:01 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T22:01:08.2883407Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.71992048925019,
+                    51.179541348884477
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 137,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Muleshoe",
+                "Remarks": "<p>Muleshoe has parking for about 50&nbsp;vehicles.&nbsp;&nbsp;It rarely fills up on weekends.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-22 10:11 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T18:11:31.644474Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.55833630240592,
+                    51.149402969920409
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 149,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100092,
+                "LocationName": "Sulphur Mountain Trail/Upper Hot Springs",
+                "Remarks": "<p>Parking is full at the Banff Gondola, Sulphur Mountain trailhead and Banff Upper Hot Pools. Take <a href=\"https://roamtransit.com/schedules-routes/banff-local-route-one/\"><strong>Roam Public Transit</strong></a> from town.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 13:58 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T21:58:14.7411969Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.49009110929775,
+                    51.199429556140039
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 158,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100092,
+                "LocationName": "Johnson Lake",
+                "Remarks": "<p>Johnson Lake has parking for about 95 vehicles. It often fills up on busy summer weekends.&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 14:00 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T22:00:55.2659328Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.49640763597166,
+                    51.230814083609005
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 179,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100092,
+                "LocationName": "Two Jack Lake",
+                "Remarks": "<p>Two Jack Lake Picnic Area has parking for vehicles under 6 m (20&#39;), and may fill up on busy summer weekends. Consider biking from town.</p>\n\n<p>&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:39 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:39:16.8512257Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -116.17766216149035,
+                    51.425404529579922
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 219,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Village of Lake Louise",
+                "Remarks": "<p>The Village of Lake Louise has parking available. Visit the Lake Louise Visitor Centre open daily from 9 am - 5 pm for trip planning information.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-24 20:03 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T04:03:44.8786099Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -116.48337643276066,
+                    51.497557864436772
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 256,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100092,
+                "LocationName": "Takakkaw Falls",
+                "Remarks": "<p>Takakkaw Falls is a very popular destination. Parking is limited and fills by 10 am. Arrive before 10 am or after 3 pm for the highest likelihood of finding parking.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-22 10:11 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T18:11:24.1968036Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.073281139665731,
+                    46.41665740884973
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 261,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100322,
+                "LocationName": "Dalvay Beach",
+                "Remarks": "<p>Join us at the beach! Parking is still available at this location.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-21 18:39 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T02:39:09.5312602Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.200117439552713,
+                    46.42846842925892
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 265,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100322,
+                "LocationName": "Brackley Beach Complex",
+                "Remarks": "<p>Join us at the beach! Parking is still available at this location.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:06 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:06:21.1970784Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.2944225674131,
+                    46.458356179897081
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 267,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100322,
+                "LocationName": "North Rustico Beach",
+                "Remarks": "<p>On a beautiful summer day, this parking lot is typically full between 11-3pm. Please plan accordingly.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-21 18:39 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T02:39:21.5965792Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.39260616950957,
+                    46.497279356254225
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 269,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100322,
+                "LocationName": "Cavendish Beach Complex",
+                "Remarks": "<p>Join us at the beach! Parking is still available at this location.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:06 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:06:23.3561498Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.382081181334449,
+                    46.489294922565314
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 271,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100322,
+                "LocationName": "Green Gables Heritage Place",
+                "Remarks": "<p>On a summer day, this parking lot is typically full between 11:00am-3pm. Please plan accordingly!</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:06 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:06:24.4642147Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -116.49891178732952,
+                    51.716682579059508
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 278,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Peyto Lake",
+                "Remarks": "<p>Peyto Lake is a very popular destination. Arrive before 11 am or after 2 pm for the highest likelihood of finding parking.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-19 10:15 EDT",
+                "ModifiedTimestamplocal": "2022-08-19T18:15:24.0019245Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -116.54145000322626,
+                    51.4391495055568
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 280,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100092,
+                "LocationName": "Emerald Lake",
+                "Remarks": "<p>Emerald Lake is a very popular destination. Parking is limited and fills by 10 am. Arrive before 10 am or after 3 pm for the highest likelihood of finding parking.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-19 10:16 EDT",
+                "ModifiedTimestamplocal": "2022-08-19T18:16:17.0582936Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.51956981214481,
+                    51.236899818086648
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 290,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Upper Bankhead",
+                "Remarks": "<p>Upper Bankhead has parking for passenger vehicles and small RVs and is a good choice when other picnicking areas are too busy.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 10:19 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T18:19:41.1799574Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.80468529722692,
+                    51.22026344101014
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 305,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Redearth Creek Trail",
+                "Remarks": "<p>Redearth Creek trailhead parking often fills up on busy summer weekends.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-22 10:11 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T18:11:16.8183092Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.56114377212705,
+                    51.175150593229084
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 308,
+                "StatusId": 6,
+                "StatusIconFileName": "blackspot.png",
+                "PhaId": 100092,
+                "LocationName": "Tunnel Mountain Summit Trail",
+                "Remarks": "<p>Parking lot closed for construction.</p>\n\n<p>For details on trail access&nbsp;visit:</p>\n\n<p><a href=\"https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fbanff.ca%2Fstjulienroad&amp;data=05%7C01%7Cmatthew.perdeaux%40pc.gc.ca%7Cebeee362dfa248803a8608da2217ce6b%7C6f45dd51039e4566bcc55b700537cb87%7C0%7C0%7C637859782884561949%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=j0hhFdLT8PWpveMx61ZeDaIikYzt0lEk3SPg6Ve%2BPn4%3D&amp;reserved=0\">banff.ca/stjulienroad</a></p>\n\n<p>&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-22 10:11 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T18:11:14.9913319Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.57153092987285,
+                    51.170706838697321
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 312,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Cascades of Time Garden and Admin Parking",
+                "Remarks": "<p>Cascades of Time Garden at the Banff Administration Building has limited parking for vehicles under 6 m (20&#39;) and tourbuses only. It is usually full Mon-Fri 9am-4pm. Try <a href=\"http://roamtransit.com\" target=\"_blank\"><strong>Roam transit</strong>&nbsp;</a> or Cave &amp; Basin NHS as an alternative.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 10:20 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T18:20:15.4472539Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.56007210986806,
+                    51.1612843071772
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 319,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Spray River West Trail",
+                "Remarks": "<p>Spray West has parking for about 27 vehicles. It may fill up on busy weekends. Try parking at Bow Falls and accessing via Spray East trailhead.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 10:20 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T18:20:04.7829138Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.52331890330099,
+                    51.232672871373047
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 323,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Lower Bankhead",
+                "Remarks": "<p>Parking is available at Lower Bankhead.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 10:19 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T18:19:44.0001034Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -116.46412373238913,
+                    51.679278470373895
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 328,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Bow Lake",
+                "Remarks": "<p>Parking is available at Bow Lake. Parking is often full during peak hours (10am-3pm).&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-19 10:15 EDT",
+                "ModifiedTimestamplocal": "2022-08-19T18:15:25.1675404Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -116.18100579716645,
+                    51.330152414379555
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 336,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100092,
+                "LocationName": "Moraine Lake",
+                "Remarks": "<p>Parking is <strong>FULL</strong>.</p>\n\n<p>Vehicles are only permitted on Moraine Lake Road when parking is available at Moraine Lake. There is no space to wait for an available stall. Roadside parking is prohibited.</p>\n\n<p>Booking a seat on <strong>a Parks Canada shuttle</strong> is the best way to enjoy your visit! Conveniently see both Lake Louise and Moraine Lake with one reservation. Visit the <a href=\"https://reservation.pc.gc.ca/Banff-LakeLouise?Type=7&amp;language=en&amp;_ga=2.106280899.139039898.1651073929-140506452.1649778365\" target=\"_blank\">Parks Canada Reservation System</a> to plan your trip.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 14:01 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T22:01:41.5212438Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -115.7309161829433,
+                    51.168164328078667
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 339,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Bourgeau Lake Trail",
+                "Remarks": "<p>Limited parking is available at the Bourgeau trailhead. Try carpooling!</p>\n",
+                "ModifiedTimestampUtc": "2022-08-22 10:11 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T18:11:05.4184462Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.380815178688366,
+                    46.499380522537678
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 344,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100322,
+                "LocationName": "Oceanview Lookoff",
+                "Remarks": "<p>Oceanview offers breathtaking views of the beach and the red cliffs. However, it is not a beach access area.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:06 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:06:51.2896959Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.353456646737264,
+                    46.496943309830293
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 345,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100322,
+                "LocationName": "MacNeills Brook",
+                "Remarks": "<p>On a beautiful summer day, this parking lot is typically full between 11-3pm. Please plan accordingly.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:06 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:06:52.2288426Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.340646416483217,
+                    46.4961234955493
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 346,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100322,
+                "LocationName": "MacKenzies Brook",
+                "Remarks": "<p>On a beautiful summer day, this parking lot is typically full between 11-3pm. Please plan accordingly.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:06 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:06:53.3727913Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.192840783710551,
+                    46.429152458184305
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 347,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100322,
+                "LocationName": "Shaws Beach",
+                "Remarks": "<p>On a beautiful summer day, this parking lot is typically full between 11-3pm. Please plan accordingly.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-21 18:39 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T02:39:45.0249182Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.142919509529129,
+                    46.429803202057983
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 348,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100322,
+                "LocationName": "Covehead Lighthouse",
+                "Remarks": "<p>On a beautiful summer day, this parking lot is typically full between 11-3pm. Please plan accordingly.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:06 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:06:55.6280323Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.136495618940458,
+                    46.4293632113124
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 349,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100322,
+                "LocationName": "Stanhope Cape Beach",
+                "Remarks": "<p>On a beautiful summer day, this parking lot is typically full between 11-3pm. Please plan accordingly.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-21 18:39 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T02:39:45.7769544Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -62.685455350995419,
+                    46.453745912192041
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 350,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100322,
+                "LocationName": "Greenwich Beach",
+                "Remarks": "<p>Join us at the beach! There are still parking spaces available at this location.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:06 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:06:58.2167339Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -62.69380489044952,
+                    46.443814494796484
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 352,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100322,
+                "LocationName": "Greenwich Trailhead",
+                "Remarks": "<p>There are still parking spaces available at this location.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:06 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:06:59.4434538Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.1202922170717,
+                    46.423809409337593
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 363,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100322,
+                "LocationName": "Ross Lane Beach Overflow",
+                "Remarks": "<p>Join us at the beach! Parking is still available at this location.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-21 18:39 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T02:39:39.7530159Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.202404176082965,
+                    46.43087399992362
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 402,
+                "StatusId": 6,
+                "StatusIconFileName": "blackspot.png",
+                "PhaId": 100322,
+                "LocationName": "Brackley Beach Surf Conditions",
+                "Remarks": "<p>Calm Surf</p>\n\n<p>Air temperature: 22&nbsp;degrees Celsius</p>\n\n<p>Water temperature: 18&nbsp;degrees Celsius</p>\n",
+                "ModifiedTimestampUtc": "2022-08-23 09:17 EDT",
+                "ModifiedTimestamplocal": "2022-08-23T17:17:20.7066521Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.391960962919015,
+                    46.499780920426559
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 429,
+                "StatusId": 6,
+                "StatusIconFileName": "blackspot.png",
+                "PhaId": 100322,
+                "LocationName": "Cavendish Beach Surf Conditions",
+                "Remarks": "<p>Calm Surf</p>\n\n<p>Air temperature: 22&nbsp;degrees Celsius</p>\n\n<p>Water temperature: 18&nbsp;degrees Celsius</p>\n",
+                "ModifiedTimestampUtc": "2022-08-23 09:17 EDT",
+                "ModifiedTimestamplocal": "2022-08-23T17:17:03.4335789Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.101447499450288,
+                    46.420270059133109
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 447,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100322,
+                "LocationName": "Stanhope Beach Complex",
+                "Remarks": "<p>Join us at the beach! There are still parking spaces available at this location.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-21 18:39 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T02:39:16.8414926Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.121603190631262,
+                    43.790258699581926
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 485,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 101059,
+                "LocationName": "Rouge Beach and Marsh",
+                "Remarks": "<p>***Lower lot is closed for Metrolinx construction.***</p>\n\n<p><strong>Corner of Lawrence Avenue East and 195 Rouge Hills Dr, Toronto</strong></p>\n\n<p>Extremely limited parking available. Lots open at <strong>7:30 a.m</strong>. daily and close at <strong>9 p.m.&nbsp;</strong>daily for community safety and security. After hours parking is prohibited and subject to fines and towing. For more information, please visit our <a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/toronto/beach\">website</a>.</p>\n\n<p>Parking spaces- Upper (paved)- 28; Overflow (gravel)- 35-40</p>\n\n<p>Accessible parking-&nbsp;5, lower lot</p>\n\n<p>Services- Portable toilets are available at the Upper lot</p>\n\n<p>Trails Access- Rouge Marsh Trail, Waterfront Trail</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:16.772542Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.1654440480736,
+                    43.80933620495361
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 494,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "Glen Eagles Vista",
+                "Remarks": "<p><strong>7 Twyn Rivers Dr, Toronto</strong></p>\n\n<p>Limited parking available. The parking lot is <strong>closed and locked at 9 p.m.</strong> daily for community safety and security. <strong>Lots reopen 7:30 a.m. daily. </strong>After hours parking is prohibited and subject to fines and towing.&nbsp;Parking on the both sides of Twyn Rivers Drive and after hours is prohibited.&nbsp;For more information, please visit our <a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/toronto\">website</a>.</p>\n\n<p>Parking spaces (paved)- 15</p>\n\n<p>Accessible parking- Yes (1)</p>\n\n<p>Services- Not available at this location</p>\n\n<p>Trails- Glen Eagles Vista Trail</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:19.1155565Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.170555620388285,
+                    43.8165114085923
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 501,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "Zoo Road Welcome Area",
+                "Remarks": "<p><strong>1749 Meadowvale Rd, Scarborough</strong></p>\n\n<p>Zoo Road Welcome Area parking is available in the back grassy lot. Please look out for Rouge National Urban Park parking signs as you enter Zoo Rd. These will direct you to south of the road for parking.&nbsp;</p>\n\n<p>The parking lot is <strong>closed and locked at 9 p.m.</strong> daily for community safety and security. <strong>Lots reopen&nbsp;7:30 a.m. daily. </strong>After hours parking is prohibited and subject to fines and towing. For more information, please visit our <a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/toronto\">website</a>.</p>\n\n<p>Parking spaces (grass field): 200</p>\n\n<p>Accessible parking- No</p>\n\n<p>Services- Portable toilets are available</p>\n\n<p>Trails- Orchard Trail, Vista Trail, Cedar Trail and the Beare Wetlands Loop</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:20.6206884Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.199528971064481,
+                    43.848074338320338
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 502,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "Woodland Day Use Area",
+                "Remarks": "<p><strong>19 Reesor Rd, Scarborough</strong></p>\n\n<p>The entrance to this day use area descends into a granular based parking area with access to a relatively flat natural dirt trail.&nbsp;</p>\n\n<p>Parking spaces (gravel)- approx. 25</p>\n\n<p>Accessible parking- No</p>\n\n<p>Services- Not available at this location.</p>\n\n<p>Trails- Woodland Trail</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:23.0998996Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.2119907910126,
+                    43.860895775805261
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 507,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "Bob Hunter Memorial Park",
+                "Remarks": "<p><strong>7277 14th Ave, Markham</strong></p>\n\n<p>Parking is available at this location from 7:30 AM to 9:00 PM . Please only park in the designated gravel parking lot. After hours parking is prohibited. For more information, please visit our&nbsp;<a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/markham/bob-hunter\">website.</a></p>\n\n<p>Parking spaces (gravel)- approx. 70</p>\n\n<p>Accessible parking- No</p>\n\n<p>Services- Portable washrooms available. Electric Vehicle charging station available.</p>\n\n<p>Trails- Reesor Way/ Tanglewood Trail (partial closure), Tallgrass Trek, Monarch Trail</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:24.4754325Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.245256403788019,
+                    43.9527698429796
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 517,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "19th Avenue Day Use Area",
+                "Remarks": "<p><strong>6994 19th Ave, Markham</strong></p>\n\n<p>Limited parking available. Please only park in the designated parking lot. The parking lot is <strong>closed and locked at 9 p.m.</strong> daily for community safety and security. <strong>Lot&nbsp;reopens at&nbsp;7:30 a.m</strong><strong>. daily.</strong><strong> </strong>After hours parking is prohibited and subject to fines and towing. For more information, please visit our <a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/toronto/ontario\">website</a>.&nbsp;</p>\n\n<p>Parking spaces (paved)- 8</p>\n\n<p>Accessible parking- Yes (2)</p>\n\n<p>Services- Washroom facilities available (no running water)</p>\n\n<p>Trails- Harvest Trail</p>\n\n<p>&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:25.8837249Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.203388079012214,
+                    43.991662075176954
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 524,
+                "StatusId": 6,
+                "StatusIconFileName": "blackspot.png",
+                "PhaId": 101059,
+                "LocationName": "Glasgow Day Use Area",
+                "Remarks": "<p>Glasgow Day Use Area (and Coyote Trail) is closed to undertake important and necessary infrastructure and trail upgrades, as well as to enhance visitor experience and safety at the site.&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:28.4615907Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.196543795781466,
+                    43.824837538798583
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 525,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "Finch Meander",
+                "Remarks": "<p><strong>305 Old Finch Ave</strong></p>\n\n<p>Limited parking available. The parking lot is <strong>closed and locked at 9 p.m.</strong> daily for community safety and security. <strong>Lots reopen&nbsp;7:30 a.m</strong><strong>. daily.</strong><strong> </strong>After hours parking is prohibited and subject to fines and towing. For more information, please visit our <a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/toronto/ontario\">website</a>.</p>\n\n<p>Parking spaces (paved)- 15</p>\n\n<p>Accessible parking- Yes (1)</p>\n\n<p>Services- Not available at this location</p>\n\n<p>Trail: Finch Meander Trail</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:29.5742613Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.13664160910362,
+                    43.805061273621142
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 529,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "Mast Trailhead",
+                "Remarks": "<p><strong>7450 Kingston Rd, Scarborough</strong></p>\n\n<p>Limited parking available. The parking lot is <strong>closed and locked at 9 p.m.</strong> daily for community safety and security. <strong>Lots reopen&nbsp;7:30 a.m</strong><strong>. daily.</strong><strong> </strong>After hours parking is prohibited and subject to fines and towing. For more information, please visit our <a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/toronto/ontario\">website</a>.</p>\n\n<p>Parking spaces (paved)- 50</p>\n\n<p>Accessible parking- Yes (2)</p>\n\n<p>Services- Portable toilets are available</p>\n\n<p>Trails- Mast Trail</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:30.9341052Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.191928367853862,
+                    43.869211631543152
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 546,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "Bob Hunter Memorial Park - North Parking Lot",
+                "Remarks": "<p>There is parking available at this location. Parking is available 7:30 AM to 9:00 PM. For more information, please visit our <a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/markham/reesor\">website.</a></p>\n\n<p>Parking spaces (paved)- 15</p>\n\n<p>Accessible parking- Yes (1)</p>\n\n<p>Services- Not available at this location</p>\n\n<p>Trails- Monarch Trail</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:35.7974867Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.203584340368337,
+                    43.857267448094284
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 547,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "Bob Hunter Memorial Park - East Parking Lot",
+                "Remarks": "<p>There is parking available at this location. Parking is available 7:30 AM to 9:00 PM. For more information, please visit our <a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/markham/reesor\">website.</a></p>\n\n<p>Trails- Monarch Trail</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:37.3777055Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.22242978268,
+                    43.93825600083585
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 552,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "Reesor Day Use Area P3",
+                "Remarks": "<p><strong>7535 Elgin Mills Rd, Markham, ON, L6B 1A8</strong></p>\n\n<p>There is parking available at this location. Parking is available 7:30 AM to 9:00 PM. For more information, please visit our&nbsp;<a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/markham/reesor\">website.</a></p>\n\n<p>Parking spaces (grvavel): approx. 15</p>\n\n<p>Accessible parking- No</p>\n\n<p>Services- Washroom facilities are available.</p>\n\n<p>Trails- Harvest Trail</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:07 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:07:38.8209175Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -116.16269287915225,
+                    51.441533429002355
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 558,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100092,
+                "LocationName": "Lake Louise Park and Ride",
+                "Remarks": "<p>Start your journey to Lake Louise and Moraine Lake here! All shuttles to Lake Louise and Moraine Lake depart from the Park and Ride, located at the Lake Louise Ski Area.</p>\n\n<p>Booking a seat on <strong>a Parks Canada shuttle</strong> is the best way to enjoy your visit. &nbsp;Conveniently see both Lake Louise and Moraine Lake with one reservation. Visit the <a href=\"https://reservation.pc.gc.ca/Banff-LakeLouise?Type=7&amp;language=en&amp;_ga=2.106280899.139039898.1651073929-140506452.1649778365\" target=\"_blank\">Parks Canada Reservation System</a> to plan your trip.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-22 10:10 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T18:10:53.7267651Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -63.120297581490455,
+                    46.424506663998194
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 567,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100322,
+                "LocationName": "Ross Lane Beach",
+                "Remarks": "<p>Parking at this location may be full on weekends and holidays with clear weather, so consider having a backup location in mind. Try visiting the park on weekdays or early mornings/ late afternoons.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-21 18:39 EDT",
+                "ModifiedTimestamplocal": "2022-08-22T02:39:33.4305075Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -118.06217251983018,
+                    52.871188127340233
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 570,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100244,
+                "LocationName": "Old Fort Point",
+                "Remarks": "<p>Parking available. Parking is often full during peak hours (10am &ndash; 5pm).</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:57 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:57:29.9004767Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -118.10169755187503,
+                    52.915901420962783
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 576,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100244,
+                "LocationName": "Pyramid Beach",
+                "Remarks": "<p>Parking is FULL. Visit at another time.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:57 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:57:34.2972902Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -118.09238552225884,
+                    52.911002452293118
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 578,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100244,
+                "LocationName": "Patricia Lake",
+                "Remarks": "<p>Parking available.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:57 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:57:37.9999008Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -118.04421344451195,
+                    52.905937299595969
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 584,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100244,
+                "LocationName": "Lake Annette/Edith",
+                "Remarks": "<p>Parking is FULL. Take your bike along Jasper&rsquo;s Connector Trails or consider visiting at a different time.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:57 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:57:43.0361418Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -118.01653176342288,
+                    52.920594050574287
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 586,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100244,
+                "LocationName": "5th Bridge",
+                "Remarks": "<p>Parking available.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:57 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:57:44.8705872Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -118.00236433540597,
+                    52.919138581333819
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 590,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100244,
+                "LocationName": "Maligne Overlook",
+                "Remarks": "<p>Parking available. This parking area is less than 1km walk to Maligne Canyon.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:57 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:57:47.1972842Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -117.99955338035882,
+                    52.921017744647351
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 596,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100244,
+                "LocationName": "Maligne Canyon",
+                "Remarks": "<p>Parking is FULL. Check whether Maligne Overlook parking area has space.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:57 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:57:49.6391668Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -117.63853341137209,
+                    52.730400848775261
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 599,
+                "StatusId": 4,
+                "StatusIconFileName": "yellowspot.png",
+                "PhaId": 100244,
+                "LocationName": "Maligne Lake",
+                "Remarks": "<p>Parking is nearly full.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:57 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:57:52.2420033Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -118.02320863384094,
+                    52.808277056580536
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 604,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100244,
+                "LocationName": "Valley of the Five Lakes",
+                "Remarks": "<p>Parking is FULL. Visit at another time. No parking allowed along roadways and highways.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:57 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:57:58.2680785Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -117.88295978064885,
+                    52.666035476785524
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 608,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100244,
+                "LocationName": "Athabasca Falls",
+                "Remarks": "<p>Parking is FULL. Visit at another time.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:58 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:58:01.8841607Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -117.64576667303922,
+                    52.532661099623809
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 612,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100244,
+                "LocationName": "Sunwapta Falls",
+                "Remarks": "<p>Parking is FULL. Visit at another time. No parking allowed along roadways and highways.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:58 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:58:03.240096Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -117.22725678981806,
+                    52.220037904681369
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 616,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100244,
+                "LocationName": "Icefields Centre",
+                "Remarks": "<p>Parking is FULL. Visit at another time. No parking allowed along roadways and highways.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:58 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:58:08.9396711Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -117.23261660014541,
+                    52.212610158219995
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 620,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100244,
+                "LocationName": "Toe of the Glacier",
+                "Remarks": "<p>Parking is FULL. No parking allowed along roadways and highways.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:58 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:58:07.6040147Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -118.02958136473913,
+                    53.083652392615612
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 622,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 100244,
+                "LocationName": "Jasper Lake",
+                "Remarks": "<p>Parking available.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:58 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:58:11.8365059Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -117.77127122556014,
+                    53.130531372075581
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 628,
+                "StatusId": 5,
+                "StatusIconFileName": "redspot.png",
+                "PhaId": 100244,
+                "LocationName": "Miette Hot Springs",
+                "Remarks": "<p>Parking is FULL. Visit at another time.</p>\n",
+                "ModifiedTimestampUtc": "2022-08-25 15:58 EDT",
+                "ModifiedTimestamplocal": "2022-08-25T23:58:40.6387554Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.224556376650241,
+                    43.937828641392059
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 641,
+                "StatusId": 3,
+                "StatusIconFileName": "greenspot.png",
+                "PhaId": 101059,
+                "LocationName": "Reesor Day Use Area P2",
+                "Remarks": "<p><strong>7445 Elgin Mills Rd, Markham, ON, L6B 1A8</strong></p>\n\n<p>There is parking available at this location. Parking is available 7:30 AM to 9:00 PM. For more information, please visit our <a href=\"https://www.pc.gc.ca/en/pn-np/on/rouge/visit/se-rendre-get-there/markham/reesor\">website.</a></p>\n\n<p>Parking spaces (paved on East lot, gravel on West lot): approx. 35</p>\n\n<p>Accessible parking- Yes (6)</p>\n\n<p>Services- Washroom facilities are available.</p>\n\n<p>Trails- Harvest Trail</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:08 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:08:11.8756656Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.119224742248917,
+                    43.793799007405681
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 644,
+                "StatusId": 6,
+                "StatusIconFileName": "blackspot.png",
+                "PhaId": 101059,
+                "LocationName": "Rouge Beach and Marsh",
+                "Remarks": "<p>***The lower Rouge marsh&nbsp;parking lot is closed for Metrolinx construction.***</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:08 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:08:14.8280635Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -79.153691164883014,
+                    43.814220358054229
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "MarkerId": 646,
+                "StatusId": 6,
+                "StatusIconFileName": "blackspot.png",
+                "PhaId": 101059,
+                "LocationName": "Twyn Rivers Day Use Area",
+                "Remarks": "<p>Twyn Rivers day use area&nbsp;is closed to undertake important and necessary infrastructure and trail upgrades, as well as to enhance visitor experience and safety at the site.&nbsp;</p>\n",
+                "ModifiedTimestampUtc": "2022-08-18 10:08 EDT",
+                "ModifiedTimestamplocal": "2022-08-18T18:08:16.0842259Z",
+                "StatusIconSortOrder": 0
+            },
+            "type": "Feature"
+        }
+    ],
+    "type": "FeatureCollection"
+}
