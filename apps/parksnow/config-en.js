@@ -9,10 +9,10 @@ var wet_boew_geomap = {
             },
             style: {
                 type: "unique", field: "Status", init: {
-                    "greenspot.png": { name: "Available", "fillColor": "#056C07"},
-                    "yellowspot.png": { name: "Limited", "fillColor": "#FFF702"},
-                    "redspot.png": { name: "Full", "fillColor": "#EB1E25"},
-                    "blackspot.png": { name: "Closed", "fillColor": "#000000" }
+                    "greenspot.png": { name: "Available", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971109-202d4320-59cb-4f95-9ca8-bfc769ef7a91.svg"},
+                    "yellowspot.png": { name: "Limited", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971106-8e809376-e908-4906-8310-5f2a4bf007e2.svg"},
+                    "redspot.png": { name: "Full", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971105-f6e8e99d-0584-40c6-9b76-e56d34c040d1.svg"},
+                    "blackspot.png": { name: "Closed", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971096-b0b1cbf5-8f5b-459e-a562-49b5856fa92f.svg" }
                 }
             }
         }
