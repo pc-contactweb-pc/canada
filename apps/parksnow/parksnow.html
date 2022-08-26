@@ -113,9 +113,7 @@
             <div id="ParksNowMap" class="wb-geomap geolocation geocoder" data-geomap-center="-79.1546555, 43.8136984" data-geomap-zoom="1" data-wb-geomap='{"layersFile": "https://pc-contactweb-pc.github.io/canada/apps/parksnow/config-en.js"}'>
                 <div class="wb-geomap-map " id="myGeomap"></div> <!-- Inserted Map End -->
             </div>
-            <div class="wb-geomap-legend col-md-3">
-                <h2>Legend</h2>
-            </div>
+            
             <!-- Inserted Layer Data Start (mandatory) -->
             <div class="wb-geomap-layers col-md-12 ">
                 <table id="addPCLoc" aria-label="[Location name] address" class="table">
@@ -153,7 +151,7 @@
                 let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
                 let myMap = map;
                 // myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
-                myMap.getView().setCenter(desiredCenter)
+                myMap.getView().setCenter(desiredCenter);
                 myMap.getView().setZoom(desiredZoom);
             });
 
