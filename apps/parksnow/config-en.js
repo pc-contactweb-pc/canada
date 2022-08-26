@@ -6,15 +6,16 @@ var wet_boew_geomap = {
                 StatusIconFileName: { path: "properties", alias: "Status" },
                 ModifiedTimestampUtc: { path: "properties", alias: "Time" },
                 Remarks: { path: "properties", alias: "Remarks" }
-            },
-            style: {
-                type: "unique", field: "Status", init: {
-                    "greenspot.png": { name: "Available", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971109-202d4320-59cb-4f95-9ca8-bfc769ef7a91.svg"},
-                    "yellowspot.png": { name: "Limited", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971106-8e809376-e908-4906-8310-5f2a4bf007e2.svg"},
-                    "redspot.png": { name: "Full", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971105-f6e8e99d-0584-40c6-9b76-e56d34c040d1.svg"},
-                    "blackspot.png": { name: "Closed", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971096-b0b1cbf5-8f5b-459e-a562-49b5856fa92f.svg" }
-                }
             }
+            // ,
+            // style: {
+            //     type: "unique", field: "Status", init: {
+            //         "greenspot.png": { name: "Available", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971109-202d4320-59cb-4f95-9ca8-bfc769ef7a91.svg"},
+            //         "yellowspot.png": { name: "Limited", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971106-8e809376-e908-4906-8310-5f2a4bf007e2.svg"},
+            //         "redspot.png": { name: "Full", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971105-f6e8e99d-0584-40c6-9b76-e56d34c040d1.svg"},
+            //         "blackspot.png": { name: "Closed", "externalGraphic": "https://user-images.githubusercontent.com/45856706/186971096-b0b1cbf5-8f5b-459e-a562-49b5856fa92f.svg" }
+            //     }
+            // }
         }
     ]
 };
