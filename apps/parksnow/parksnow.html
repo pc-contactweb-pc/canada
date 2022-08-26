@@ -145,6 +145,8 @@
                 let desiredZoom = document.getElementById("ParksNowMap").getAttribute("data-geomap-zoom");
                 // let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
                 let myMap = map;
+                console.log(myMap);
+                
                 // myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
                 // myMap.getView().setCenter(-79.1546555, 43.8136984);
                 myMap.getView().setZoom(desiredZoom);
