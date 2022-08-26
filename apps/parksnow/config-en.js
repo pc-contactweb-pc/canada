@@ -47,7 +47,7 @@ var wet_boew_geomap = {
                     },
                 },
                 select: {
-                    externalGraphic: "https://user-images.githubusercontent.com/45856706/186975883-0fcbbc67-3f4e-42f6-9714-eafa6cbf5e3c.png", fillOpacity: "1", graphicWidth: "25",
+                    externalGraphic: "https://user-images.githubusercontent.com/45856706/186975883-0fcbbc67-3f4e-42f6-9714-eafa6cbf5e3c.png", graphicOpacity: "1",
                 },
             },
         },
