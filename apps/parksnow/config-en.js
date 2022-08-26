@@ -8,13 +8,36 @@ var wet_boew_geomap = {
                 Remarks: { path: "properties", alias: "Remarks" }
             },
             style: {
-                type: "unique", "field": "Status", init: {
-                    "greenspot.png": { name: "Available", 'fillColor': "#056C07"},
-                    "yellowspot.png": { name: "Limited", 'fillColor': "#FFF702"},
-                    "redspot.png": { name: "Full", 'fillColor': "#EB1E25"},
-                    "blackspot.png": { name: "Closed", 'fillColor': "#000000" }
+                type: "unique", field: "Status", init: {
+                    "greenspot.png": { name: "Available", "fillColor": "#056C07"},
+                    "yellowspot.png": { name: "Limited", "fillColor": "#FFF702"},
+                    "redspot.png": { name: "Full", "fillColor": "#EB1E25"},
+                    "blackspot.png": { name: "Closed", "fillColor": "#000000" }
                 }
             }
         }
     ]
 };
+
+
+
+// //  "init": {
+//     "Frontcountry - Reservable": {
+//         "externalGraphic": "icons/lhnnhs-svg5.svg",
+//         "fillOpacity": "1",
+//         "graphicWidth": "25",
+//         "name": "Frontcountry - Reservable"
+//     },
+//     "Frontcountry - First-come; first-served": {
+//         "externalGraphic": "icons/lhnnhs-svg5.svg",
+//         "fillOpacity": "1",
+//         "graphicWidth": "25",
+//         "name": "Frontcountry - First-come; first-served"
+//     },
+
+//     "Backcountry - First-come; first-served": {
+//         "externalGraphic": "icons/lhnnhs-svg5.svg",
+//         "fillOpacity": "1",
+//         "graphicWidth": "25",
+//         "name": "Backcountry - First-come; first-served"
+//     }
