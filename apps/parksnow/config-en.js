@@ -16,7 +16,7 @@ var wet_boew_geomap = {
                     blackspot: { name: "Closed", externalGraphic: "https://user-images.githubusercontent.com/45856706/186975883-0fcbbc67-3f4e-42f6-9714-eafa6cbf5e3c.png", fillOpacity: "1", graphicWidth: "25" }
                 }, 
                 select: {
-                    externalGraphic:"https://user-images.githubusercontent.com/45856706/186975873-c7b4ee62-8ba2-418a-8aaf-a89f6c4c3d14.png", graphicOpacity:"1"
+                    externalGraphic:"https://wet-boew.github.io/v4.0-ci/demos/geomap/demo/trafficcamera_active.png", graphicOpacity:"1"
                 }
             }
 
