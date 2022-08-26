@@ -7,8 +7,13 @@ var wet_boew_geomap = {
                 ModifiedTimestampUtc: { path: "properties", alias: "Updated" },
                 Remarks: { path: "properties", alias: "Remarks" }
             },
-            
+
             style: {
+                init: {
+                    'strokeColor': '#ff0000',
+                    'fillColor': '#ff0000',
+                    'fillOpacity': '0.4'
+                },
                 // type: "unique", field: "Status", init: {
                 //     greenspot: { name: "Available", externalGraphic: "https://user-images.githubusercontent.com/45856706/186975873-c7b4ee62-8ba2-418a-8aaf-a89f6c4c3d14.png", fillOpacity: "1", graphicWidth: "25"},
                 //     yellowspot: { name: "Limited", externalGraphic: "https://user-images.githubusercontent.com/45856706/186975885-9b2ac8b6-f934-441f-b5d1-b2e4f73fc2d2.png", fillOpacity: "1", graphicWidth: "25"},
@@ -16,7 +21,7 @@ var wet_boew_geomap = {
                 //     blackspot: { name: "Closed", externalGraphic: "https://user-images.githubusercontent.com/45856706/186975883-0fcbbc67-3f4e-42f6-9714-eafa6cbf5e3c.png", fillOpacity: "1", graphicWidth: "25" }
                 // }, 
                 select: {
-                    'strokeColor': '#333333', 'fillColor': '#6600cc', 'pointRadius': 4.5, 'fillOpacity': .8, 'strokeWidth': 1
+                    'strokeColor': '#3AFF00', 'fillColor': '#3AFF00', 'pointRadius': 4.5, 'fillOpacity': .8, 'strokeWidth': 1
                 }
             }
 
