@@ -9,9 +9,12 @@ var wet_boew_geomap = {
             },
 
             style: {
-                type: 'symbol',
+                type: "unique",
+                field: "Status",
                 init: {
-                    externalGraphic: "https://user-images.githubusercontent.com/45856706/186975873-c7b4ee62-8ba2-418a-8aaf-a89f6c4c3d14.png", fillOpacity: "1", graphicWidth: "25"
+                    yellowspot: {
+                        externalGraphic: "https://user-images.githubusercontent.com/45856706/186975873-c7b4ee62-8ba2-418a-8aaf-a89f6c4c3d14.png", fillOpacity: "1", graphicWidth: "25"
+                    }
                 },
                 // type: "unique", field: "Status", init: {
                 //     greenspot: { name: "Available", externalGraphic: "https://user-images.githubusercontent.com/45856706/186975873-c7b4ee62-8ba2-418a-8aaf-a89f6c4c3d14.png", fillOpacity: "1", graphicWidth: "25"},
