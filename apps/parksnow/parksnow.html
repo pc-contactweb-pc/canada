@@ -111,10 +111,6 @@
         <section class="container">
 
             <div id="ParksNowMap" class="wb-geomap geolocation geocoder" data-geomap-center="-79.1546555, 43.8136984" data-geomap-zoom="1" data-wb-geomap='{"layersFile": "https://pc-contactweb-pc.github.io/canada/apps/parksnow/config-en.js?2"}'>
-
-
-
-                
                 <div class="row">
                     <div class="col-md-9">
                         <div class="wb-geomap-map" id="myGeoMap"></div>
@@ -161,7 +157,7 @@
 
     <!-- Geomap start -->
     <script>
-        $(document).on("wb-ready.wb-geomap", "#ParksNowMap", function (event, map) {
+        $(document).on("wb-ready.wb-geomap", "#geomap-map-ParksNowMap", function (event, map) {
                 let desiredZoom = document.getElementById("ParksNowMap").getAttribute("data-geomap-zoom");
                 // let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
                 let myMap = map;
