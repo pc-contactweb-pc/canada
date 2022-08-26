@@ -148,10 +148,10 @@
     <script>
         $(document).on("wb-ready.wb-geomap", "#ParksNowMap", function (event, map) {
                 let desiredZoom = document.getElementById("ParksNowMap").getAttribute("data-geomap-zoom");
-                let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
+                // let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
                 let myMap = map;
                 // myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
-                myMap.getView().setCenter(desiredCenter);
+                myMap.getView().setCenter(-79.1546555, 43.8136984);
                 myMap.getView().setZoom(desiredZoom);
             });
 
