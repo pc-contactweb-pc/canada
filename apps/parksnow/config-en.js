@@ -1,7 +1,7 @@
 var wet_boew_geomap = {
     overlays: [
         {
-            title: "Parks Now", caption: "This is a sample dataset loaded from a remote JSON resource, in this case the USGS Earthquakes API.", type: "json", url: "https://pc-contactweb-pc.github.io/canada/apps/parksnow/parksNowResponse.json", visible: !0, popups: !0, datatable: !0, zoom: !0, root: "features", attributes: {
+            title: "Parks Now", caption: "The latest information on visiting Parks Canada", type: "json", url: "https://pc-contactweb-pc.github.io/canada/apps/parksnow/parksNowResponse.json", visible: !0, popups: !0, datatable: !0, zoom: !0, root: "features", attributes: {
                 LocationName: { path: "properties", alias: "Title" },
                 StatusIconFileName: { path: "properties", alias: "Status" },
                 ModifiedTimestampUtc: { path: "properties", alias: "Time" },
