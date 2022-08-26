@@ -25,60 +25,31 @@ var wet_boew_geomap = {
                         externalGraphic: "https://user-images.githubusercontent.com/45856706/186992816-29e52dd6-82e6-400e-96ec-b33c19f94db1.png", 
                         fillOpacity: "1", 
                         graphicWidth: "25",
+                        name: "Parking available",
                     },
                     yellowspot: {
                         externalGraphic: "https://user-images.githubusercontent.com/45856706/186992814-f200d633-6ee5-4a87-9814-5ccdf4857817.png", 
                         fillOpacity: "1", 
                         graphicWidth: "25",
+                        name: "Limited availability",
                     },
                     redspot: {
                         externalGraphic: "https://user-images.githubusercontent.com/45856706/186992811-1a98cb21-b546-48b7-98dd-cd7036e00107.png", 
                         fillOpacity: "1", 
                         graphicWidth: "25",
+                        name: "Parking full",
                     },
                     blackspot: {
                         externalGraphic: "https://user-images.githubusercontent.com/45856706/186992817-b3ede806-f39a-4c71-9089-a7e72d973e5c.png", 
                         fillOpacity: "1", 
                         graphicWidth: "25",
+                        name: "Parking closed",
                     },
                 },
                 select: {
                     externalGraphic: "https://user-images.githubusercontent.com/45856706/186975883-0fcbbc67-3f4e-42f6-9714-eafa6cbf5e3c.png", fillOpacity: "1", graphicWidth: "25",
                 },
             },
-
-            // SVG version
-            // style: {
-            //     type: "unique", field: "Status", init: {
-            //         "greenspot": { name: "Available", externalGraphic: "https://user-images.githubusercontent.com/45856706/186971109-202d4320-59cb-4f95-9ca8-bfc769ef7a91.svg", fillOpacity: "1", graphicWidth: "25"},
-            //         "yellowspot": { name: "Limited", externalGraphic: "https://user-images.githubusercontent.com/45856706/186971106-8e809376-e908-4906-8310-5f2a4bf007e2.svg", fillOpacity: "1", graphicWidth: "25"},
-            //         "redspot": { name: "Full", externalGraphic: "https://user-images.githubusercontent.com/45856706/186971105-f6e8e99d-0584-40c6-9b76-e56d34c040d1.svg", fillOpacity: "1", graphicWidth: "25"},
-            //         "blackspot": { name: "Closed", externalGraphic: "https://user-images.githubusercontent.com/45856706/186971096-b0b1cbf5-8f5b-459e-a562-49b5856fa92f.svg", fillOpacity: "1", graphicWidth: "25" }
-            //     }
-            // }
         },
     ],
 };
-
-
-
-// //  "init": {
-//     "Frontcountry - Reservable": {
-//         "externalGraphic": "icons/lhnnhs-svg5.svg",
-//         "fillOpacity": "1",
-//         "graphicWidth": "25",
-//         "name": "Frontcountry - Reservable"
-//     },
-//     "Frontcountry - First-come; first-served": {
-//         "externalGraphic": "icons/lhnnhs-svg5.svg",
-//         "fillOpacity": "1",
-//         "graphicWidth": "25",
-//         "name": "Frontcountry - First-come; first-served"
-//     },
-
-//     "Backcountry - First-come; first-served": {
-//         "externalGraphic": "icons/lhnnhs-svg5.svg",
-//         "fillOpacity": "1",
-//         "graphicWidth": "25",
-//         "name": "Backcountry - First-come; first-served"
-//     }
