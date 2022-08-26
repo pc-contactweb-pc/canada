@@ -111,12 +111,20 @@
         <section class="container">
 
             <div id="ParksNowMap" class="wb-geomap geolocation geocoder" data-geomap-center="-79.1546555, 43.8136984" data-geomap-zoom="1" data-wb-geomap='{"layersFile": "https://pc-contactweb-pc.github.io/canada/apps/parksnow/config-en.js"}'>
-                <div class="wb-geomap-map " id="myGeomap"></div> <!-- Inserted Map End -->
-            </div>
-            
-            <div class="row">
-                <div class="wb-geomap-layers col-md-12"></div>
-            </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="wb-geomap-map" id="myGeoMap"></div>
+                    </div>
+                    <!-- Add optional map legend -->
+                    <div class="wb-geomap-legend col-md-3">
+                        <h2>Legend</h2>
+                        <!-- Geomap will insert legend here -->
+                    </div>
+                    <div class="row">
+                        <!-- Add placeholder for overlays -->
+                        <div class="wb-geomap-layers col-md-12"></div>
+                    </div>
+                </div>
 
         </section>
 
