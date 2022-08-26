@@ -9,7 +9,7 @@ var wet_boew_geomap = {
             },
 
             style: {
-                init: {
+                'init': {
                     'strokeColor': '#ff0000',
                     'fillColor': '#ff0000',
                     'fillOpacity': '0.4'
@@ -20,7 +20,7 @@ var wet_boew_geomap = {
                 //     redspot: { name: "Full", externalGraphic: "https://user-images.githubusercontent.com/45856706/186975884-76d0ce34-0f31-4ba6-9979-9ef6fa07be94.png", fillOpacity: "1", graphicWidth: "25"},
                 //     blackspot: { name: "Closed", externalGraphic: "https://user-images.githubusercontent.com/45856706/186975883-0fcbbc67-3f4e-42f6-9714-eafa6cbf5e3c.png", fillOpacity: "1", graphicWidth: "25" }
                 // }, 
-                select: {
+                'select': {
                     'strokeColor': '#3AFF00', 'fillColor': '#3AFF00', 'pointRadius': '4.5', 'fillOpacity': '.8', 'strokeWidth': '1'
                 }
             }
