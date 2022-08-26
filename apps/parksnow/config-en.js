@@ -3,12 +3,12 @@ var wet_boew_geomap = {
         {
             title: "Parks Now", caption: "The latest information on visiting Parks Canada", type: "json", url: "https://pc-contactweb-pc.github.io/canada/apps/parksnow/parksNowResponse.json", visible: !0, popups: !0, datatable: !0, zoom: !0, root: "features", attributes: {
                 LocationName: { path: "properties", alias: "Location" },
-                // StatusIconFileName: { path: "properties", alias: "Status" },
+                StatusIconFileName: { path: "properties", alias: "Status" },
                 ModifiedTimestampUtc: { path: "properties", alias: "Updated" },
                 Remarks: { path: "properties", alias: "Remarks" }
             },
             style: {
-                type: "unique", field: "StatusIconFileName", init: {
+                type: "unique", field: "Status", init: {
                     greenspot: { name: "Available", externalGraphic: "https://user-images.githubusercontent.com/45856706/186971109-202d4320-59cb-4f95-9ca8-bfc769ef7a91.svg", fillOpacity: "1", graphicWidth: "25"},
                     yellowspot: { name: "Limited", externalGraphic: "https://user-images.githubusercontent.com/45856706/186971106-8e809376-e908-4906-8310-5f2a4bf007e2.svg", fillOpacity: "1", graphicWidth: "25"},
                     redspot: { name: "Full", externalGraphic: "https://user-images.githubusercontent.com/45856706/186971105-f6e8e99d-0584-40c6-9b76-e56d34c040d1.svg", fillOpacity: "1", graphicWidth: "25"},
