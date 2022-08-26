@@ -5,7 +5,18 @@ var wet_boew_geomap = {
               StatusID: { path: "properties", alias: "Status"}, 
               ModifiedTimestampUtc: { path: "properties", alias: "Time"}, 
               Remarks: { path: "properties", alias: "Remarks"}
-            }
+            },
+             style:  { type: "rule", rule: [
+                // 3 = green, 4 = yellow, 5 = red, 6 = black
+
+                { field: "StatusID", value: [3],  init: { strokeColor: "#333333", fillColor: "#056C07", pointRadius: 2.5, fillOpacity: .8, strokeWidth: 1}},
+                { field: "StatusID", value: [4],  init: { strokeColor: "#333333", fillColor: "#FFF702", pointRadius: 2.5, fillOpacity: .8, strokeWidth: 1}},
+                { field: "StatusID", value: [5],  init: { strokeColor: "#333333", fillColor: "#EB1E25", pointRadius: 2.5, fillOpacity: .8, strokeWidth: 1}},
+                { field: "StatusID", value: [6],  init: { strokeColor: "#333333", fillColor: "#000000", pointRadius: 2.5, fillOpacity: .8, strokeWidth: 1}}
+                
+            ]
+        }
+
         }
     ]
 };
