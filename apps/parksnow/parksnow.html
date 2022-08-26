@@ -125,17 +125,6 @@
 
         </section>
 
-        <script>
-            $(document).on("wb-ready.wb-geomap", "#ParksNowMap", function (event, map) {
-                let desiredZoom = document.getElementById("ParksNowMap").getAttribute("data-geomap-zoom");
-                let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
-                let myMap = map;
-                // myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
-                myMap.getView().setCenter(desiredCenter)
-                myMap.getView().setZoom(desiredZoom);
-            });
-
-        </script>
         <!-- End main content -->
     </main>
     <!-- End main -->
@@ -159,62 +148,15 @@
 
     <!-- Geomap start -->
     <script>
-        // $(document).on("wb-ready.wb-geomap", "#ParksNowMap", function (event, map) {
-
-
-        //     let desiredZoom = document.getElementById("ParksNowMap").getAttribute("data-geomap-zoom");
-
-        //     let myMap = map;
-        //     myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
-
-        //     myMap.getView().setZoom(desiredZoom);
-
-        // });
-
-        $(document).on("wb-ready.wb", function (event) {
-            $("#top-bar").trigger("open.wb-overlay");
-            //show guidance button
-            $("#show-guidance-toggle").click(function () {
-                $('#show-guidance-toggle').addClass("active");
-                $('#hide-guidance-toggle').removeClass("active");
-                $('.guidance-details').removeClass("hidden");
-            });
-            //hide guidance button
-            $("#hide-guidance-toggle").click(function () {
-                $('#show-guidance-toggle').removeClass("active");
-                $('#hide-guidance-toggle').addClass("active");
-                $('.guidance-details').addClass("hidden");
+        $(document).on("wb-ready.wb-geomap", "#ParksNowMap", function (event, map) {
+                let desiredZoom = document.getElementById("ParksNowMap").getAttribute("data-geomap-zoom");
+                let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
+                let myMap = map;
+                // myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
+                myMap.getView().setCenter(desiredCenter)
+                myMap.getView().setZoom(desiredZoom);
             });
 
-            $("#show-placeholder-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-placeholder-toggle").addClass("active");
-                $('.park1-content').addClass("hidden");
-                $('.nhs1-content').addClass("hidden");
-                $('.placeholder-content').removeClass("hidden");
-                $(".wb-eqht").trigger("wb-update.wb-eqht");
-            });
-            $("#show-park1-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-park1-toggle").addClass("active");
-                $('.placeholder-content').addClass("hidden");
-                $('.nhs1-content').addClass("hidden");
-                $('.park1-content').removeClass("hidden");
-                $(".wb-eqht").trigger("wb-update.wb-eqht");
-
-            });
-            $("#show-nonopnhs-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-nonopnhs-toggle").addClass("active");
-                $('.placeholder-content').addClass("hidden");
-                $('.park1-content').addClass("hidden");
-                $('.nhs1-content').removeClass("hidden");
-                $(".wb-eqht").trigger("wb-update.wb-eqht");
-            });
-            $("#top-bar > button.mfp-close").click(function () {
-                $('header').removeClass('mrgn-tp-xl');
-            });
-        });
     </script>
 
 
