@@ -9,13 +9,10 @@ var wet_boew_geomap = {
             },
             style: {
                 type: "unique", "field": "Status", init: {
-                    // 3 = green, 4 = yellow, 5 = red, 6 = black
-
-
-                    "greenspot.png": { name: "Available", strokeColor: "#333333", fillColor: "#056C07", pointRadius: 2.5, fillOpacity: .8, strokeWidth: 1 },
-                    "yellowspot.png": { name: "Limited", strokeColor: "#333333", fillColor: "#FFF702", pointRadius: 2.5, fillOpacity: .8, strokeWidth: 1 },
-                    "redspot.png": { name: "Full", strokeColor: "#333333", fillColor: "#EB1E25", pointRadius: 2.5, fillOpacity: .8, strokeWidth: 1 },
-                    "blackspot.png": { name: "Closed", strokeColor: "#333333", fillColor: "#000000", pointRadius: 2.5, fillOpacity: .8, strokeWidth: 1 }
+                    "greenspot.png": { name: "Available", fillColor: "#056C07"},
+                    "yellowspot.png": { name: "Limited", fillColor: "#FFF702"},
+                    "redspot.png": { name: "Full", fillColor: "#EB1E25"},
+                    "blackspot.png": { name: "Closed", fillColor: "#000000" }
                 }
             }
         }
