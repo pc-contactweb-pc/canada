@@ -114,12 +114,7 @@
                 <div class="wb-geomap-map " id="myGeomap"></div> <!-- Inserted Map End -->
             </div>
             
-            <!-- Inserted Layer Data Start (mandatory) -->
-            <div class="wb-geomap-layers col-md-12 ">
-                <table id="addPCLoc" aria-label="[Location name] address" class="table">
-
-                </table>
-            </div>
+    
 
         </section>
 
@@ -151,7 +146,7 @@
                 // let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
                 let myMap = map;
                 // myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
-                myMap.getView().setCenter(-79.1546555, 43.8136984);
+                // myMap.getView().setCenter(-79.1546555, 43.8136984);
                 myMap.getView().setZoom(desiredZoom);
             });
 
