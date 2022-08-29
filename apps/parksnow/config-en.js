@@ -1,20 +1,17 @@
 var wet_boew_geomap = {
     basemap: {
-        title: 'CBMT',
-        type: 'wms',
-        url: 'https://geogratis.gc.ca/maps/CBMT',
-        layers: 'CBMT',
-        format: 'image/png',
-        version: '1.1.1',
-        options: { singleTile: true, ratio: 1.0, projection: 'EPSG:3978', fractionalZoom: true },
+        title: "MapQuest OSM Map",
+        type: "xyz",
+        url: [
+            "http://otile1.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.png",
+            "http://otile2.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.png",
+            "http://otile3.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.png",
+            "http://otile4.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.png"
+        ],
         mapOptions: {
-            maxExtent: '-3000000.0, -800000.0, 4000000.0, 3900000.0',
-            maxResolution: 'auto',
-            projection: 'EPSG:3978',
-            restrictedExtent: '-3000000.0, -800000.0, 4000000.0, 3900000.0',
-            units: 'm',
-            displayProjection: 'EPSG:4269',
-            numZoomLevels: 12
+            projection: "EPSG:900913",
+            center: [-123, 49],
+            zoomLevel: 5
         }
     },
     overlays: [
