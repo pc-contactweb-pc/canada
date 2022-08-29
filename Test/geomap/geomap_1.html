@@ -132,8 +132,9 @@
                     </style>
                     <!-- Geomap start -->
     <script>
+$( document ).on( "wb-ready.wb-geomap", ".wb-geomap", function( event, map ) {
 
-        var wet_boew_geomap = {
+    var wet_boew_geomap = {
             basemap: {
                 title: "MapQuest OSM Map",
                 type: "xyz",
@@ -202,6 +203,8 @@
                 },
             ],
         };
+});
+        
         $(document).on("wb-ready.wb-geomap", "#ParksNowMap", function (event, map) {
             let desiredZoom = document.getElementById("ParksNowMap").getAttribute("data-geomap-zoom");
             // let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
