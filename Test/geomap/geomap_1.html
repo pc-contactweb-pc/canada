@@ -4,7 +4,7 @@
 <head prefix="og: http://ogp.me/ns#">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>Parks Now</title>
+    <title>Geomap test 1</title>
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
     <link rel="canonical" href="" />
@@ -110,7 +110,7 @@
     <main role="main" property="mainContentOfPage">
         <section class="container">
 
-            <div id="ParksNowMap" class="wb-geomap geolocation geocoder" data-geomap-center="-79.1546555, 43.8136984" data-geomap-zoom="1">
+            <div id="ParksNowMap" class="wb-geomap geolocation geocoder" data-geomap-center="-79.1546555, 43.8136984" data-geomap-zoom="1"  data-wb-geomap='{"layersFile": "#geomapScript"}'>
                 <div class="row">
                     <div class="col-md-9">
                         <div class="wb-geomap-map" id="myGeoMap"></div>
@@ -156,7 +156,7 @@
 
 
     <!-- Geomap start -->
-    <script>
+    <script id="geomapScript">
 
         var wet_boew_geomap = {
             basemap: {
