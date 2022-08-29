@@ -110,7 +110,7 @@
     <main role="main" property="mainContentOfPage">
         <section class="container">
 
-            <div id="ParksNowMap" class="wb-geomap geolocation geocoder" data-geomap-center="-79.1546555, 43.8136984" data-geomap-zoom="1"  data-wb-geomap=''>
+            <div id="ParksNowMap" class="wb-geomap geolocation geocoder" data-geomap-center="-79.1546555, 43.8136984" data-geomap-zoom="1"  data-wb-geomap='https://pc-contactweb-pc.github.io/canada/Test/geomap/geomap_1.html#geomapConfig'>
                 <div class="row">
                     <div class="col-md-9">
                         <div class="wb-geomap-map" id="myGeoMap"></div>
@@ -130,11 +130,35 @@
                             visibility: hidden;
                         }
                     </style>
-                    <!-- Geomap start -->
-    <script>
-$( document ).on( "wb-ready.wb-geomap", ".wb-geomap", function( event, map ) {
+                </div>
 
-    var wet_boew_geomap = {
+        </section>
+
+        <!-- End main content -->
+    </main>
+    <!-- End main -->
+    <!-- Footer include -->
+    <script src="https://pc-contactweb-pc.github.io/canada/footer.js?2"></script>
+    <script>
+        (function () {
+            document.getElementsByTagName("main")[0].innerHTML += footerHTML;
+        })();
+    </script>
+
+    <!-- Start Treasury board Script footer -->
+    <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/jquery.js?2"></script>
+    <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/utils.js?2"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/clientlib-publish.js?2"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js?2"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.js?2"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.js?2"></script>
+    <!-- End Treasury board Script footer -->
+
+
+    <!-- Geomap start -->
+    <script id="geomapConfig">
+
+        var wet_boew_geomap = {
             basemap: {
                 title: "MapQuest OSM Map",
                 type: "xyz",
@@ -203,8 +227,6 @@ $( document ).on( "wb-ready.wb-geomap", ".wb-geomap", function( event, map ) {
                 },
             ],
         };
-});
-        
         $(document).on("wb-ready.wb-geomap", "#ParksNowMap", function (event, map) {
             let desiredZoom = document.getElementById("ParksNowMap").getAttribute("data-geomap-zoom");
             // let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
@@ -221,32 +243,6 @@ $( document ).on( "wb-ready.wb-geomap", ".wb-geomap", function( event, map ) {
         });
 
     </script>
-                </div>
-
-        </section>
-
-        <!-- End main content -->
-    </main>
-    <!-- End main -->
-    <!-- Footer include -->
-    <script src="https://pc-contactweb-pc.github.io/canada/footer.js?2"></script>
-    <script>
-        (function () {
-            document.getElementsByTagName("main")[0].innerHTML += footerHTML;
-        })();
-    </script>
-
-    <!-- Start Treasury board Script footer -->
-    <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/jquery.js?2"></script>
-    <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/utils.js?2"></script>
-    <script src="https://www.canada.ca/etc/designs/canada/clientlib-publish.js?2"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js?2"></script>
-    <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.js?2"></script>
-    <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.js?2"></script>
-    <!-- End Treasury board Script footer -->
-
-
-    
 
 
     <style>
