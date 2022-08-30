@@ -157,26 +157,6 @@
     <!-- End Treasury board Script footer -->
 
 
-    <!-- Geomap start -->
-    <script>
-
-        $(document).on("wb-ready.wb-geomap", "#ParksNowMap", function (event, map) {
-            let desiredZoom = document.getElementById("ParksNowMap").getAttribute("data-geomap-zoom");
-            // let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
-            let myMap = map;
-            console.log(document.getElementById("geomap-map-ParksNowMap"));
-            console.log(myMap);
-            console.log(myMap.getView());
-
-            // myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
-            // myMap.getView().setCenter(43.8136984, -79.1546555); 
-            // Coords above are flipped
-
-            // myMap.getView().setZoom(desiredZoom);
-        });
-
-    </script>
-
 
     <style>
         /* Guidance specific scroll fixer */

@@ -111,8 +111,8 @@
         <section class="container">
             <h1 property="name" id="wb-cont" class="pc-h1-brass">Default basemap</h1>
             <h2 class="h3 mrgn-tp-sm" style="color: #6f6f6f;">Geomap test 2</h2>
-        
-            <div id="ParksNowMap" class="wb-geomap geolocation geocoder"  data-wb-geomap='{ "layersFile": "https://pc-contactweb-pc.github.io/canada/Test/geomap/geomap_config_2.js?3"}'>
+
+            <div id="ParksNowMap" class="wb-geomap geolocation geocoder" data-wb-geomap='{ "layersFile": "https://pc-contactweb-pc.github.io/canada/Test/geomap/geomap_config_2.js?3"}'>
                 <div class="row">
                     <div class="col-md-9">
                         <div class="wb-geomap-map" id="myGeoMap"></div>
@@ -158,23 +158,16 @@
 
 
     <!-- Geomap start -->
-    <!-- <script>
+    <script>
+
         $(document).on("wb-ready.wb-geomap", "#ParksNowMap", function (event, map) {
-            let desiredZoom = document.getElementById("ParksNowMap").getAttribute("data-geomap-zoom");
-            // let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
-            let myMap = map;
-            console.log(document.getElementById("geomap-map-ParksNowMap"));
-            console.log(myMap);
-            console.log(myMap.getView());
-
-            // myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
-            // myMap.getView().setCenter(43.8136984, -79.1546555); 
-            // Coords above are flipped
-
-            // myMap.getView().setZoom(desiredZoom);
+            let geomap = $(".wb-geomap").get(0).geomap;
+            let mapLayer0 = geomap.mapLayers[0]
+            geomap.zoomToExtent(mapLayer0.getDataExtent(), true);
+            geomap.getView().setZoom(8);
         });
 
-    </script> -->
+    </script>
 
 
     <style>
