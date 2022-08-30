@@ -10,8 +10,9 @@ var wet_boew_geomap = {
         ],
         mapOptions: {
             projection: "EPSG:900913",
-            center: [-123, 49],
-            zoomLevel: 5
+            center: [-79.1546555, 43.8136984],
+            
+            zoomLevel: 3
         }
     },
     overlays: [
