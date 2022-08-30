@@ -1,10 +1,4 @@
 var wet_boew_geomap = {
-    basemap: {
-        mapOptions: {
-            center: [-57.1485251, 49.5146158],
-            zoomLevel: 8
-        }
-    },
     overlays: [
         {
             title: "Parks Now",
