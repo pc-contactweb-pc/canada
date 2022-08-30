@@ -157,16 +157,14 @@
 
 
     <!-- Geomap start -->
-    <!-- <script>
-
-        $(document).on("wb-ready.wb-geomap", "#ParksNowMap", function (event, map) {
-            let geomap = $(".wb-geomap").get(0).geomap;
-            let mapLayer0 = geomap.mapLayers[0]
-            geomap.zoomToExtent(mapLayer0.getDataExtent(), true);
-            geomap.getView().setZoom(8);
+    <script>
+        $(document).on( "wb-ready.wb-geomap", "#myGeoMap", function( event, map ) {
+            // Get the map to use in zoomFeature function
+            var myMap = map;
+            myMap.getView().setCenter( -57.1485251, 49.5146158 );
+            myMap.getView().setZoom( 8 );
         });
-
-    </script> -->
+        </script>
 
 
     <style>
