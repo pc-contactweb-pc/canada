@@ -303,8 +303,7 @@ a.hg:visited {
 }
 .pc-logo {
     /* Extracted from .brand img (GoC signature) in theme.min.css */
-    height: auto;
-    max-height: 50px;
+    height: 57px;
     /* GoC logo is max-height:40px, but 50px looked better to me - DM */
     margin-bottom: .375em;
 }
