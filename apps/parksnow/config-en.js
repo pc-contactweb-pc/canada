@@ -19,7 +19,7 @@ var wet_boew_geomap = {
             content: "<div>_Location<br>_Remarks<br><br>_Updated</div>",
             style: {
                 type: "unique",
-                field: StatusIconFileName,
+                field: "StatusIconFileName",
                 init: {
                     greenspot: {
                         externalGraphic: "https://user-images.githubusercontent.com/45856706/186992816-29e52dd6-82e6-400e-96ec-b33c19f94db1.png",
