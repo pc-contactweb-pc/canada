@@ -223,15 +223,8 @@
             let desiredZoom = document.getElementById("myGeoMap").getAttribute("data-geomap-zoom");
             // let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
             let myMap = map;
-            console.log(document.getElementById("geomap-map-myGeoMap"));
-            console.log(myMap);
-            console.log(myMap.getView());
-
-            // myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
-            // myMap.getView().setCenter(43.8136984, -79.1546555); 
-            // Coords above are flipped
-
-            // myMap.getView().setZoom(desiredZoom);
+            var geomap = $( ".wb-geomap" ).get( 0 ).geomap;
+            console.log(geomap.mapLayer[0]);
         });
 
     </script>
