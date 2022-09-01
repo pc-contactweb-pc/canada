@@ -18,7 +18,7 @@ var wet_boew_geomap = {
             },
             style: {
                 type: "unique",
-                field: "Type",
+                field: StatusIconFileName,
                 init: {
                     greenspot: {
                         externalGraphic: "https://user-images.githubusercontent.com/45856706/186992816-29e52dd6-82e6-400e-96ec-b33c19f94db1.png",
@@ -46,7 +46,8 @@ var wet_boew_geomap = {
                     }
                 },
                 select: {
-                    externalGraphic: "https://user-images.githubusercontent.com/45856706/186975883-0fcbbc67-3f4e-42f6-9714-eafa6cbf5e3c.png", graphicOpacity: "1",
+                    externalGraphic: "https://user-images.githubusercontent.com/45856706/186975883-0fcbbc67-3f4e-42f6-9714-eafa6cbf5e3c.png", 
+                    graphicOpacity: "1",
                 },
             },
         },
