@@ -17,8 +17,8 @@ var wet_boew_geomap = {
                 Remarks: { path: "properties", alias: "Remarks" }
             },
             popupsInfo: {
-                close: true,
-                content: "<div>_Location<br>_Remarks<br><br>_Updated</div>"
+                close: "true",
+                content: "<div><h5>_Location</h5><p>_Remarks<br>Updated: _Updated</p></div>"
             }
         },
     ],
