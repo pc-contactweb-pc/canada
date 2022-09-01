@@ -219,12 +219,12 @@
 
     <!-- Geomap start -->
     <script>
-        $(document).on("wb-ready.wb-geomap", "#myGeoMap", function (event, map) {
-            let desiredZoom = document.getElementById("myGeoMap").getAttribute("data-geomap-zoom");
+       $( ".wb-geomap" ).on( "wb-ready.wb-geomap", function( event, map ) {
+
             // let desiredCenter = document.getElementById("ParksNowMap").getAttribute("data-geomap-center");
             let myMap = map;
-            var geomap = $( ".wb-geomap" ).get( 0 ).geomap;
-            console.log(geomap.mapLayer[0]);
+
+            console.log(myMap.mapLayer[0]);
         });
 
     </script>
