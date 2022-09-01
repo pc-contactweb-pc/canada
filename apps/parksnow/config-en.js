@@ -16,8 +16,10 @@ var wet_boew_geomap = {
                 ModifiedTimestampUtc: { path: "properties", alias: "Updated" },
                 Remarks: { path: "properties", alias: "Remarks" }
             },
-            content: "<div>_Location<br>_Remarks<br><br>_Updated</div>"
-           
+            popupsInfo: {
+                close: true,
+                content: "<div>_Location<br>_Remarks<br><br>_Updated</div>"
+            }
         },
     ],
 };

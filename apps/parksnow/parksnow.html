@@ -109,9 +109,8 @@
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage">
         <section class="container">
-
-            <div id="ParksNowMap" class="wb-geomap geolocation geocoder" data-geomap-center="-79.1546555, 43.8136984" data-geomap-zoom="1" data-wb-geomap='{"layersFile": "https://pc-contactweb-pc.github.io/canada/apps/parksnow/config-en.js?2", "style": 
-            {
+            <!-- 
+ {
                 "type": "unique",
                 "field": "StatusIconFileName",
                 "init": {
@@ -143,7 +142,37 @@
                 "select": {
                     "externalGraphic": "https://user-images.githubusercontent.com/45856706/186975883-0fcbbc67-3f4e-42f6-9714-eafa6cbf5e3c.png", 
                     "graphicOpacity": "1"
-                }}}'>
+                }}
+ -->
+            <div id="ParksNowMap" class="wb-geomap geolocation geocoder" data-geomap-center="-79.1546555, 43.8136984" data-geomap-zoom="1" data-wb-geomap='{"layersFile": "https://pc-contactweb-pc.github.io/canada/apps/parksnow/config-en.js?2", "style": {
+                "type": "unique",
+                "field": "Type",
+                "init": {
+                    "greenspot": {
+                        "externalGraphic": "-/media/2F9399AAAA1844B0972217ED1A24290D.ashx",
+                        "fillOpacity": "1",
+                        "graphicWidth": "25",
+                        "name": "National Historic Site"
+                    },
+                    "NP": {
+                        "externalGraphic": "-/media/1CA2306CDFF240E3AB7F413075A7D5CC.ashx",
+                        "fillOpacity": "1",
+                        "graphicWidth": "25",
+                        "name": "National Park"
+                    },
+                    "NMCA": {
+                        "externalGraphic": "-/media/A94D0A0D7E26415FB0721FCC8654E928.ashx",
+                        "fillOpacity": "1",
+                        "graphicWidth": "25",
+                        "name": "National Marine Conservation Area"
+                    }
+                
+                },
+                "select": {
+                    "externalGraphic": "-/media/77D8D8A30F4C467E877CD984FE210447.ashx",
+                    "graphicOpacity": "1"
+                }
+            }}'>
                 <div class="row">
                     <div class="col-md-9">
                         <div class="wb-geomap-map" id="myGeoMap"></div>
