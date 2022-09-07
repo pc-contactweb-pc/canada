@@ -495,28 +495,62 @@ Background - Cobblestone, Tint #3 / #e7e1da
 Background:Hover - Cobblestone, Tint #2 / #cec7bc
 
 */
-.btn-call-to-action {
-    color: #000!important;
-    background-color: #ecb731!important;
-    text-shadow:none;
+.btn.activ:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
 
-.btn-call-to-action:hover {
-    background-color: #ffcc66!important;
+.btn-call-to-action.activ {
+    background-color: #d1a32d !important;
+    border-color: #bbbfc5;
+
 }
+
+.btn-primary.activ {
+    background-color: #1b2c21 !important;
+    border-color: #bbbfc5;
+}
+
+.btn-default.activ {
+    background-color: #cac5c0 !important;
+    border-color: #bbbfc5;
+}
+
+.btn.activ {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgb(0 0 0 / 13%);
+    box-shadow: inset 0 3px 5px rgb(0 0 0 / 13%);
+}
+
+.btn-call-to-action {
+    color: #000 !important;
+    background-color: #ecb731 !important;
+    text-shadow: none;
+}
+
+
+.btn-call-to-action:hover {
+    background-color: #ffcc66 !important;
+}
+
 .btn-primary {
-    color: #FFFFFF!important;
-    background-color: #2b4635!important;
+    color: #FFFFFF !important;
+    background-color: #2b4635 !important;
 }
 
 .btn-primary:hover {
-    background-color: #4e6653!important;
+    background-color: #4e6653 !important;
 }
+
 .btn-default {
-    color: #2b4635!important;
-    background-color: #e7e1da!important;
+    color: #2b4635 !important;
+    background-color: #e7e1da !important;
 }
 
 .btn-default:hover {
-    background-color: #cec7bc!important;
+    background-color: #cec7bc !important;
+}
+.btn-default.disabled {
+    cursor: not-allowed!important;
 }
