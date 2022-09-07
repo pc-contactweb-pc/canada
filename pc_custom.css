@@ -476,3 +476,47 @@ div.icon-list {
 }
 
 /* End icon list styling */
+/* PC button styling based on Gabe's mockup */
+
+/* 
+Primary (Brass): 
+Text -  Black / #000000
+Background - Brass / #ecb731
+Background:Hover -  #ffcc66
+
+Secondary (Heritage green):
+Text - White / #FFFFFF
+Background - Heritage green / #2b4635
+Background:Hover - #4e6653
+
+Ghost (Cobblestone):
+Text - Heritage green / #2b4635
+Background - Cobblestone, Tint #3 / #e7e1da
+Background:Hover - Cobblestone, Tint #2 / #cec7bc
+
+*/
+.btn-call-to-action {
+    color: #000!important;
+    background-color: #ecb731!important;
+    text-shadow:none;
+}
+
+.btn-call-to-action:hover {
+    background-color: #ffcc66!important;
+}
+.btn-primary {
+    color: #FFFFFF!important;
+    background-color: #2b4635!important;
+}
+
+.btn-primary:hover {
+    background-color: #4e6653!important;
+}
+.btn-default {
+    color: #2b4635!important;
+    background-color: #e7e1da!important;
+}
+
+.btn-default:hover {
+    background-color: #cec7bc!important;
+}
