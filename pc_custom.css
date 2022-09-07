@@ -1,177 +1,177 @@
 /* Start provisional CSS for institutional page */
-    
-        .provisional.bg-cover {
-            background-size: cover;
-        }
 
-        .provisional.bg-right {
-            background-position: right;
-        }
+.provisional.bg-cover {
+    background-size: cover;
+}
 
-        .provisional.pb-3 {
-            padding-bottom: 15px;
-        }
+.provisional.bg-right {
+    background-position: right;
+}
 
-        .provisional.btn-call-to-action {
-            font-size: 1em;
-        }
+.provisional.pb-3 {
+    padding-bottom: 15px;
+}
 
-        .provisional.gc-featured-lnk {
-            background: #31708f;
-            margin-bottom: 0em;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
+.provisional.btn-call-to-action {
+    font-size: 1em;
+}
 
-        .provisional.gc-featured-lnk a {
-            color: #fff
-        }
+.provisional.gc-featured-lnk {
+    background: #31708f;
+    margin-bottom: 0em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
-        ul.feeds-cont li a {
-            font-weight: bold;
-        }
+.provisional.gc-featured-lnk a {
+    color: #fff
+}
 
-        .provisional.most-requested-bullets li {
-            font-family: 'Lato', sans-serif;
-            font-size: 17px;
-            font-weight: 600;
-            line-height: 26px;
-            margin-top: 0
-        }
+ul.feeds-cont li a {
+    font-weight: bold;
+}
 
-        .provisional.most-requested-bullets .pddng-r-0 {
-            padding-right: 0px;
-        }
+.provisional.most-requested-bullets li {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-top: 0
+}
 
-        .provisional.most-requested-bullets h2 {
-            font-size: 1.2em;
-        }
+.provisional.most-requested-bullets .pddng-r-0 {
+    padding-right: 0px;
+}
 
-        .provisional.list-bld {
-            font-weight: 600;
-        }
+.provisional.most-requested-bullets h2 {
+    font-size: 1.2em;
+}
 
-        .provisional.followus h2 {
-            font-size: 1.1em;
-            margin-top: 10px;
-        }
+.provisional.list-bld {
+    font-weight: 600;
+}
 
-        .provisional.followus {
-            padding: 0;
-        }
+.provisional.followus h2 {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
 
-        .provisional.followus h2 {
-            display: block;
-        }
+.provisional.followus {
+    padding: 0;
+}
 
-        .provisional.followus h2,
-        .provisional.followus ul {
-            margin-left: 0;
-        }
+.provisional.followus h2 {
+    display: block;
+}
 
-        .provisional.followus-vertical {
-            line-height: 0em;
-        }
+.provisional.followus h2,
+.provisional.followus ul {
+    margin-left: 0;
+}
 
-        .provisional.followus-vertical,
-        .provisional.followus {
-            background-color: transparent;
-        }
+.provisional.followus-vertical {
+    line-height: 0em;
+}
 
-        .provisional.followus-vertical a {
-            text-decoration: none;
-        }
+.provisional.followus-vertical,
+.provisional.followus {
+    background-color: transparent;
+}
 
-        .provisional.followus-vertical ul {
-            display: block;
-            list-style-type: none;
-            margin-block-start: 1em;
-            padding-inline-start: 1em;
-            font-size: 16px;
-            margin-block-end: 0em;
-        }
+.provisional.followus-vertical a {
+    text-decoration: none;
+}
 
-        .provisional.followus-vertical ul li {
-            margin-bottom: 15px;
-        }
+.provisional.followus-vertical ul {
+    display: block;
+    list-style-type: none;
+    margin-block-start: 1em;
+    padding-inline-start: 1em;
+    font-size: 16px;
+    margin-block-end: 0em;
+}
 
-        .provisional.followus-vertical ul li:last-child {
-            margin-bottom: 0px;
-        }
+.provisional.followus-vertical ul li {
+    margin-bottom: 15px;
+}
 
-        .provisional.followus-vertical ul li a {
-            border: none;
-            padding: 0px 5px;
-        }
+.provisional.followus-vertical ul li:last-child {
+    margin-bottom: 0px;
+}
 
-        .provisional.followus ul li a {
-            border: none;
-        }
+.provisional.followus-vertical ul li a {
+    border: none;
+    padding: 0px 5px;
+}
 
-        .provisional .social-lnk {
-            position: relative;
-            bottom: -18px;
-            left: 45px;
-        }
+.provisional.followus ul li a {
+    border: none;
+}
 
-        .provisional.followus-vertical li {
-            display: block;
-            background-position: left;
-        }
+.provisional .social-lnk {
+    position: relative;
+    bottom: -18px;
+    left: 45px;
+}
 
-        .provisional.followus .facebook,
-        .provisional.followus .twitter,
-        .provisional.followus .youtube,
-        .provisional.followus .instagram,
-        .provisional.followus .linkedin {
-            display: block;
-            height: 38px;
-            width: 38px;
-        }
+.provisional.followus-vertical li {
+    display: block;
+    background-position: left;
+}
 
-        /* remove this section if you do not want the new icons */
-        .provisional.followus .facebook {
-            background: url("https://design.canada.ca/images/social-media/facebook.png") 0 0 / cover no-repeat;
-        }
+.provisional.followus .facebook,
+.provisional.followus .twitter,
+.provisional.followus .youtube,
+.provisional.followus .instagram,
+.provisional.followus .linkedin {
+    display: block;
+    height: 38px;
+    width: 38px;
+}
 
-        .provisional.followus .twitter {
-            background: url("https://design.canada.ca/images/social-media/twitter.png") 0 0 / cover no-repeat;
-        }
+/* remove this section if you do not want the new icons */
+.provisional.followus .facebook {
+    background: url("https://design.canada.ca/images/social-media/facebook.png") 0 0 / cover no-repeat;
+}
 
-        .provisional.followus .youtube {
-            background: url("https://design.canada.ca/images/social-media/youtube.png") 0 0 / cover no-repeat;
-        }
+.provisional.followus .twitter {
+    background: url("https://design.canada.ca/images/social-media/twitter.png") 0 0 / cover no-repeat;
+}
 
-        .provisional.followus .instagram {
-            background: url("https://design.canada.ca/images/social-media/instagram.png") 0 0 / cover no-repeat;
-        }
+.provisional.followus .youtube {
+    background: url("https://design.canada.ca/images/social-media/youtube.png") 0 0 / cover no-repeat;
+}
 
-        .provisional.followus .linkedin {
-            background: url("https://design.canada.ca/images/social-media/linkedin.png") 0 0 / cover no-repeat;
-        }
+.provisional.followus .instagram {
+    background: url("https://design.canada.ca/images/social-media/instagram.png") 0 0 / cover no-repeat;
+}
 
-        /* end of new social media icons */
-        @media screen and (max-width: 767px) {
-            .provisional.bg-hide-xs {
-                background-image: url("none") !important;
-            }
+.provisional.followus .linkedin {
+    background: url("https://design.canada.ca/images/social-media/linkedin.png") 0 0 / cover no-repeat;
+}
 
-            .provisional.btn-call-to-action {
-                font-size: .9em;
-            }
+/* end of new social media icons */
+@media screen and (max-width: 767px) {
+    .provisional.bg-hide-xs {
+        background-image: url("none") !important;
+    }
 
-            .provisional.xs-left {
-                float: left !important;
-            }
-        }
+    .provisional.btn-call-to-action {
+        font-size: .9em;
+    }
 
-        @media (min-width:768px) and (max-width:991px) {
-            .provisional.bg-hide-sm {
-                background-image: url("none") !important;
-            }
-        }
-    
-    /*  End provisional CSS for institutional page */
+    .provisional.xs-left {
+        float: left !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .provisional.bg-hide-sm {
+        background-image: url("none") !important;
+    }
+}
+
+/*  End provisional CSS for institutional page */
 
 .bg-pn-np {
     /*Not used yet */
@@ -182,23 +182,32 @@
     /* Rename to bg-heritage-green for more semantic? */
     background-color: #2b4635;
 }
+
 .hg {
-    color:#2b4635
+    color: #2b4635
 }
-a.hg:hover, a.hg:focus, a.hg:visited:focus {
+.text-hg {
+    color: #2b4635
+}
+
+a.hg:hover,
+a.hg:focus,
+a.hg:visited:focus {
     color: #545454;
 }
 
 a.hg:visited {
-    color:#2b4635
+    color: #2b4635
 }
+
 .bg-accent {
     background-color: #f8f8f8;
 }
 
 .bg-white {
-    background-color: #ffff ;
+    background-color: #ffff;
 }
+
 .pc-h1-brass {
     /* Combine this with .pc-brdr-brass? */
     border-bottom-color: #ecb731;
@@ -218,7 +227,8 @@ a.hg:visited {
     border-bottom-width: 5px;
 }
 
-.sites-nearby-list h3, .sites-nearby-list p {
+.sites-nearby-list h3,
+.sites-nearby-list p {
     margin-left: 15px;
     margin-right: 15px;
     /* Simulate mrgn-lft-md on sites nearby h3 and p */
@@ -248,7 +258,7 @@ a.hg:visited {
 .pc-footer {
     padding-top: 25px;
     padding-bottom: 25px;
-    border-bottom: 1em solid #ecb731 ;
+    border-bottom: 1em solid #ecb731;
 
 }
 
@@ -258,11 +268,13 @@ a.hg:visited {
 
 
 .pc-footer a:hover {
-    color: white; /* Override default purple color */
+    color: white;
+    /* Override default purple color */
 }
 
 .pc-footer a:not(:hover) {
-    text-decoration: none; /* Overide default underline until hover */
+    text-decoration: none;
+    /* Overide default underline until hover */
 
 }
 
@@ -271,12 +283,13 @@ a.hg:visited {
     text-decoration: none;
 } */
 
-.follow-social:hover{
+.follow-social:hover {
     /* color: #31708f; */
     color: rgba(255, 255, 255, 0.616);
-    
+
     animation-duration: 50ms;
 }
+
 .pc-footer :is(h2, h3) {
     margin-bottom: 20px;
 }
@@ -285,22 +298,26 @@ a.hg:visited {
     padding-right: 25px;
 }
 
-.pc-footer li, .pc-footer small, .pc-footer p {
+.pc-footer li,
+.pc-footer small,
+.pc-footer p {
     margin-bottom: 1em;
     line-height: 1.1em;
 }
 
 .btn-footer {
-    color: #2b4635!important;
+    color: #2b4635 !important;
     background-color: #fff;
     border-radius: 0px;
 }
+
 .btn-footer:hover {
-    
+
     background-color: rgba(255, 255, 255, 0.616);
-    
+
     animation-duration: 50ms;
 }
+
 .pc-logo {
     /* Extracted from .brand img (GoC signature) in theme.min.css */
     height: 57px;
@@ -457,4 +474,5 @@ div.icon-list div {
 div.icon-list {
     margin-left: 0px;
 }
+
 /* End icon list styling */
