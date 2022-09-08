@@ -1,42 +1,5 @@
 <html class="no-js" dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<section class="wb-inview bar-demo" data-inview="top-bar">
-    <section id="top-bar" class="wb-overlay modal-content overlay-def wb-bar-t outside-off">
-        <div class="row center-block container">
 
-            <div class="guidance-options">
-                <div class="btn-group">
-                    <button id="show-guidance-toggle" class="guidance-toggle btn btn-default active">
-                        <span class="fas fa-laptop-code "></span>&nbsp;Show guidance
-                    </button>
-                    <button id="hide-guidance-toggle" class="guidance-toggle btn btn-default wb-toggle" data-toggle="
-                                [
-                                    {
-                                        'selector':'#show-guidance-toggle',
-                                        'stateOn':'active', 'state':'on'
-                                    },
-                                    {
-                                        'stateOn':'active',
-                                        'state':'off'
-                                    }
-                                ]" aria-controls="hide-guidance-toggle">
-                        <span class="fas fa-pen-square"></span>&nbsp;Hide guidance
-                    </button>
-                </div>
-                <div class="btn-group">
-                    <button class="location-toggles btn btn-default active" id="show-placeholder-toggle">Placeholders</button>
-                    <button class="location-toggles btn btn-default" id="show-park1-toggle">Saguenay-St. Lawrence Marine Park</button>
-                    <!-- https://www.pc.gc.ca/en/amnc-nmca/qc/saguenay/activ/itin -->
-
-                    <!--
-                    <button class="location-toggles btn btn-default" id="show-park2-toggle">Large park #2</button>
-                    <button class="location-toggles btn btn-default" id="show-nhs-toggle">Operational historic site</button>
-                    <button class="location-toggles btn btn-default" id="show-nonopnhs-toggle">Non-operational historic site</button> -->
-                </div>
-            </div>
-
-        </div>
-    </section>
-</section>
 <!-- Start Treasury board content -->
 
 <head prefix="og: http://ogp.me/ns#">
@@ -86,7 +49,44 @@
     </nav>
     <!-- End treasury board content -->
     <!-- Start content-en header -->
+    <section class="wb-inview bar-demo" data-inview="top-bar">
+        <section id="top-bar" class="wb-overlay modal-content overlay-def wb-bar-t outside-off">
+            <div class="row center-block container">
 
+                <div class="guidance-options">
+                    <div class="btn-group">
+                        <button id="show-guidance-toggle" class="guidance-toggle btn btn-default active">
+                            <span class="fas fa-laptop-code "></span>&nbsp;Show guidance
+                        </button>
+                        <button id="hide-guidance-toggle" class="guidance-toggle btn btn-default wb-toggle" data-toggle="
+                                [
+                                    {
+                                        'selector':'#show-guidance-toggle',
+                                        'stateOn':'active', 'state':'on'
+                                    },
+                                    {
+                                        'stateOn':'active',
+                                        'state':'off'
+                                    }
+                                ]" aria-controls="hide-guidance-toggle">
+                            <span class="fas fa-pen-square"></span>&nbsp;Hide guidance
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="location-toggles btn btn-default active" id="show-placeholder-toggle">Placeholders</button>
+                        <button class="location-toggles btn btn-default" id="show-nmca1-toggle">Saguenay-St. Lawrence MP</button>
+                        <button class="location-toggles btn btn-default" id="show-park1-toggle">Ukkusiksalik NP</button>
+
+                        <!--
+                    <button class="location-toggles btn btn-default" id="show-park2-toggle">Large park #2</button>
+                    <button class="location-toggles btn btn-default" id="show-nhs-toggle">Operational historic site</button>
+                    <button class="location-toggles btn btn-default" id="show-nonopnhs-toggle">Non-operational historic site</button> -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </section>
 
 
     <header class="mrgn-tp-xl">
@@ -133,12 +133,21 @@
         <nav id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
             <div class="container">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb placeholder-content">
                     <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
                     <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parks Canada</a></li>
                     <li><a href="https://www.canada.ca/en.html">Program</a></li>
                     <li><a href="https://www.canada.ca/en.html">Province / Territory </a></li>
                     <li><a href="https://www.canada.ca/en.html">Place</a></li>
+
+                    <!-- <li><a href="https://www.canada.ca/en.html">Parks Canada reservations</a></li> -->
+                </ol>
+                <ol class="breadcrumb nmca1-content hidden">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                    <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parks Canada</a></li>
+                    <li><a href="https://www.canada.ca/en.html">National Marine Conservation Areas</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Quebec</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Saguenay–St. Lawrence Marine Park</a></li>
 
                     <!-- <li><a href="https://www.canada.ca/en.html">Parks Canada reservations</a></li> -->
                 </ol>
@@ -149,13 +158,15 @@
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage">
         <section class="mrgn-bttm-lg ">
-            <img src="https://user-images.githubusercontent.com/93224537/185694990-51c248b0-3e6d-48a3-8340-23cd18075efa.png" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;">
+            <img src="https://user-images.githubusercontent.com/93224537/185694990-51c248b0-3e6d-48a3-8340-23cd18075efa.png" alt="" class="img-responsive placeholder-content" style="margin-left: auto; margin-right: auto;">
+            <img src="https://user-images.githubusercontent.com/45856706/189238096-4847b03a-74d4-444c-afe3-28052b3a6b54.jpg" alt="" class="img-responsive nmca1-content hidden" style="margin-left: auto; margin-right: auto;">
+            <img src="https://pcweb.azureedge.net/-/media/pn-np/nu/ukkusiksalik/WET4/activ/culture_870290.jpg?modified=20200401182743" alt="" class="img-responsive park1-content hidden" style="margin-left: auto; margin-right: auto; min-width: 1140px;">
             <div class="container">
-                <h1 property="name" id="wb-cont" class="pc-h1-brass">Header 1
+                <h1 property="name" id="wb-cont" class="pc-h1-brass"><span class="placeholder-content">Header 1</span><span class="nmca1-content hidden">Itineraries</span><span class="park1-content hidden">Cultural sites</span>
                     <!-- <br><span
                     class="small mrgn-tp-xl" style="line-height:1.2em">Kluane National Park and Reserve</span> -->
                 </h1>
-                <h2 class="h3 mrgn-tp-sm" style="color: #6f6f6f;">Location name</h2>
+                <h2 class="h3 mrgn-tp-sm" style="color: #6f6f6f;"><span class="placeholder-content">Location name</span><span class="nmca1-content hidden">Saguenay–St. Lawrence Marine Park</span><span class="park1-content hidden">Ukkusiksalik National Park</span></h2>
                 <details class="guidance-details">
                     <summary><strong>Guidance:</strong> Banner, title, and intro text <span class="label label-primary">Mandatory</span></summary>
                     <p id="banner"><strong>What is Banner, title, and intro text?</strong></p>
@@ -201,7 +212,8 @@
             </div>
         </section>
 
-        <section class="mrgn-bttm-xl">
+        
+        <section class="mrgn-bttm-xl placeholder-content">
             <section class=" brdr-0 well well-sm">
                 <!-- .most-requested-bullets would normally be applied to ^ this section. It is applied to div.row below instead because otherwise it messes up the styling of the guidance section -->
                 <div class="container mrgn-tp-lg mrgn-bttm-lg">
@@ -210,162 +222,202 @@
                             <h2 class="mrgn-tp-0 provisional">Most requested</h2>
                         </div>
                         <div class="col-md-10">
-                            <ul class="wb-eqht colcount-md-2  wb-eqht-inited ">
+                            <ul class="wb-eqht colcount-md-2 ">
                                 <li><a href="#noTarget" class="wb-lbx">Item 1</a></li>
                                 <li><a href="#noTarget" class="wb-lbx">Item 2</a></li>
                                 <li><a href="#noTarget" class="wb-lbx">Item 3</a></li>
                             </ul>
+                        
                         </div>
                     </div>
-                    <details class="guidance-details container">
-                        <summary><strong>Guidance:</strong> Most requested <span class="label label-success">Optional</span></summary>
-                        <p id="requested"><strong>What are Most requested?</strong></p>
-                        <ul>
-                            <li>1-8 short bullets linking to the most requested tasks related to the page's content</li>
-                        </ul>
-                        <p>Parks Canada guidance supersedes the Canada.ca guidance on <a href="https://design.canada.ca/common-design-patterns/most-requested.html">Most requested design pattern</a></p>
-                        <dl class="dl-horizontal">
-                            <dt>Header:</dt>
-                            <dd>
-                                <ul>
-                                    <li>Text: Most requested</li>
-                                </ul>
-                            </dd>
-                            <dt>Label</dt>
-                            <dd>
-                                <ul>
-                                    <li>Character limit: 58 characters (including spaces)</li>
-                                    <li>Number of links:
-                                        <ul>
-                                            <li>1 to 8</li>
-                                        </ul>
-                                    <li>When applicable, use the Most requested suggested labels</li>
-                                    </li>
-                                    <li>Items must be listed in the same order on English and French pages</li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <details>
-                            <summary>Most requested suggested labels</summary>
-                            <table class="table table-striped table-hover">
-                                <caption></caption>
-                                <thead>
-                                    <tr>
-                                    <tr>
-                                        <th>Labels (field) - English</th>
-                                        <th>Labels (field) - French</th>
-                                        <th>Notes</th>
-                                    </tr>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>COVID-19 and your visit</td>
-                                        <td>COVID-19 et votre visite</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trail conditions</td>
-                                        <td>État des sentiers</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Important bulletins</td>
-                                        <td>Bulletins importants</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Maps and directions</td>
-                                        <td>Cartes et directions</td>
-                                        <td>This is a common top task and is strongly recommended to be included</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jobs</td>
-                                        <td>Emplois</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Free youth admission</td>
-                                        <td>Entrée gratuite pour les jeunes</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Red chairs</td>
-                                        <td>Chaises rouges</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Film and photography permits</td>
-                                        <td>Permis de tournage et de photographie</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Learn-to camp</td>
-                                        <td>Initiation au camping</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tide times and heights</td>
-                                        <td>Marées, heures et hauteurs </td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Water levels</td>
-                                        <td>Niveaux d'eau</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Shop and reserve</td>
-                                        <td>Acheter et réserver</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>[location name of another location]</td>
-                                        <td>[nom de lieu d'un autre lieu]</td>
-                                        <td>Name of another Parks Canada locations (ie. a National Historic Site that is located within a National Park)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Calendar of events</td>
-                                        <td>Calendrier des événements</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tours and programs</td>
-                                        <td>Visites guidées et programmes</td>
-                                        <td>n/a</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Learning experiences</td>
-                                        <td>Expériences d’apprentissage</td>
-                                        <td>n/a</td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </details>
-
-                    </details>
+                    
                 </div>
             </section>
         </section>
+        <section class="mrgn-bttm-xl nmca1-content hidden">
+            <section class=" brdr-0 well well-sm">
+                <!-- .most-requested-bullets would normally be applied to ^ this section. It is applied to div.row below instead because otherwise it messes up the styling of the guidance section -->
+                <div class="container mrgn-tp-lg mrgn-bttm-lg">
+                    <div class="row provisional most-requested-bullets">
+                        <div class="pddng-r-0 col-md-2">
+                            <h2 class="mrgn-tp-0 provisional">Most requested</h2>
+                        </div>
+                        <div class="col-md-10">
+                            <ul class="wb-eqht colcount-md-2  ">
+                                <li><a href="#noTarget" class="wb-lbx">Pointe-Noire Interpretation and Observation Centre</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Cap-de-Bon-Désir Interpretation and Observation Centre</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Ocean encounters activity</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </section>
+        <section class="container">
+        <details class="guidance-details">
+            <summary><strong>Guidance:</strong> Most requested <span class="label label-success">Optional</span></summary>
+            <p id="requested"><strong>What are Most requested?</strong></p>
+            <ul>
+                <li>1-8 short bullets linking to the most requested tasks related to the page's content</li>
+            </ul>
+            <p>Parks Canada guidance supersedes the Canada.ca guidance on <a href="https://design.canada.ca/common-design-patterns/most-requested.html">Most requested design pattern</a></p>
+            <dl class="dl-horizontal">
+                <dt>Header:</dt>
+                <dd>
+                    <ul>
+                        <li>Text: Most requested</li>
+                    </ul>
+                </dd>
+                <dt>Label</dt>
+                <dd>
+                    <ul>
+                        <li>Character limit: 58 characters (including spaces)</li>
+                        <li>Number of links:
+                            <ul>
+                                <li>1 to 8</li>
+                            </ul>
+                        <li>When applicable, use the Most requested suggested labels</li>
+                        </li>
+                        <li>Items must be listed in the same order on English and French pages</li>
+                    </ul>
+                </dd>
+            </dl>
+            <details>
+                <summary>Most requested suggested labels</summary>
+                <table class="table table-striped table-hover">
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                        <tr>
+                            <th>Labels (field) - English</th>
+                            <th>Labels (field) - French</th>
+                            <th>Notes</th>
+                        </tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>COVID-19 and your visit</td>
+                            <td>COVID-19 et votre visite</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Trail conditions</td>
+                            <td>État des sentiers</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Important bulletins</td>
+                            <td>Bulletins importants</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Maps and directions</td>
+                            <td>Cartes et directions</td>
+                            <td>This is a common top task and is strongly recommended to be included</td>
+                        </tr>
+                        <tr>
+                            <td>Jobs</td>
+                            <td>Emplois</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Free youth admission</td>
+                            <td>Entrée gratuite pour les jeunes</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Red chairs</td>
+                            <td>Chaises rouges</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Film and photography permits</td>
+                            <td>Permis de tournage et de photographie</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Learn-to camp</td>
+                            <td>Initiation au camping</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Tide times and heights</td>
+                            <td>Marées, heures et hauteurs </td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Water levels</td>
+                            <td>Niveaux d'eau</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Shop and reserve</td>
+                            <td>Acheter et réserver</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>[location name of another location]</td>
+                            <td>[nom de lieu d'un autre lieu]</td>
+                            <td>Name of another Parks Canada locations (ie. a National Historic Site that is located within a National Park)</td>
+                        </tr>
+                        <tr>
+                            <td>Calendar of events</td>
+                            <td>Calendrier des événements</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Tours and programs</td>
+                            <td>Visites guidées et programmes</td>
+                            <td>n/a</td>
+                        </tr>
+                        <tr>
+                            <td>Learning experiences</td>
+                            <td>Expériences d’apprentissage</td>
+                            <td>n/a</td>
+                        </tr>
 
+                    </tbody>
+                </table>
+            </details>
+
+        </details>
+    </section>
         <!-- Start of main content -->
         <section class="container">
-            <p>This is the new "Intro" content section.</p>
+            <p class="placeholder-content">This is the new "Intro" content section.</p>
+            <p class="nmca1-content hidden">For turnkey holiday ideas, check out our suggested itineraries.</p>
 
-            <h3 class="mrgn-tp-xl">Doormat title</h3>
-            <div class="wb-eqht row mrgn-bttm-md pc-feature">
-                <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
-                    <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Doormat 1</a></h3>
-                    <p>Description.</p>
+            <div class="placeholder-content">
+                <h3 class="mrgn-tp-xl">Doormat title</h3>
+                <div class="wb-eqht row mrgn-bttm-md pc-feature">
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Doormat 1</a></h3>
+                        <p>Description.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Doormat 2</a></h3>
+                        <p>Description.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Doormat 3</a></h3>
+                        <p>Description.</p>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
-                    <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Doormat 2</a></h3>
-                    <p>Description.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
-                    <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Doormat 3</a></h3>
-                    <p>Description.</p>
+            </div>
+            <div class="nmca1-content hidden">
+                <h3 class="mrgn-tp-xl">Itineraries</h3>
+                <div class="wb-eqht row mrgn-bttm-md pc-feature">
+                    <div class="col-lg-6 col-md-6 mrgn-bttm-lg">
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Escape to whale country</a></h3>
+                        <p>Observe belugas and other whales from whale-watching cruises and scenic overlooks. Make sure to explore the Marine Environment Discovery Centre! </p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mrgn-bttm-lg">
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Take it all in! Côte-Nord road trip</a></h3>
+                        <p>Enjoy amazing views of the Saguenay Fjord, spend the night at Sept-Îles, explore the the Mingan Archpelago National Park Reserve,and more!</p>
+                    </div>
+
                 </div>
             </div>
             <details class="guidance-details mrgn-bttm-lg">
@@ -426,9 +478,14 @@
                     </div>
                 </div>
             </details>
-            <p>This is the main content section.</p>
-
-            <div class="well mrgn-tp-xl">
+            <p class="placeholder-content">This is the main content section.</p>
+            <div class="park1-content hidden">
+                <p>There are more than 400 documented archaeological sites within park boundaries, including tent rings, food caches, fox traps and an extensive site called <em>Aklungiqtautitalik</em>, meaning “place of the rope game.” Named for a large, distinctive stone feature on the south side of the site, archaeologists believe this area might have been used both prehistorically and in relatively recent times. </p>
+                <p>In 1925, a Hudson’s Bay trading post was set up at the head of Wager Bay above an area of reversing tidal falls, to take advantage of inland trade potential and additional trade routes. It is significant as being the first post run by an Inuk manager. Old buildings remain on-site as relics of this era.</p>
+                <p>Several of these sites may be visited with a <a href="/en/pn-np/nu/ukkusiksalik/visit/guides">licensed operator</a>. If you wish to visit the old trading post, ask if Parks Canada staff are available to accompany you. <cite>Akungiqtautitalik</cite> is not open to visitors at present.
+                </p>
+            </div>
+            <div class="well mrgn-tp-xl  placeholder-content">
                 <h3 class="mrgn-tp-0">Related links</h3>
                 <ul class="lst-spcd">
                     <li><a href="#noTarget" class="wb-lbx">Item 1</a></li>
@@ -436,6 +493,25 @@
                     <li><a href="#noTarget" class="wb-lbx">Item 3</a></li>
                     <li><a href="#noTarget" class="wb-lbx">Item 4</a></li>
                     <li><a href="#noTarget" class="wb-lbx">Item 5</a></li>
+                </ul>
+                
+            </div>
+            <div class="well mrgn-tp-xl nmca1-content hidden">
+                <h3 class="mrgn-tp-0">Related links</h3>
+               
+                <ul class="lst-spcd">
+                    <li><a href="#noTarget" class="wb-lbx">Whale watching</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Tours and programs</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Diving activities</a></li>
+                </ul>
+            </div>
+            <div class="well mrgn-tp-xl park1-content hidden">
+                <h3 class="mrgn-tp-0">Related links</h3>
+               
+                <ul class="lst-spcd ">
+                    <li><a href="#noTarget" class="wb-lbx">Inuit cultural activities</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Camping</a></li>
+                    
                 </ul>
             </div>
             <details class="guidance-details mrgn-bttm-lg">
@@ -480,25 +556,78 @@
     <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
     <!-- End Treasury board Script footer -->
 
-
     <!-- Geomap start -->
     <script>
-        wb.doc.on("geomap.ready", function (event, maps) {
-            var myMap = maps.locationmap; // return map with specfic id
+        $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
+            let desiredZoom = document.getElementById("location_map").getAttribute("data-geomap-zoom");
+            let myMap = map;
+            myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
+            myMap.getView().setZoom(desiredZoom);
+        });
+        $(document).on("wb-ready.wb", function (event) {
+            $("#top-bar").trigger("open.wb-overlay");
+            //show guidance button
+            $("#show-guidance-toggle").click(function () {
+                $('#show-guidance-toggle').addClass("active");
+                $('#hide-guidance-toggle').removeClass("active");
+                $('.guidance-details').removeClass("hidden");
+            });
+            //hide guidance button
+            $("#hide-guidance-toggle").click(function () {
+                $('#show-guidance-toggle').removeClass("active");
+                $('#hide-guidance-toggle').addClass("active");
+                $('.guidance-details').addClass("hidden");
+            });
 
-            myMap.zoomToExtent(myMap.getLayer("#mapFeatures").getDataExtent(), true);
-            console.log(myMap.getLayer("#mapFeatures"));
-            myMap.zoomOut();
+            $("#show-placeholder-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-placeholder-toggle").addClass("active");
+                $('.park1-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.nmca1-content').addClass("hidden");
+                $('.placeholder-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+            });
+            $("#show-nmca1-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-ncma1-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.park1-content').addClass("hidden");
+                $('.nmca1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
 
-            // myMap.view
-            console.log(myMap);
-            console.log(myMap.map[0]);
-            // let myMapMap = myMap.map();
-            // myMapMap.getView().setCenter( ol.proj.transform( [ -75.70535, 45.3995 ], "EPSG:4326", "EPSG:3978" ) )
+            });
+            $("#show-park1-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-park1-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.nmca1-content').addClass("hidden");
+                $('.park1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+
+            });
+            $("#show-nonopnhs-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-nonopnhs-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.nmca1-content').addClass("hidden");
+                $('.park1-content').addClass("hidden");
+                $('.nhs1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+            });
+            $("#top-bar > button.mfp-close").click(function () {
+                $('header').removeClass('mrgn-tp-xl');
+            });
         });
     </script>
-    <!-- Geomap end -->
-
+    <style>
+        /* Guidance specific scroll fixer */
+        [id] {
+            scroll-margin-top: 100px;
+        }
+    </style>
 </body>
 
 </html>
