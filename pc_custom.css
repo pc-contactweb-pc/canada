@@ -495,28 +495,28 @@ Background - Cobblestone, Tint #3 / #e7e1da
 Background:Hover - Cobblestone, Tint #2 / #cec7bc
 
 */
-.btn.activ:focus {
+.btn.active:focus {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
 }
 
-.btn-call-to-action.activ {
+.btn-call-to-action.active {
     background-color: #d1a32d !important;
     border-color: #bbbfc5;
 
 }
 
-.btn-primary.activ {
+.btn-primary.active {
     background-color: #1b2c21 !important;
     border-color: #bbbfc5;
 }
 
-.btn-default.activ {
+.btn-default.active {
     background-color: #cac5c0 !important;
     border-color: #bbbfc5;
 }
 
-.btn.activ {
+.btn.active {
     background-image: none;
     outline: 0;
     -webkit-box-shadow: inset 0 3px 5px rgb(0 0 0 / 13%);
