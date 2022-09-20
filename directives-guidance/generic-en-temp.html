@@ -158,9 +158,19 @@
                     <li><a href="https://www.canada.ca/en.html">National Parks</a></li>
                     <li><a href="https://www.canada.ca/en.html">Nunavut</a></li>
                     <li><a href="https://www.canada.ca/en.html">Ukkusiksalik National Park</a></li>
-
                     <!-- <li><a href="https://www.canada.ca/en.html">Parks Canada reservations</a></li> -->
                 </ol>
+                <ol class="breadcrumb racoons-content hidden">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                    <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parks Canada</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Near your food</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Closer than you think</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Your food is gone</a></li>
+                    <!-- <li><a href="https://www.canada.ca/en.html">Parks Canada reservations</a></li> -->
+                </ol>
+
+
+
             </div>
         </nav>
     </header>
@@ -613,6 +623,8 @@
                 $('.park1-content').addClass("hidden");
                 $('.nhs1-content').addClass("hidden");
                 $('.nmca1-content').addClass("hidden");
+                $('.racoons').addClass("hidden");
+
                 $('.placeholder-content').removeClass("hidden");
                 $(".wb-eqht").trigger("wb-update.wb-eqht");
             });
@@ -623,6 +635,8 @@
                 $('.nhs1-content').addClass("hidden");
                 $('.park1-content').addClass("hidden");
                 $('.nmca1-content').removeClass("hidden");
+                $('.racoons').addClass("hidden");
+
                 $(".wb-eqht").trigger("wb-update.wb-eqht");
 
             });
@@ -633,10 +647,22 @@
                 $('.nhs1-content').addClass("hidden");
                 $('.nmca1-content').addClass("hidden");
                 $('.park1-content').removeClass("hidden");
+                $('.racoons').addClass("hidden");
                 $(".wb-eqht").trigger("wb-update.wb-eqht");
 
             });
-            $("#show-nonopnhs-toggle").click(function () {
+            //racoons!//
+            $("#show-racoon-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-racoon-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.nmca1-content').addClass("hidden");
+                $('.park1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+
+            });
+            /* $("#show-nonopnhs-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
                 $("#show-nonopnhs-toggle").addClass("active");
                 $('.placeholder-content').addClass("hidden");
@@ -644,7 +670,19 @@
                 $('.park1-content').addClass("hidden");
                 $('.nhs1-content').removeClass("hidden");
                 $(".wb-eqht").trigger("wb-update.wb-eqht");
+            }); */
+            $("#top-bar > button.mfp-close").click(function () {
+                $('header').removeClass('mrgn-tp-xl');
             });
+            /*$("#show-nonopnhs-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-nonopnhs-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.nmca1-content').addClass("hidden");
+                $('.park1-content').addClass("hidden");
+                $('.nhs1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+            }); */
             $("#top-bar > button.mfp-close").click(function () {
                 $('header').removeClass('mrgn-tp-xl');
             });
