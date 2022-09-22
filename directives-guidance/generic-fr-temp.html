@@ -164,6 +164,14 @@
                     <li><a href="https://www.canada.ca/en.html">Nunavut</a></li>
                     <li><a href="https://www.canada.ca/en.html">Parc national Ukkusiksalik</a></li>
                 </ol>
+                <ol class="breadcrumb racoons-content hidden">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                    <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parks Canada</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Near your food</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Closer than you think</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Your food is gone</a></li>
+                    <!-- <li><a href="https://www.canada.ca/en.html">Parks Canada reservations</a></li> -->
+                </ol>
             </div>
         </nav>
     </header>
@@ -177,10 +185,20 @@
                 alt="" class="img-responsive nmca1-content hidden" style="margin-left: auto; margin-right: auto;">
             <img src="https://pcweb.azureedge.net/-/media/pn-np/nu/ukkusiksalik/WET4/activ/culture_870290.jpg?modified=20200401182743"
                 alt="" class="img-responsive park1-content hidden" style="margin-left: auto; margin-right: auto;">
+            <img src="https://user-images.githubusercontent.com/93224537/191534397-adc924c2-b992-450a-986b-0c5cdd125a90.jpg"
+                alt="" class="img-responsive racoons-content hidden" style="margin-left: auto; margin-right: auto;">
             <div class="container">
+                <section class="racoons-content nhs1-content hidden">
+                    <div class="wb-dismissable">
+                        <div class="alert alert-info mrgn-tp-0 mrgn-bttm-0">
+                            <p>Il ne s'agit pas d'une page d'exemple réelle : c'est pour les sourires !</p>
+                        </div>
+                    </div>
+                </section>
                 <h1 property="name" id="wb-cont" class="pc-h1-brass"><span class="placeholder-content">Page de contenu
                         de base d'un lieu</span><span class="nmca1-content hidden">Itinéraires</span><span
-                        class="park1-content hidden">Sites culturels</span>
+                        class="park1-content hidden">Sites culturels</span><span class="racoons-content hidden">Bandits
+                        masqués</span>
                     <!-- <br><span
                     class="small mrgn-tp-xl" style="line-height:1.2em">Kluane National Park and Reserve</span> -->
                 </h1>
@@ -191,10 +209,14 @@
         </section>
 
         <section class="container">
-            <p class="placeholder-content">Ceci est la section principale du contenu. 🦝</p>
+            <p class="placeholder-content">Ceci est la section principale du contenu. <a href="#"><span
+                        id="show-racoons-toggle">🦝</span></a></p>
             <p class="nmca1-content hidden">Pour des idées de vacances clé en main, consultez nos suggestions
                 d'itinéraire.</p>
-
+            <p class="racoons-content hidden">Les ratons laveurs sont des créatures opportunistes qui cherchent des
+                solutions faciles pour se procurer de la nourriture. On les surnomme souvent les « bandits masqués » des
+                terrains de camping. Leurs pattes agiles leur permettent d’ouvrir des contenants, des paquets, des
+                glacières et même des fermetures éclair de tente.</p>
 
             <details class="guidance-details">
                 <summary><strong>Directives :</strong> Bannière, titre et texte d'introduction <span
@@ -231,13 +253,12 @@
                     <dd>
                         <ul>
                             <li>[Nom de lieu]</li>
-                            <li>Le nom de lieu s'affichera automatiquement dans l'équipe Web de Sitecore aux fins
-                                de
+                            <li>Le nom de lieu s'affichera automatiquement dans l'équipe Web de Sitecore aux fins de
                                 vérification ou de révision, si nécessaire.</li>
                         </ul>
                     </dd>
 
-                    <dt>Texte d'introduction<br><span class="label label-primary">Obligatoire</span></dt>
+                    <dt>Texte d'introduction <br><span class="label label-primary">Obligatoire</span></dt>
                     <dd>
                         <ul>
                             <li>1 à 2 phrases qui résument le contenu ou l'objectif de la page.</li>
@@ -266,6 +287,32 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <section class="racoons-content hidden">
+                <section class=" brdr-0 well well-sm">
+                    <!-- .most-requested-bullets would normally be applied to ^ this section. It is applied to div.row below instead because otherwise it messes up the styling of the guidance section -->
+                    <div class="container mrgn-tp-lg mrgn-bttm-lg">
+                        <div class="row provisional most-requested-bullets">
+                            <div class="pddng-r-0 col-md-2">
+                                <h2 class="mrgn-tp-0 provisional">En demande</h2>
+                            </div>
+                            <div class="col-md-10">
+                                <ul class="wb-eqht colcount-md-2 ">
+                                    <li><a href="#noTarget" class="wb-lbx">Des restes de bacon</a></li>
+                                    <li><a href="#noTarget" class="wb-lbx">Fruits de mer frais</a></li>
+                                    <li><a href="#noTarget" class="wb-lbx">Dentifrice</a></li>
+                                    <li><a href="#noTarget" class="wb-lbx">Viande de bœuf séchée</a></li>
+                                    <li><a href="#noTarget" class="wb-lbx">Tous les fruits</a></li>
+                                    <li><a href="#noTarget" class="wb-lbx">Hotdogs</a></li>
+                                    <li><a href="#noTarget" class="wb-lbx">Sacs à ordures</a></li>
+    
+                                </ul>
+    
+                            </div>
+                        </div>
+    
+                    </div>
+                </section>
             </section>
             <!-- Most requested guidance -->
             <details class="guidance-details container">
@@ -544,17 +591,21 @@
                 </div>
                 <details class="guidance-details mrgn-bttm-lg">
                     <!-- Start generic doormat navigation guidance -->
-    
-                    <summary><strong>Directives :</strong> Liens connexes <span class="label label-success">Optionnel</span>
+
+                    <summary><strong>Directives :</strong> Liens connexes <span
+                            class="label label-success">Optionnel</span>
                     </summary>
-                    <p>Utilisez les Liens connexes pour créer des liens vers du contenu susceptible d'intéresser les utilisateurs.</p>
-                    <p>Il s'agit probablement de pages "sœurs", mais il peut également s'agir de pages d'autres sections ou même d'autres sites</p>
+                    <p>Utilisez les Liens connexes pour créer des liens vers du contenu susceptible d'intéresser les
+                        utilisateurs.</p>
+                    <p>Il s'agit probablement de pages "sœurs", mais il peut également s'agir de pages d'autres sections
+                        ou même d'autres sites</p>
                     <dl class="dl-horizontal">
                         <dt>Texte du lien</dt>
                         <dd>
                             <ul>
                                 <li>Nombre maximum de caractères :<ul>
-                                        <li>45 caractères (espaces compris) pour les deux langues officielles (optimal)</li>
+                                        <li>45 caractères (espaces compris) pour les deux langues officielles (optimal)
+                                        </li>
                                         <li>Peut aller jusqu'à 75 caractères (espaces compris)</li>
                                     </ul>
                                 </li>
@@ -613,26 +664,46 @@
                 $('.location-toggles').removeClass("active");
                 $("#show-placeholder-toggle").addClass("active");
                 $('.park1-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
                 $('.nmca1-content').addClass("hidden");
+                $('.racoons-content').addClass("hidden");
+
                 $('.placeholder-content').removeClass("hidden");
                 $(".wb-eqht").trigger("wb-update.wb-eqht");
-            });
-            $("#show-park1-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-park1-toggle").addClass("active");
-                $('.placeholder-content').addClass("hidden");
-                $('.nmca1-content').addClass("hidden");
-                $('.park1-content').removeClass("hidden");
-                $(".wb-eqht").trigger("wb-update.wb-eqht");
-
             });
             $("#show-nmca1-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
                 $("#show-nmca1-toggle").addClass("active");
                 $('.placeholder-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
                 $('.park1-content').addClass("hidden");
                 $('.nmca1-content').removeClass("hidden");
+                $('.racoons-content').addClass("hidden");
                 $(".wb-eqht").trigger("wb-update.wb-eqht");
+
+            });
+            $("#show-park1-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-park1-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.nmca1-content').addClass("hidden");
+                $('.racoons-content').addClass("hidden");
+                $('.park1-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+
+            });
+            //racoons!//
+            $("#show-racoons-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-racoons-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.nmca1-content').addClass("hidden");
+                $('.park1-content').addClass("hidden");
+                $('.racoons-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+
             });
             $("#top-bar > button.mfp-close").click(function () {
                 $('header').removeClass('mrgn-tp-xl');
