@@ -34,7 +34,6 @@
     <noscript>
         <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/wet-boew/css/noscript.min.css" />
     </noscript>
-
 </head>
 
 <body vocab="http://schema.org/" class="cnt-wdth-lmtd" typeof="WebPage" resource="#wb-webpage">
@@ -49,19 +48,57 @@
         </ul>
     </nav>
     <!-- End treasury board content -->
-
-
     <!-- Start content-en header -->
-    <header>
+    <section class="wb-inview bar-demo" data-inview="top-bar">
+        <section id="top-bar" class="wb-overlay modal-content overlay-def wb-bar-t outside-off">
+            <div class="row center-block container">
+                <div class="guidance-options">
+                    <div class="btn-group">
+                        <button id="show-guidance-toggle" class="guidance-toggle btn btn-default active">
+                            <span class="fas fa-laptop-code "></span>&nbsp;Montrer les conseils
+                        </button>
+                        <button id="hide-guidance-toggle" class="guidance-toggle btn btn-default wb-toggle" data-toggle="
+                                [
+                                    {
+                                        'selector':'#show-guidance-toggle',
+                                        'stateOn':'active', 'state':'on'
+                                    },
+                                    {
+                                        'stateOn':'active',
+                                        'state':'off'
+                                    }
+                                ]" aria-controls="hide-guidance-toggle">
+                            <span class="fas fa-pen-square"></span>&nbsp;Cacher les conseils
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="location-toggles btn btn-default active" id="show-placeholder-toggle">Espaces
+                            réservés</button>
+                        <button class="location-toggles btn btn-default" id="show-nmca1-toggle">PM du
+                            Saguenay-Saint-Laurent</button>
+                        <button class="location-toggles btn btn-default" id="show-park1-toggle">PN Ukkusiksalik</button>
+                        <!--
+                    <button class="location-toggles btn btn-default" id="show-park2-toggle">Large park #2</button>
+                    <button class="location-toggles btn btn-default" id="show-nhs-toggle">Operational historic site</button>
+                    <button class="location-toggles btn btn-default" id="show-nonopnhs-toggle">Non-operational historic site</button> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Start content-en header -->
+    <header class="mrgn-tp-xl">
         <div id="wb-bnr" class="container">
             <div class="row">
                 <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
                     <h2 class="wb-inv">Sélection de la langue</h2>
                     <ul class="list-inline mrgn-bttm-0">
                         <li>
-                            <a lang="fr" hreflang="fr" href="https://pc-contactweb-pc.github.io/canada/directives-guidance/generic-en.html">
+                            <a lang="fr" hreflang="fr"
+                                href="https://pc-contactweb-pc.github.io/canada/directives-guidance/generic-en.html">
                                 <span class="hidden-xs">English</span>
-                                <abbr title="English" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">en</abbr>
+                                <abbr title="English"
+                                    class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">en</abbr>
                             </a>
                         </li>
                     </ul>
@@ -69,20 +106,23 @@
                 <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
                     <!-- <a href="https://wet-boew.github.io/gcweb/" property="url"> -->
                     <div>
-
-                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-fr.svg" alt="Government of Canada" property="logo" class="wb-toggle"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
-
+                        <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-fr.svg"
+                            alt="Government of Canada" property="logo" class="wb-toggle"><span class="wb-inv"> / <span
+                                lang="fr">Gouvernement du Canada</span></span>
                     </div>
                     <meta property="name" content="Government of Canada">
                     <meta property="areaServed" typeof="Country" content="Canada">
                     <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg">
                 </div>
-                <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+                <section id="wb-srch"
+                    class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
                     <h2>Rechercher</h2>
                     <form action="#" method="post" name="cse-search-box" role="search">
                         <div class="form-group wb-srch-qry">
                             <label for="wb-srch-q" class="wb-inv">Recherher dans Parcs Canada</label>
-                            <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Recherher dans Parcs Canada">
+                            <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q"
+                                type="search" value="" size="34" maxlength="170"
+                                placeholder="Recherher dans Parcs Canada">
                             <datalist id="wb-srch-q-ac"></datalist>
                         </div>
                         <div class="form-group submit">
@@ -98,13 +138,34 @@
         <nav id="wb-bc" property="breadcrumb">
             <h2>Vous êtes ici&nbsp;:</h2>
             <div class="container">
-                <ol class="breadcrumb">
-                    <li><a href="https://www.canada.ca/fr.html">Canada.ca</a></li>
-                    <li><a href="https://pc-contactweb-pc.github.io/canada/fr/index.html">Parcs Canada</a></li>
-                    <li><a href="https://www.canada.ca/en.html"><span class="placeholder-content">[Programme]</span><span class="park1-content hidden">Parcs nationaux</span><span class="nhs1-content hidden">Lieux historiques nationaux</span></a></li>
-                    <li><a href="https://www.canada.ca/en.html"><span class="placeholder-content">[Province / Territoire]</span></a></li>
-                    <li><a href="https://www.canada.ca/en.html"><span class="placeholder-content">[Lieux]</span></a></li>
-                    
+                <ol class="breadcrumb placeholder-content">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                    <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parcs Canada</a></li>
+                    <li><a href="https://www.canada.ca/en.html">[Programme]</a></li>
+                    <li><a href="https://www.canada.ca/en.html">[Province / Territoire]</a></li>
+                    <li><a href="https://www.canada.ca/en.html">[Lieu]</a></li>
+                </ol>
+                <ol class="breadcrumb nmca1-content hidden">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                    <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parcs Canada</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Aires marines nationales de conservation</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Québec</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Parc marin du Saguenay-Saint-Laurent</a></li>
+                </ol>
+                <ol class="breadcrumb park1-content hidden">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                    <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parcs Canada</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Parcs nationaux</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Nunavut</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Parc national Ukkusiksalik</a></li>
+                </ol>
+                <ol class="breadcrumb racoons-content hidden">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                    <li><a href="https://pc-contactweb-pc.github.io/canada/en/index.html">Parks Canada</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Near your food</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Closer than you think</a></li>
+                    <li><a href="https://www.canada.ca/en.html">Your food is gone</a></li>
+                    <!-- <li><a href="https://www.canada.ca/en.html">Parks Canada reservations</a></li> -->
                 </ol>
             </div>
         </nav>
@@ -113,70 +174,479 @@
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage">
         <section class="mrgn-bttm-lg ">
-            <img src="https://user-images.githubusercontent.com/93224537/185694990-51c248b0-3e6d-48a3-8340-23cd18075efa.png" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto;">
+            <img src="https://user-images.githubusercontent.com/93224537/185694990-51c248b0-3e6d-48a3-8340-23cd18075efa.png"
+                alt="" class="img-responsive placeholder-content" style="margin-left: auto; margin-right: auto;">
+            <img src="https://user-images.githubusercontent.com/45856706/189238096-4847b03a-74d4-444c-afe3-28052b3a6b54.jpg"
+                alt="" class="img-responsive nmca1-content hidden" style="margin-left: auto; margin-right: auto;">
+            <img src="https://pcweb.azureedge.net/-/media/pn-np/nu/ukkusiksalik/WET4/activ/culture_870290.jpg?modified=20200401182743"
+                alt="" class="img-responsive park1-content hidden" style="margin-left: auto; margin-right: auto;">
+            <img src="https://user-images.githubusercontent.com/93224537/191534397-adc924c2-b992-450a-986b-0c5cdd125a90.jpg"
+                alt="" class="img-responsive racoons-content hidden" style="margin-left: auto; margin-right: auto;">
             <div class="container">
-                <h1 property="name" id="wb-cont" class="pc-h1-brass">En-tête 1
+                <section class="racoons-content nhs1-content hidden">
+                    <div class="wb-dismissable">
+                        <div class="alert alert-info mrgn-tp-0 mrgn-bttm-0">
+                            <p>Il ne s'agit pas d'une page d'exemple réelle : c'est pour les sourires !</p>
+                        </div>
+                    </div>
+                </section>
+                <h1 property="name" id="wb-cont" class="pc-h1-brass"><span class="placeholder-content">Page de contenu
+                        de base d'un lieu</span><span class="nmca1-content hidden">Itinéraires</span><span
+                        class="park1-content hidden">Sites culturels</span><span class="racoons-content hidden">Bandits
+                        masqués</span>
                     <!-- <br><span
                     class="small mrgn-tp-xl" style="line-height:1.2em">Kluane National Park and Reserve</span> -->
                 </h1>
-                <h2 class="h3 mrgn-tp-sm" style="color: #6f6f6f;">Nom de lieu</h2>
-            </div>
+                <h2 class="h3 mrgn-tp-sm" style="color: #6f6f6f;"><span class="placeholder-content">Nom de
+                        lieu</span><span class="nmca1-content hidden">Parc marin du Saguenay-Saint-Laurent</span><span
+                        class="park1-content hidden">Parc national Ukkusiksalik</span></h2>
         </section>
-        <section class="mrgn-bttm-xl">
-            <section class="provisional most-requested-bullets brdr-0 well well-sm">
-                <!-- well white-well well-sm -->
+        <section class="container">
+            <style>
+                /* Easter egg rotation */
+                #show-racoons-toggle:hover {
+                    transform: rotate(360deg);
+                    display: inline-block;
+                    transition-duration: 1s;
+                }
+            </style>
+            <p class="placeholder-content">Ceci est la section principale du contenu. <a href="#"><span
+                        id="show-racoons-toggle">🦝</span></a></p>
+            <p class="nmca1-content hidden">Pour des idées de vacances clé en main, consultez nos suggestions d'itinéraire.</p>
+            <p class="racoons-content hidden">Les ratons laveurs sont des créatures opportunistes qui cherchent des
+                solutions faciles pour se procurer de la nourriture. On les surnomme souvent les « bandits masqués » des
+                terrains de camping. Leurs pattes agiles leur permettent d’ouvrir des contenants, des paquets, des
+                glacières et même des fermetures éclair de tente.</p>
+            <details class="guidance-details">
+                <summary><strong>Directives :</strong> Bannière, titre et texte d'introduction <span
+                        class="label label-primary">Obligatoire</span></summary>
+                <p id="banniere"><strong>Qu'est-ce que la bannière, le titre et le texte d'introduction</strong></p>
+                <p>Ils permettent d'orienter les utilisateurs dès qu'ils arrivent sur la page à l'aide d'un grand
+                    visuel, d'un titre unique et d'une introduction pour le contexte.</p>
+                <p>La bannière reste visible sur la vue mobile</p>
+                <dl class="dl-horizontal">
+                    <dt>Image de bannière<br>
+                        <span class="label label-success">Optionnel</span>
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li>Choisissez une image qui donne une idée du contenu.</li>
+                            <li>1920 x 480 px (4:1), <a
+                                    href="http://confluence:8090/pages/viewpage.action?pageId=487548935">dimensions
+                                    obligatoires de l'image</a></li>
+                        </ul>
+                    </dd>
+                    <dt>Titre de la page<br><span class="label label-primary">Obligatoire</span></dt>
+                    <dd>
+                        <ul>
+                            <li>Rédiger un titre qui décrit le contenu de la page</li>
+                            <li><a
+                                    href="https://www.canada.ca/fr/secretariat-conseil-tresor/services/communications-gouvernementales/guide-redaction-contenu-canada.html#wp5-1">Rédiger
+                                    des titres et sous-titres de page descriptifs</a> Guide de rédaction du contenu du
+                                site Canada.ca</li>
+                        </ul>
+                    </dd>
+                    <dt>Sous-titre<br><span class="label label-primary">Obligatoire</span></dt>
+                    <dd>
+                        <ul>
+                            <li>[Nom de lieu]</li>
+                            <li>Le nom de lieu s'affichera automatiquement dans Sitecore.</li>
+                        </ul>
+                    </dd>
+                    <dt>Texte d'introduction <br><span class="label label-primary">Obligatoire</span></dt>
+                    <dd>
+                        <ul>
+                            <li>1 à 2 phrases qui résument le contenu ou l'objectif de la page.</li>
+                            <li>Nombre maximal de caractères : 300 ou moins, espaces compris.</li>
+                            <li>Si le texte existant compte plus de 300 caractères, il doit être revu et raccourci
+                                lorsque le temps le permet.</li>
+                        </ul>
+            </details>
+        </section>
+        <section class="placeholder-content">
+            <section class=" brdr-0 well well-sm">
+                <!-- .most-requested-bullets would normally be applied to ^ this section. It is applied to div.row below instead because otherwise it messes up the styling of the guidance section -->
                 <div class="container mrgn-tp-lg mrgn-bttm-lg">
-                    <div class="row">
+                    <div class="row provisional most-requested-bullets">
                         <div class="pddng-r-0 col-md-2">
                             <h2 class="mrgn-tp-0">En demande</h2>
                         </div>
                         <div class="col-md-10">
-                            <ul class="wb-eqht colcount-md-2  wb-eqht-inited">
-                                <li><a href="#noTarget" class="wb-lbx">Éiquette 1</a></li>
-                                <li><a href="#noTarget" class="wb-lbx">Éiquette 2</a></li>
-                                <li><a href="#noTarget" class="wb-lbx">Éiquette 3</a></li>
+                            <ul class="wb-eqht colcount-md-2">
+                                <li><a href="#noTarget" class="wb-lbx">[Élément 1]</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">[Élément 2]</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">[Élément 3]</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- Start of main content -->
-            <section class="container">
-                <p>Ceci est la section principale du contenu.</p>
-
+        </section>
+        <section class="nmca1-content hidden">
+            <section class=" brdr-0 well well-sm">
+                <!-- .most-requested-bullets would normally be applied to ^ this section. It is applied to div.row below instead because otherwise it messes up the styling of the guidance section -->
+                <div class="container mrgn-tp-lg mrgn-bttm-lg">
+                    <div class="row provisional most-requested-bullets">
+                        <div class="pddng-r-0 col-md-2">
+                            <h2 class="mrgn-tp-0 provisional">En demande</h2>
+                        </div>
+                        <div class="col-md-10">
+                            <ul class="wb-eqht">
+                                <li><a href="#noTarget" class="wb-lbx">Centre d'interprétation et d'observation de
+                                        Pointe-Noire</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Centre d'interprétation et d'observation de
+                                        Cap-de-Bon-Désir</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Activité de rencontre avec l'océan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="racoons-content hidden">
+            <section class=" brdr-0 well well-sm">
+                <!-- .most-requested-bullets would normally be applied to ^ this section. It is applied to div.row below instead because otherwise it messes up the styling of the guidance section -->
+                <div class="container mrgn-tp-lg mrgn-bttm-lg">
+                    <div class="row provisional most-requested-bullets">
+                        <div class="pddng-r-0 col-md-2">
+                            <h2 class="mrgn-tp-0 provisional">Most requested</h2>
+                        </div>
+                        <div class="col-md-10">
+                            <ul class="wb-eqht colcount-md-2 ">
+                                <li><a href="#noTarget" class="wb-lbx">Des restes de bacon</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Fruits de mer frais</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Dentifrice</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Viande de bœuf séchée</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Tous les fruits</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Hotdogs</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Sacs à ordures</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- Most requested guidance -->
+        <section class="container">
+            <details class="guidance-details mrgn-bttm-xl">
+                <summary><strong>Directives :</strong> En demande <span class="label label-success">Optionnel</span>
+                </summary>
+                <p id="demande"><strong>Qu'est-ce que la rubrique En demande?</strong></p>
+                <ul>
+                    <li>1 à 8 items de textes très courts liés au contenu de la page</li>
+                    <li>Ne faudrait pas que ce soit le seul lien de navigation vers ce contenu </li>
+                </ul>
+                <p>Les directives de Parcs Canada remplacent les directives de Canada.ca sur la <a
+                        href="https://conception.canada.ca/configurations-conception-communes/en-demande.html">configuration
+                        de conception En demande</a></p>
+                <dl class="dl-horizontal">
+                    <dt>En-tête : </dt>
+                    <dd>
+                        <ul>
+                            <li>Texte : En demande</li>
+                        </ul>
+                    </dd>
+                    <dt>Étiquette</dt>
+                    <dd>
+                        <ul>
+                            <li>Limite de caractères : 58 caractères (espaces compris)</li>
+                            <li>Nombre de liens :
+                                <ul>
+                                    <li>1 à 8</li>
+                                </ul>
+                            <li>Le cas échéant, utilisez les étiquettes suggérées En demande </li>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <details>
+                    <summary>Étiquettes suggérées En demande</summary>
+                    <table class="table table-striped table-hover">
+                        <caption></caption>
+                        <thead>
+                            <tr>
+                            <tr>
+                                <th>Étiquettes (champ) - Français</th>
+                                <th>Étiquettes (champ) - Anglais</th>
+                                <th>Notes</th>
+                            </tr>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>COVID-19 et votre visite</td>
+                                <td>COVID-19 and your visit</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>État des sentiers</td>
+                                <td>Trail conditions</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Bulletins importants</td>
+                                <td>Important bulletins</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Cartes et directions</td>
+                                <td>Maps and directions</td>
+                                <td>Il s'agit d'une tâche principales courante dont l'inclusion est fortement
+                                    recommandée.</td>
+                            </tr>
+                            <tr>
+                                <td>Emplois</td>
+                                <td>Jobs</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Entrée gratuite pour les jeunes</td>
+                                <td>Free youth admission</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Chaises rouges</td>
+                                <td>Red chairs</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Permis de tournage et de photographie</td>
+                                <td>Film and photography permits</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Initiation au camping</td>
+                                <td>Learn-to camp</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Marées, heures et hauteurs </td>
+                                <td>Tide times and heights</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Niveaux d'eau</td>
+                                <td>Water levels</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Acheter et réserver</td>
+                                <td>Shop and reserve</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>[nom de lieu d'un autre lieu]</td>
+                                <td>[location name of another location]</td>
+                                <td>Nom d'un autre lieu de Parcs Canada (par exemple, un lieu historique national situé
+                                    dans un parc national).</td>
+                            </tr>
+                            <tr>
+                                <td>Calendrier des événements</td>
+                                <td>Calendar of events</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Visites guidées et programmes</td>
+                                <td>Tours and programs</td>
+                                <td>s/o</td>
+                            </tr>
+                            <tr>
+                                <td>Expériences d'apprentissage</td>
+                                <td>Learning experiences</td>
+                                <td>s/o</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <details>
+                    <summary>Trouver vos éléments En demande </summary>
+                    <ul>
+                        <li>En utilisant le <a
+                                href="http://intranet2/our-work/brand-web-new-media/web/web-analytics-and-evaluation/location-dashboards/?lang=fr">tableau
+                                de bord du site (ParcsNet)</a>, sélectionnez une plage de dates qui représente votre
+                            trafic de haute saison (exemple : du 1er mai au 1er octobre)</li>
+                        <li>Vous trouverez les 10 premières pages du site sous « Pages les plus populaires ». Certaines
+                            pages peuvent se rapporter toutes à la même tâche, auquel cas vous pouvez les regrouper sous
+                            un seul lien.</li>
+                        <li>Considérez que toute promotion payante, tout média social et toute initiative médiatique
+                            peuvent fausser les résultats. Vous pouvez consulter le tableau de bord pendant les périodes
+                            sans mise en avant pour comparer les résultats.</li>
+                        <li>Sélectionnez jusqu'à huit liens en fonction de leur popularité<ul>
+                                <li>Il s'agit de la popularité combinée des pages en anglais et en français (les deux
+                                    pages doivent avoir la même liste et le même ordre)</li>
+                                <li>Créez un court texte lié pour elles en vous basant sur le titre de la page existante
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Les articles doivent être énumérés dans le même ordre sur les pages en anglais et en
+                            français</li>
+                    </ul>
+                </details>
+            </details>
+        </section>
+        <!-- Doormats -->
+        <section class="container">
+            <div class="placeholder-content">
                 <h3 class="mrgn-tp-xl">Menus d'accueil thématiques</h3>
                 <div class="wb-eqht row mrgn-bttm-md pc-feature">
                     <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
-                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Menu d'accueil thématique - 1</a></h3>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Menu d'accueil thématique 1</a>
+                        </h3>
                         <p>Description.</p>
                     </div>
                     <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
-                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Menu d'accueil thématique - 2</a></h3>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Menu d'accueil thématique 2</a>
+                        </h3>
                         <p>Description.</p>
                     </div>
                     <div class="col-lg-4 col-md-6 mrgn-bttm-lg">
-                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Menu d'accueil thématique - 3</a></h3>
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Menu d'accueil thématique 3</a>
+                        </h3>
                         <p>Description.</p>
                     </div>
                 </div>
-                <p>Contenu principal.</p>
-
-                <div class="well mrgn-tp-xl">
-                    <h3 class="mrgn-tp-0">Liens connexes</h3>
-                    <ul class="lst-spcd">
-                        <li><a href="#noTarget" class="wb-lbx">Éiquette 1</a></li>
-                        <li><a href="#noTarget" class="wb-lbx">Éiquette 2</a></li>
-                        <li><a href="#noTarget" class="wb-lbx">Éiquette 3</a></li>
-                        <li><a href="#noTarget" class="wb-lbx">Éiquette 4</a></li>
-                        <li><a href="#noTarget" class="wb-lbx">Éiquette 5</a></li>
-                    </ul>
+            </div>
+            <div class="nmca1-content hidden">
+                <h3 class="mrgn-tp-0">Itinéraires suggérés</h3>
+                <div class="wb-eqht row mrgn-bttm-md pc-feature">
+                    <div class="col-lg-6 col-md-6 mrgn-bttm-lg">
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Évasion au pays des baleines
+                            </a></h3>
+                        <p>Observez les bélugas et autres baleines depuis des croisières d'observation des baleines et
+                            des points de vue panoramiques. Ne manquez pas d'explorer le Centre de découverte du milieu
+                            marin !</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mrgn-bttm-lg">
+                        <h3 class="h5 mrgn-tp-sm"><a href="#noTarget" class="wb-lbx">Décrochez, découvrez! Une virée sur
+                                la Côte-Nord</a></h3>
+                        <p>Profitez de la vue imprenable sur le fjord du Saguenay, passez la nuit à Sept-Îles, explorez
+                            la réserve de parc national de l’Archipel-de-Mingann, et plus encore!</p>
+                    </div>
                 </div>
-                <!-- End of main content -->
-            </section>
-
-            <!-- End main content -->
+            </div>
+            <!-- Start generic doormat navigation guidance -->
+            <details class="guidance-details mrgn-bttm-lg">
+                <summary><strong>Directives :</strong> Menus d'accueil thématiques <span
+                        class="label label-success">Optionnel</span></summary>
+                <p id="menus"><strong>Que sont les Menus d'accueil thématiques?</strong></p>
+                <p>Chaque lien avec sa description fournit une description précise et concise de ce qu'une personne
+                    trouvera sur la page de destination. Ensemble, ces ensembles de liens et de descriptions offrent
+                    des
+                    choix clairs et distincts aux personnes qui tentent d'accomplir leur tâche.</p>
+                <p>Les Menus d'accueil thématiques remplacent votre menu de navigation de gauche.</p>
+                <p>Les conseils de Parcs Canada supplantent les conseils de Canada.ca sur :
+                    <a
+                        href="https://conception.canada.ca/configurations-conception-communes/services-renseignements.html">Services
+                        et renseignements - Configuration de conception</a>
+                </p>
+                <dl class="dl-horizontal">
+                    <dt>Texte du lien</dt>
+                    <dd>
+                        <ul>
+                            <li>Nombre maximum de caractères :<ul>
+                                    <li>45 caractères (espaces compris) pour les deux langues officielles (optimal)
+                                    </li>
+                                    <li>Peut aller jusqu'à 75 caractères (espaces compris)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt>Texte de description</dt>
+                    <dd>
+                        <ul>
+                            <li>La limite de caractères pour les descriptions de liens est de 120 caractères
+                                (espaces
+                                compris) dans les deux langues officielles</li>
+                            <li><strong>Exception :</strong>
+                                <ul>
+                                    <li>Si le texte de la description comporte plus de 120 caractères, il est
+                                        acceptable en tant qu'espace réservé pour le lancement. Modifiez ces descriptions à 120 caractères dès que possible.</li>
+                                    <li>La navigation principale de votre site et les 10 premières pages doivent
+                                        être mises à jour pour le lancement.</li>
+                                </ul>
+                            </li>
+                            <li>Ponctuation :<ul>
+                                    <li>Utilisez les virgules de série pour les listes (en anglais seulement)</li>
+                                    <li>Terminez par un point ou un autre signe de ponctuation. </li>
+                                </ul>
+                            </li>
+                            <li>Utiliser des verbes d'action ou simplement énumérer des mots-clés pour résumer les
+                                renseignements ou les tâches qui peuvent être accomplies sur la page</li>
+                            <li>Ne séparez pas les phrases par des sauts de ligne :</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <div class="row">
+                    <div class="col-md-4 brdr-tp brdr-rght brdr-lft brdr-bttm  ">
+                        <h3><span class="label label-danger">Incorrect</span></h3>
+                        <h4 class="h3"><a href="#noTarget" class="wb-lbx">Frais </a></h4>
+                        <p>Droits d'entrée quotidiens, droits de camping et de programme et plus encore.<br>Entrée
+                            gratuite
+                            pour les jeunes.</p>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1 brdr-tp brdr-rght brdr-lft brdr-bttm ">
+                        <h3><span class="label label-success">Correct</span></h3>
+                        <h4 class="h3"><a href="#noTarget" class="wb-lbx">Frais </a></h4>
+                        <p>Droits d'entrée quotidiens, droits de camping et de programme et plus encore. Entrée gratuite
+                            pour les jeunes.</p>
+                    </div>
+                </div>
+            </details>
+            <!-- End generic doormat navigation guidance -->
+            <!-- Main content-->
+            <p class="placeholder-content">Ceci est la section de contenu principale.</p>
+            <div class="park1-content hidden">
+                <p>TIl y a plus de 400 sites archéologiques documentés dans le parc, tels que des cercles de tentes, des caches de nourriture, des pièges à renard et un grand site nommé Aklungiqtautitalik, qui veut dire « lieu du jeu de corde ». Cet endroit enferme un important élément rocheux distinct du côté sud du site et les archéologues croient que cette région a pu, non seulement être utilisée à l’époque préhistorique, mais aussi relativement récemment.</p>
+                <p>En 1925, un poste de traite de la Baie d’Hudson fut construit à la tête de la baie Wager, au-dessus d’une zone de chutes tidales réversibles pour profiter des possibilités de traite intérieures et d’autres routes de commerce. Vous pouvez encore voir les anciens bâtiments de ce premier poste de traite géré par un Inuk.</p>
+                <p>Vous pouvez visiter plusieurs de ces sites avec un <a href="https://www.pc.gc.ca/fr/pn-np/nu/ukkusiksalik/visit/guides">pourvoyeur autorisé</a>. Si vous désirez visiter l’ancien poste de traite, demandez si un employé de Parcs Canada peut vous accompagner. Aklungiqtautitalik n’est pas ouvert aux visiteurs en ce moment.</p>
+            </div>
+            <!-- Related links -->
+            <div class="well mrgn-tp-xl placeholder-content">
+                <h3 class="mrgn-tp-0">Liens connexes</h3>
+                <ul class="lst-spcd">
+                    <li><a href="#noTarget" class="wb-lbx">[Élément 1]</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">[Élément 2]</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">[Élément 3]</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">[Élément 4]</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">[Élément 5]</a></li>
+                </ul>
+            </div>
+            <div class="well mrgn-tp-xl nmca1-content hidden">
+                <h3 class="mrgn-tp-0">Liens connexe</h3>
+                <ul class="lst-spcd">
+                    <li><a href="#noTarget" class="wb-lbx">Observation des baleines</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Activités de découverte</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Activités de plongée</a></li>
+                </ul>
+            </div>
+            <div class="well mrgn-tp-xl park1-content hidden">
+                <h3 class="mrgn-tp-0">Liens connexe</h3>
+                <ul class="lst-spcd ">
+                    <li><a href="#noTarget" class="wb-lbx">Activités culturelles inuit</a></li>
+                    <li><a href="#noTarget" class="wb-lbx">Camping</a></li>
+                </ul>
+            </div>
+            <details class="guidance-details mrgn-bttm-lg">
+                <!-- Start generic doormat navigation guidance -->
+                <summary><strong>Directives :</strong> Liens connexes <span class="label label-success">Optionnel</span>
+                </summary>
+                <p>Utilisez les Liens connexes pour créer des liens vers du contenu susceptible d'intéresser les utilisateurs.</p>
+                <p>Il s'agit probablement de pages "sœurs", mais il peut également s'agir de pages d'autres sections ou même d'autres sites.</p>
+                <dl class="dl-horizontal">
+                    <dt>Texte du lien</dt>
+                    <dd>
+                        <ul>
+                            <li>Nombre maximum de caractères :<ul>
+                                    <li>45 caractères (espaces compris) pour les deux langues officielles (optimal)</li>
+                                    <li>Peut aller jusqu'à 75 caractères (espaces compris)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </details>
+        </section>
     </main>
-
     <!-- End main -->
     <!-- Footer include -->
     <script src="https://pc-contactweb-pc.github.io/canada/footer.js?2"></script>
@@ -185,7 +655,6 @@
             document.getElementsByTagName("main")[0].innerHTML += footerHTMLFR;
         })();
     </script>
-
     <!-- Start Treasury board Script footer -->
     <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
     <script src="https://www.canada.ca/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
@@ -194,8 +663,6 @@
     <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
     <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
     <!-- End Treasury board Script footer -->
-
-
     <!-- Geomap start -->
     <script>
         $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
@@ -218,13 +685,24 @@
                 $('#hide-guidance-toggle').addClass("active");
                 $('.guidance-details').addClass("hidden");
             });
-
             $("#show-placeholder-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
                 $("#show-placeholder-toggle").addClass("active");
                 $('.park1-content').addClass("hidden");
                 $('.nhs1-content').addClass("hidden");
+                $('.nmca1-content').addClass("hidden");
+                $('.racoons-content').addClass("hidden");
                 $('.placeholder-content').removeClass("hidden");
+                $(".wb-eqht").trigger("wb-update.wb-eqht");
+            });
+            $("#show-nmca1-toggle").click(function () {
+                $('.location-toggles').removeClass("active");
+                $("#show-nmca1-toggle").addClass("active");
+                $('.placeholder-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.park1-content').addClass("hidden");
+                $('.nmca1-content').removeClass("hidden");
+                $('.racoons-content').addClass("hidden");
                 $(".wb-eqht").trigger("wb-update.wb-eqht");
             });
             $("#show-park1-toggle").click(function () {
@@ -232,16 +710,20 @@
                 $("#show-park1-toggle").addClass("active");
                 $('.placeholder-content').addClass("hidden");
                 $('.nhs1-content').addClass("hidden");
+                $('.nmca1-content').addClass("hidden");
+                $('.racoons-content').addClass("hidden");
                 $('.park1-content').removeClass("hidden");
                 $(".wb-eqht").trigger("wb-update.wb-eqht");
-
             });
-            $("#show-nonopnhs-toggle").click(function () {
+            //racoons!//
+            $("#show-racoons-toggle").click(function () {
                 $('.location-toggles').removeClass("active");
-                $("#show-nonopnhs-toggle").addClass("active");
+                $("#show-racoons-toggle").addClass("active");
                 $('.placeholder-content').addClass("hidden");
+                $('.nhs1-content').addClass("hidden");
+                $('.nmca1-content').addClass("hidden");
                 $('.park1-content').addClass("hidden");
-                $('.nhs1-content').removeClass("hidden");
+                $('.racoons-content').removeClass("hidden");
                 $(".wb-eqht").trigger("wb-update.wb-eqht");
             });
             $("#top-bar > button.mfp-close").click(function () {
