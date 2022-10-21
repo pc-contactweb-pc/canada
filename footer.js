@@ -37,7 +37,7 @@ let footerHTML = `
                                 <li><a href="#noTarget" class="wb-lbx">National marine conservation areas</a></li>
                                 <li><a href="#noTarget" class="wb-lbx">National urban parks</a></li>
                                 <li><a href="#noTarget" class="wb-lbx">Science and conservation</a></li>
-                                <li><a href="#noTarget" class="wb-lbx">History and culture</a></li>
+                                <li><a href="#noTarget" class="wb-lbx">Culture and history</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-4">
@@ -160,7 +160,7 @@ let footerHTMLFR = `
                         <li><a href="#noTarget" class="wb-lbx">Aires marines nationales de conservation</a></li>
                         <li><a href="#noTarget" class="wb-lbx">Parcs urbains nationaux</a></li>
                         <li><a href="#noTarget" class="wb-lbx">Sciences et conservation</a></li>
-                        <li><a href="#noTarget" class="wb-lbx">Histoire et culture</a></li>
+                        <li><a href="#noTarget" class="wb-lbx">Culture et histoire</a></li>
                     </ul>
             </div>
             <div class="col-sm-4">
