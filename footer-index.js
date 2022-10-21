@@ -38,22 +38,19 @@ let footerHTML = `
                                 <li><a href="#noTarget" class="wb-lbx">National urban parks</a></li>
                                 <li><a href="#noTarget" class="wb-lbx">Science and conservation</a></li>
                                 <li><a href="#noTarget" class="wb-lbx">History and culture</a></li>
+    
                             </ul>
                         </div>
                         <div class="col-sm-4">
                             <h3 class="h2">Minister</h3>
                             <p><a href="#noTarget" class="wb-lbx">The Honourable Steven Guilbeault</a><br><small>Minister of Environment and Climate Change</small></p>
                             
-                            <h3  class="h2">Connect with us</h3>
+                            <h3  class="h2">Follow us</h3>
                             <ul class="list-unstyled list-inline nowrap text-white">
                                 <li><a class="mrgn-rght-md" href="https://www.facebook.com/parkscanada"><span class="fab fa-facebook fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Facebook</span></a></li>
                                 <li><a class="mrgn-rght-md" href="https://twitter.com/parkscanada"><span class="fab fa-twitter fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
                                 <li><a class="mrgn-rght-md" href="https://www.youtube.com/ParksCanada"><span class="fab fa-youtube fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
                                 <li><a class="mrgn-rght-md" href="https://www.instagram.com/ParksCanada"><span class="fab fa-instagram fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
-                            </ul>
-                            <ul class="list-unstyled lst-spcd">
-                            <li><a href="#noTarget" class="wb-lbx">Sign up for the newsletter</a></li>
-                            <li><a href="#noTarget" class="wb-lbx">Download the app</a></li>
                             </ul>
                         </div>
                     </div>
@@ -174,10 +171,6 @@ let footerHTMLFR = `
                     <li><a class="mrgn-rght-md" href="https://twitter.com/parcscanada"><span class="fab fa-twitter fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">Twitter</span></a></li>
                     <li><a class="mrgn-rght-md" href="https://www.youtube.com/ParcsCanada"><span class="fab fa-youtube fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
                     <li><a class="mrgn-rght-md" href="https://www.instagram.com/ParcsCanada"><span class="fab fa-instagram fa-2x follow-social" aria-hidden="true"></span><span class="wb-inv">YouTube</span></a></li>
-                </ul>
-                <ul class="list-unstyled lst-spcd">
-                <li><a href="#noTarget" class="wb-lbx">Sign up for the newsletter</a></li>
-                <li><a href="#noTarget" class="wb-lbx">Download the app</a></li>
                 </ul>
 
             </div>
