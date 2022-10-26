@@ -48,7 +48,7 @@
     </nav>
     <!-- End treasury board content -->
     <!-- Start content-en header -->
-   
+
     <header class="mrgn-tp-xl">
         <div id="wb-bnr" class="container">
             <div class="row">
@@ -96,7 +96,7 @@
                     <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
                     <li>Parka's sandbox</li>
                 </ol>
-                
+
             </div>
         </nav>
     </header>
@@ -109,13 +109,48 @@
                 <li>"renderas" can be checkbox or radio, or null/missing/default is a drop down list</li>
                 <li>"csvextract" makes it pull cell content as CSV. Otherwise it looks for / pulls the listitem in the marked column</li>
                 <li>Without a "limit" attribute set, it defaults to needing 10 items before the filter is generated</li>
-            </ul> 
+            </ul>
             <p> <a href="https://wet-boew.github.io/GCWeb/components/wb-fieldflow/fieldflow-doc-en.html">Documentation</a>.</p>
+            <div id="location_map" class="wb-geomap geolocation geocoder" data-geomap-zoom="2" data-wb-geomap='{
+                    "tables": [{
+                        "id": "events",
+                        "style": {
+                            "type": "symbol",
+                            "init": {
+                                "pointRadius": 12,
+                                "graphicName": "star",
+                                "strokeColor": "#FF0000",
+                                "fillColor": "#FF0000",
+                                "fillOpacity": 0.7
+                            }
+                        
+                            
+                        }
+                    }]
+                }'>
+                <div class="wb-geomap-map " id="myGeomap"></div> <!-- Inserted Map End -->
+            </div>
+            <!-- Inserted Layer Data Start (mandatory) -->
+            <div class="wb-geomap-layers col-md-12 wb-inv">
+                <table id="addPCLoc" aria-label="[Location name] address" class="table">
+                    <caption class="wb-inv">[Location name]</caption>
+                    <thead>
+                        <tr>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-geometry="POINT (-86.2926568 48.5902892)" data-type="wkt">
+                            <td>615 Booth St.,<br />Ottawa (ON),<br />Canada,<br />K1A 0E8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <h3>Checkbox option</h3>
             <form id="frmEvents">
 
-                <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true, "unhideelm": "#frmEvents", "srctype":"tblfilter", "source":"#events", "column":0, "defaultselectedlabel": "All the events", "label":"Filter by type of fruit:", "limit": 3, "renderas": "checkbox", "csvextract":true}'>&nbsp;</div>
+                <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true, "unhideelm": "#frmEvents", "srctype":"tblfilter", "source":"#events", "column":1, "defaultselectedlabel": "All the events", "label":"Filter by type of fruit:", "limit": 3, "renderas": "checkbox", "csvextract":true}'>&nbsp;</div>
             </form>
             <table id="events" class="table wb-tables" data-wb-tables='{ "ordering" : "false", "paging": "false" }' aria-describedby="events_info">
                 <thead>
@@ -126,31 +161,32 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr data-geometry="POINT (-86.26568 48.5902892)" data-type="wkt">
                         <td>Apple</td>
                         <td>Cat</td>
                         <td>Square</td>
                     </tr>
-                    <tr>
+                    <tr data-geometry="POINT (-86.29268 48.09809)" data-type="wkt">
                         <td>Banana</td>
                         <td>Dog</td>
                         <td>Triangle</td>
                     </tr>
-                    <tr>
+                    <tr data-geometry="POINT (-86.29126 48.14413)" data-type="wkt">
                         <td>Orange</td>
                         <td>Bat</td>
                         <td>Rectangle</td>
                     </tr>
-                    <tr>
+                    <tr data-geometry="POINT (-86.14568 48.9878)" data-type="wkt">
                         <td>Apple</td>
                         <td>Blue whale</td>
                         <td>Circle</td>
                     </tr>
-                   
+
                 </tbody>
             </table>
-<div class="clearfix"></div>
-<h3 class="mrgn-bttm-lg">Default drop down and only pull li</h3>
+           
+            <div class="clearfix"></div>
+            <h3 class="mrgn-bttm-lg">Default drop down and only pull li</h3>
             <form id="frmEvents1">
 
                 <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true, "unhideelm": "#frmEvents1", "srctype":"tblfilter", "source":"#events1", "column":0, "defaultselectedlabel": "All fruit", "label":"Filter by type of fruit:", "limit": 3, "renderas": "" }'>&nbsp;</div>
@@ -165,26 +201,42 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><p>I wish I had an: <ul><li>Apple</li></td>
+                        <td>
+                            <p>I wish I had an:
+                            <ul>
+                                <li>Apple</li>
+                        </td>
                         <td>Cat</td>
                         <td>Square</td>
                     </tr>
                     <tr>
-                        <td><p>I could eat a: <ul><li>Banana</li></td>
+                        <td>
+                            <p>I could eat a:
+                            <ul>
+                                <li>Banana</li>
+                        </td>
                         <td>Dog</td>
                         <td>Triangle</td>
                     </tr>
                     <tr>
-                        <td><p>I recently bought an: <ul><li>Orange</li></td>
+                        <td>
+                            <p>I recently bought an:
+                            <ul>
+                                <li>Orange</li>
+                        </td>
                         <td>Bat</td>
                         <td>Rectangle</td>
                     </tr>
                     <tr>
-                        <td><p>I just ate an: <ul><li>Apple</li></td>
+                        <td>
+                            <p>I just ate an:
+                            <ul>
+                                <li>Apple</li>
+                        </td>
                         <td>Blue whale</td>
                         <td>Circle</td>
                     </tr>
-                   
+
                 </tbody>
             </table>
         </div>
@@ -206,95 +258,26 @@
     <script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/wet-boew.min.js"></script>
     <script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
     <!-- End Treasury board Script footer -->
+    <!-- Update geomap on table filter -->
+    <script>
+       
+    </script>
+
     <!-- Geomap start -->
     <script>
+        let myMap = ""
         $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
             let desiredZoom = document.getElementById("location_map").getAttribute("data-geomap-zoom");
-            let myMap = map;
+            myMap = map;
             myMap.zoomToExtent(myMap.getLayer("#addPCLoc").getDataExtent(), true);
             myMap.getView().setZoom(desiredZoom);
         });
-        $(document).on("wb-ready.wb", function (event) {
-            $("#top-bar").trigger("open.wb-overlay");
-            //show guidance button
-            $("#show-guidance-toggle").click(function () {
-                $('#show-guidance-toggle').addClass("active");
-                $('#hide-guidance-toggle').removeClass("active");
-                $('.guidance-details').removeClass("hidden");
-            });
-            //hide guidance button
-            $("#hide-guidance-toggle").click(function () {
-                $('#show-guidance-toggle').removeClass("active");
-                $('#hide-guidance-toggle').addClass("active");
-                $('.guidance-details').addClass("hidden");
-            });
-            $("#show-placeholder-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-placeholder-toggle").addClass("active");
-                $('.park1-content').addClass("hidden");
-                $('.nhs1-content').addClass("hidden");
-                $('.nmca1-content').addClass("hidden");
-                $('.racoons-content').addClass("hidden");
-                $('.placeholder-content').removeClass("hidden");
-                $(".wb-eqht").trigger("wb-update.wb-eqht");
-            });
-            $("#show-nmca1-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-nmca1-toggle").addClass("active");
-                $('.placeholder-content').addClass("hidden");
-                $('.nhs1-content').addClass("hidden");
-                $('.park1-content').addClass("hidden");
-                $('.nmca1-content').removeClass("hidden");
-                $('.racoons-content').addClass("hidden");
-                $(".wb-eqht").trigger("wb-update.wb-eqht");
-            });
-            $("#show-park1-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-park1-toggle").addClass("active");
-                $('.placeholder-content').addClass("hidden");
-                $('.nhs1-content').addClass("hidden");
-                $('.nmca1-content').addClass("hidden");
-                $('.racoons-content').addClass("hidden");
-                $('.park1-content').removeClass("hidden");
-                $(".wb-eqht").trigger("wb-update.wb-eqht");
-            });
-            //racoons!//
-            $("#show-racoons-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-racoons-toggle").addClass("active");
-                $('.placeholder-content').addClass("hidden");
-                $('.nhs1-content').addClass("hidden");
-                $('.nmca1-content').addClass("hidden");
-                $('.park1-content').addClass("hidden");
-                $('.racoons-content').removeClass("hidden");
-                $(".wb-eqht").trigger("wb-update.wb-eqht");
-            });
-            /* $("#show-nonopnhs-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-nonopnhs-toggle").addClass("active");
-                $('.placeholder-content').addClass("hidden");
-                $('.nmca1-content').addClass("hidden");
-                $('.park1-content').addClass("hidden");
-                $('.nhs1-content').removeClass("hidden");
-                $(".wb-eqht").trigger("wb-update.wb-eqht");
-            }); */
-            $("#top-bar > button.mfp-close").click(function () {
-                $('header').removeClass('mrgn-tp-xl');
-            });
-            /*$("#show-nonopnhs-toggle").click(function () {
-                $('.location-toggles').removeClass("active");
-                $("#show-nonopnhs-toggle").addClass("active");
-                $('.placeholder-content').addClass("hidden");
-                $('.nmca1-content').addClass("hidden");
-                $('.park1-content').addClass("hidden");
-                $('.nhs1-content').removeClass("hidden");
-                $(".wb-eqht").trigger("wb-update.wb-eqht");
-            }); */
-            $("#top-bar > button.mfp-close").click(function () {
-                $('header').removeClass('mrgn-tp-xl');
-            });
+        $( document ).on( "tblfilter.action.wb-fieldflow",  function( event, settings ) {
+            var geomap = $( ".wb-geomap" ).get( 0 ).geomap;
+            console.log(geomap);
         });
     </script>
+   
     <style>
         /* Guidance specific scroll fixer */
         [id] {
