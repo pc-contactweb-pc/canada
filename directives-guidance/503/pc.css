@@ -1,0 +1,653 @@
+/* START Indigenous languages */
+/* Added 2022-11-16 */
+.Pigiarniq {
+    font-family: 'PigiarniqRegular'
+}
+
+@font-face {
+    font-family: 'PigiarniqRegular';
+    src: url("../fonts/pigiarniq_regular-webfont.eot");
+    src: url("../fonts/pigiarniq_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pigiarniq_regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+.Dene {
+    font-family: 'Dene'
+}
+
+@font-face {
+    font-family: 'Dene';
+    src: url("../fonts/Wm32sor.eot");
+    src: url("../fonts/Wm32sor.eot?#iefix") format("embedded-opentype"), url("../fonts/Wm32sor.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+.Aboriginal {
+    font-family: 'Aboriginal';
+    font-size: 120%;
+    line-height: 16px
+}
+
+@font-face {
+    font-family: 'Aboriginal';
+    src: url("../fonts/aboriginalsansregular.eot");
+    src: url("../fonts/aboriginalsansregular.eot?#iefix") format("embedded-opentype"), url("../fonts/aboriginalsansregular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+/* END Indigenous languages */
+
+/* FOOTER */
+
+.pc-logo {
+    height: 57px;
+    margin-bottom: 0.375em;
+}
+
+#pc-footer {
+    background-color: #2b4635;
+    border-bottom: 15px solid #ecb731;
+}
+
+    #pc-footer > *,
+    #pc-footer > *:visited,
+    #pc-footer > * > *,
+    #involved > * {
+        color: #fff !important;
+    }
+
+    #pc-footer a:link,
+    #pc-footer a:visited,
+    #pc-footer h2 {
+        color: #fff;
+    }
+
+    #pc-footer a:link,
+    #pc-footer a:visited {
+        text-decoration: underline;
+    }
+
+    #pc-footer a:hover {
+        text-decoration: none;
+    }
+
+.pc-footer a:not(:hover) {
+    text-decoration: none;
+}
+
+#pc-footer button.btn-default {
+    background-color: #ffffff;
+}
+
+
+#pc-footer h2,
+#pc-footer h3,
+#pc-footer h4,
+#pc-footer h5,
+#pc-footer h6 {
+    height: auto;
+    width: auto;
+    position: initial;
+}
+
+.pc-footer li,
+.pc-footer small,
+.pc-footer p {
+    margin-bottom: 1em;
+    line-height: 1.1em;
+}
+
+#footer-logo {
+    padding: 50px 0;
+    height: 180px;
+}
+
+
+.gcweb-menu {
+    margin-top: 0;
+}
+
+#prk-hdr {
+    background-color: #2b4635;
+    color: #FFFFFF;
+}
+
+.hdr-links > li > a {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 17px;
+    font: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: auto 20px auto 20px;
+}
+
+/*START Footer Social links Style*/
+
+ul#pc-footer-social {
+    padding-inline-start: 0;
+}
+
+@media only screen and (max-width: 992px) {
+
+    ul#pc-footer-social {
+        margin-top: 26px;
+    }
+}
+
+ul#pc-footer-social li {
+    display: inline;
+    padding-right: 25px;
+}
+
+/*END Footer Social links Style*/
+
+/*START Social widget links Style*/
+.fa-facebook-square.black,
+.fa-twitter-square.black,
+.fa-youtube-square.black {
+    color: #000000;
+}
+
+/*END Social widget links Style*/
+
+/*START Alert Notification style*/
+.alert {
+    margin: 15px auto 15px 15px;
+}
+
+/*END Alert Notification style*/
+
+/* START Custom Body Styles */
+h1 {
+    border-bottom: 3px solid #ecb731;
+}
+
+/* END Custom Body Styles */
+
+/* START Banner Styles */
+
+@media (min-width:992px) {
+    .banner-image img {
+        min-width: 1170px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width:991px) {
+    .banner-image img {
+        width: 100%;
+    }
+}
+
+.banner-image img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* END Banner Styles */
+
+/* START Img-responsive fix */
+/* Added 2022-11-16 */
+.img-responsive {
+    display: inline-block;
+}
+/* END Img-responsive fix */
+
+/* START thumbnail override */
+.thumbnail {
+    background: none;
+}
+/* END thumbnail override */
+
+/*START Button style*/
+.btn-call-to-action {
+    color: #000 !important;
+    background-color: #ecb731 !important;
+    text-shadow: none;
+    border: none;
+}
+
+    .btn-call-to-action:active,
+    .btn-call-to-action.active {
+        background-color: #d1a32d !important;
+        border-color: #bbbfc5;
+    }
+
+    .btn-call-to-action:hover,
+    .btn-call-to-action:focus,
+    .btn-call-to-action.focus,
+    .btn-call-to-action:active,
+    .btn-call-to-action.active,
+    .open > .btn-call-to-action.dropdown-toggle {
+        background-color: #ffcc66 !important;
+    }
+
+    .btn-call-to-action:hover {
+        border: none;
+    }
+
+.btn-primary {
+    background-color: #2b4635 !important;
+}
+
+    .btn-primary:active,
+    .btn-primary.active {
+        background-color: #1b2c21 !important;
+        border-color: #bbbfc5;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary.focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .btn-primary.dropdown-toggle {
+        background-color: #4e6653 !important;
+    }
+
+.btn-default {
+    color: #2b4635 !important;
+    background-color: #e7e1da !important;
+}
+
+figure.video .btn-default {
+    color: #fff !important;
+    background-color: transparent !important;
+}
+
+.btn-default:active,
+.btn-default.active {
+    background-color: #cac5c0 !important;
+    border-color: #bbbfc5;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .btn-default.dropdown-toggle {
+    background-color: #cec7bc !important;
+}
+
+/*END Button style*/
+
+/* Start icon list styling */
+div.icon-list img {
+    background-color: black;
+    width: 25px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+div.icon-list a img {
+    background-color: #00609C
+}
+
+
+div.icon-list a {
+    text-decoration: none;
+}
+
+    div.icon-list a:hover div {
+        background-color: #EAEBED;
+    }
+
+    div.icon-list a div {
+        color: #555555;
+        background-color: #FFFFFF;
+        border: #DDDDDD 1px solid;
+        border-radius: 4px;
+    }
+
+div.icon-list div {
+    padding: 10px;
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    background-color: none;
+    border: none;
+    padding-bottom: 15px;
+    margin-right: 8.3%;
+    margin-bottom: 15px;
+}
+
+div.icon-list {
+    margin-left: 0px;
+}
+
+/* End icon list styling */
+
+/*START Beta theme and topic page style*/
+.provisional.profile {
+    position: relative;
+    overflow-x: hidden;
+}
+
+    .provisional.profile .pagetag {
+        max-width: 65ch;
+    }
+
+.provisional.single-feature figcaption {
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+.provisional .thumbnail {
+    border-color: #335075;
+    border-width: 1px;
+    padding: 0px;
+}
+
+.provisional.contributors {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.provisional.from {
+    font-size: 17px;
+    margin-top: 7px;
+}
+
+.provisional.contributors ul {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: -50px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.provisional.most-requested-bullets li {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-top: 0
+}
+
+.provisional.most-requested-bullets .pddng-r-0 {
+    padding-right: 0px;
+}
+
+.provisional.most-requested-bullets h2 {
+    font-size: 1.2em;
+}
+
+.provisional.list-bld {
+    font-weight: 600;
+}
+
+.provisional.followus h2 {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.provisional.followus {
+    padding: 0;
+}
+
+    .provisional.followus h2 {
+        display: block;
+    }
+
+    .provisional.followus h2,
+    .provisional.followus ul {
+        margin-left: 0;
+    }
+
+.provisional.followus-vertical {
+    line-height: 0em;
+}
+
+.provisional.followus-vertical,
+.provisional.followus {
+    background-color: transparent;
+}
+
+    .provisional.followus-vertical a {
+        text-decoration: none;
+    }
+
+    .provisional.followus-vertical ul {
+        display: block;
+        list-style-type: none;
+        margin-block-start: 1em;
+        padding-inline-start: 1em;
+        font-size: 16px;
+        margin-block-end: 0em;
+    }
+
+        .provisional.followus-vertical ul li {
+            margin-bottom: 15px;
+        }
+
+            .provisional.followus-vertical ul li:last-child {
+                margin-bottom: 0px;
+            }
+
+            .provisional.followus-vertical ul li a {
+                border: none;
+                padding: 0px 5px;
+            }
+
+    .provisional.followus ul li a {
+        border: none;
+    }
+
+.provisional .social-lnk {
+    position: relative;
+    bottom: -18px;
+    left: 45px;
+}
+
+.provisional.followus-vertical li {
+    display: block;
+    background-position: left;
+}
+
+.provisional.followus .facebook,
+.provisional.followus .twitter,
+.provisional.followus .youtube,
+.provisional.followus .instagram {
+    display: block;
+    height: 38px;
+    width: 38px;
+}
+
+/* remove this section if you do not want the new icons */
+
+.provisional.followus .facebook {
+    background: url("https://design.canada.ca/images/social-media/facebook.png") 0 0 / cover no-repeat;
+}
+
+.provisional.followus .twitter {
+    background: url("https://design.canada.ca/images/social-media/twitter.png") 0 0 / cover no-repeat;
+}
+
+.provisional.followus .youtube {
+    background: url("https://design.canada.ca/images/social-media/youtube.png") 0 0 / cover no-repeat;
+}
+
+.provisional.followus .instagram {
+    background: url("https://design.canada.ca/images/social-media/instagram.png") 0 0 / cover no-repeat;
+}
+
+.provisional.followus .linkedin {
+    background: url("https://design.canada.ca/images/social-media/linkedin.png") 0 0 / cover no-repeat;
+}
+
+/* end of new social media icons */
+
+@media screen and (min-width: 991px) {
+    .provisional.contributors li {
+        display: inline-block;
+        margin-right: .7em;
+    }
+
+        .provisional.contributors li:first-child:before {
+            content: none;
+        }
+
+        .provisional.contributors li:before {
+            content: "\2022";
+            margin-right: .7em;
+        }
+}
+
+@media screen and (max-width: 1200px) {
+    .provisional.contributors ul {
+        margin-inline-start: -30px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .provisional.most-requested-bullets li {
+        font-size: 19px;
+    }
+
+    .provisional.contributors ul {
+        margin-inline-start: 1.5em;
+    }
+}
+
+/*END Beta theme and topic page style*/
+
+
+/*Feature set thumbnail style*/
+.feature-set div .thumbnail {
+    background: none;
+}
+
+/*START photo gallery Style*/
+.lbx-gal ul[class*=colcount-] {
+    padding-left: 0;
+}
+
+    .lbx-gal ul[class*=colcount-] li {
+        margin-left: 0;
+    }
+
+/*END photo gallery Style*/
+
+/*START location search Style*/
+#locationSearch .mapLabel {
+    font-size: 16px;
+    line-height: 23px;
+}
+#locationSearch .legendLabel {
+    padding-left: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+#locationSearch .geomap-lgnd-layer div {
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+#siteNameSearch .form-group label {
+    font-size: 16px;
+    line-height: 23px;
+}
+
+#siteNameSearch .form-group #searchByName {
+    width: 100%;
+}
+/*END location search Style*/
+
+
+/*START This week history archive list*/
+.history-search-wrapper ul {
+    list-style: none !important;
+}
+.history-search-wrapper .image-block {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    margin-bottom: 20px
+}
+/*END This week history archive list*/
+
+/*START This week history details*/
+.history-date-stamp {
+    font-size: 14px;
+    color: #6c6c6c;
+    display: block;
+    margin-bottom: 10px
+}
+
+.history-content-top-wrapper .image-wrapper, .history-content-bottom-wrapper .image-wrapper {
+    margin-bottom: 10px
+}
+
+    .history-content-top-wrapper .image-wrapper.pull-left, .history-content-top-wrapper .image-wrapper.pull-right, .history-content-bottom-wrapper .image-wrapper.pull-left, .history-content-bottom-wrapper .image-wrapper.pull-right {
+        width: 33.3%
+    }
+
+    .history-content-top-wrapper .image-wrapper figure img, .history-content-bottom-wrapper .image-wrapper figure img {
+        width: 100%
+    }
+
+    .history-content-top-wrapper .image-wrapper figure figcaption .copyright, .history-content-bottom-wrapper .image-wrapper figure figcaption .copyright {
+        display: block
+    }
+
+.history-content-top-wrapper table, .history-content-bottom-wrapper table {
+    margin-bottom: 10px
+}
+
+    .history-content-top-wrapper table tbody tr td img, .history-content-bottom-wrapper table tbody tr td img {
+        width: 100%
+    }
+
+    .history-content-top-wrapper table tbody tr:last-child, .history-content-bottom-wrapper table tbody tr:last-child {
+        font-size: 87%;
+        line-height: 18px
+    }
+
+        .history-content-top-wrapper table tbody tr:last-child td .caption, .history-content-top-wrapper table tbody tr:last-child td .copyright, .history-content-bottom-wrapper table tbody tr:last-child td .caption, .history-content-bottom-wrapper table tbody tr:last-child td .copyright {
+            display: block
+        }
+
+        .history-content-top-wrapper table tbody tr:last-child td br, .history-content-bottom-wrapper table tbody tr:last-child td br {
+            display: none
+        }
+
+    .history-content-top-wrapper table[align="left"], .history-content-bottom-wrapper table[align="left"] {
+        margin-right: 15px
+    }
+
+    .history-content-top-wrapper table[align="right"], .history-content-bottom-wrapper table[align="right"] {
+        margin-left: 15px
+    }
+
+.spacer {
+    width: 0px;
+    float: right
+}
+
+.history-content-top-wrapper .pull-left.image-wrapper, .history-content-bottom-wrapper .pull-left.image-wrapper {
+    padding-left: 0;
+    padding-right: 15px;
+    margin-right: 15px
+}
+
+.history-content-top-wrapper .pull-right.image-wrapper, .history-content-bottom-wrapper .pull-right.image-wrapper {
+    padding-right: 0;
+    padding-left: 15px;
+    margin-left: 15px
+}
+
+.history-content-top-wrapper .bottom-image {
+    box-sizing: border-box;
+    clear: right
+}
+
+/*END This week history details*/

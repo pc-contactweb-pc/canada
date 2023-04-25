@@ -1,0 +1,221 @@
+﻿.bg-pn-np {
+    /*Not used yet */
+    background-color: #55833b;
+}
+
+.bg-hg {
+    /* Rename to bg-heritage-green for more semantic? */
+    background-color: #2b4635;
+}
+
+.bg-accent {
+    background-color: #f8f8f8;
+}
+
+.bg-white {
+    background-color: #ffff;
+}
+
+.pc-h1-brass {
+    /* Combine this with .pc-brdr-brass? */
+    border-bottom-color: #ecb731;
+    border-bottom-width: medium;
+}
+
+/* Pukaskwa mockup css */
+.pc-brdr-brass {
+    border-color: #ecb731;
+}
+
+.pc-brdr-grey {
+    border-color: #d1d1d1;
+}
+
+.pc-brdr-bttm-md {
+    border-bottom-width: 5px;
+}
+
+.sites-nearby-list h3, .sites-nearby-list p {
+    margin-left: 15px;
+    margin-right: 15px;
+    /* Simulate mrgn-lft-md on sites nearby h3 and p */
+}
+
+    .sites-nearby-list h3 a:not(:hover) {
+        text-decoration: none;
+    }
+
+/* Nearby site image hover effect */
+.sites-nearby-list img:hover {
+    filter: brightness(90%);
+}
+
+.sites-nearby-list img {
+    transition: filter 500ms;
+}
+
+/* Feature tile image hover effect */
+.pc-feature img:hover {
+    filter: brightness(90%);
+}
+
+.pc-feature img {
+    transition: filter 500ms;
+}
+
+.pc-footer h2 a:not(:hover) {
+    text-decoration: none;
+}
+
+
+.pc-footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1em solid #ecb731;
+}
+
+    .pc-footer :is(a, h2, h3, li, small) {
+        color: #fff;
+    }
+
+
+    .pc-footer h3 a:not(:hover) {
+        text-decoration: none;
+    }
+
+    .pc-footer :is(h2, h3) {
+        margin-bottom: 20px;
+    }
+
+.pc-footer-list {
+    padding-right: 25px;
+}
+
+.btn-footer {
+    color: #2b4635 !important;
+    background-color: #fff;
+    border-radius: 0px;
+}
+
+    .btn-footer:hover {
+        background-color: rgba(255, 255, 255, 0.616);
+        animation-duration: 50ms;
+    }
+
+.pc-logo {
+    /* Extracted from .brand img (GoC signature) in theme.min.css */
+    height: auto;
+    max-height: 50px;
+    /* GoC logo is max-height:40px, but 50px looked better to me - DM */
+    margin-bottom: .375em;
+}
+
+/* End Pukaskwa mockup css */
+
+.pc-banner-logo {
+    max-height: 30px;
+}
+/* Banner image */
+.pc-banner:not([data-bgimg=""]) {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: white;
+    background-blend-mode: multiply;
+    background-color: gray;
+}
+@media screen and (min-width: 991px) {
+    .pc-banner:not([data-bgimg=""]) {
+        min-height: 350px;
+    }
+}
+
+
+
+
+.pc-banner p {
+    max-width: 65ch;
+}
+
+/* 
+#topcontent {
+    
+} */
+.white-well {
+    background-color: #fff;
+}
+
+/* 404 */
+img.banner-404-image {
+    filter: brightness(50%);
+    width: 99vw;
+    /* TODO: Decide how we want to handle >1920 screen widths. Currently, without the max-width below the img expands up and over the breadcrumb/top content */
+    max-width: 1920px;
+    max-height: 600px;
+    background-color: #2b4635;
+}
+
+div.banner-404-text {
+    position: absolute;
+    top: 25%;
+    transform: translate(0%, -50%);
+}
+
+    div.banner-404-text h2 {
+        max-width: 35ch;
+    }
+
+div.banner-404-description {
+    position: absolute;
+    right: 5%;
+    bottom: 0%;
+}
+
+div.banner-404-container {
+    max-height: 660px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+div.park-hero-description {
+    position: absolute;
+    right: 5%;
+
+}
+
+/* Reservation page */
+.reservation-icon {
+    width: 25px;
+    margin-bottom: 5px;
+}
+
+.reservation-table th {
+    width: 20%
+}
+
+.reservation-hide-md {
+    display: none;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 991px) {
+    .reservation-hide-md {
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .reservation-name {
+        display: block !important;
+    }
+}
+
+/* Heading colours based on Gabe's mockups */
+
+/* h2, h3, h4, h5, h6 {
+    color: #405849
+} */
