@@ -50,11 +50,11 @@ var wet_boew_geomap = {
       type: "esritile",
       url: "//services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0",
       params: { LAYERS: "show:0" },
-      visible: !1,
-      datatable: !1,
+      visible: 1,
+      datatable: 1,
       options: {
         legendHTML:
-          "<ul class='list-unstyled'><li><small>Weather Station</small><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFZJREFUOI3t0TEKwDAMQ1F9yIFzlN5YHUqgpOA2TZaANdnLQ9hFi1MSTPCKbbcZYAq0bWq3B2gI9pgkUWN086cAPG54xI95bdjQ+/674VdkGBxJgvM5AZAOH6jK5pnSAAAAAElFTkSuQmCC'></li></ul>",
+          "<p>PCA</p>",
       },
     },
 
