@@ -181,6 +181,213 @@
             </div>
         </section>
 
+<!-- LOCATION FINDER A -->
+
+<section style="margin-top:80px;background: #2b4635;position: relative;">
+<div class="section-bg" style="
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.veterans.gc.ca/images/homepage_2019/compass-benefitnav-01.png);
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: .1;
+    background-size: 38%;
+    /* transform: rotate(180deg); */
+"></div>
+            <!-- Start of location finder -->
+            <div class="container">
+                <div id="locationSearch" class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-12 scEnabledChrome" style="padding-left:15px;/* background: #2b4635; */color: #fff;/* border-bottom: 1em solid #ecb731; */" sc-part-of="placeholder rendering">
+                    <h3 style="
+    border-bottom: 3px solid var(--brass);
+    margin-top: 44px;
+">Find a Parks Canada location</h3>
+                    <p>Parks Canada administers 171 national historic sites, 48 national parks, 5 national marine conservation areas, and 1 national urban park.</p>
+                    <p>An explanation of how this tool works and that the map is related to search text.</p>
+
+                    <div class="nojs-show">
+                        <p><a href="#noTarget" class="wb-lbx wb-init wb-lbx-inited">Find a Parks Canada location</a></p>
+                    </div>
+                    <!-- GeomapStart -->
+                    <script src="https://pc-contactweb-pc.github.io/canada/institutional-landing-page/index_files/i18n/en.min.js"></script><script>
+                        $(document).ready(function () {
+                            if ($("#siteNameSearch").length == 1) {
+                                var $document = wb.doc,
+                                    searchByNameInput = $("#searchByName");
+
+                                searchByNameInput.trigger("wb-update.wb-datalist");
+                                $document.on("change", "#searchByName", function (event) {
+                                    var locationTargetValue = event.target.value.replace(/[^a-z0-9+]+/gi, '');
+                                    var locationTarget = $('#siteSearch li[locationtarget="' + locationTargetValue + '"]');
+                                    if (locationTarget.length) {
+                                        var provSelect = $('#siteSearch').find('select').first();
+                                        $.when($(provSelect).val($(locationTarget).attr('province')).change()).done(function () {
+                                            var itemSelect = $('#siteSearch').find('select').eq(1);
+                                            $(itemSelect).val(event.target.value).change()
+                                        });
+                                        return;
+                                    }
+                                    //default map canada
+                                    $('#location_map_reset').click();
+                                });
+                            }
+                            if ($("#siteSearch").length == 1) {
+                                $("body").on("change", "#siteSearch select", function () {
+                                    var form = $(this).closest('form');
+                                    var provinceItem = form.find('select').filter(':visible:first');
+                                    var provinceChange = $(this).attr("id") == provinceItem.attr("id");
+                                    var province = $(provinceItem).find(":selected").val();
+                                    if (province != null)
+                                        province = province.trim();
+
+                                    var location = form.find('select').filter(':visible:last').find(":selected").val();
+                                    if (location != null)
+                                        location = location.trim();
+
+                                    if (province == null || province == '') {
+                                        //no selection default map canada
+                                        $('#location_map_reset').click();
+                                    } else if (!provinceChange && location != '' && location != province) {
+                                        //if location change - map location
+                                        var locationTargetValue = location.replace(/[^a-z0-9+]+/gi, '');
+                                        var locationTarget = $('.locationTable tr[locationtarget="' + locationTargetValue + '"]');
+                                        if (locationTarget.length && $(locationTarget).find('a[data-map="location_map"]').length) {
+                                            $(locationTarget).find('a[data-map="location_map"]').click();
+                                        } else {
+                                            //if can't find location target - map province
+                                            $("#gm_province option").filter(function () {
+                                                //may want to use $.trim in here
+                                                return $(this).text() == province;
+                                            }).prop('selected', true);
+                                            $('#location_map_submit').click();
+                                        }
+                                    } else {
+                                        //if province change - map province
+                                        $("#gm_province option").filter(function () {
+                                            //may want to use $.trim in here
+                                            return $(this).text() == province;
+                                        }).prop('selected', true);
+                                        $('#location_map_submit').click();
+                                    }
+                                });
+                            }
+                        });
+                    </script>
+                    <!--        <label class="mapLabel" for="location_map">Search on map</label>  -->
+                    <div class="row mrgn-tp-md mrgn-bttm-lg">
+                        <div class="col-sm-12">
+<div class="row">
+<div class="col-md-6">
+    <div id="siteNameSearch" class="nojs-hide show-load mrgn-tp-sm mrgn-bttm-lg">
+                                <div class="form-group">
+                                    <label for="searchByName">Search by name</label>
+                                    <input class="form-control" type="text" id="searchByName" name="searchByName" list="searchByNames" placeholder="Type a location name" style="
+    margin-top: 7px;
+    height: 43px;
+">
+                                </div>
+                                
+                            </div>
+</div>
+<div class="col-md-6">
+    <div id="siteNameSearch" class="nojs-hide show-load mrgn-tp-sm mrgn-bttm-sm">
+                                <div class="form-group">
+                                    <label for="searchByName">Filter by province &amp; territory</label>
+<ul class="province-search">
+  <li>AB</li>
+  <li>BC</li>
+  <li>MB</li>
+  <li>NB</li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+
+                                    
+                                </div>
+                                
+                            </div>
+</div></div>
+    
+                            <div id="location_map" class="wb-geomap wb-init wb-geomap-inited">
+                                <div class="row">
+
+                                    <!-- Insert Legend Start (optional) -->
+                                    <section class="col-md-6 pull-right form-group" style="
+    /* overflow: auto; */
+    /* height: 450px; */
+    /* background: rgba(0,0,0,0.2); */
+">
+                                        <section>
+                        <div class="mrgn-bttm-0">
+                            
+                            
+                        </div>
+                                            <div id="location-results" style="
+    overflow: auto;
+    height: 450px;
+    /* padding-left: 10px; */
+    background: rgb(34 56 42);
+">
+<div class="location-result">
+<h6 class="mrgn-tp-md">Parka National Park</h6>
+<p>This is a description</p>
+</div>
+<div class="location-result">
+<h6 class="mrgn-tp-md">Parka National Historic Site</h6>
+<p>This is a description</p>
+</div><div class="location-result">
+<h6 class="mrgn-tp-md">Parka National Marine Conservation Area</h6>
+<p>This is a description</p>
+</div><div class="location-result">
+<h6 class="mrgn-tp-md">Parka National Park</h6>
+<p>This is a description</p>
+</div><div class="location-result">
+<h6 class="mrgn-tp-md">Parka National Historic Site</h6>
+<p>This is a description</p>
+</div>
+<div class="location-result">
+<h6 class="mrgn-tp-md">Parka National Park</h6>
+<p>This is a description</p>
+</div></div></section>
+
+                                        
+                                        
+                                    </section>
+                                    <!-- Insert Legend End -->
+
+                                    <div class="col-md-6" style="
+    overflow: visible;
+">
+                                        <!-- Insert Map Start (mandatory) -->
+                                        <div class="wb-geomap-map" id="geomap-map-location_map" tabindex="0" data-map="location_map" style="height: 450px;width: 569px;background-color: darkseagreen;">
+                                        
+                                        </div>
+                                        <!-- Insert Map End -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GeomapEnd -->
+
+
+                </div>
+        </div></section>
+
+<!-- LOCATION FINDER B -->
+
+
         <section style="margin-top:80px;">
 
             <!-- Start of location finder -->
