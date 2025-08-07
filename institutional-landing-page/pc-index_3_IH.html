@@ -185,7 +185,7 @@
 
             <!-- Start of location finder -->
             <div class="container">
-                <div id="locationSearch" class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-12 thumbnail scEnabledChrome" style="padding-left:15px;" sc-part-of="placeholder rendering">
+                <div id="locationSearch" class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-12 thumbnail scEnabledChrome" style="padding-left:15px;background:#eee" sc-part-of="placeholder rendering">
                     <h3>Find a Parks Canada location</h3>
                     <p>Parks Canada administers 171 national historic sites, 48 national parks, 5 national marine conservation areas, and 1 national urban park.</p>
                     <p>An explanation of how this tool works and that the map is related to search text.</p>
@@ -259,7 +259,7 @@
                         });
                     </script>
                     <!--        <label class="mapLabel" for="location_map">Search on map</label>  -->
-                    <div class="row">
+                    <div class="row mrgn-tp-lg mrgn-bttm-md">
                         <div class="col-sm-12">
                             <div id="location_map" class="wb-geomap wb-init wb-geomap-inited">
                                 <div class="row">
@@ -268,14 +268,13 @@
                                     <section class="col-md-4 form-group">
                                         <section class="mrgn-tp-lg">
                         <div class="mrgn-bttm-0">
-                            <div id="siteNameSearch" class="nojs-hide show-load mrgn-tp-sm">
+                            <div id="siteNameSearch" class="nojs-hide show-load mrgn-tp-sm mrgn-bttm-lg">
                                 <div class="form-group">
                                     <label for="searchByName">Search by name</label>
                                     <input class="form-control" type="text" id="searchByName" name="searchByName" list="searchByNames" placeholder="Type a location name">
                                 </div>
                                 
                             </div>
-                            <hr>
                             <div class="wb-frmvld nojs-hide show-load wb-init wb-frmvld-inited wb-fieldflow-form" id="wb-auto-3">
                                 <form method="get" id="siteSearch" novalidate="novalidate">
                                     
@@ -329,58 +328,17 @@
                             </div>
                         </div>
 </section>
-                                        <label class="legendLabel" for="wb-geomap-legend">Toggle the display of:</label>
+<hr class="mrgn-tp-lg" style="border-top: 1px solid #ddd">
+                                        <label class="legendLabel" for="wb-geomap-legend" style="padding-left:0;">Toggle the display of:</label>
                                         <div class="wb-geomap-legend col-md-12" id="geomap-legend-location_map">
                                             <fieldset name="legend">
                                                 <legend class="wb-inv">Toggle the display of the layer</legend>
                                                 <ul class="list-unstyled geomap-lgnd">
                                                     <li class="checkbox geomap-lgnd-layer"><label for="cb_locationsHistoric"><input type="checkbox" id="cb_locationsHistoric" class="geomap-lgnd-cbx" value="locationsHistoric" data-map="location_map" data-layer="locationsHistoric">National historic sites</label>
-                                                        <div id="sb_locationsHistoric">
-                                                            <ul class="list-unstyled">
-                                                                <li>
-                                                                    <div class="geomap-legend-element">
-                                                                        <div id="ls_locationsHistoric_0" class="geomap-legend-symbol" style="width: 25px; height: 40px;">
-                                                                            <div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%; touch-action: none;"><canvas class="ol-unselectable" style="width: 100%; height: 100%;" width="22" height="36"></canvas>
-                                                                                <div class="ol-overlaycontainer"></div>
-                                                                                <div class="ol-overlaycontainer-stopevent"></div>
-                                                                            </div>
-                                                                        </div><span class="geomap-legend-symbol-text"><small> </small></span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
                                                     </li>
                                                     <li class="checkbox geomap-lgnd-layer"><label for="cb_locationsMarine"><input type="checkbox" id="cb_locationsMarine" class="geomap-lgnd-cbx" value="locationsMarine" data-map="location_map" data-layer="locationsMarine">National marine conservation areas</label>
-                                                        <div id="sb_locationsMarine">
-                                                            <ul class="list-unstyled">
-                                                                <li>
-                                                                    <div class="geomap-legend-element">
-                                                                        <div id="ls_locationsMarine_0" class="geomap-legend-symbol" style="width: 25px; height: 40px;">
-                                                                            <div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%; touch-action: none;"><canvas class="ol-unselectable" style="width: 100%; height: 100%;" width="22" height="36"></canvas>
-                                                                                <div class="ol-overlaycontainer"></div>
-                                                                                <div class="ol-overlaycontainer-stopevent"></div>
-                                                                            </div>
-                                                                        </div><span class="geomap-legend-symbol-text"><small> </small></span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
                                                     </li>
                                                     <li class="checkbox geomap-lgnd-layer"><label for="cb_locationsParks"><input type="checkbox" id="cb_locationsParks" class="geomap-lgnd-cbx" value="locationsParks" data-map="location_map" data-layer="locationsParks">National parks</label>
-                                                        <div id="sb_locationsParks">
-                                                            <ul class="list-unstyled">
-                                                                <li>
-                                                                    <div class="geomap-legend-element">
-                                                                        <div id="ls_locationsParks_0" class="geomap-legend-symbol" style="width: 25px; height: 40px;">
-                                                                            <div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%; touch-action: none;"><canvas class="ol-unselectable" width="22" height="36" style="width: 100%; height: 100%;"></canvas>
-                                                                                <div class="ol-overlaycontainer"></div>
-                                                                                <div class="ol-overlaycontainer-stopevent"></div>
-                                                                            </div>
-                                                                        </div><span class="geomap-legend-symbol-text"><small> </small></span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
                                                     </li>
                                                 </ul>
                                             </fieldset>
@@ -390,7 +348,7 @@
 
                                     <div class="col-md-8">
                                         <!-- Insert Map Start (mandatory) -->
-                                        <div class="wb-geomap-map" id="geomap-map-location_map" tabindex="0" data-map="location_map"style="height: 588px;background-color:darkseagreen;">
+                                        <div class="wb-geomap-map" id="geomap-map-location_map" tabindex="0" data-map="location_map"style="height: 450px;background-color:aliceblue;">
                                         
                                         </div>
                                         <!-- Insert Map End -->
