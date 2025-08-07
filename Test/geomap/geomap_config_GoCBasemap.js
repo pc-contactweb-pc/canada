@@ -28,7 +28,35 @@ var wet_boew_geomap = {
             options: {
                 opacity: 0.5
             }
-        }
+        },
+        {
+      title: "Esri REST Tile Layer",
+      caption:
+        "This is a sample dataset loaded from a remote Esri REST tile service.",
+      type: "esritile",
+      url: "//maps-cartes.services.geo.ca/server_serveur/rest/services/NRCan/Carte_climatique_HOT2000_Climate_Map_EN/MapServer/",
+      params: { LAYERS: "show:0" },
+      visible: !1,
+      datatable: !1,
+      options: {
+        legendHTML:
+          "<ul class='list-unstyled'><li><small>Weather Station</small><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFZJREFUOI3t0TEKwDAMQ1F9yIFzlN5YHUqgpOA2TZaANdnLQ9hFi1MSTPCKbbcZYAq0bWq3B2gI9pgkUWN086cAPG54xI95bdjQ+/674VdkGBxJgvM5AZAOH6jK5pnSAAAAAElFTkSuQmCC'></li></ul>",
+      },
+    },
+    {
+      title: "Test PCA",
+      caption:
+        "This is a test.",
+      type: "esritile",
+      url: "//services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0",
+      params: { LAYERS: "show:0" },
+      visible: !1,
+      datatable: !1,
+      options: {
+        legendHTML:
+          "<ul class='list-unstyled'><li><small>Weather Station</small><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFZJREFUOI3t0TEKwDAMQ1F9yIFzlN5YHUqgpOA2TZaANdnLQ9hFi1MSTPCKbbcZYAq0bWq3B2gI9pgkUWN086cAPG54xI95bdjQ+/674VdkGBxJgvM5AZAOH6jK5pnSAAAAAElFTkSuQmCC'></li></ul>",
+      },
+    },
 
     ]
 };
