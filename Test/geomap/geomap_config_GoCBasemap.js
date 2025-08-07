@@ -56,7 +56,7 @@ var wet_boew_geomap = {
         legendHTML:
           "<p>PCA</p>",
       },
-    },
+    }
 
     ]
 };
