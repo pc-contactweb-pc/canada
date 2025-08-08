@@ -22,14 +22,19 @@ var wet_boew_geomap = {
             type: 'geojson',
             url: 'https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson',
             visible: true,
-             datatable: !0,
-           
+            datatable: !0,
+
             attributes: {
-                PLACE_TYPE_E: { path: 'properties', alias: 'Category' },
-                DESC_EN: { path: 'properties', alias: 'Park_Name' }
+                PLACE_TYPE_E: { path: 'properties', alias: 'Category' }
+                // DESC_EN: { path: 'properties', alias: 'Park_Name' }
             },
             style: {
-                type: 'unique',
+
+                'strokeColor': '#ff0000',
+                'fillColor': '#ff0000',
+                'fillOpacity': '0.4'
+
+                /*type: 'unique',
                 field: 'PLACE_TYPE_E',
                 init: {
                     'National Park': {
@@ -46,6 +51,7 @@ var wet_boew_geomap = {
                     }
                 },
                 select: { fillColor: '#990000', fillOpacity: 0.8, strokeWidth: 1 }
+                */
             }
 
         }
