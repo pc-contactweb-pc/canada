@@ -60,13 +60,12 @@ var wet_boew_geomap = {
                         field: "Type",
                         value: ["National Park"],
                         filter: "EQUAL_TO",
-                        name: "National Park",
                         init: {
                             strokeColor: "#0c3817ff",
                             fillColor: "#125e25ff",
                             fillOpacity: 0.8,
                             strokeWidth: 1
-                        },
+                        }
                     }
                 ]
             }
