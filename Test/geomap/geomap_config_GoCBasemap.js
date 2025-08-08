@@ -53,27 +53,23 @@ var wet_boew_geomap = {
                 PLACE_TYPE_E: { path: "properties", alias: "Category" }
             },
             style: {
-                type: "rule",
-                rule: [
-                    {
-                        field: "Category",
-                        value: ["National Park"],
-                        filter: "EQUAL_TO",
-                        name: "National Parks",
-                        init: {
-                            strokeColor: "#0c3817ff",
-                            fillColor: "#125e25ff",
-                            fillOpacity: 0.8,
-                            strokeWidth: 1
-                        },
-                    }
-                ]
+                type: "unique",
+                fied: "Category",
+                init: {
+                    "National Park": { "fillColor": "#125e25ff" },
+                    "National Park Reserve": { "fillColor": "#125e25ff" },
+                    "National Marine Conservation Area": { "fillColor": "#2816caff" },
+                    "National Marine Conservation Area Reserve": { "fillColor": "#2816caff" },
+                    "null": { "fillColor": "#49125eff" }
+
+                }
             }
         }
 
     ]
 };
 //{"id" : "points-table-blank-example","zoom" : true,"tooltips" : true,"tooltipText" : "Name","popups" : true,"popupsInfo" : { "content" : "<h4>_Name</h4><p>_Description</p>" },"style" : { "type" : "rule", "rule" : [{ "field": "Category", "value": ["Location 1"], "filter": "EQUAL_TO", "init": { "externalGraphic": "https://parks.canada.ca/-/media/WET4/iconographie-icons/carte-map/geomatic/geomap_square-1.png", "graphicWidth": 35, "graphicHeight": 35, "fillOpacity": 1 } },]}}
+
 
 /*
 {
