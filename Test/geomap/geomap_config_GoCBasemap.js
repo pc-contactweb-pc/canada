@@ -62,7 +62,8 @@ var wet_boew_geomap = {
                     'National Marine Conservation Area Reserve': { 'fillColor': '#2816caff' },
                     'null': { 'fillColor': '#49125eff' }
 
-                }
+                },
+                select: { 'fillColor': '#990000', 'label': '${ Category }' }
             }
         }
 
