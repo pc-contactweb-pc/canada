@@ -15,7 +15,50 @@ var wet_boew_geomap = {
         }
     },
     overlays: [
+
         {
+            title: 'Parks Canada Areas',
+            caption: 'National Parks, Reserves & Marine Conservation Areas administered by Parks Canada',
+            type: 'geojson',
+            url: 'https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson',
+            visible: true,
+            attributes: {
+                PLACE_TYPE_E: { path: 'properties', alias: 'Category' }
+            },
+            style: {
+                type: 'unique',
+                fied: 'PLACE_TYPE_E',
+                init: {
+                    'National Park': {
+                        'fillColor': '#125e25ff', 'fillOpacity': 0.8,
+                        'strokeWidth': 1,
+                    },
+                    'National Park Reserve': {
+                        'fillColor': '#125e25ff', 'fillOpacity': 0.8,
+                        'strokeWidth': 1,
+                    },
+                    'National Marine Conservation Area': {
+                        'fillColor': '#2816caff', 'fillOpacity': 0.8,
+                        'strokeWidth': 1,
+                    },
+                    'National Marine Conservation Area Reserve': {
+                        'fillColor': '#2816caff', 'fillOpacity': 0.8,
+                        'strokeWidth': 1,
+                    },
+                    'null': {
+                        'fillColor': '#49125eff', 'fillOpacity': 0.8,
+                        'strokeWidth': 1,
+                    }
+
+                },
+                select: { 'fillColor': '#990000', 'label': '${ Category }' }
+            }
+        }
+
+    ]
+};
+
+/* {
             title: 'WMS Demo',
             caption: 'This is a sample WMS service loaded by Geomap.',
             type: 'wms',
@@ -43,32 +86,7 @@ var wet_boew_geomap = {
                     "<ul class='list-unstyled'><li><small>Weather Station</small><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFZJREFUOI3t0TEKwDAMQ1F9yIFzlN5YHUqgpOA2TZaANdnLQ9hFi1MSTPCKbbcZYAq0bWq3B2gI9pgkUWN086cAPG54xI95bdjQ+/674VdkGBxJgvM5AZAOH6jK5pnSAAAAAElFTkSuQmCC'></li></ul>",
             }
         },
-        {
-            title: 'Parks Canada Areas',
-            caption: 'National Parks, Reserves & Marine Conservation Areas administered by Parks Canada',
-            type: 'geojson',
-            url: 'https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson',
-            visible: true,
-            attributes: {
-                PLACE_TYPE_E: { path: 'properties', alias: 'Category' }
-            },
-            style: {
-                type: 'unique',
-                fied: 'PLACE_TYPE_E',
-                init: {
-                    'National Park': { 'fillColor': '#125e25ff' },
-                    'National Park Reserve': { 'fillColor': '#125e25ff' },
-                    'National Marine Conservation Area': { 'fillColor': '#2816caff' },
-                    'National Marine Conservation Area Reserve': { 'fillColor': '#2816caff' },
-                    'null': { 'fillColor': '#49125eff' }
-
-                },
-                select: { 'fillColor': '#990000', 'label': '${ Category }' }
-            }
-        }
-
-    ]
-};
+        */
 //{'id' : 'points-table-blank-example','zoom' : true,'tooltips' : true,'tooltipText' : 'Name','popups' : true,'popupsInfo' : { 'content' : '<h4>_Name</h4><p>_Description</p>' },'style' : { 'type' : 'rule', 'rule' : [{ 'field': 'Category', 'value': ['Location 1'], 'filter': 'EQUAL_TO', 'init': { 'externalGraphic': 'https://parks.canada.ca/-/media/WET4/iconographie-icons/carte-map/geomatic/geomap_square-1.png', 'graphicWidth': 35, 'graphicHeight': 35, 'fillOpacity': 1 } },]}}
 
 
