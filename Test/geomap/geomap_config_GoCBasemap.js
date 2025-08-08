@@ -60,7 +60,7 @@ var wet_boew_geomap = {
                         field: "Category",
                         value: ["Wapusk National Park of Canada"],
                         filter: "EQUAL_TO",
-                        name: "National Parks",
+                        name: "Wapusk",
                         init: {
                             strokeColor: "#0c3817ff",
                             fillColor: "#125e25ff",
