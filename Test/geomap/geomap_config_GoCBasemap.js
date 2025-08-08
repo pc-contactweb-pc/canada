@@ -48,7 +48,8 @@ var wet_boew_geomap = {
                         fillColor: '#2816ca', fillOpacity: '0.8', strokeWidth: '1'
                     }
                 },
-                select: { fillColor: '#000000', fillOpacity: '0.8', strokeWidth: '1' }
+                select: { fillColor: '#000000', fillOpacity: '0.8', strokeWidth: '1' },
+                default: { fillColor: '#000000', fillOpacity: '0.8', strokeWidth: '1' }
             }
 
         }
