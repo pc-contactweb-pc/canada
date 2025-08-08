@@ -138,11 +138,19 @@
                     </style> -->
                 </div>
                 <script>
-
-                    document.addEventListener("DOMContentLoaded", (event) => {
-                        geomap.map.updateSize();
+                    document.addEventListener("DOMContentLoaded", () => {
+                        setTimeout(() => {
+                            const geomapInstance = $('#geomap').data('geomap');
+                            if (geomapInstance && geomapInstance.map) {
+                                geomapInstance.map.updateSize();
+                                geomapInstance.map.layers.forEach(layer => {
+                                    if (layer.redraw) layer.redraw(true);
+                                });
+                            } else {
+                                console.warn('Geomap instance or map not found yet.');
+                            }
+                        }, 500);
                     });
-
                 </script>
         </section>
 
