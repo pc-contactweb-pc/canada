@@ -22,11 +22,17 @@ var wet_boew_geomap = {
             type: 'geojson',
             url: 'https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson',
             visible: true,
+           
             attributes: {
                 PLACE_TYPE_E: { path: 'properties', alias: 'Category' },
                 DESC_EN: { path: 'properties', alias: 'Park_Name' }
             },
-            datatable: true,
+             datatable: {
+                columns: [
+                    { data: 'Category', title: 'Category' },
+                    { data: 'Park_Name', title: 'Park Name' }
+                ]
+            },
             style: {
                 type: 'unique',
                 field: 'PLACE_TYPE_E',
@@ -44,7 +50,7 @@ var wet_boew_geomap = {
                         fillColor: '#2816caff', fillOpacity: 0.8, strokeWidth: 1
                     }
                 },
-                select: { fillColor: '#990000',  fillOpacity: 0.8, strokeWidth: 1 }
+                select: { fillColor: '#990000', fillOpacity: 0.8, strokeWidth: 1 }
             }
 
         }
