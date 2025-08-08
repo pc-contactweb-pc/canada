@@ -138,9 +138,11 @@
                     </style> -->
                 </div>
                 <script>
-                    $(document).on("wb-ready.wb-geomap", ".wb-geomap", function (event, map) {
+
+                    document.addEventListener("DOMContentLoaded", (event) => {
                         geomap.map.updateSize();
                     });
+
                 </script>
         </section>
 
