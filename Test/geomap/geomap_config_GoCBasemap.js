@@ -50,22 +50,23 @@ var wet_boew_geomap = {
             url: "https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson",
             visible: true,
             attributes: {
-                PLACE_TYPE_E: { path: "properties", alias: "Type" },
+                PLACE_TYPE_E: { path: "properties", alias: "Category" },
                 DESC_EN: { path: "properties", alias: "Title" }
             },
             style: {
                 type: "rule",
                 rule: [
                     {
-                        field: "Type",
+                        field: "Category",
                         value: ["National Park"],
                         filter: "EQUAL_TO",
+                        name: "National Parks",
                         init: {
                             strokeColor: "#0c3817ff",
                             fillColor: "#125e25ff",
                             fillOpacity: 0.8,
                             strokeWidth: 1
-                        }
+                        },
                     }
                 ]
             }
