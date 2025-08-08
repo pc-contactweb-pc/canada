@@ -27,7 +27,7 @@ var wet_boew_geomap = {
             },
             style: {
                 type: 'unique',
-                fied: 'PLACE_TYPE_E',
+                field: 'PLACE_TYPE_E',
                 init: {
                     'National Park': {
                         'fillColor': '#125e25ff', 'fillOpacity': 0.8,
@@ -45,12 +45,10 @@ var wet_boew_geomap = {
                         'fillColor': '#2816caff', 'fillOpacity': 0.8,
                         'strokeWidth': 1,
                     },
-                    'null': {
-                        'fillColor': '#49125eff', 'fillOpacity': 0.8,
-                        'strokeWidth': 1,
-                    }
+                   
 
                 },
+                default:{ 'fillColor': '#990085ff', 'label': '${ Category }' }, 
                 select: { 'fillColor': '#990000', 'label': '${ Category }' }
             }
         }
