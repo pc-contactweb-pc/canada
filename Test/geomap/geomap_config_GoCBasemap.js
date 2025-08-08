@@ -58,7 +58,7 @@ var wet_boew_geomap = {
                 rule: [
                     {
                         field: "Category",
-                        value: ["National Park"],
+                        value: ["Wapusk National Park of Canada"],
                         filter: "EQUAL_TO",
                         name: "National Parks",
                         init: {
