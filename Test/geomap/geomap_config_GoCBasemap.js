@@ -3,7 +3,7 @@ var wet_boew_geomap = {
         title: 'Basic Map',
         type: 'esri',
         url: 'https://maps-cartes.services.geo.ca/server2_serveur2/rest/services/BaseMaps/CBMT3978/MapServer',
-        options: { singleTile: false, ratio: 1.0, projection: 'EPSG:3978', fractionalZoom: true },
+        options: { singleTile: false, ratio: '1.0', projection: 'EPSG:3978', fractionalZoom: true },
         mapOptions: {
             maxExtent: '-3000000.0, -800000.0, 4000000.0, 3900000.0',
             maxResolution: 'auto',
@@ -11,7 +11,7 @@ var wet_boew_geomap = {
             restrictedExtent: '-3000000.0, -800000.0, 4000000.0, 3900000.0',
             units: 'm',
             displayProjection: 'EPSG:4269',
-            numZoomLevels: 2
+            numZoomLevels: '2'
         }
     },
     overlays: [
@@ -22,36 +22,30 @@ var wet_boew_geomap = {
             type: 'geojson',
             url: 'https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson',
             visible: true,
-            datatable: !0,
-
+             datatable: !0,
+           
             attributes: {
                 PLACE_TYPE_E: { path: 'properties', alias: 'Category' }
                 // DESC_EN: { path: 'properties', alias: 'Park_Name' }
             },
             style: {
-
-                'strokeColor': '#ff0000',
-                'fillColor': '#ff0000',
-                'fillOpacity': '0.4'
-
-                /*type: 'unique',
+                type: 'unique',
                 field: 'PLACE_TYPE_E',
                 init: {
                     'National Park': {
-                        fillColor: '#125e25ff', fillOpacity: 0.8, strokeWidth: 1
+                        fillColor: '#125e25ff', fillOpacity: '0.8', strokeWidth: '1'
                     },
                     'National Park Reserve': {
-                        fillColor: '#125e25ff', fillOpacity: 0.8, strokeWidth: 1
+                        fillColor: '#125e25ff', fillOpacity: '0.8', strokeWidth: '1'
                     },
                     'National Marine Conservation Area': {
-                        fillColor: '#2816caff', fillOpacity: 0.8, strokeWidth: 1
+                        fillColor: '#2816caff', fillOpacity: '0.8', strokeWidth: '1'
                     },
                     'National Marine Conservation Area Reserve': {
-                        fillColor: '#2816caff', fillOpacity: 0.8, strokeWidth: 1
+                        fillColor: '#2816caff', fillOpacity: '0.8', strokeWidth: '1'
                     }
                 },
-                select: { fillColor: '#990000', fillOpacity: 0.8, strokeWidth: 1 }
-                */
+                select: { fillColor: '#990000', fillOpacity: '0.8', strokeWidth: '1' }
             }
 
         }
