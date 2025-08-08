@@ -30,7 +30,7 @@ var wet_boew_geomap = {
             },
             style: {
                 type: 'unique',
-                field: 'PLACE_TYPE_E',
+                field: 'Category',
                 init: {
                     'National Park': { fillColor: '#125e25', fillOpacity: 0.8, strokeWidth: 1 },
                     'National Park Reserve': { fillColor: '#125e25', fillOpacity: 0.8, strokeWidth: 1 },
