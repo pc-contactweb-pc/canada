@@ -1,41 +1,41 @@
 var wet_boew_geomap = {
     basemap: {
-        title: "Basic Map",
-        type: "esri",
-        url: "https://maps-cartes.services.geo.ca/server2_serveur2/rest/services/BaseMaps/CBMT3978/MapServer",
-        options: { singleTile: false, ratio: 1.0, projection: "EPSG:3978", fractionalZoom: true },
+        title: 'Basic Map',
+        type: 'esri',
+        url: 'https://maps-cartes.services.geo.ca/server2_serveur2/rest/services/BaseMaps/CBMT3978/MapServer',
+        options: { singleTile: false, ratio: 1.0, projection: 'EPSG:3978', fractionalZoom: true },
         mapOptions: {
-            maxExtent: "-3000000.0, -800000.0, 4000000.0, 3900000.0",
-            maxResolution: "auto",
-            projection: "EPSG:3978",
-            restrictedExtent: "-3000000.0, -800000.0, 4000000.0, 3900000.0",
-            units: "m",
-            displayProjection: "EPSG:4269",
+            maxExtent: '-3000000.0, -800000.0, 4000000.0, 3900000.0',
+            maxResolution: 'auto',
+            projection: 'EPSG:3978',
+            restrictedExtent: '-3000000.0, -800000.0, 4000000.0, 3900000.0',
+            units: 'm',
+            displayProjection: 'EPSG:4269',
             numZoomLevels: 2
         }
     },
     overlays: [
         {
-            title: "WMS Demo",
-            caption: "This is a sample WMS service loaded by Geomap.",
-            type: "wms",
-            url: "https://geo.weather.gc.ca/geomet/?Lang=E",
+            title: 'WMS Demo',
+            caption: 'This is a sample WMS service loaded by Geomap.',
+            type: 'wms',
+            url: 'https://geo.weather.gc.ca/geomet/?Lang=E',
             visible: false,
-            version: "1.1.1",
-            format: "image/png",
-            layers: "GDPS.ETA_PR",
+            version: '1.1.1',
+            format: 'image/png',
+            layers: 'GDPS.ETA_PR',
             transparent: true,
             options: {
                 opacity: 0.5
             }
         },
         {
-            title: "Esri REST Tile Layer",
+            title: 'Esri REST Tile Layer',
             caption:
-                "This is a sample dataset loaded from a remote Esri REST tile service.",
-            type: "esritile",
-            url: "//maps-cartes.services.geo.ca/server_serveur/rest/services/NRCan/Carte_climatique_HOT2000_Climate_Map_EN/MapServer/",
-            params: { LAYERS: "show:0" },
+                'This is a sample dataset loaded from a remote Esri REST tile service.',
+            type: 'esritile',
+            url: '//maps-cartes.services.geo.ca/server_serveur/rest/services/NRCan/Carte_climatique_HOT2000_Climate_Map_EN/MapServer/',
+            params: { LAYERS: 'show:0' },
             visible: !1,
             datatable: !1,
             options: {
@@ -44,23 +44,23 @@ var wet_boew_geomap = {
             }
         },
         {
-            title: "Parks Canada Areas",
-            caption: "National Parks, Reserves & Marine Conservation Areas administered by Parks Canada",
-            type: "geojson",
-            url: "https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson",
+            title: 'Parks Canada Areas',
+            caption: 'National Parks, Reserves & Marine Conservation Areas administered by Parks Canada',
+            type: 'geojson',
+            url: 'https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson',
             visible: true,
             attributes: {
-                PLACE_TYPE_E: { path: "properties", alias: "Category" }
+                PLACE_TYPE_E: { path: 'properties', alias: 'Category' }
             },
             style: {
-                type: "unique",
-                fied: "Category",
+                type: 'unique',
+                fied: 'Category',
                 init: {
-                    "National Park": { "fillColor": "#125e25ff" },
-                    "National Park Reserve": { "fillColor": "#125e25ff" },
-                    "National Marine Conservation Area": { "fillColor": "#2816caff" },
-                    "National Marine Conservation Area Reserve": { "fillColor": "#2816caff" },
-                    "null": { "fillColor": "#49125eff" }
+                    'National Park': { 'fillColor': '#125e25ff' },
+                    'National Park Reserve': { 'fillColor': '#125e25ff' },
+                    'National Marine Conservation Area': { 'fillColor': '#2816caff' },
+                    'National Marine Conservation Area Reserve': { 'fillColor': '#2816caff' },
+                    'null': { 'fillColor': '#49125eff' }
 
                 }
             }
@@ -68,104 +68,104 @@ var wet_boew_geomap = {
 
     ]
 };
-//{"id" : "points-table-blank-example","zoom" : true,"tooltips" : true,"tooltipText" : "Name","popups" : true,"popupsInfo" : { "content" : "<h4>_Name</h4><p>_Description</p>" },"style" : { "type" : "rule", "rule" : [{ "field": "Category", "value": ["Location 1"], "filter": "EQUAL_TO", "init": { "externalGraphic": "https://parks.canada.ca/-/media/WET4/iconographie-icons/carte-map/geomatic/geomap_square-1.png", "graphicWidth": 35, "graphicHeight": 35, "fillOpacity": 1 } },]}}
+//{'id' : 'points-table-blank-example','zoom' : true,'tooltips' : true,'tooltipText' : 'Name','popups' : true,'popupsInfo' : { 'content' : '<h4>_Name</h4><p>_Description</p>' },'style' : { 'type' : 'rule', 'rule' : [{ 'field': 'Category', 'value': ['Location 1'], 'filter': 'EQUAL_TO', 'init': { 'externalGraphic': 'https://parks.canada.ca/-/media/WET4/iconographie-icons/carte-map/geomatic/geomap_square-1.png', 'graphicWidth': 35, 'graphicHeight': 35, 'fillOpacity': 1 } },]}}
 
 
 /*
 {
-      title: "JSON (Earthquakes)",
+      title: 'JSON (Earthquakes)',
       caption:
-        "This is a sample dataset loaded from a remote JSON resource, in this case the USGS Earthquakes API.",
-      type: "json",
-      url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+        'This is a sample dataset loaded from a remote JSON resource, in this case the USGS Earthquakes API.',
+      type: 'json',
+      url: 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson',
       visible: !1,
       popups: !0,
       datatable: !0,
       zoom: !0,
-      root: "features",
+      root: 'features',
       attributes: {
-        title: { path: "properties", alias: "Title" },
-        mag: { path: "properties", alias: "Magnitude" },
-        time: { path: "properties", alias: "Time" },
+        title: { path: 'properties', alias: 'Title' },
+        mag: { path: 'properties', alias: 'Magnitude' },
+        time: { path: 'properties', alias: 'Time' },
       },
       style: {
-        type: "rule",
+        type: 'rule',
         rule: [
           {
-            field: "Magnitude",
+            field: 'Magnitude',
             value: [2],
-            filter: "LESS_THAN",
-            name: "M < 2",
+            filter: 'LESS_THAN',
+            name: 'M < 2',
             init: {
-              strokeColor: "#333333",
-              fillColor: "#000066",
+              strokeColor: '#333333',
+              fillColor: '#000066',
               pointRadius: 2.5,
               fillOpacity: 0.8,
               strokeWidth: 1,
             },
           },
           {
-            field: "Magnitude",
+            field: 'Magnitude',
             value: [2, 2.9],
-            filter: "BETWEEN",
-            name: "M-2",
+            filter: 'BETWEEN',
+            name: 'M-2',
             init: {
-              strokeColor: "#333333",
-              fillColor: "#6600cc",
+              strokeColor: '#333333',
+              fillColor: '#6600cc',
               pointRadius: 4.5,
               fillOpacity: 0.8,
               strokeWidth: 1,
             },
           },
           {
-            field: "Magnitude",
+            field: 'Magnitude',
             value: [3, 3.9],
-            filter: "BETWEEN",
-            name: "M-3",
+            filter: 'BETWEEN',
+            name: 'M-3',
             init: {
-              strokeColor: "#333333",
-              fillColor: "#990099",
+              strokeColor: '#333333',
+              fillColor: '#990099',
               pointRadius: 6.5,
               fillOpacity: 0.8,
               strokeWidth: 1,
             },
           },
           {
-            field: "Magnitude",
+            field: 'Magnitude',
             value: [4, 4.9],
-            filter: "BETWEEN",
-            name: "M-4",
+            filter: 'BETWEEN',
+            name: 'M-4',
             init: {
-              strokeColor: "#333333",
-              fillColor: "#ff0000",
+              strokeColor: '#333333',
+              fillColor: '#ff0000',
               pointRadius: 8,
               fillOpacity: 0.8,
               strokeWidth: 1,
             },
           },
           {
-            field: "Magnitude",
+            field: 'Magnitude',
             value: [5, 5.9],
-            filter: "BETWEEN",
-            name: "M-5",
+            filter: 'BETWEEN',
+            name: 'M-5',
             init: {
-              graphicName: "star",
-              strokeColor: "#333333",
-              fillColor: "#ff6600",
+              graphicName: 'star',
+              strokeColor: '#333333',
+              fillColor: '#ff6600',
               pointRadius: 14,
               fillOpacity: 0.8,
               strokeWidth: 1,
             },
           },
           {
-            field: "Magnitude",
+            field: 'Magnitude',
             value: [5.9],
-            filter: "GREATER_THAN",
-            name: "M-6+",
+            filter: 'GREATER_THAN',
+            name: 'M-6+',
             init: {
-              graphicName: "star",
-              strokeColor: "#333333",
-              fillColor: "#ff9933",
+              graphicName: 'star',
+              strokeColor: '#333333',
+              fillColor: '#ff9933',
               pointRadius: 18,
               fillOpacity: 0.8,
               strokeWidth: 1,
