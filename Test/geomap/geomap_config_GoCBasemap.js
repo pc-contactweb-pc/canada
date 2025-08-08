@@ -22,16 +22,11 @@ var wet_boew_geomap = {
             type: 'geojson',
             url: 'https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson',
             visible: true,
+             datatable: !0,
            
             attributes: {
                 PLACE_TYPE_E: { path: 'properties', alias: 'Category' },
                 DESC_EN: { path: 'properties', alias: 'Park_Name' }
-            },
-             datatable: {
-                columns: [
-                    { data: 'Category', title: 'Category' },
-                    { data: 'Park_Name', title: 'Park Name' }
-                ]
             },
             style: {
                 type: 'unique',
