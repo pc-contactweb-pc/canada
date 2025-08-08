@@ -50,18 +50,16 @@ var wet_boew_geomap = {
             url: "https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson",
             visible: true,
             attributes: {
-                OBJECTID: {path: "properties", alias: "ID"},
-                PLACE_TYPE_E: { path: "properties", alias: "Category" },
-                DESC_EN: { path: "properties", alias: "Title" }
+                PLACE_TYPE_E: { path: "properties", alias: "Category" }
             },
             style: {
                 type: "rule",
                 rule: [
                     {
                         field: "Category",
-                        value: ["Wapusk National Park of Canada"],
+                        value: ["National Park"],
                         filter: "EQUAL_TO",
-                        name: "Wapusk",
+                        name: "National Parks",
                         init: {
                             strokeColor: "#0c3817ff",
                             fillColor: "#125e25ff",
