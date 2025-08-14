@@ -252,7 +252,7 @@
             .location-result-expand {
                 position: absolute;
                 right: 18px;
-                top: 0;
+                top: 18px;
                 font-weight: bold;
                 font-size: 27px;
                 background: #fff;
@@ -263,10 +263,14 @@
                 border-radius: 30px;
                 display: inline-block;
             }
+            .location-result-expand a {
+                text-decoration: none;
+            }
         </style>
 
         <script>
-            $(".location-result-expand").on("click", function() {
+            $(".location-result-expand a").on("click", function(e) {
+                e.preventDefault();
             let location = $(this).closest(".location-result");
                 let hiddenElements = location.find(".location-thumbnail, .location-description");
                 hiddenElements.toggleClass("hidden");
