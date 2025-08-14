@@ -241,6 +241,10 @@
 
         <style>
             #locationSearch .legendLabel { padding-left: 0; }
+            .location-result {
+                padding: 20px 15px 10px;
+                border-bottom: 1px solid #eee;
+            }
         </style>
 
         <section style="margin-top:80px;background: #eee;position: relative;">
@@ -447,14 +451,14 @@
                                 <div class="row">
 
                                     <!-- Park Result List -->
-                                    <section class="col-md-6 form-group" style="overflow: visible;width: 583px;">
+                                    <section class="col-md-6 form-group" style="width: 583px;padding-right:0;">
                                         <section>
                                             <div class="mrgn-bttm-0">
 
 
                                             </div>
                                             <div id="location-results"
-                                                style="overflow: auto;height: 450px;background: #ddd;">
+                                                style="overflow-y: scroll;overflow-x:hidden;height: 450px;background: #ddd;">
 
                         <div class="location-result" id="5763StLouisStreetNationalHistoricSite">
                             <div class="row">
@@ -5262,11 +5266,11 @@ Sulphur Mountain Cosmic Ray Station National Historic Site                      
                                     </section>
                                     <!-- Park Result List End -->
 
-                                    <div class="col-md-6" style="overflow: visible;margin-left: -29px;">
+                                    <div class="col-md-6" style="overflow: visible;padding:0;">
                                         <!-- Insert Map Start (mandatory) -->
                                         <div class="wb-geomap-map" id="geomap-map-location_map" tabindex="0"
                                             data-map="location_map"
-                                            style="height: 450px;width: 554px;background-color: darkseagreen;">
+                                            style="height: 450px;width: 572px;background-color: darkseagreen;">
 
                                         </div>
                                         <!-- Insert Map End -->
