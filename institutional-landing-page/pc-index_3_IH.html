@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/css/noscript.min.css" />
     </noscript>
 
-    <script src="https://kit.fontawesome.com/9090ff3cfc.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
 
 </head>
 
@@ -275,9 +275,9 @@
         </style>
 
         <script>
-            jQuery(".location-result-expand a").on("click", function (e) {
+            $(".location-result-expand a").on("click", function (e) {
                 e.preventDefault();
-                let location = jQuery(this).closest(".location-result");
+                let location = $(this).closest(".location-result");
                 let hiddenElements = location.find(".location-thumbnail, .location-description");
                 hiddenElements.toggleClass("hidden");
             });
