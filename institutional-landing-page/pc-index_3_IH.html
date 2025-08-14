@@ -275,9 +275,9 @@
         </style>
 
         <script>
-            $(".location-result-expand a").on("click", function (e) {
+            jQuery(".location-result-expand a").on("click", function (e) {
                 e.preventDefault();
-                let location = $(this).closest(".location-result");
+                let location = jQuery(this).closest(".location-result");
                 let hiddenElements = location.find(".location-thumbnail, .location-description");
                 hiddenElements.toggleClass("hidden");
             });
