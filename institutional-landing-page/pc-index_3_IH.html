@@ -275,12 +275,14 @@
         </style>
 
         <script>
+            $( document ).ready(function() {
             $(".location-result-expand a").on("click", function (e) {
                 e.preventDefault();
                 let location = $(this).closest(".location-result");
                 let hiddenElements = location.find(".location-thumbnail, .location-description");
                 hiddenElements.toggleClass("hidden");
             });
+        });
         </script>
 
         <section style="margin-top:80px;background: #eee;position: relative;">
