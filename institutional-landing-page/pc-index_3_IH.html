@@ -245,6 +245,9 @@
         <style>
             #locationSearch .legendLabel {
                 padding-left: 0;
+                float: left;
+                line-height: 60px;
+                margin-right: 10px;
             }
 
             .location-results {
@@ -288,6 +291,12 @@
                 justify-content: flex-end;
                 float: left;
                 margin-right: 20px;
+            }
+            .geomap-legend-symbol {
+                margin-right: 12px;
+            }
+            .wb-geomap-legend {
+                float: left;
             }
         </style>
 
@@ -461,7 +470,7 @@
 
                                         <div class="col-md-6">
                                             <div id="siteNameSearch"
-                                                class="nojs-hide show-load mrgn-tp-sm mrgn-bttm-lg">
+                                                class="nojs-hide show-load mrgn-tp-sm mrgn-bttm-md">
                                                 <div class="form-group">
                                                     <label for="searchByName">Search locations by name</label>
                                                     <input class="form-control" type="text" id="searchByName"
@@ -474,7 +483,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div id="siteNameSearch"
-                                                class="nojs-hide show-load mrgn-tp-sm mrgn-bttm-lg">
+                                                class="nojs-hide show-load mrgn-tp-sm mrgn-bttm-md">
                                                 <div class="form-group">
                                                     <label for="searchByName">Zoom to province or territory on
                                                         map</label>
