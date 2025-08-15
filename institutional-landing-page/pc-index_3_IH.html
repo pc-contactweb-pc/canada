@@ -278,6 +278,7 @@
                 border-radius: 30px;
                 display: inline-block;
                 z-index: 99;
+                transition:.2s;
             }
 
             .location-result-expand a {
@@ -301,6 +302,9 @@
 
             .location-result.active {
                 display: block!important;
+                .location-result-expand {
+                    transform:rotate(180deg);
+                }
             }
         </style>
 
