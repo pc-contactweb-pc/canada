@@ -389,16 +389,10 @@
             <div class="container">
                 <div class="row">
                     <div id="locationSearch" class="col-md-12">
-                        <h3 style="border-bottom: 3px solid var(--brass);margin-top: 44px;">Find a Parks Canada location
-                        </h3>
-                        <p>Parks Canada administers 171 national historic sites, 48 national parks, 5 national marine
-                            conservation areas, and 1 national urban park.</p>
+                        <h3 style="border-bottom: 3px solid var(--brass);margin-top: 44px;">Find a Parks Canada location</h3>
+                        <p>Parks Canada administers 171 national historic sites, 48 national parks, 5 national marine conservation areas, and 1 national urban park.</p>
                         <p>An explanation of how this tool works and that the map is related to search text.</p>
 
-                        <div class="nojs-show">
-                            <p><a href="#noTarget" class="wb-lbx wb-init wb-lbx-inited">Find a Parks Canada location</a>
-                            </p>
-                        </div>
                         <!-- GeomapStart -->
                         <div class="row mrgn-tp-lg mrgn-bttm-lg">
                             <div class="col-sm-12">
@@ -473,7 +467,7 @@
 
                                         <div class="col-md-6">
                                             <div id="siteNameSearch"
-                                                class="nojs-hide show-load mrgn-tp-sm mrgn-bttm-md">
+                                                class="mrgn-tp-sm mrgn-bttm-md">
                                                 <div class="form-group">
                                                     <label for="searchByName">Search by name</label>
                                                     <input class="form-control" type="text" id="searchByName"
@@ -485,13 +479,10 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div id="siteNameSearch"
-                                                class="nojs-hide show-load mrgn-tp-sm mrgn-bttm-md">
+                                            <div class="mrgn-tp-sm mrgn-bttm-md">
                                                 <div class="form-group">
-                                                    <label for="searchByName">Zoom to province or territory on
-                                                        map</label>
-                                                    <select
-                                                        style="display: block;border-radius: 5px;width: 100%;height: 44px;margin-top: 6px; color: black;font-size: 16px;border-color: #bbb;">
+                                                    <label for="searchByName">Zoom to province or territory on map</label>
+                                                    <select id="select-province" style="display: block;border-radius: 5px;width: 100%;height: 44px;margin-top: 6px; color: black;font-size: 16px;border-color: #bbb;">
                                                         <option>Select a province or territory</option>
                                                         <option>Alberta</option>
                                                         <option>British Columbia</option>
@@ -508,7 +499,6 @@
                                                         <option>Yukon</option>
                                                     </select>
                                                 </div>
-
                                             </div>
                                         </div>
 
@@ -523,11 +513,6 @@
 
                                         <!-- Park Result List -->
                                         <section class="col-md-6 form-group" style="width: 583px;padding-right:0;">
-                                            <section>
-                                                <div class="mrgn-bttm-0">
-
-
-                                                </div>
                                                 <div id="location-results">
 
                                                     <div class="location-result"
@@ -7870,10 +7855,6 @@
                                                     </div>
 
                                                 </div>
-                                            </section>
-
-
-
                                         </section>
                                         <!-- Park Result List End -->
 
@@ -10040,17 +10021,15 @@
             </div>
         </footer>
 
-        <!--Local WET downloaded on Dec 13, 2022.  See SI-634-->
-        <script src="https://parks.canada.ca/Content/wet-boew/js/wet-boew.min.js"></script>
-        <script src="https://parks.canada.ca/Content/GCWeb/js/theme.min.js"></script>
 
         <script src="./index_files/en.min.js.download"></script>
         <script src="./index_files/jquery.magnific-popup.min.js.download"></script>
         <script src="./index_files/jquery.min.js.download"
             integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
             crossorigin="anonymous"></script>
-        <!--<script src="./index_files/wet-boew.min.js.download"></script><span id="wb-rsz">&nbsp;</span>
-        <script src="./index_files/theme.min.js.download"></script>-->
+        <!--Local WET downloaded on Dec 13, 2022.  See SI-634-->
+        <script src="https://parks.canada.ca/Content/wet-boew/js/wet-boew.min.js"></script>
+        <script src="https://parks.canada.ca/Content/GCWeb/js/theme.min.js"></script>
 
 
 </body>
