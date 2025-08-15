@@ -320,7 +320,11 @@
         <!-- Fuse fuzzy filtering for location search 
         <script src="https://cdn.jsdelivr.net/npm/fuse.js@7"></script>-->
         <script>
-        // Simple fuzzy match: returns true if all characters in query appear in order in the text
+        /**
+         * Simple fuzzy match: checks if all characters of query
+         * appear in order inside the text.
+         * Example: "stlo" matches "St. Louis Street".
+         */
         function fuzzyMatch(text, query) {
         text = text.toLowerCase();
         query = query.toLowerCase();
@@ -339,10 +343,12 @@
 
         searchInput.addEventListener("input", e => {
             const query = e.target.value.trim();
+
             results.forEach(result => {
-            const link = result.querySelector("a");
-            const text = link ? link.textContent.trim() : "";
-            if (!query || fuzzyMatch(text, query)) {
+            const titleEl = result.querySelector(".location-title");
+            const titleText = titleEl ? titleEl.textContent.trim() : "";
+
+            if (!query || fuzzyMatch(titleText, query)) {
                 result.style.display = "";
             } else {
                 result.style.display = "none";
