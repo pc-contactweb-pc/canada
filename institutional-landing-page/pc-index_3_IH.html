@@ -328,7 +328,7 @@
         $( document ).ready(function() {
             $(".location-result-expand a").on("click", function (e) {
                 e.preventDefault();
-                let resultsContainer = document.querySelector(".location-results");
+                let resultsContainer = document.querySelector("#location-results");
                 let location = $(this).closest(".location-result");
                 $(".location-result").toggleClass("hidden");
                 location.toggleClass("active");
