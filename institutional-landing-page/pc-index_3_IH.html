@@ -298,6 +298,10 @@
             .wb-geomap-legend {
                 float: left;
             }
+
+            .location-result.active {
+                display: block!important;
+            }
         </style>
 
         <script>
@@ -305,6 +309,8 @@
             $(".location-result-expand a").on("click", function (e) {
                 e.preventDefault();
                 let location = $(this).closest(".location-result");
+                $(".location-result").toggleClass("hidden");
+                location.toggleClass("active");
                 let hiddenElements = location.find(".location-thumbnail, .location-description");
                 hiddenElements.toggleClass("hidden");
             });
