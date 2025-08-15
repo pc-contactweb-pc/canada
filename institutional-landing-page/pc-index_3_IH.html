@@ -332,7 +332,7 @@
                 let location = $(this).closest(".location-result");
                 $(".location-result").toggleClass("hidden");
                 location.toggleClass("active");
-                scrollElementIntoParentView(location, resultsContainer);
+                scrollElementIntoParentView(location[0], resultsContainer);
                 let hiddenElements = location.find(".location-thumbnail, .location-description");
                 hiddenElements.toggleClass("hidden");
             });
