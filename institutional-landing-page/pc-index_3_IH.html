@@ -334,9 +334,9 @@
 
             items.forEach(el => {
             if (results.includes(el.textContent)) {
-                el.closest(".location-result").show();
+                el.closest(".location-result").style.display = "";
             } else {
-                el.closest(".location-result").hide();
+                el.closest(".location-result").style.display = "none";
             }
             });
         });
