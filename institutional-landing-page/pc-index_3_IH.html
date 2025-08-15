@@ -400,75 +400,6 @@
                             </p>
                         </div>
                         <!-- GeomapStart -->
-                        <script
-                            src="https://pc-contactweb-pc.github.io/canada/institutional-landing-page/index_files/i18n/en.min.js"></script>
-                        <script
-                            src="https://pc-contactweb-pc.github.io/canada/institutional-landing-page/index_files/i18n/en.min.js"></script>
-                        <script>
-                            $(document).ready(function () {
-                                if ($("#siteNameSearch").length == 1) {
-                                    var $document = wb.doc,
-                                        searchByNameInput = $("#searchByName");
-
-                                    searchByNameInput.trigger("wb-update.wb-datalist");
-                                    $document.on("change", "#searchByName", function (event) {
-                                        var locationTargetValue = event.target.value.replace(/[^a-z0-9+]+/gi, '');
-                                        var locationTarget = $('#siteSearch li[locationtarget="' + locationTargetValue + '"]');
-                                        if (locationTarget.length) {
-                                            var provSelect = $('#siteSearch').find('select').first();
-                                            $.when($(provSelect).val($(locationTarget).attr('province')).change()).done(function () {
-                                                var itemSelect = $('#siteSearch').find('select').eq(1);
-                                                $(itemSelect).val(event.target.value).change()
-                                            });
-                                            return;
-                                        }
-                                        //default map canada
-                                        $('#location_map_reset').click();
-                                    });
-                                }
-                                if ($("#siteSearch").length == 1) {
-                                    $("body").on("change", "#siteSearch select", function () {
-                                        var form = $(this).closest('form');
-                                        var provinceItem = form.find('select').filter(':visible:first');
-                                        var provinceChange = $(this).attr("id") == provinceItem.attr("id");
-                                        var province = $(provinceItem).find(":selected").val();
-                                        if (province != null)
-                                            province = province.trim();
-
-                                        var location = form.find('select').filter(':visible:last').find(":selected").val();
-                                        if (location != null)
-                                            location = location.trim();
-
-                                        if (province == null || province == '') {
-                                            //no selection default map canada
-                                            $('#location_map_reset').click();
-                                        } else if (!provinceChange && location != '' && location != province) {
-                                            //if location change - map location
-                                            var locationTargetValue = location.replace(/[^a-z0-9+]+/gi, '');
-                                            var locationTarget = $('.locationTable tr[locationtarget="' + locationTargetValue + '"]');
-                                            if (locationTarget.length && $(locationTarget).find('a[data-map="location_map"]').length) {
-                                                $(locationTarget).find('a[data-map="location_map"]').click();
-                                            } else {
-                                                //if can't find location target - map province
-                                                $("#gm_province option").filter(function () {
-                                                    //may want to use $.trim in here
-                                                    return $(this).text() == province;
-                                                }).prop('selected', true);
-                                                $('#location_map_submit').click();
-                                            }
-                                        } else {
-                                            //if province change - map province
-                                            $("#gm_province option").filter(function () {
-                                                //may want to use $.trim in here
-                                                return $(this).text() == province;
-                                            }).prop('selected', true);
-                                            $('#location_map_submit').click();
-                                        }
-                                    });
-                                }
-                            });
-                        </script>
-
                         <div class="row mrgn-tp-lg mrgn-bttm-lg">
                             <div class="col-sm-12">
 
@@ -7948,9 +7879,7 @@
 
                                         <div class="col-md-6" style="overflow: visible;padding:0;">
                                             <!-- Insert Map Start (mandatory) -->
-                                            <div class="wb-geomap-map" id="geomap-map-location_map">
-
-                                            </div>
+                                            <div class="wb-geomap-map"></div>
                                             <!-- Insert Map End -->
                                         </div>
                                     </div>
