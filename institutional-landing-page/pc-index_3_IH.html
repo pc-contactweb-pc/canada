@@ -317,6 +317,29 @@
         });
         </script>
 
+        <!-- Fuse fuzzy filtering for location search -->
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@7"></script>
+        <script>
+        const items = Array.from(document.querySelectorAll(".location-result a"));
+        const fuse = new Fuse(items.map(el => el.textContent), {
+            includeScore: true,
+            threshold: 0.4 // lower = stricter match
+        });
+
+        document.querySelector("#searchByName").addEventListener("input", e => {
+            const query = e.target.value;
+            const results = query ? fuse.search(query).map(r => r.item) : items.map(el => el.textContent);
+
+            items.forEach(el => {
+            if (results.includes(el.textContent)) {
+                el.closest(".location-result").show();
+            } else {
+                el.closest(".location-result").hide();
+            }
+            });
+        });
+        </script>
+
         <section style="margin-top:80px;background: #eee;position: relative; padding: 30px 0; margin-bottom: 30px;">
 
             <!-- Start of location finder -->
