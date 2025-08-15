@@ -315,7 +315,7 @@
                 let location = $(this).closest(".location-result");
                 $(".location-result").toggleClass("hidden");
                 location.toggleClass("active");
-                location.scrollIntoView();
+                location[0].scrollIntoView();
                 let hiddenElements = location.find(".location-thumbnail, .location-description");
                 hiddenElements.toggleClass("hidden");
             });
