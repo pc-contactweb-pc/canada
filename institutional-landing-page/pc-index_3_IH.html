@@ -317,30 +317,38 @@
         });
         </script>
 
-        <!-- Fuse fuzzy filtering for location search -->
-        <script src="https://cdn.jsdelivr.net/npm/fuse.js@7"></script>
+        <!-- Fuse fuzzy filtering for location search 
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@7"></script>-->
         <script>
+        // Simple fuzzy match: returns true if all characters in query appear in order in the text
+        function fuzzyMatch(text, query) {
+        text = text.toLowerCase();
+        query = query.toLowerCase();
+        let tIndex = 0;
+        for (let qChar of query) {
+            tIndex = text.indexOf(qChar, tIndex);
+            if (tIndex === -1) return false;
+            tIndex++;
+        }
+        return true;
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.querySelector("#searchByName");
+        const results = Array.from(document.querySelectorAll(".location-result"));
 
-        const items = Array.from(document.querySelectorAll(".location-result a"));
-        const fuse = new Fuse(items.map(el => el.textContent), {
-            includeScore: true,
-            threshold: 0.4 // lower = stricter match
-        });
-
-        document.querySelector("#searchByName").addEventListener("input", e => {
-            const query = e.target.value;
-            const results = query ? fuse.search(query).map(r => r.item) : items.map(el => el.textContent);
-
-            items.forEach(el => {
-            if (results.includes(el.textContent)) {
-                el.closest(".location-result").style.display = "";
+        searchInput.addEventListener("input", e => {
+            const query = e.target.value.trim();
+            results.forEach(result => {
+            const link = result.querySelector("a");
+            const text = link ? link.textContent.trim() : "";
+            if (!query || fuzzyMatch(text, query)) {
+                result.style.display = "";
             } else {
-                el.closest(".location-result").style.display = "none";
+                result.style.display = "none";
             }
             });
         });
-
         });
         </script>
 
