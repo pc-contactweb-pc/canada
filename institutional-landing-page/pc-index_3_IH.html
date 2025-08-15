@@ -309,13 +309,30 @@
         </style>
 
         <script>
-            $( document ).ready(function() {
+        function scrollElementIntoParentView(element, container) {
+        const elRect = element.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+
+        const overScroll = elRect.top - containerRect.top;
+        const underScroll = elRect.bottom - containerRect.bottom;
+
+        if (overScroll < 0) {
+            // element is above the visible area
+            container.scrollTop += overScroll;
+        } else if (underScroll > 0) {
+            // element is below the visible area
+            container.scrollTop += underScroll;
+        }
+        }
+
+        $( document ).ready(function() {
             $(".location-result-expand a").on("click", function (e) {
                 e.preventDefault();
+                let resultsContainer = document.querySelector(".location-results");
                 let location = $(this).closest(".location-result");
                 $(".location-result").toggleClass("hidden");
                 location.toggleClass("active");
-                location[0].scrollIntoView();
+                scrollElementIntoParentView(location, resultsContainer);
                 let hiddenElements = location.find(".location-thumbnail, .location-description");
                 hiddenElements.toggleClass("hidden");
             });
