@@ -320,6 +320,8 @@
         <!-- Fuse fuzzy filtering for location search -->
         <script src="https://cdn.jsdelivr.net/npm/fuse.js@7"></script>
         <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
         const items = Array.from(document.querySelectorAll(".location-result a"));
         const fuse = new Fuse(items.map(el => el.textContent), {
             includeScore: true,
@@ -337,6 +339,8 @@
                 el.closest(".location-result").hide();
             }
             });
+        });
+
         });
         </script>
 
