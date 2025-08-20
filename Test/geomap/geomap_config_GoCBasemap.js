@@ -28,17 +28,22 @@ var wet_boew_geomap = {
                 PLACE_TYPE_E: { path: 'properties', alias: 'Category' }
                 // DESC_EN: { path: 'properties', alias: 'Park_Name' } // Uncomment if needed
             },
+            // style: {
+            //     type: 'unique',
+            //     field: 'Category',
+            //     init: {
+            //         'National Park': { fillColor: '#125e25', fillOpacity: 0.8, strokeWidth: 1 },
+            //         'National Park Reserve': { fillColor: '#125e25', fillOpacity: 0.8, strokeWidth: 1 },
+            //         'National Marine Conservation Area': { fillColor: '#2816ca', fillOpacity: 0.8, strokeWidth: 1 },
+            //         'National Marine Conservation Area Reserve': { fillColor: '#2816ca', fillOpacity: 0.8, strokeWidth: 1 }
+            //     },
+            //     default: { fillColor: '#666666', fillOpacity: 0.5, strokeWidth: 1 },
+            //     select: { fillColor: '#990000', fillOpacity: 1, strokeWidth: 2 }
+            // }
             style: {
-                type: 'unique',
-                field: 'Category',
-                init: {
-                    'National Park': { fillColor: '#125e25', fillOpacity: 0.8, strokeWidth: 1 },
-                    'National Park Reserve': { fillColor: '#125e25', fillOpacity: 0.8, strokeWidth: 1 },
-                    'National Marine Conservation Area': { fillColor: '#2816ca', fillOpacity: 0.8, strokeWidth: 1 },
-                    'National Marine Conservation Area Reserve': { fillColor: '#2816ca', fillOpacity: 0.8, strokeWidth: 1 }
-                },
-                default: { fillColor: '#666666', fillOpacity: 0.5, strokeWidth: 1 },
-                select: { fillColor: '#990000', fillOpacity: 1, strokeWidth: 2 }
+                'strokeColor': '#ff0000',
+                'fillColor': '#ff0000',
+                'fillOpacity': '0.4'
             }
         }
     ]
