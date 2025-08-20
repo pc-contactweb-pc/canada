@@ -40,20 +40,7 @@ var wet_boew_geomap = {
             //     default: { fillColor: '#666666', fillOpacity: 0.5, strokeWidth: 1 },
             //     select: { fillColor: '#990000', fillOpacity: 1, strokeWidth: 2 }
             // }
-            style: {
-                type: 'unique',
-                field: 'Category',
-                init: {
-                    // using the value from the 'Location' attribute, create a unique style for each feature
-                    'National Park': { 'fillColor': '#000099' },
-                    'National Park Reserve': { 'fillColor': '#009900' },
-                    'National Marine Conservation Area': { 'fillColor': '#009900' },
-                    'National Marine Conservation Area Reserve': { 'fillColor': '#009900' }
-                },
-                // specify a style for selected features (optional). Note here we are adding a label when
-                // a feature is selected.
-                select: { 'fillColor': '#990000', 'label': '${ Category }' }
-            }
+
             // style: {
             //     type: 'unique',
             //     field: 'Category',
@@ -91,6 +78,17 @@ var wet_boew_geomap = {
             //     'fillColor': '#ff0000',
             //     'fillOpacity': '0.4'
             // }
+// Save us chatGPT:
+            style: {
+                'strokeColor': '#ff0000',
+                'fillColor': '#ff0000',
+                'fillOpacity': '0.4',
+                select: {
+                    'strokeColor': '#0000ff',
+                    'fillColor': '#0000ff',
+                    'fillOpacity': '0.6'
+                }
+            }
 
         }
     ]
