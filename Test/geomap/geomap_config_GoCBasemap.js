@@ -43,23 +43,12 @@ var wet_boew_geomap = {
 
 
             // This style works:
-            // style: {
-            //     'strokeColor': '#ff0000',
-            //     'fillColor': '#ff0000',
-            //     'fillOpacity': '0.4'
-            // }
             style: {
-                type: 'unique',
-                field: 'Category',
-                init: {
-                    // using the value from the 'Location' attribute, create a unique style for each feature
-                    'National Park': { 'fillColor': '#000099' },
-                    'National Marine Conservation Area Reserve': { 'fillColor': '#009900' }
-                },
-                // specify a style for selected features (optional). Note here we are adding a label when
-                // a feature is selected.
-                select: { 'fillColor': '#990000', 'label': '${ Location }' }
+                'strokeColor': '#ff0000',
+                'fillColor': '#ff0000',
+                'fillOpacity': '0.4'
             }
+
         }
     ]
 };
