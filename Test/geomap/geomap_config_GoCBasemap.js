@@ -26,7 +26,7 @@ var wet_boew_geomap = {
             datatable: true,
             attributes: {
                 PLACE_TYPE_E: { path: 'properties', alias: 'Category' },
-                DESC_EN: { path: 'properties', alias: 'Park_Name' }
+                // DESC_EN: { path: 'properties', alias: 'Park_Name' }
             },
             // style: {
             //     type: 'unique',
@@ -42,7 +42,7 @@ var wet_boew_geomap = {
             // }
             style: {
                 type: 'unique',
-                field: 'Location',
+                field: 'Category',
                 init: {
                     // using the value from the 'Location' attribute, create a unique style for each feature
                     'National Park': { 'fillColor': '#000099' },
@@ -52,7 +52,7 @@ var wet_boew_geomap = {
                 },
                 // specify a style for selected features (optional). Note here we are adding a label when
                 // a feature is selected.
-                select: { 'fillColor': '#990000', 'label': '${ Park_Name }' }
+                select: { 'fillColor': '#990000', 'label': '${ Category }' }
             }
             // style: {
             //     type: 'unique',
