@@ -66,11 +66,6 @@ var wet_boew_geomap = {
                         'fillOpacity': '0.4'
                     }
                 },
-                default: {
-                    'strokeColor': '#ff0000',
-                    'fillColor': '#ff0000',
-                    'fillOpacity': '0.4'
-                },
                 select: {
                     'strokeColor': '#ff0000',
                     'fillColor': '#ff0000',
