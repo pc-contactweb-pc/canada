@@ -17,6 +17,7 @@ var wet_boew_geomap = {
         }
     },
     overlays: [
+        
         {
             title: 'Parks Canada Areas',
             caption: 'National Parks, Reserves & Marine Conservation Areas administered by Parks Canada',
@@ -79,17 +80,36 @@ var wet_boew_geomap = {
             //     'fillOpacity': '0.4'
             // }
 // Save us chatGPT:
-            style: {
-                'strokeColor': '#ff0000',
-                'fillColor': '#ff0000',
-                'fillOpacity': '0.4',
-                select: {
-                    'strokeColor': '#1cd353ff',
-                    'fillColor': '#b628c9ff',
-                    'fillOpacity': '0.6'
-                }
-            }
+            // style: {
+            //     'strokeColor': '#ff0000',
+            //     'fillColor': '#ff0000',
+            //     'fillOpacity': '0.4',
+            //     select: {
+            //         'strokeColor': '#1cd353ff',
+            //         'fillColor': '#b628c9ff',
+            //         'fillOpacity': '0.6'
+            //     }
+            // }
 
+
+            style: function (feature) {
+                    // Check the attribute. Sometimes Geomap flattens to feature.attributes["Category"]
+                    var category = feature.attributes.Category || feature.attributes.PLACE_TYPE_E;
+
+                    if (category === "National Park") {
+                        return {
+                            strokeColor: "#008000", // green border
+                            fillColor: "#008000",   // green fill
+                            fillOpacity: 0.5
+                        };
+                    } else {
+                        return {
+                            strokeColor: "#ff0000", // red border
+                            fillColor: "#ff0000",   // red fill
+                            fillOpacity: 0.4
+                        };
+                    }
+                }
         }
     ]
 };
