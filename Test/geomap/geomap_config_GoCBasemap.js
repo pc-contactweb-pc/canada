@@ -26,7 +26,7 @@ var wet_boew_geomap = {
             visible: true,
             datatable: true,
             attributes: {
-                // PLACE_TYPE_E: { path: 'properties', alias: 'Category' },
+                PLACE_TYPE_E: { path: 'properties', alias: 'Category' },
                 // DESC_EN: { path: 'properties', alias: 'Park_Name' }
             },
 
@@ -96,7 +96,7 @@ var wet_boew_geomap = {
                 "type": "rule",
                 "rule": [
                     {
-                        "field": "PLACE_TYPE_E",               // alias for PLACE_TYPE_E
+                        "field": "Category",               // alias for PLACE_TYPE_E
                         "value": ["National Park"],
                         "filter": "EQUAL_TO",
                         "init": { "strokeColor": "#008000", "fillColor": "#008000", "fillOpacity": "0.4" }
