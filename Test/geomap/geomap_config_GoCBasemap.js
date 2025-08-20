@@ -25,8 +25,8 @@ var wet_boew_geomap = {
             visible: true,
             datatable: true,
             attributes: {
-                PLACE_TYPE_E: { path: 'properties', alias: 'Category' }
-                // DESC_EN: { path: 'properties', alias: 'Park_Name' } // Uncomment if needed
+                PLACE_TYPE_E: { path: 'properties', alias: 'Category' },
+                DESC_EN: { path: 'properties', alias: 'Park_Name' }
             },
             // style: {
             //     type: 'unique',
@@ -40,38 +40,51 @@ var wet_boew_geomap = {
             //     default: { fillColor: '#666666', fillOpacity: 0.5, strokeWidth: 1 },
             //     select: { fillColor: '#990000', fillOpacity: 1, strokeWidth: 2 }
             // }
-
             style: {
                 type: 'unique',
-                field: 'Category',
+                field: 'Location',
                 init: {
-                    'National Park': {
-                        'strokeColor': '#ff0000',
-                        'fillColor': '#ff0000',
-                        'fillOpacity': '0.4'
-                    },
-                    'National Park Reserve': {
-                        'strokeColor': '#ff0000',
-                        'fillColor': '#ff0000',
-                        'fillOpacity': '0.4'
-                    },
-                    'National Marine Conservation Area': {
-                        'strokeColor': '#ff0000',
-                        'fillColor': '#ff0000',
-                        'fillOpacity': '0.4'
-                    },
-                    'National Marine Conservation Area Reserve': {
-                        'strokeColor': '#ff0000',
-                        'fillColor': '#ff0000',
-                        'fillOpacity': '0.4'
-                    }
+                    // using the value from the 'Location' attribute, create a unique style for each feature
+                    'National Park': { 'fillColor': '#000099' },
+                    'National Park Reserve': { 'fillColor': '#009900' },
+                    'National Marine Conservation Area': { 'fillColor': '#009900' },
+                    'National Marine Conservation Area Reserve': { 'fillColor': '#009900' }
                 },
-                select: {
-                    'strokeColor': '#ff0000',
-                    'fillColor': '#ff0000',
-                    'fillOpacity': '0.4'
-                }
+                // specify a style for selected features (optional). Note here we are adding a label when
+                // a feature is selected.
+                select: { 'fillColor': '#990000', 'label': '${ Park_Name }' }
             }
+            // style: {
+            //     type: 'unique',
+            //     field: 'Category',
+            //     init: {
+            //         'National Park': {
+            //             'strokeColor': '#ff0000',
+            //             'fillColor': '#ff0000',
+            //             'fillOpacity': '0.4'
+            //         },
+            //         'National Park Reserve': {
+            //             'strokeColor': '#ff0000',
+            //             'fillColor': '#ff0000',
+            //             'fillOpacity': '0.4'
+            //         },
+            //         'National Marine Conservation Area': {
+            //             'strokeColor': '#ff0000',
+            //             'fillColor': '#ff0000',
+            //             'fillOpacity': '0.4'
+            //         },
+            //         'National Marine Conservation Area Reserve': {
+            //             'strokeColor': '#ff0000',
+            //             'fillColor': '#ff0000',
+            //             'fillOpacity': '0.4'
+            //         }
+            //     },
+            //     select: {
+            //         'strokeColor': '#ff0000',
+            //         'fillColor': '#ff0000',
+            //         'fillOpacity': '0.4'
+            //     }
+            // }
             // This style works:
             // style: {
             //     'strokeColor': '#ff0000',
