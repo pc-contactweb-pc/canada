@@ -17,7 +17,7 @@ var wet_boew_geomap = {
         }
     },
     overlays: [
-        
+
         {
             title: 'Parks Canada Areas',
             caption: 'National Parks, Reserves & Marine Conservation Areas administered by Parks Canada',
@@ -29,6 +29,7 @@ var wet_boew_geomap = {
                 PLACE_TYPE_E: { path: 'properties', alias: 'Category' },
                 // DESC_EN: { path: 'properties', alias: 'Park_Name' }
             },
+
             // style: {
             //     type: 'unique',
             //     field: 'Category',
@@ -79,7 +80,7 @@ var wet_boew_geomap = {
             //     'fillColor': '#ff0000',
             //     'fillOpacity': '0.4'
             // }
-// Save us chatGPT:
+            // Save us chatGPT:
             // style: {
             //     'strokeColor': '#ff0000',
             //     'fillColor': '#ff0000',
@@ -91,25 +92,23 @@ var wet_boew_geomap = {
             //     }
             // }
 
-
-            style: function (feature) {
-                    // Check the attribute. Sometimes Geomap flattens to feature.attributes["Category"]
-                    var category = feature.attributes.Category || feature.attributes.PLACE_TYPE_E;
-
-                    if (category === "National Park") {
-                        return {
-                            strokeColor: "#008000", // green border
-                            fillColor: "#008000",   // green fill
-                            fillOpacity: 0.5
-                        };
-                    } else {
-                        return {
-                            strokeColor: "#ff0000", // red border
-                            fillColor: "#ff0000",   // red fill
-                            fillOpacity: 0.4
-                        };
+            style: {
+                "type": "rule",
+                "rule": [
+                    {
+                        "field": "Category",               // alias for PLACE_TYPE_E
+                        "value": ["National Park"],
+                        "filter": "EQUAL_TO",
+                        "init": { "strokeColor": "#008000", "fillColor": "#008000", "fillOpacity": "0.4" }
+                    },
+                    {
+                        "elseFilter": true,                // fallback for all other values
+                        "init": { "strokeColor": "#ff0000", "fillColor": "#ff0000", "fillOpacity": "0.4" }
                     }
-                }
+                ],
+                "select": { "strokeColor": "#0000ff", "fillColor": "#0000ff", "fillOpacity": "0.4" }
+            }
+
         }
     ]
 };
