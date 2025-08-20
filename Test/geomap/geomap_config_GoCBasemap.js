@@ -41,13 +41,48 @@ var wet_boew_geomap = {
             //     select: { fillColor: '#990000', fillOpacity: 1, strokeWidth: 2 }
             // }
 
-
-            // This style works:
             style: {
-                'strokeColor': '#ff0000',
-                'fillColor': '#ff0000',
-                'fillOpacity': '0.4'
+                type: 'unique',
+                field: 'Category',
+                init: {
+                    'National Park': {
+                        'strokeColor': '#ff0000',
+                        'fillColor': '#ff0000',
+                        'fillOpacity': '0.4'
+                    },
+                    'National Park Reserve': {
+                        'strokeColor': '#ff0000',
+                        'fillColor': '#ff0000',
+                        'fillOpacity': '0.4'
+                    },
+                    'National Marine Conservation Area': {
+                        'strokeColor': '#ff0000',
+                        'fillColor': '#ff0000',
+                        'fillOpacity': '0.4'
+                    },
+                    'National Marine Conservation Area Reserve': {
+                        'strokeColor': '#ff0000',
+                        'fillColor': '#ff0000',
+                        'fillOpacity': '0.4'
+                    }
+                },
+                default: {
+                    'strokeColor': '#ff0000',
+                    'fillColor': '#ff0000',
+                    'fillOpacity': '0.4'
+                },
+                select: {
+                    'strokeColor': '#ff0000',
+                    'fillColor': '#ff0000',
+                    'fillOpacity': '0.4'
+                }
             }
+            // This style works:
+            // style: {
+            //     'strokeColor': '#ff0000',
+            //     'fillColor': '#ff0000',
+            //     'fillOpacity': '0.4'
+            // }
 
         }
     ]
