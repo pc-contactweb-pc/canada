@@ -122,7 +122,7 @@
                         <h1 property="name" id="wb-cont" class="pc-h1-brass">Parks Canada</h1>
                         <p>Parks Canada administers one of the finest and most extensive systems of natural and cultural
                             heritage places in the world.</p>
-                        <p>Simple popup - More purge</p>
+                        <p>Simple popup - One table</p>
 
                         <img src="./index_files/pc-beaver-white.svg" alt="Parks Canada logo" class="pc-logo mrgn-tp-sm" style="max-width:70px;">
 
@@ -226,69 +226,29 @@
                         <div class="row mrgn-tp-lg mrgn-bttm-lg">
                             <div class="col-sm-12">
 
-                                <div id="location_map" class="wb-geomap" data-wb-geomap='{
-                                    "layersFile" : "https://parks.canada.ca/content/js/locationsearch.js",
-                                    "tables" : [{
-                                    "id" : "locationsParks",
-                                    "zoom" : true,
-                                    "tab" : false,
-                                    "tooltips" : true,
-                                    "tooltipText" : "Location text",
-                                    "popups" : true,
-                                    "visible" : true,
-                                    "popupsInfo" : {
-                                    "id" : "locationsPopup",
-                                    "height" : 200,
-                                    "width" : 300,
-                                    "close" : true,
-                                    "content" : "_Location name"
-                                    },
-                                    "style": {
-                                    "type": "rule",
-                                    "rule": [ { "field": "Type", "value": [1], "filter": "EQUAL_TO", "name": " ", "init": { "externalGraphic": "https://parks.canada.ca/-/media/Images/Location-Search/pnnp-svg5-png", "graphicWidth": 25,"graphicHeight": 40, "fillOpacity": 1}} ]
-                                    }
-                                    },
-                                    {
-                                    "id" : "locationsMarine",
-                                    "zoom" : true,
-                                    "tab" : false,
-                                    "tooltips" : true,
-                                    "tooltipText" : "Location text",
-                                    "popups" : true,
-                                    "visible" : true,
-                                    "popupsInfo" : {
-                                    "id" : "locationsPopup",
-                                    "height" : 200,
-                                    "width" : 300,
-                                    "close" : true,
-                                    "content" : "<div style=\" white-space:nowrap;\"><p>_Location name</div>"
-                                    },
-                                    "style": {
-                                    "type": "rule",
-                                    "rule": [ { "field": "Type", "value": [3], "filter": "EQUAL_TO", "name": " ", "init": { "externalGraphic": "https://parks.canada.ca/-/media/Images/Location-Search/amcnmca-svg4-png", "graphicWidth": 25,"graphicHeight": 40, "fillOpacity": 1}} ]
-                                    }
-                                    },
-                                    {
-                                    "id" : "locationsHistoric",
-                                    "zoom" : true,
-                                    "tab" : false,
-                                    "tooltips" : true,
-                                    "tooltipText" : "Location text",
-                                    "popups" : true,
-                                    "visible" : true,
-                                    "popupsInfo" : {
-                                    "id" : "locationsPopup",
-                                    "height" : 200,
-                                    "width" : 300,
-                                    "close" : true,
-                                    "content" : "<div style=\" white-space:nowrap;\"><p>_Location name</div>"
-                                    },
-                                    "style": {
-                                    "type": "rule",
-                                    "rule": [ { "field": "Type", "value": [2], "filter": "EQUAL_TO", "name": " ", "init": { "externalGraphic": "https://parks.canada.ca/-/media/Images/Location-Search/lhnnhs-svg5-png", "graphicWidth": 25,"graphicHeight": 40, "fillOpacity": 1}} ]
-                                    }
-                                    }]
-                                    }'>
+                                <div id="location_map" class="wb-geomap" data-wb-geomap='let test = {
+    "layersFile": "https://parks.canada.ca/content/js/locationsearch.js",
+    "tables": [{
+        "id": "locationsParks",
+        "zoom": true,
+        "tab": false,
+        "tooltips": true,
+        "tooltipText": "Location text",
+        "popups": true,
+        "visible": true,
+        "popupsInfo": {
+            "id": "locationsPopup",
+            "height": 200,
+            "width": 300,
+            "close": true,
+            "content": "_Location name"
+        },
+        "style": {
+            "type": "rule",
+            "rule": [{ "field": "Type", "value": [1], "filter": "EQUAL_TO", "name": " ", "init": { "externalGraphic": "https://parks.canada.ca/-/media/Images/Location-Search/pnnp-svg5-png", "graphicWidth": 25, "graphicHeight": 40, "fillOpacity": 1 } }]
+        }
+    }]
+}'>
 
 
 
