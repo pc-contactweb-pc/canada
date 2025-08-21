@@ -17,50 +17,36 @@ var wet_boew_geomap = {
         }
     },
     overlays: [
-        {
-            title: "Parks Canada Areas",
-            caption: "National Parks, Reserves & Marine Conservation Areas administered by Parks Canada",
-            type: "geojson",
-            url: "https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson",
-            visible: true,
-            datatable: true,
-            attributes: {
-                PLACE_TYPE_E: { path: "properties", alias: "Category" },
-                // DESC_EN: { path: "properties", alias: "Park_Name" }
-            },
-            style: {
-                type: "unique",
-                field: "PLACE_TYPE_E",
-                init: {
-                    "National Park": {
-                        strokeColor: "#008000",
-                        fillColor: "#008000",
-                        fillOpacity: 0.4
-                    },
-                    "National Park Reserve": {
-                        strokeColor: "#00aa00",
-                        fillColor: "#00aa00",
-                        fillOpacity: 0.4
-                    },
-                    "National Marine Conservation Area": {
-                        strokeColor: "#00cccc",
-                        fillColor: "#00cccc",
-                        fillOpacity: 0.4
-                    }
-                },
-                default: {
-                    strokeColor: "#ff0000",
-                    fillColor: "#ff0000",
-                    fillOpacity: 0.4
-                },
-                select: {
-                    strokeColor: "#0000ff",
-                    fillColor: "#0000ff",
-                    fillOpacity: 0.6
-                }
-            }
-        }
-    ]
+  {
+    title: "Parks Canada Areas",
+    caption: "National Parks, Reserves & Marine Conservation Areas administered by Parks Canada",
+    type: "geojson",
+    url: "https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson",
+    visible: true,
+    datatable: true,
+    attributes: {
+      PLACE_TYPE_E: { path: "properties", alias: "Category" },
+      DESC_EN: { path: "properties", alias: "Park_Name" }
+    },
+    style: {
+      type: "unique",
+      field: "PLACE_TYPE_E",
+      init: {
+        "National Park": { strokeColor: "#008000", fillColor: "#008000", fillOpacity: 0.4 },
+        "National Park Reserve": { strokeColor: "#00aa00", fillColor: "#00aa00", fillOpacity: 0.4 },
+        "National Marine Conservation Area": { strokeColor: "#00cccc", fillColor: "#00cccc", fillOpacity: 0.4 }
+      },
+      default: { strokeColor: "#ff0000", fillColor: "#ff0000", fillOpacity: 0.4 },
+      select: { strokeColor: "#0000ff", fillColor: "#0000ff", fillOpacity: 0.6 }
+    },
+    after: function(layer) {
+      // Force redraw immediately after features load
+      layer.events.register("featuresadded", layer, function() {
+        layer.redraw(true);
+      });
+    }
+  }
+]
 
 
 
