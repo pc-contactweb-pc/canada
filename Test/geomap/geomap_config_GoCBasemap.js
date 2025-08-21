@@ -96,14 +96,29 @@ var wet_boew_geomap = {
                 "type": "rule",
                 "rule": [
                     {
-                        "field": "Category",               // alias for PLACE_TYPE_E
+                        "field": "Category",
                         "value": ["National Park"],
-                        "filter": "CONTAINS",
-                        "init": { "strokeColor": "#008000", "fillColor": "#008000", "fillOpacity": "0.4" }
+                        "filter": "EQUAL_TO",
+                        "init": {
+                            "strokeColor": "#008000",
+                            "fillColor": "#008000",
+                            "fillOpacity": "0.4"
+                        }
                     },
-                  
+                    {
+                        "elseFilter": true,
+                        "init": {
+                            "strokeColor": "#ff0000",
+                            "fillColor": "#ff0000",
+                            "fillOpacity": "0.4"
+                        }
+                    }
                 ],
-                "select": { "strokeColor": "#0000ff", "fillColor": "#0000ff", "fillOpacity": "0.4" }
+                "select": {
+                    "strokeColor": "#0000ff",
+                    "fillColor": "#0000ff",
+                    "fillOpacity": "0.6"
+                }
             }
 
         }
