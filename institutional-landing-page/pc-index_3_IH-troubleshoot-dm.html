@@ -221,102 +221,22 @@
                         <p>Parks Canada administers 171 national historic sites, 48 national parks, 5 national marine
                             conservation areas, and 1 national urban park.</p>
                         <p>An explanation of how this tool works and that the map is related to search text.</p>
-<p>Base geomap</p>
+                        <p>Totally basic geomap</p>
                         <!-- GeomapStart -->
-                        <div class="row mrgn-tp-lg mrgn-bttm-lg">
-                            <div class="col-sm-12">
-
-                                <div id="location_map" class="wb-geomap" data-wb-geomap='{
-    "layersFile": "https://parks.canada.ca/content/js/locationsearch.js"
-}'>
-
-
-
-                                    <div class="row">
-
-
-                                        <div class="col-md-6" style="overflow: visible;padding:0;">
-                                            <!-- Insert Map Start (mandatory) -->
-                                            <div class="wb-geomap-map"></div>
-                                            <!-- Insert Map End -->
-                                        </div>
+                        <div id="mygeomap" class="wb-geomap position">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="wb-geomap-map"></div>
+                                </div>
+                                <!-- Add optional map legend -->
+                                    <div class="wb-geomap-legend col-md-3">
+                                        <h2>Legend</h2>
+                                        <!-- Geomap will insert legend here -->
                                     </div>
-
-
-                                </div>
-
-                                <!-- Insert Layer Data Start (mandatory) -->
-                                <div class="row hidden">
-                                    <section>
-                                        <div class="wb-geomap-layers col-md-12">
-                                            <section>
-                                                <table id="locationsParks" class="locationTable" aria-label="National parks">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Type</th>
-                                                            <th>Location text</th>
-                                                            <th>Location name</th>
-                                                            <th>Info</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr locationTarget="AkamiUapishkKakKasuakMealyMountainsNationalParkReserve" data-geometry="POINT (-58.348138 53.572076)" data-type="wkt">
-                                                            <td>1</td>
-                                                            <td>Akami-Uapishkᵁ-KakKasuak-Mealy Mountains National Park
-                                                                Reserve</td>
-                                                            <td><a href="https://parks.canada.ca/pn-np/nl/mealy">Akami-Uapishkᵁ-KakKasuak-Mealy
-                                                                    Mountains National Park Reserve</a></td>
-                                                            <td>-58.348138 53.572076 </td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-                                                <table id="locationsHistoric" class="locationTable" aria-label="National historic sites">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Type</th>
-                                                            <th>Location text</th>
-                                                            <th>Location name</th>
-                                                            <th>Info</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr locationTarget="AlexanderGrahamBellNationalHistoricSite" data-geometry="POINT (-60.74645 46.10343)" data-type="wkt">
-                                                            <td>2</td>
-                                                            <td>Alexander Graham Bell National Historic Site</td>
-                                                            <td><a href="https://parks.canada.ca/lhn-nhs/ns/grahambell">Alexander
-                                                                    Graham Bell National Historic Site</a></td>
-                                                            <td>-60.74645 46.10343 </td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-                                                <table id="locationsMarine" class="locationTable" aria-label="National marine conservation areas">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Type</th>
-                                                            <th>Location text</th>
-                                                            <th>Location name</th>
-                                                            <th>Info</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr locationTarget="FathomFiveNationalMarinePark" data-geometry="POINT (-81.6571 45.2568)" data-type="wkt">
-                                                            <td>3</td>
-                                                            <td>Fathom Five National Marine Park</td>
-                                                            <td><a href="https://parks.canada.ca/amnc-nmca/on/fathomfive">Fathom
-                                                                    Five National Marine Park</a></td>
-                                                            <td>-81.6571 45.2568 </td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </div>
-                                <!-- Insert Layer Data End -->
-
+                                    <div class="row">
+                                        <!-- Add placeholder for overlays -->
+                                            <div class="wb-geomap-layers col-md-12"></div>
+                                    </div>
                             </div>
                         </div>
                         <!-- GeomapEnd -->
