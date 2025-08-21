@@ -32,7 +32,7 @@ var wet_boew_geomap = {
                 "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
                 "outSR": "4326",
-                "maxAllowableOffset": 1000
+                "maxAllowableOffset": 15000
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
@@ -57,7 +57,7 @@ var wet_boew_geomap = {
                 "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
                 "outSR": "4326",
-                "maxAllowableOffset": 1000
+                "maxAllowableOffset": 15000
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
@@ -83,7 +83,7 @@ var wet_boew_geomap = {
                 "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
                 "outSR": "4326",
-                "maxAllowableOffset": 1000
+                "maxAllowableOffset": 15000
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
