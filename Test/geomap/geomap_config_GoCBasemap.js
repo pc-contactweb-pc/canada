@@ -31,7 +31,8 @@ var wet_boew_geomap = {
                 "where": "PLACE_TYPE_E = 'National Park' OR PLACE_TYPE_E = 'National Park Reserve'",
                 "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
-                "outSR": "4326"
+                "outSR": "4326",
+                "maxAllowableOffset": 10
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
@@ -49,13 +50,14 @@ var wet_boew_geomap = {
             "url": "https://services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0/query",
             "root": "features",
             "visible": true,
-            "datatable": false,
+            "datatable": true,
             "legend": false,
             "params": {
                 "where": "PLACE_TYPE_E ='National Historic Site'",
                 "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
-                "outSR": "4326"
+                "outSR": "4326",
+                "maxAllowableOffset": 10
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
@@ -80,7 +82,8 @@ var wet_boew_geomap = {
                 "where": "PLACE_TYPE_E = 'National Marine Conservation Area' OR PLACE_TYPE_E = 'National Marine Conservation Area Reserve'",
                 "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
-                "outSR": "4326"
+                "outSR": "4326",
+                "maxAllowableOffset": 10
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
