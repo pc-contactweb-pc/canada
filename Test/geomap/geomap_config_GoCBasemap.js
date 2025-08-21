@@ -31,28 +31,24 @@ var wet_boew_geomap = {
             style: {
                 "type": "unique",
                 "field": "PLACE_TYPE_E",
-
-                // Top-level default style
-                "strokeColor": "#ff0000",
-                "fillColor": "#ff0000",
-                "fillOpacity": "0.4",
-
-                // Value-specific overrides
                 "init": {
                     "National Park": {
                         "strokeColor": "#008000",
                         "fillColor": "#008000",
-                        "fillOpacity": "0.4"
+                        "fillOpacity": 0.4
                     }
                 },
-
+                "symbolizer": {       // this is the default style for anything not listed in init
+                    "strokeColor": "#ff0000",
+                    "fillColor": "#ff0000",
+                    "fillOpacity": 0.4
+                },
                 "select": {
                     "strokeColor": "#0000ff",
                     "fillColor": "#0000ff",
-                    "fillOpacity": "0.6"
+                    "fillOpacity": 0.6
                 }
             }
-
         }
     ]
 
