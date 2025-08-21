@@ -20,7 +20,6 @@ var wet_boew_geomap = {
     "overlays": [
 
         {
-            "title": "National Park",
             "type": "esrijson",
             "url": "https://services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0/query",
             "root": "features",
@@ -46,14 +45,13 @@ var wet_boew_geomap = {
             }
         },
         {
-            "title": "National Historic Site",
             "type": "esrijson",
             "url": "https://services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0/query",
             "root": "features",
             "visible": true,
             "datatable": false,
             "legend": false,
-            "tab": true,
+            "tab": false,
             "params": {
                 "where": "PLACE_TYPE_E ='National Historic Site'",
                 "outFields": "PLACE_TYPE_E,DESC_EN",
@@ -73,7 +71,6 @@ var wet_boew_geomap = {
         },
 
         {
-            "title": "National Marine Conservation Area",
             "type": "esrijson",
             "url": "https://services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0/query",
             "root": "features",
