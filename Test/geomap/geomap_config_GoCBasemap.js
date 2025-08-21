@@ -98,7 +98,7 @@ var wet_boew_geomap = {
                     {
                         "field": "Category",               // alias for PLACE_TYPE_E
                         "value": ["National Park"],
-                        "filter": "EQUAL_TO",
+                        "filter": "CONTAINS",
                         "init": { "strokeColor": "#008000", "fillColor": "#008000", "fillOpacity": "0.4" }
                     },
                   
