@@ -97,7 +97,7 @@ var wet_boew_geomap = {
                 "rule": [
                     {
                         "field": "Category",
-                        "value": ["National Park"],
+                        "value": "National Park",
                         "filter": "EQUAL_TO",
                         "init": {
                             "strokeColor": "#008000",
