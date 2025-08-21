@@ -264,15 +264,21 @@
             }
 
             .location-result {
-                padding: 20px 15px 10px;
+                padding: 15px 15px 5px;
+                font-size: 1rem;
                 border-bottom: 1px solid #eee;
                 position: relative;
+                cursor:pointer;
+                transition:.2s;
+            }
+            .location-result:hover{
+                background:#e8e8e8;
             }
 
             .location-result-expand {
                 position: absolute;
-                right: 18px;
-                top: 18px;
+                right: 10px;
+                top: 10px;
                 font-weight: bold;
                 font-size: 27px;
                 background: #fff;
@@ -289,13 +295,18 @@
                 text-decoration: none;
                 display: block;
                 transition: .2s;
+                color: #284162;
             }
             .location-result-expand a:visited {
-                color: initial !important;
+                color: #284162;
             }
 
             .location-title {
                 max-width: 90%;
+            }
+            .location-title a, .location-result-expand a {
+                pointer-events: none;
+                text-decoration: none;
             }
 
             .location-thumbnail {
@@ -327,6 +338,11 @@
                     transform: rotate(45deg);
                 }
             }
+
+            #siteNameSearch .form-group label {
+                font-size: inherit;
+                line-height: inherit;
+            }
         </style>
 
 <script>
@@ -354,41 +370,76 @@
         }
     }
 
-            $(document).ready(function () {
-                $(".location-result-expand a").on("click", function (e) {
-                    e.preventDefault();
+    function expandLocation(locationId, scroll = false) {
+        const $location = $(`#${locationId}`);
+        if (!$location.length) return;
 
-            // Get the main container for the location results.
-            let resultsContainer = document.querySelector("#location-results");
-            
-            // Find the parent '.location-result' of the clicked link.
-            let location = $(this).closest(".location-result");
+        // Hide all other results and their details, and remove 'active' class
+        $(".location-result").not($location).addClass("hidden").removeClass("active")
+            .find(".location-thumbnail, .location-description").addClass("hidden");
 
-            // Toggle the 'hidden' class on all location results to create an accordion effect
-            // where only one item is expanded at a time.
-            $(".location-result").toggleClass("hidden");
-            
-            // Toggle the 'active' class on the clicked location to style it as the active/expanded item.
-            location.toggleClass("active");
+        // Show and activate the target location and its details
+        $location.removeClass("hidden").addClass("active");
+        $location.find(".location-thumbnail, .location-description").removeClass("hidden");
 
-            // Scroll the active location into the visible area of the results container.
-            scrollElementIntoParentView(location[0], resultsContainer);
-            
-            // Find the thumbnail and description elements within the clicked location and toggle their visibility.
-            location.find(".location-thumbnail, .location-description").toggleClass("hidden");
-
-            // If the clicked location is not active, reset the map view
-            if( !location.hasClass("active") ) {
-                document.querySelector('#location_map_reset').click();
-            } else {
-                // Center the geomap on the selected location
-                const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${location[0].id}"] td:nth-last-child(2)`);
-                // Get coordinates from the table cell, trim whitespace, split into an array, and convert to numbers
-                const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
-
-                globalMap.getView().setCenter(ol.proj.transform(locationCoordinates, "EPSG:4326", "EPSG:3857"));
-                globalMap.getView().setZoom(12);
+        if (scroll) {
+            const resultsContainer = document.querySelector("#location-results");
+            if (resultsContainer) {
+                scrollElementIntoParentView($location[0], resultsContainer);
             }
+        }
+    }
+
+    function collapseLocation(locationId) {
+        const $location = $(`#${locationId}`);
+        if (!$location.length) return;
+
+        const resultsContainer = document.querySelector("#location-results");
+
+        // Show all location results
+        $(".location-result").removeClass("hidden");
+        // Deactivate the current location
+        $location.removeClass("active");
+        // Hide its details
+        $location.find(".location-thumbnail, .location-description").addClass("hidden");
+        // reset map
+        document.querySelector('#location_map_reset').click();
+        // Scroll the (now collapsed) location into view
+        if (resultsContainer) {
+            scrollElementIntoParentView($location[0], resultsContainer);
+        }
+    }
+
+    $(document).ready(function () {
+        $("#location-results").on("click", ".location-result", function (e) {
+            e.preventDefault();
+
+            const $locationResult = $(this).closest(".location-result");
+            const locationId = $locationResult.attr("id");
+
+            if ($locationResult.hasClass("active")) {
+                collapseLocation(locationId);
+            } else {
+                expandLocation(locationId, true);
+
+                const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:last-child`);
+                if (layerDataRow) {
+                    const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
+                    if (locationCoordinates.length === 2 && !isNaN(locationCoordinates[0]) && !isNaN(locationCoordinates[1])) {
+                        globalMap.getView().setCenter(ol.proj.transform(locationCoordinates, "EPSG:4326", "EPSG:3857"));
+                        globalMap.getView().setZoom(12);
+                    }
+                }
+            }
+        });
+
+        $(".wb-geomap-map").on("click", function() {
+            setTimeout(() => {
+                const selectedRow = $(".locationTable tr.active").attr("locationTarget");
+                if (selectedRow) {
+                    expandLocation(selectedRow, true);
+                }
+            }, 500);
         });
     });
 
@@ -418,6 +469,7 @@
                     keys: ["text"],
                     threshold: 0.2, // lower = stricter matching
                     ignoreLocation: true, // allows matches anywhere in the string
+                    ignoreDiacritics: true // ignore accents
                 });
 
                 const input = document.querySelector("#searchByName");
