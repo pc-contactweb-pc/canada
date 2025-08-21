@@ -26,11 +26,13 @@ var wet_boew_geomap = {
             "root": "features",
             "visible": true,
             "datatable": false,
+            "legend": false,
             "params": {
                 "where": "'National Park' OR PLACE_TYPE_E = 'National Park Reserve'",
-                "outFields": "*",
+                "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
-                "outSR": "4326"
+                "outSR": "3857",
+                "maxAllowableOffset": 1000
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
@@ -49,11 +51,13 @@ var wet_boew_geomap = {
             "root": "features",
             "visible": true,
             "datatable": false,
+            "legend": false,
             "params": {
                 "where": "'National Historic Site'",
-                "outFields": "*",
+                "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
-                "outSR": "4326"
+                "outSR": "3857",
+                "maxAllowableOffset": 1000
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
@@ -73,11 +77,13 @@ var wet_boew_geomap = {
             "root": "features",
             "visible": true,
             "datatable": false,
+            "legend": false,
             "params": {
                 "where": "PLACE_TYPE_E = 'National Marine Conservation Area' OR PLACE_TYPE_E = 'National Marine Conservation Area Reserve'",
-                "outFields": "*",
+                "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
-                "outSR": "4326"
+                "outSR": "3857",
+                "maxAllowableOffset": 1000
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
