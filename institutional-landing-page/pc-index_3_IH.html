@@ -380,11 +380,9 @@
     });
 
 
-    // center and zoom geomap on location result expansion
+    // get global geomap variable on page load
     $(document).on("wb-ready.wb-geomap", "#location_map", function(event, map ) {
     window.globalMap = map;
-    map.getView().setCenter( ol.proj.transform( [-117.48, 51.25], "EPSG:4326", "EPSG:3857" ) );
-    map.getView().setZoom(11.6);
     });
 
 </script>
