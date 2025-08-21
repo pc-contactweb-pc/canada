@@ -41,30 +41,30 @@ var wet_boew_geomap = {
                 'fillColor': '#ff0000',
                 'fillOpacity': '0.4'
             }
-        },
+        // },
 
-        {
-            "title": "Other Areas",
-            "type": "esrijson",
-            "url": "https://services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0/query",
-            "root": "features",
-            "visible": true,
-            "datatable": true,
-            "params": {
-                "where": "PLACE_TYPE_E = 'National Historic Site'",
-                "outFields": "*",
-                "f": "json",
-                "outSR": "4326"
-            },
-            "attributes": {
-                "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
-                // "DESC_EN": { "path": "attributes", "alias": "Name" }
-            },
-            style: {
-                'strokeColor': '#1176a5ff',
-                'fillColor': '#26a036ff',
-                'fillOpacity': '0.4'
-            }
+        // {
+        //     "title": "Other Areas",
+        //     "type": "esrijson",
+        //     "url": "https://services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0/query",
+        //     "root": "features",
+        //     "visible": true,
+        //     "datatable": true,
+        //     "params": {
+        //         "where": "PLACE_TYPE_E = 'National Historic Site'",
+        //         "outFields": "*",
+        //         "f": "json",
+        //         "outSR": "4326"
+        //     },
+        //     "attributes": {
+        //         "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
+        //         // "DESC_EN": { "path": "attributes", "alias": "Name" }
+        //     },
+        //     style: {
+        //         'strokeColor': '#1176a5ff',
+        //         'fillColor': '#26a036ff',
+        //         'fillOpacity': '0.4'
+        //     }
         }
 
     ]
