@@ -20,14 +20,14 @@ var wet_boew_geomap = {
     "overlays": [
 
         {
-            "title": "National Parks",
+            "title": "National Park",
             "type": "esrijson",
             "url": "https://services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0/query",
             "root": "features",
             "visible": true,
-            "datatable": true,
+            "datatable": false,
             "params": {
-                "where": "PLACE_TYPE_E = 'National Park'",
+                "where": "'National Park' OR PLACE_TYPE_E = 'National Park Reserve'",
                 "outFields": "*",
                 "f": "json",
                 "outSR": "4326"
@@ -37,34 +37,57 @@ var wet_boew_geomap = {
                 // "DESC_EN": { "path": "attributes", "alias": "Park_Name" }
             },
             style: {
-                'strokeColor': '#ff0000',
-                'fillColor': '#ff0000',
+                'strokeColor': '#54813a',
+                'fillColor': '#54813a',
                 'fillOpacity': '0.4'
             }
-        // },
+        },
+        {
+            "title": "National Historic Site",
+            "type": "esrijson",
+            "url": "https://services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0/query",
+            "root": "features",
+            "visible": true,
+            "datatable": false,
+            "params": {
+                "where": "'National Historic Site'",
+                "outFields": "*",
+                "f": "json",
+                "outSR": "4326"
+            },
+            "attributes": {
+                "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
+                // "DESC_EN": { "path": "attributes", "alias": "Park_Name" }
+            },
+            style: {
+                'strokeColor': '#ad4c24',
+                'fillColor': '#ad4c24',
+                'fillOpacity': '0.4'
+            }
+        },
 
-        // {
-        //     "title": "Other Areas",
-        //     "type": "esrijson",
-        //     "url": "https://services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0/query",
-        //     "root": "features",
-        //     "visible": true,
-        //     "datatable": true,
-        //     "params": {
-        //         "where": "PLACE_TYPE_E = 'National Historic Site'",
-        //         "outFields": "*",
-        //         "f": "json",
-        //         "outSR": "4326"
-        //     },
-        //     "attributes": {
-        //         "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
-        //         // "DESC_EN": { "path": "attributes", "alias": "Name" }
-        //     },
-        //     style: {
-        //         'strokeColor': '#1176a5ff',
-        //         'fillColor': '#26a036ff',
-        //         'fillOpacity': '0.4'
-        //     }
+        {
+            "title": "National Marine Conservation Area",
+            "type": "esrijson",
+            "url": "https://services2.arcgis.com/wCOMu5IS7YdSyPNx/arcgis/rest/services/vw_Places_Public_lieux_public_APCA/FeatureServer/0/query",
+            "root": "features",
+            "visible": true,
+            "datatable": false,
+            "params": {
+                "where": "PLACE_TYPE_E = 'National Marine Conservation Area' OR PLACE_TYPE_E = 'National Marine Conservation Area Reserve'",
+                "outFields": "*",
+                "f": "json",
+                "outSR": "4326"
+            },
+            "attributes": {
+                "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
+                // "DESC_EN": { "path": "attributes", "alias": "Name" }
+            },
+            style: {
+                'strokeColor': '#1e71b8',
+                'fillColor': '#1e71b8',
+                'fillOpacity': '0.4'
+            }
         }
 
     ]
