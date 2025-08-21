@@ -26,7 +26,7 @@ var wet_boew_geomap = {
     datatable: true,
     attributes: {
       PLACE_TYPE_E: { path: "properties", alias: "Category" },
-      DESC_EN: { path: "properties", alias: "Park_Name" }
+    //   DESC_EN: { path: "properties", alias: "Park_Name" }
     },
     style: {
       type: "unique",
