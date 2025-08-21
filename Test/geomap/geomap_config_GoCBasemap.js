@@ -18,7 +18,7 @@ var wet_boew_geomap = {
     },
 
     "overlays": [
- 
+
         {
             "title": "Parks Canada — National Parks",
             "type": "esrijson",
@@ -34,16 +34,12 @@ var wet_boew_geomap = {
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
-                "DESC_EN": { "path": "attributes", "alias": "Park_Name" }
+                // "DESC_EN": { "path": "attributes", "alias": "Park_Name" }
             },
-            "style": {
-                "type": "simple",
-                "geometryType": "polygon",
-                "init": {
-                    "strokeColor": "#00aa00",
-                    "fillColor": "#00aa00",
-                    "fillOpacity": 0.4
-                }
+            style: {
+                'strokeColor': '#ff0000',
+                'fillColor': '#ff0000',
+                'fillOpacity': '0.4'
             }
         },
 
@@ -62,16 +58,12 @@ var wet_boew_geomap = {
             },
             "attributes": {
                 "PLACE_TYPE_E": { "path": "attributes", "alias": "Category" },
-                "DESC_EN": { "path": "attributes", "alias": "Name" }
+                // "DESC_EN": { "path": "attributes", "alias": "Name" }
             },
-            "style": {
-                "type": "simple",
-                "geometryType": "polygon",
-                "init": {
-                    "strokeColor": "#ff0000",
-                    "fillColor": "#ff0000",
-                    "fillOpacity": 0.4
-                }
+            style: {
+                'strokeColor': '#1176a5ff',
+                'fillColor': '#26a036ff',
+                'fillOpacity': '0.4'
             }
         }
 
