@@ -17,40 +17,41 @@ var wet_boew_geomap = {
         }
     },
     overlays: [
-  {
-    title: "Parks Canada Areas",
-    caption: "National Parks, Reserves & Marine Conservation Areas administered by Parks Canada",
-    type: "geojson",
-    url: "https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson",
-    visible: true,
-    datatable: true,
-    attributes: {
-      PLACE_TYPE_E: { path: "properties", alias: "Category" }
-      // DESC_EN: { path: "properties", alias: "Park_Name" }
-    },
-    style: {
-      "type": "unique",
-      "field": "PLACE_TYPE_E",  // must be the raw property name in GeoJSON
-      "init": {
-        "strokeColor": "#ff0000",
-        "fillColor": "#ff0000",
-        "fillOpacity": "0.4"
-      },
-      "values": {
-        "National Park": {
-          "strokeColor": "#008000",
-          "fillColor": "#008000",
-          "fillOpacity": "0.4"
+        {
+            title: "Parks Canada Areas",
+            caption: "National Parks, Reserves & Marine Conservation Areas administered by Parks Canada",
+            type: "geojson",
+            url: "https://opendata.arcgis.com/datasets/0fb235ee5bb34e51a825add061dd1a21_0.geojson",
+            visible: true,
+            datatable: true,
+            attributes: {
+                PLACE_TYPE_E: { path: "properties", alias: "Category" }
+                // DESC_EN: { path: "properties", alias: "Park_Name" }
+            },
+            style: {
+                "type": "unique",
+                "field": "PLACE_TYPE_E",
+                "init": {
+                    "National Park": {
+                        "strokeColor": "#008000",
+                        "fillColor": "#008000",
+                        "fillOpacity": "0.4"
+                    },
+                    "default": {
+                        "strokeColor": "#ff0000",
+                        "fillColor": "#ff0000",
+                        "fillOpacity": "0.4"
+                    }
+                },
+                "select": {
+                    "strokeColor": "#0000ff",
+                    "fillColor": "#0000ff",
+                    "fillOpacity": "0.6"
+                }
+            }
         }
-      },
-      "select": {
-        "strokeColor": "#0000ff",
-        "fillColor": "#0000ff",
-        "fillOpacity": "0.6"
-      }
-    }
-  }
-]
+    ]
+
 
 
 
