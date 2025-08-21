@@ -28,7 +28,7 @@ var wet_boew_geomap = {
             "datatable": false,
             "legend": false,
             "params": {
-                "where": "'National Park' OR PLACE_TYPE_E = 'National Park Reserve'",
+                "where": "PLACE_TYPE_E = 'National Park' OR PLACE_TYPE_E = 'National Park Reserve'",
                 "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
                 "outSR": "4326",
@@ -53,7 +53,7 @@ var wet_boew_geomap = {
             "datatable": false,
             "legend": false,
             "params": {
-                "where": "'National Historic Site'",
+                "where": "PLACE_TYPE_E ='National Historic Site'",
                 "outFields": "PLACE_TYPE_E,DESC_EN",
                 "f": "json",
                 "outSR": "4326",
