@@ -32,7 +32,7 @@ var wet_boew_geomap = {
                 "type": "rule",
                 "rule": [
                     {
-                        "field": "Category",
+                        "field": "PLACE_TYPE_E",               // must be raw property name
                         "value": ["National Park"],
                         "filter": "EQUAL_TO",
                         "init": {
@@ -58,6 +58,7 @@ var wet_boew_geomap = {
             }
         }
     ]
+
 
 
     // style: {
