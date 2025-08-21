@@ -416,7 +416,7 @@
                 // Set up Fuse
                 const fuse = new Fuse(titles, {
                     keys: ["text"],
-                    threshold: 0.3, // lower = stricter matching
+                    threshold: 0.2, // lower = stricter matching
                     ignoreLocation: true, // allows matches anywhere in the string
                 });
 
@@ -592,7 +592,7 @@
 
                                         <!-- start geomap legend -->
                                         <section class="col-md-12 form-group">
-                                            <label class="legendLabel" for="wb-geomap-legend">Display:</label>
+                                            <label class="legendLabel" for="wb-geomap-legend">Display on map:</label>
                                             <div class="wb-geomap-legend"></div>
                                         </section>
                                         <!-- end geomap legend -->
