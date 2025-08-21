@@ -287,7 +287,6 @@
                 text-align: center;
                 line-height: 35px;
                 border-radius: 5px;
-                display: inline-block;
                 z-index: 99;
             }
 
@@ -333,7 +332,8 @@
 
             .location-result.active {
                 display: block !important;
-
+                background: transparent !important;
+                border-bottom: 0;
                 .location-result-expand a {
                     transform: rotate(45deg);
                 }
@@ -342,6 +342,19 @@
             #siteNameSearch .form-group label {
                 font-size: inherit;
                 line-height: inherit;
+            }
+
+            /* province select */
+            select#gm_province {
+                float: left;
+                margin-right: 10px;
+            }
+            form.wb-geomap-filter {
+                margin-top: 7px;
+                height: 43px;
+            }
+            .wb-geomap-filter select, .wb-geomap-filter button {
+                height: 43px !important;
             }
         </style>
 
@@ -415,14 +428,17 @@
             e.preventDefault();
 
             const $locationResult = $(this).closest(".location-result");
+            console.log("Clicked location result:", $locationResult);
             const locationId = $locationResult.attr("id");
+            console.log("Location ID:", locationId);
 
             if ($locationResult.hasClass("active")) {
                 collapseLocation(locationId);
             } else {
                 expandLocation(locationId, true);
 
-                const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:last-child`);
+                const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:nth-last-child(2)`);
+                console.log(layerDataRow);
                 if (layerDataRow) {
                     const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
                     if (locationCoordinates.length === 2 && !isNaN(locationCoordinates[0]) && !isNaN(locationCoordinates[1])) {
@@ -494,28 +510,6 @@
         </script>
 
         <section style="margin-top:80px;background: #eee;position: relative; padding: 30px 0; margin-bottom: 30px;">
-
-            <!-- province areas of interest and map reset -->
-            <form class="wb-geomap-filter hidden" data-bind-to="location_map">
-                <select id="gm_province" class="form-control" data-filter="aoi">
-                    <option selected value="76.5 -66.9 47.3 -123.0">Canada</option>
-                    <option value="60 -110 49 -120">Alberta</option>
-                    <option value="60 -120 48 -139">British Columbia</option>
-                    <option value="60 -90 50 -100">Manitoba</option>
-                    <option value="45 -62 50 -72">New Brunswick</option>
-                    <option value="55 -45 50 -70">Newfoundland and Labrador</option>
-                    <option value="76 -124 61 -98">Northwest Territories</option>
-                    <option value="42 -60 48 -64">Nova Scotia</option>
-                    <option value="76 -104 61 -78">Nunavut Territory</option>
-                    <option value="57 -80 42 -90">Ontario</option>
-                    <option value="45 -60 48 -64">Prince Edward Island</option>
-                    <option value="62 -60 48 -80">Quebec</option>
-                    <option value="60 -100 50 -110">Saskatchewan</option>
-                    <option value="69 -135 58 -145">Yukon Territory</option>
-                </select>
-                <button id="location_map_submit" class="btn btn-primary" aria-controls="location_map" type="submit">Filter</button>
-                <button id="location_map_reset" class="btn btn-link" type="reset">Reset to defaults</button>
-            </form>
 
             <!-- Start of location finder -->
             <div class="container">
@@ -620,23 +614,27 @@
                                                 <div class="form-group">
                                                     <label for="searchByName">Zoom to province or territory on
                                                         map</label>
-                                                    <select id="select-province"
-                                                        style="display: block;border-radius: 5px;width: 100%;height: 44px;margin-top: 6px; color: black;font-size: 16px;border-color: #bbb;">
-                                                        <option>Select a province or territory</option>
-                                                        <option>Alberta</option>
-                                                        <option>British Columbia</option>
-                                                        <option>Manitoba</option>
-                                                        <option>New Brunswick</option>
-                                                        <option>Newfoundland and Labrador</option>
-                                                        <option>Nova Scotia</option>
-                                                        <option>Northwest Territories</option>
-                                                        <option>Nunavut</option>
-                                                        <option>Ontario</option>
-                                                        <option>Prince Edward Island</option>
-                                                        <option>Quebec</option>
-                                                        <option>Saskatchewan</option>
-                                                        <option>Yukon</option>
-                                                    </select>
+                                                    <!-- province areas of interest and map reset -->
+                                                    <form class="wb-geomap-filter" data-bind-to="location_map">
+                                                        <select id="gm_province" class="form-control" data-filter="aoi">
+                                                            <option selected value="76.5 -66.9 47.3 -123.0">Canada</option>
+                                                            <option value="60 -110 49 -120">Alberta</option>
+                                                            <option value="60 -120 48 -139">British Columbia</option>
+                                                            <option value="60 -90 50 -100">Manitoba</option>
+                                                            <option value="45 -62 50 -72">New Brunswick</option>
+                                                            <option value="55 -45 50 -70">Newfoundland and Labrador</option>
+                                                            <option value="76 -124 61 -98">Northwest Territories</option>
+                                                            <option value="42 -60 48 -64">Nova Scotia</option>
+                                                            <option value="76 -104 61 -78">Nunavut Territory</option>
+                                                            <option value="57 -80 42 -90">Ontario</option>
+                                                            <option value="45 -60 48 -64">Prince Edward Island</option>
+                                                            <option value="62 -60 48 -80">Quebec</option>
+                                                            <option value="60 -100 50 -110">Saskatchewan</option>
+                                                            <option value="69 -135 58 -145">Yukon Territory</option>
+                                                        </select>
+                                                        <button id="location_map_submit" class="btn btn-primary" aria-controls="location_map" type="submit">Filter</button>
+                                                        <button id="location_map_reset" class="btn btn-link" type="reset">Reset to defaults</button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
