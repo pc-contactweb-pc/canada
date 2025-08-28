@@ -279,6 +279,7 @@
                 cursor: default;
                 .location-result-expand {
                     cursor: pointer;
+                    pointer-events:all;
                 }
             }
 
@@ -293,6 +294,7 @@
                 text-align: center;
                 line-height: 52px;
                 z-index: 99;
+                pointer-events:none;
             }
 
             .location-result-expand a {
@@ -301,7 +303,7 @@
                 transition: .2s;
                 color: #284162;
             }
-            .location-result-expand a:visited {
+            .location-result-expand a:visited, .location-title a:visited {
                 color: #284162;
             }
 
@@ -488,8 +490,7 @@
         if (resultsContainer) {
             scrollElementIntoParentView($location[0], resultsContainer);
         }
-        globalMap.getView().setCenter( ol.proj.transform( [-100.48, 70.25], "EPSG:4326", "EPSG:3857" ) );
-        globalMap.getView().setZoom(2.3);
+        resetMap();
     }
 
     $(document).ready(function () {
@@ -524,12 +525,16 @@
         });
     });
 
+    function resetMap() {
+        globalMap.getView().setCenter( ol.proj.transform( [-100.48, 70.25], "EPSG:4326", "EPSG:3857" ) );
+        globalMap.getView().setZoom(2.3);
+    }
 
     // get global geomap variable on page load
     $(document).on("wb-ready.wb-geomap", "#location_map", function(event, map ) {
-    window.globalMap = map;
-    map.getView().setCenter( ol.proj.transform( [-100.48, 70.25], "EPSG:4326", "EPSG:3857" ) );
-    map.getView().setZoom(2.3);
+        window.globalMap = map;
+        resetMap();
+        $("#location_map_reset").on("click", resetMap);
     });
 
 </script>
@@ -693,7 +698,7 @@
                                                     <label for="searchByName">Zoom to province or territory on
                                                         map</label>
                                                     <!-- province areas of interest and map reset -->
-                                                    <form class="wb-geomap-filter" data-bind-to="location_map">
+                                                    <form class="wb-geomap-filter pull-left" data-bind-to="location_map">
                                                         <select id="gm_province" class="form-control" data-filter="aoi">
                                                             <option selected value="79.5 -66.9 47.3 -123.0">Canada</option>
                                                             <option value="60 -110 49 -120">Alberta</option>
@@ -711,8 +716,8 @@
                                                             <option value="69 -135 58 -145">Yukon Territory</option>
                                                         </select>
                                                         <button id="location_map_submit" class="btn btn-primary" aria-controls="location_map" type="submit">Filter</button>
-                                                        <button id="location_map_reset" class="btn btn-link" type="reset">Reset to defaults</button>
                                                     </form>
+                                                    <button id="location_map_reset" class="mrgn-tp-sm btn btn-link pull-left" type="reset">Reset map view</button>
                                                 </div>
                                             </div>
                                         </div>
