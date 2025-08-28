@@ -431,6 +431,10 @@
                 top: 54px;
                 background-color: #eee;
                 color: #777;
+                transition: .2s;
+            }
+            #searchByName.clear-search~.result-text {
+                right: 55px;
             }
             .result-text.positive {
                 background-color: #dff0d8;
@@ -449,6 +453,22 @@
             }
             .wb-geomap-map {
                 margin-left: -15px;
+            }
+
+            span#clear-search {
+                font-weight: bold;
+                position: absolute;
+                right: 20px;
+                top: 54px;
+                cursor: pointer;
+                width: 33px;
+                height: 33px;
+                z-index: 99;
+                text-align: center;
+                display: none;
+            }
+            #searchByName.clear-search+span#clear-search {
+                display: inline-block!important;
             }
 
             @media screen and (max-width: 1200px){
@@ -605,6 +625,12 @@
             // auto-submit the form when a province is selected
             $(this).closest("form").submit();
         });
+
+        $("#clear-search").on("click", function() {
+            $("#searchByName").val("").removeClass("clear-search");
+            $(".location-result").show();
+        });
+
     });
 
     // get global geomap variable on page load
@@ -646,9 +672,11 @@
                     let visibleIndexes;
                     if (query) {
                         visibleIndexes = new Set(fuse.search(query).map(r => r.item.idx));
+                        $("#searchByName").addClass("clear-search");
                     } else {
                         // If empty query, show all
                         visibleIndexes = new Set(titles.map((_, idx) => idx));
+                        $("#searchByName").removeClass("clear-search");
                     }
 
                     results.forEach((result, idx) => {
@@ -769,6 +797,7 @@
                                                         name="searchByName" list="searchByNames"
                                                         placeholder="Type a location name"
                                                         style="margin-top: 7px;height: 43px;">
+                                                        <span id="clear-search" aria-label="Clear search">×</span>
                                                     <p aria-live="assertive" class="bg-success text-success result-text"><small><span id="visible-results"></span><span id="all-results">0</span> results</small></p>
                                                 </div>
 
