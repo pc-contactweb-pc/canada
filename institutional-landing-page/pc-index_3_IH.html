@@ -417,8 +417,11 @@
 
             .result-text {
                 border-radius: 5px;
-                padding: 3px 14px;
+                padding: 0px 10px;
                 display: inline-block;
+                position: absolute;
+                right: 20px;
+                bottom: 8px;
             }
         </style>
 
@@ -694,6 +697,7 @@
                                                         name="searchByName" list="searchByNames"
                                                         placeholder="Type a location name"
                                                         style="margin-top: 7px;height: 43px;">
+                                                    <p aria-live="assertive" class="bg-success text-success result-text"><small><span id="visible-results"></span><span id="all-results">0</span> results</small></p>
                                                 </div>
 
                                             </div>
@@ -731,10 +735,6 @@
                                             </div>
                                         </div>
                                         <!-- end province zoom field -->
-
-                                        <div class="col-sm-12" aria-live="assertive">
-                                            <p class="bg-success text-success result-text"><small>Showing <span id="visible-results"></span><span id="all-results">0</span> results</small></p>
-                                        </div>
 
                                     </div>
 
