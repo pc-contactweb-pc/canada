@@ -486,9 +486,12 @@
         $location.find(".location-thumbnail, .location-description").addClass("hidden");
         // reset map
         document.querySelector('#location_map_reset').click();
-        // Scroll the (now collapsed) location into view
+        // Scroll the (now collapsed) location to the top of the container
         if (resultsContainer) {
-            scrollElementIntoParentView($location[0], resultsContainer);
+            const locationEl = $location[0];
+            const containerRect = resultsContainer.getBoundingClientRect();
+            const locationRect = locationEl.getBoundingClientRect();
+            resultsContainer.scrollTop += locationRect.top - containerRect.top;
         }
         resetMap();
     }
