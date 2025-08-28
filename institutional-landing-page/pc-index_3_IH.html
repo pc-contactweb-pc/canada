@@ -255,6 +255,10 @@
                 display: inline-block !important;
             }
 
+            #location-results-container {
+                max-width: 100%;
+            }
+
             #location-results {
                 overflow-y: scroll;
                 overflow-x: hidden;
@@ -368,10 +372,13 @@
             select#gm_province {
                 float: left;
                 margin-right: 10px;
+                width:100%;
             }
             form.wb-geomap-filter {
                 margin-top: 7px;
                 height: 43px;
+                display: inline-block;
+                width: 70%;
             }
             .wb-geomap-filter select, .wb-geomap-filter button {
                 height: 43px !important;
@@ -416,13 +423,65 @@
             }
 
             .result-text {
-                border-radius: 5px;
+                border-radius: 3px;
                 padding: 0px 10px;
                 display: inline-block;
                 position: absolute;
                 right: 20px;
-                bottom: 8px;
+                top: 54px;
+                background-color: #eee;
+                color: #777;
             }
+            .result-text.positive {
+                background-color: #dff0d8;
+                color: #3c763d;
+            }
+            .result-text.negative {
+                background-color: #f2dede;
+                color: #a94442;
+            }
+
+            #location-results, .wb-geomap-map {
+                height: 50vh!important;
+            }
+            #location-results {
+                margin-right: -15px;
+            }
+            .wb-geomap-map {
+                margin-left: -15px;
+            }
+
+            @media screen and (max-width: 1200px){
+                form.wb-geomap-filter {
+                    width: 66%;
+                }
+            }
+
+            @media screen and (max-width: 992px){
+                .result-text {
+                    top: 0px;
+                    right: 16px;
+                    background: #e5e5e5;
+                }
+                .location-title {
+                    strong {
+                        max-width: 70vw;
+                    }
+                }
+                form.wb-geomap-filter {
+                    width: 62%;
+                }
+                #location-results, .wb-geomap-map {
+                    height: 50vh;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+                #locationSearch .legendLabel {
+                    line-height: 20px;
+                    margin-top: 20px;
+                }
+            }
+            
         </style>
 
 <script>
@@ -505,6 +564,11 @@
         resetMap();
     }
 
+    function resetMap() {
+        globalMap.getView().setCenter( ol.proj.transform( [-100.48, 70.25], "EPSG:4326", "EPSG:3857" ) );
+        globalMap.getView().setZoom(2.3);
+    }
+
     $(document).ready(function () {
 
         const allResults = $(".location-result").length;
@@ -527,6 +591,7 @@
             }
         });
 
+        // when a map marker is clicked, expand the corresponding location result
         $(".wb-geomap-map").on("click", function() {
             setTimeout(() => {
                 const selectedRow = $(".locationTable tr.active").attr("locationTarget");
@@ -535,12 +600,12 @@
                 }
             }, 500);
         });
-    });
 
-    function resetMap() {
-        globalMap.getView().setCenter( ol.proj.transform( [-100.48, 70.25], "EPSG:4326", "EPSG:3857" ) );
-        globalMap.getView().setZoom(2.3);
-    }
+        $("#gm_province").on("change", function() {
+            // auto-submit the form when a province is selected
+            $(this).closest("form").submit();
+        });
+    });
 
     // get global geomap variable on page load
     $(document).on("wb-ready.wb-geomap", "#location_map", function(event, map ) {
@@ -594,6 +659,13 @@
                     const visibleResults = $(".location-result:visible").length;
                     $("#visible-results").text(visibleResults + " of ");
 
+                    // update result text styling
+                    if(visibleResults === 0){
+                        $(".result-text").removeClass("positive").addClass("negative");
+                    } else {
+                        $(".result-text").removeClass("negative").addClass("positive");
+                    }
+
                     if(visibleResults === 1){
                         // if only one result, expand it
                         const onlyResultId = $(".location-result:visible").attr("id");
@@ -629,7 +701,6 @@
                      "tab" : false,
                      "tooltips" : true,
                      "tooltipText" : "Location text" ,
-                     "popups" : true,
                      "visible" : true,
                      "popupsInfo" : {
                      "id" : "locationsPopup" ,
@@ -649,7 +720,6 @@
                 "tab" : false,
                 "tooltips" : true,
                 "tooltipText" : "Location text" ,
-                "popups" : true,
                 "visible" : true,
                 "popupsInfo" : {
                 "id" : "locationsPopup" ,
@@ -669,7 +739,6 @@
                 "tab" : false,
                 "tooltips" : true,
                 "tooltipText" : "Location text" ,
-                "popups" : true,
                 "visible" : true,
                 "popupsInfo" : {
                 "id" : "locationsPopup" ,
@@ -686,11 +755,14 @@
                 }'>
 
 
+
                                     <div class="row">
 
-                                        <!-- start site name search field -->
-                                        <div class="col-md-6">
-                                            <div id="siteNameSearch" class="mrgn-tp-sm mrgn-bttm-md">
+                                        <!-- Start Park Result List -->
+                                        <section id="location-results-container" class="col-md-6 mrgn-tp-lg">
+
+                                                                                    <!-- start site name search field -->
+                                                                                    <div id="siteNameSearch" class="mrgn-tp-sm mrgn-bttm-md">
                                                 <div class="form-group">
                                                     <label for="searchByName">Search by name</label>
                                                     <input class="form-control" type="search" id="searchByName"
@@ -701,47 +773,9 @@
                                                 </div>
 
                                             </div>
-                                        </div>
+
                                         <!-- end site name search field -->
 
-                                        <!-- start province zoom field -->
-                                        <div class="col-md-6">
-                                            <div class="mrgn-tp-sm mrgn-bttm-md">
-                                                <div class="form-group">
-                                                    <label for="searchByName">Zoom to province or territory on
-                                                        map</label>
-                                                    <!-- province areas of interest and map reset -->
-                                                    <form class="wb-geomap-filter pull-left" data-bind-to="location_map">
-                                                        <select id="gm_province" class="form-control" data-filter="aoi">
-                                                            <option selected value="79.5 -66.9 47.3 -123.0">Canada</option>
-                                                            <option value="60 -110 49 -120">Alberta</option>
-                                                            <option value="60 -120 48 -139">British Columbia</option>
-                                                            <option value="60 -90 50 -100">Manitoba</option>
-                                                            <option value="45 -62 50 -72">New Brunswick</option>
-                                                            <option value="55 -45 50 -70">Newfoundland and Labrador</option>
-                                                            <option value="76 -124 61 -98">Northwest Territories</option>
-                                                            <option value="42 -60 48 -64">Nova Scotia</option>
-                                                            <option value="76 -104 61 -78">Nunavut Territory</option>
-                                                            <option value="57 -80 42 -90">Ontario</option>
-                                                            <option value="45 -60 48 -64">Prince Edward Island</option>
-                                                            <option value="62 -60 48 -80">Quebec</option>
-                                                            <option value="60 -100 50 -110">Saskatchewan</option>
-                                                            <option value="69 -135 58 -145">Yukon Territory</option>
-                                                        </select>
-                                                        <button id="location_map_submit" class="btn btn-primary" aria-controls="location_map" type="submit">Zoom map</button>
-                                                    </form>
-                                                    <button id="location_map_reset" class="mrgn-tp-sm btn btn-link pull-left" type="reset">Reset map view</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end province zoom field -->
-
-                                    </div>
-
-                                    <div class="row">
-
-                                        <!-- Start Park Result List -->
-                                        <section class="col-md-6 form-group" style="width: 583px;padding-right:0;">
 <div id="location-results">
 
                                                 <div class="location-result nhs" id="5763StLouisStreetNationalHistoricSite" style="">
@@ -6851,7 +6885,38 @@
                                         <!-- Park Result List End -->
 
                                         <!-- Insert Map Start (mandatory) -->
-                                        <div class="col-md-6" style="overflow: visible;padding:0;">
+                                        <div class="col-md-6 mrgn-tp-lg">
+
+                                        <!-- start province zoom field -->
+                                            <div class="mrgn-tp-sm mrgn-bttm-sm">
+                                                
+                                                    <label for="searchByName">Zoom to province or territory on
+                                                        map</label>
+                                                    <!-- province areas of interest and map reset -->
+                                                    <form class="wb-geomap-filter" data-bind-to="location_map">
+                                                        <select id="gm_province" class="form-control" data-filter="aoi">
+                                                            <option selected value="79.5 -66.9 47.3 -123.0">Canada</option>
+                                                            <option value="60 -110 49 -120">Alberta</option>
+                                                            <option value="60 -120 48 -139">British Columbia</option>
+                                                            <option value="60 -90 50 -100">Manitoba</option>
+                                                            <option value="45 -62 50 -72">New Brunswick</option>
+                                                            <option value="55 -45 50 -70">Newfoundland and Labrador</option>
+                                                            <option value="76 -124 61 -98">Northwest Territories</option>
+                                                            <option value="42 -60 48 -64">Nova Scotia</option>
+                                                            <option value="76 -104 61 -78">Nunavut Territory</option>
+                                                            <option value="57 -80 42 -90">Ontario</option>
+                                                            <option value="45 -60 48 -64">Prince Edward Island</option>
+                                                            <option value="62 -60 48 -80">Quebec</option>
+                                                            <option value="60 -100 50 -110">Saskatchewan</option>
+                                                            <option value="69 -135 58 -145">Yukon Territory</option>
+                                                        </select>
+                                                        <button id="location_map_submit" class="btn btn-primary hidden" aria-controls="location_map" type="submit">Zoom map</button>
+                                                        </form>
+                                                        <button id="location_map_reset" class="mrgn-tp-sm btn btn-link pull-right" type="reset">Reset map view</button>
+                                                
+                                            </div>
+                                        <!-- end province zoom field -->
+
                                             <div class="wb-geomap-map"></div>
                                         </div>
                                         <!-- Insert Map End -->
