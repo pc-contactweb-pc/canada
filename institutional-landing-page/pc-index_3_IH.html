@@ -292,34 +292,50 @@
 padding: 15px 30px 15px 40px !important;
     margin: 0 -15px 0 -15px;
     display: block!important;
+
 }
 details.location-result {
     margin-bottom: 0!important;
 }
+.location-result summary:hover,
+.location-result summary:active,
+.location-result summary:focus{
+    text-decoration: none;
+    color:#295376;
+}
+.location-result[open] summary{
+    margin-bottom: 1em;
+}
+.location-result, .location-result[open] {
+    border-radius: 0;
+    border: 0;
+    border-right: 1px solid #eee;
+}
+.location-result[open] {
+    height: 100%;
+}
 
-            .location-result-expand {
-                position: absolute;
-                right: 0;
-                top: 0;
+
+
+            .location-result summary:after {
+                content: "+";
                 font-weight: bold;
-                font-size: 27px;
-                width: 100%;
-                margin-right: 15px;
-                height: 57px;
-                text-align: right;
-                line-height: 52px;
-                z-index: 99;
-            }
-
-            .location-result-expand a {
-                text-decoration: none;
+                width: 30px;
+                height: 30px;
+                font-size: 30px;
+                line-height: 30px;
                 display: inline-block;
-                transition: .2s;
-                color: #284162;
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: 10px;
+                right: 10px;
+                transition:.2s;
+                text-align:center;
             }
-            .location-result-expand a:visited, .location-title a:visited {
-                color: #284162;
-            }
+.location-result.active summary:after {
+    transform: rotate(45deg);
+}
 
             .location-title {
                 padding-left:30px;
@@ -651,6 +667,8 @@ details.location-result {
         $("#clear-search").on("click", function() {
             $("#searchByName").val("").removeClass("clear-search");
             $(".location-result").removeClass("hidden").show();
+            $("#visible-results").text("");
+            $(".result-text").removeClass("positive negative");
         });
 
     });
@@ -691,14 +709,19 @@ details.location-result {
 
                     collapseLocation();
 
+                    const visibleTotal = $(".location-result:visible").length;
+
                     let visibleIndexes;
                     if (query) {
                         visibleIndexes = new Set(fuse.search(query).map(r => r.item.idx));
                         $("#searchByName").addClass("clear-search");
+                        $(".result-text").removeClass("negative").addClass("positive");
                     } else {
                         // If empty query, show all
                         visibleIndexes = new Set(titles.map((_, idx) => idx));
                         $("#searchByName").removeClass("clear-search");
+                                    $("#visible-results").text("");
+            $(".result-text").removeClass("positive negative");
                     }
 
                     results.forEach((result, idx) => {
@@ -712,8 +735,6 @@ details.location-result {
                     // update result text styling
                     if(visibleResults === 0){
                         $(".result-text").removeClass("positive").addClass("negative");
-                    } else {
-                        $(".result-text").removeClass("negative").addClass("positive");
                     }
 
                     if(visibleResults === 1){
