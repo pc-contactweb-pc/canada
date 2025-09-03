@@ -627,10 +627,13 @@
         // when a map marker is clicked, expand the corresponding location result
         $(".wb-geomap-map").on("click", function() {
             setTimeout(() => {
+                const selectedRowCheckbox = $(".locationTable tr.active input[type='checkbox']");
                 const selectedRow = $(".locationTable tr.active").attr("locationTarget");
                 if (selectedRow) {
                     expandLocation(selectedRow, true);
+                    selectedRowCheckbox.trigger("click");
                 }
+
             }, 500);
         });
 
