@@ -244,6 +244,8 @@
         <!-- LOCATION FINDER A -->
 
         <style>
+html { scroll-behavior: smooth; }
+
             #locationSearch .legendLabel {
                 padding-left: 0;
                 float: left;
@@ -498,6 +500,18 @@ details.location-result {
             #searchByName.clear-search+span#clear-search {
                 display: inline-block!important;
             }
+        label[for="searchByName"] {
+    display: block;
+}
+
+.ol-popup {
+    display: none;
+    min-width: 160px;
+    padding: 20px;
+}
+.ol-popup h5 {
+    display: none;
+}
 
             @media screen and (max-width: 1200px){
                 form.wb-geomap-filter {
@@ -521,7 +535,7 @@ details.location-result {
                     }
                 }
                 form.wb-geomap-filter {
-                    width: 58%;
+                    width: 50%;
                 }
                 #location-results, .wb-geomap-map {
                     height: 50vh;
@@ -544,6 +558,9 @@ details.location-result {
                 #location_map .col-md-6 {
                     padding: 0 30px;
                 }
+                .ol-popup {
+    display: block;
+}
             }
             
         </style>
@@ -776,12 +793,13 @@ details.location-result {
                      "tooltips" : true,
                      "tooltipText" : "Location text" ,
                      "visible" : true,
+                     "popups" : true,
                      "popupsInfo" : {
                      "id" : "locationsPopup" ,
                      "height" : 200,
                      "width" : 300,
                      "close" : true,
-                     "content" : "<div style=\" white-space:nowrap;\"><p>_Location name</div>"
+                     "content" : "<div style=\" white-space:nowrap;\"><a class=\"btn btn-primary\"href=\"#location-results\">View location details</a></div>"
                 },
                 "style": {
                 "type": "rule",
@@ -795,12 +813,13 @@ details.location-result {
                 "tooltips" : true,
                 "tooltipText" : "Location text" ,
                 "visible" : true,
+                "popups" : true,
                 "popupsInfo" : {
                 "id" : "locationsPopup" ,
                 "height" : 200,
                 "width" : 300,
                 "close" : true,
-                "content" : "<div style=\" white-space:nowrap;\"><p>_Location name</div>"
+                "content" : "<div style=\" white-space:nowrap;\"><a class=\"btn btn-primary\" href=\"#location-results\">View location details</a></div>"
                 },
                 "style": {
                 "type": "rule",
@@ -814,12 +833,13 @@ details.location-result {
                 "tooltips" : true,
                 "tooltipText" : "Location text" ,
                 "visible" : true,
+                "popups" : true,
                 "popupsInfo" : {
                 "id" : "locationsPopup" ,
                 "height" : 200,
                 "width" : 300,
                 "close" : true,
-                "content" : "<div style=\" white-space:nowrap;\"><p>_Location name</div>"
+                "content" : "<div style=\" white-space:nowrap;\"><a class=\"btn btn-primary\" href=\"#location-results\">View location details</a></div>"
                 },
                 "style": {
                 "type": "rule",
@@ -5619,7 +5639,7 @@ details.location-result {
                                         <div class="col-md-6 mrgn-tp-lg">
 
                                         <!-- start province zoom field -->
-                                            <div class="mrgn-tp-sm mrgn-bttm-sm">
+                                            <div class="mrgn-bttm-sm">
                                                 
                                                     <label for="searchByName">Zoom to province or territory on
                                                         map</label>
