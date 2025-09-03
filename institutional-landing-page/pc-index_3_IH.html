@@ -552,8 +552,17 @@ details.location-result {
                 }
             }
             @media screen and (max-width: 768px){
+#location-results, .wb-geomap-map {
+    height: 40vh!important;
+}
+
+
+                    .result-text {
+        right: 30px!important;
+    }
                 #clear-search {
-                    top: 40px!important;
+        top: 35px !important;
+        right: 32px !important;
                 }
                 #location_map .col-md-6 {
                     padding: 0 30px;
@@ -686,8 +695,8 @@ details.location-result {
                     selectedRowCheckbox.trigger("click");
                     // Scroll to the location results if on a small screen
                     if (window.innerWidth < 768) {
-                        const locationResults = document.querySelector("#location-results");
-                        locationResults.scrollIntoView();
+                        const locationSearch = document.querySelector("#siteNameSearch");
+                        locationSearch.scrollIntoView();
                     }
                 }
 
