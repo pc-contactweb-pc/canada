@@ -561,6 +561,16 @@ details.location-result {
                 .ol-popup {
     display: block;
 }
+
+/* reorder map and region finder on a small screen */
+#map-container {
+    display: grid;
+    margin-top: 0;
+}
+#region-finder {
+    grid-row: 2;
+    margin-top: 10px;
+}
             }
             
         </style>
@@ -674,6 +684,11 @@ details.location-result {
                 if (selectedRow) {
                     expandLocation(selectedRow, true);
                     selectedRowCheckbox.trigger("click");
+                    // Scroll to the location results if on a small screen
+                    if (window.innerWidth < 768) {
+                        const locationResults = document.querySelector("#location-results");
+                        locationResults.scrollIntoView();
+                    }
                 }
 
             }, 500);
@@ -793,13 +808,13 @@ details.location-result {
                      "tooltips" : true,
                      "tooltipText" : "Location text" ,
                      "visible" : true,
-                     "popups" : true,
+                     "popups" : false,
                      "popupsInfo" : {
                      "id" : "locationsPopup" ,
                      "height" : 200,
                      "width" : 300,
                      "close" : true,
-                     "content" : "<div style=\" white-space:nowrap;\"><a class=\"btn btn-primary\"href=\"#location-results\">View location details</a></div>"
+                     "content" : "<div style=\" white-space:nowrap;\"><p><small>_Location name</small></p><a class=\"btn btn-primary\"href=\"#location-results\">View details</a></div>"
                 },
                 "style": {
                 "type": "rule",
@@ -813,13 +828,13 @@ details.location-result {
                 "tooltips" : true,
                 "tooltipText" : "Location text" ,
                 "visible" : true,
-                "popups" : true,
+                "popups" : false,
                 "popupsInfo" : {
                 "id" : "locationsPopup" ,
                 "height" : 200,
                 "width" : 300,
                 "close" : true,
-                "content" : "<div style=\" white-space:nowrap;\"><a class=\"btn btn-primary\" href=\"#location-results\">View location details</a></div>"
+                "content" : "<div style=\" white-space:nowrap;\"><p><small>_Location name</small></p><a class=\"btn btn-primary\"href=\"#location-results\">View details</a></div>"
                 },
                 "style": {
                 "type": "rule",
@@ -833,13 +848,13 @@ details.location-result {
                 "tooltips" : true,
                 "tooltipText" : "Location text" ,
                 "visible" : true,
-                "popups" : true,
+                "popups" : false,
                 "popupsInfo" : {
                 "id" : "locationsPopup" ,
                 "height" : 200,
                 "width" : 300,
                 "close" : true,
-                "content" : "<div style=\" white-space:nowrap;\"><a class=\"btn btn-primary\" href=\"#location-results\">View location details</a></div>"
+                "content" : "<div style=\" white-space:nowrap;\"><p><small>_Location name</small></p><a class=\"btn btn-primary\"href=\"#location-results\">View details</a></div>"
                 },
                 "style": {
                 "type": "rule",
@@ -5636,10 +5651,10 @@ details.location-result {
                                             </section>
 
                                         <!-- Insert Map Start (mandatory) -->
-                                        <div class="col-md-6 mrgn-tp-lg">
+                                        <div id="map-container" class="col-md-6 mrgn-tp-lg">
 
                                         <!-- start province zoom field -->
-                                            <div class="mrgn-bttm-sm">
+                                            <div id="region-finder" class="mrgn-bttm-sm">
                                                 
                                                     <label for="searchByName">Zoom to province or territory on
                                                         map</label>
@@ -5668,7 +5683,7 @@ details.location-result {
                                             </div>
                                         <!-- end province zoom field -->
 
-                                            <div class="wb-geomap-map"></div>
+                                            <div id="location-map" class="wb-geomap-map"></div>
                                         </div>
                                         <!-- Insert Map End -->
 
