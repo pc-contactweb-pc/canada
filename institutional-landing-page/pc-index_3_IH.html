@@ -731,18 +731,21 @@ details.location-result {
         <script src="https://cdn.jsdelivr.net/npm/fuse.js@7"></script>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
+                // use fuse to search the <summary> element text content as well as the data-region-name attribute for each .location-result
                 const results = Array.from(document.querySelectorAll(".location-result"));
+                const regions = results.map(result => result.getAttribute("data-region-name"));
                 const titles = results.map((result, idx) => {
                     const titleEl = result.querySelector(".location-result summary");
                     return {
                         idx,
-                        text: titleEl ? titleEl.textContent.trim() : ""
+                        text: titleEl ? titleEl.textContent.trim() : "",
+                        region: regions[idx] ? regions[idx].trim() : ""
                     };
                 });
 
                 // Set up Fuse
                 const fuse = new Fuse(titles, {
-                    keys: ["text"],
+                    keys: ["text", "region"],
                     threshold: 0.2, // lower = stricter matching
                     ignoreLocation: true, // allows matches anywhere in the string
                     ignoreDiacritics: true // ignore accents
@@ -898,7 +901,7 @@ details.location-result {
 
 <div id="location-results">
 
-                                                <details class="location-result nhs" id="5763StLouisStreetNationalHistoricSite">
+                                                <details class="location-result nhs" id="5763StLouisStreetNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -922,7 +925,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="AkamiUapishkKakKasuakMealyMountainsNationalParkReserve">
+                                                <details class="location-result np" id="AkamiUapishkKakKasuakMealyMountainsNationalParkReserve" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -945,7 +948,7 @@ details.location-result {
                                                                 boreal species. For thousands of years,...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="AlexanderGrahamBellNationalHistoricSite">
+                                                <details class="location-result nhs" id="AlexanderGrahamBellNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -966,7 +969,7 @@ details.location-result {
                                                                 part in exhilarating behind-the-scenes tours.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="ArdgowanNationalHistoricSite">
+                                                <details class="location-result nhs" id="ArdgowanNationalHistoricSite" data-region-name="Prince Edward Island">
 
 
 <summary><span>
@@ -987,7 +990,7 @@ details.location-result {
                                                                 house during the Charlottetown Conference of 1864.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="AthabascaPassNationalHistoricSite">
+                                                <details class="location-result nhs" id="AthabascaPassNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -1006,7 +1009,7 @@ details.location-result {
                                                                 the mid 1800s.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="AulavikNationalPark">
+                                                <details class="location-result np" id="AulavikNationalPark" data-region-name="Northwest Territories">
 
 
 <summary><span>
@@ -1028,7 +1031,7 @@ details.location-result {
                                                                 mammals.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="AuyuittuqNationalPark">
+                                                <details class="location-result np" id="AuyuittuqNationalPark" data-region-name="Nunavut">
 
 
 <summary><span>
@@ -1048,7 +1051,7 @@ details.location-result {
                                                                 Inuktitut.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="BanffNationalPark">
+                                                <details class="location-result np" id="BanffNationalPark" data-region-name="Alberta">
 
 
 <summary><span>
@@ -1069,7 +1072,7 @@ details.location-result {
                                                                 millions of visitors every year.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BanffParkMuseumNationalHistoricSite">
+                                                <details class="location-result nhs" id="BanffParkMuseumNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -1089,7 +1092,7 @@ details.location-result {
                                                                 birds and bees.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result" id="BanffUpperHotSprings">
+                                                <details class="location-result" id="BanffUpperHotSprings" data-region-name="Alberta">
 
 
 <summary><span>
@@ -1111,7 +1114,7 @@ details.location-result {
                                                                 drawn visitors to Banff since 1886.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BarURanchNationalHistoricSite">
+                                                <details class="location-result nhs" id="BarURanchNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -1131,7 +1134,7 @@ details.location-result {
                                                                 Mountains - it’s a true Alberta experience!
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BatocheNationalHistoricSite">
+                                                <details class="location-result nhs" id="BatocheNationalHistoricSite" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -1151,7 +1154,7 @@ details.location-result {
                                                                 1885, scene of Louis Riel’s last stand.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BattleHillNationalHistoricSite">
+                                                <details class="location-result nhs" id="BattleHillNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1174,7 +1177,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BattleofCooksMillsNationalHistoricSite">
+                                                <details class="location-result nhs" id="BattleofCooksMillsNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1198,7 +1201,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BattleofRestigoucheNationalHistoricSite">
+                                                <details class="location-result nhs" id="BattleofRestigoucheNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -1220,7 +1223,7 @@ details.location-result {
                                                                 don't miss out on any of the history!
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BattleofTourondsCouleeFishCreekNationalHistoricSite">
+                                                <details class="location-result nhs" id="BattleofTourondsCouleeFishCreekNationalHistoricSite" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -1242,7 +1245,7 @@ details.location-result {
                                                                 Tourond's Coulee.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BattleoftheChteauguayNationalHistoricSite">
+                                                <details class="location-result nhs" id="BattleoftheChteauguayNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -1264,7 +1267,7 @@ details.location-result {
                                                                 battlefield!
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BattleoftheWindmillNationalHistoricSite">
+                                                <details class="location-result nhs" id="BattleoftheWindmillNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1286,7 +1289,7 @@ details.location-result {
                                                                 Upper Canada from invaders.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BattlefieldofFortGeorgeNationalHistoricSite">
+                                                <details class="location-result nhs" id="BattlefieldofFortGeorgeNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1330,7 +1333,7 @@ details.location-result {
                                                                 the Little Rouge Creek.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BeaubassinandFortLawrenceNationalHistoricSites">
+                                                <details class="location-result nhs" id="BeaubassinandFortLawrenceNationalHistoricSites" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -1351,7 +1354,7 @@ details.location-result {
                                                                 region.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BeausoleilIslandNationalHistoricSite">
+                                                <details class="location-result nhs" id="BeausoleilIslandNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1374,7 +1377,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BellevueHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="BellevueHouseNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1394,7 +1397,7 @@ details.location-result {
                                                                 Lake Ontario breeze in an heirloom garden.&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BethuneMemorialHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="BethuneMemorialHouseNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1416,7 +1419,7 @@ details.location-result {
                                                                 interactive Visitor Centre.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BloodyCreekNationalHistoricSite">
+                                                <details class="location-result nhs" id="BloodyCreekNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -1456,7 +1459,7 @@ details.location-result {
                                                                 stood watch.&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="BoishbertandBeaubearsIslandShipbuildingNationalHistoricSites">
+                                                <details class="location-result nhs" id="BoishbertandBeaubearsIslandShipbuildingNationalHistoricSites" data-region-name="New Brunswick">
 
 
 <summary><span>
@@ -1479,7 +1482,7 @@ details.location-result {
                                                                 National Historic Sites.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="BrucePeninsulaNationalPark">
+                                                <details class="location-result np" id="BrucePeninsulaNationalPark" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1499,7 +1502,7 @@ details.location-result {
                                                                 coast and campers to revel at a stunning night sky.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="ButlersBarracksNationalHistoricSite">
+                                                <details class="location-result nhs" id="ButlersBarracksNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1519,7 +1522,7 @@ details.location-result {
                                                                 Historic Site in Niagara-on-the-Lake.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CansoIslandsNationalHistoricSite">
+                                                <details class="location-result nhs" id="CansoIslandsNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -1540,7 +1543,7 @@ details.location-result {
                                                                 brings to life the stories of Atlantic Canada.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="CapeBretonHighlandsNationalPark">
+                                                <details class="location-result np" id="CapeBretonHighlandsNationalPark" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -1561,7 +1564,7 @@ details.location-result {
                                                                 campsites and glorious sandy beaches.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CapeSpearLighthouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="CapeSpearLighthouseNationalHistoricSite" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -1583,7 +1586,7 @@ details.location-result {
                                                                 unforgiving coast.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CarillonBarracksNationalHistoricSite">
+                                                <details class="location-result nhs" id="CarillonBarracksNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -1604,7 +1607,7 @@ details.location-result {
                                                                 Regional Museum.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CarillonCanalNationalHistoricSite">
+                                                <details class="location-result nhs" id="CarillonCanalNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -1625,7 +1628,7 @@ details.location-result {
                                                                 century travelers.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CarletonMartelloTowerNationalHistoricSite">
+                                                <details class="location-result nhs" id="CarletonMartelloTowerNationalHistoricSite" data-region-name="New Brunswick">
 
 
 <summary><span>
@@ -1647,7 +1650,7 @@ details.location-result {
                                                                 exhibits, and commanding harbour views.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CarryingPlaceoftheBayofQuinteNationalHistoricSite">
+                                                <details class="location-result nhs" id="CarryingPlaceoftheBayofQuinteNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1671,7 +1674,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CartierBrbeufNationalHistoricSite">
+                                                <details class="location-result nhs" id="CartierBrbeufNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -1690,7 +1693,7 @@ details.location-result {
                                                                 magnificent urban park.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CastleHillNationalHistoricSite">
+                                                <details class="location-result nhs" id="CastleHillNationalHistoricSite" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -1711,7 +1714,7 @@ details.location-result {
                                                                 continent.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CaveandBasinNationalHistoricSite">
+                                                <details class="location-result nhs" id="CaveandBasinNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -1731,7 +1734,7 @@ details.location-result {
                                                                 cultural heritage places in the world.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="ChamblyCanalNationalHistoricSite">
+                                                <details class="location-result nhs" id="ChamblyCanalNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -1753,7 +1756,7 @@ details.location-result {
                                                                 It's magical.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CharlesFortNationalHistoricSite">
+                                                <details class="location-result nhs" id="CharlesFortNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -1774,7 +1777,7 @@ details.location-result {
                                                                 imagine the dramas of early settlers.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="ChilkootTrailNationalHistoricSite">
+                                                <details class="location-result nhs" id="ChilkootTrailNationalHistoricSite" data-region-name="Yukon">
 
 
 <summary><span>
@@ -1794,7 +1797,7 @@ details.location-result {
                                                                 Columbia.&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="CoteauduLacNationalHistoricSite">
+                                                <details class="location-result nhs" id="CoteauduLacNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -1834,7 +1837,7 @@ details.location-result {
                                                                 Saskatchewan.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="DalvaybytheSeaNationalHistoricSite">
+                                                <details class="location-result nhs" id="DalvaybytheSeaNationalHistoricSite" data-region-name="Prince Edward Island">
 
 
 <summary><span>
@@ -1855,7 +1858,7 @@ details.location-result {
                                                                 Adirondack chair with a view.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="DawsonHistoricalComplexNationalHistoricSite">
+                                                <details class="location-result nhs" id="DawsonHistoricalComplexNationalHistoricSite" data-region-name="Yukon">
 
 
 <summary><span>
@@ -1876,7 +1879,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="DredgeNo4NationalHistoricSite">
+                                                <details class="location-result nhs" id="DredgeNo4NationalHistoricSite" data-region-name="Yukon">
 
 
 <summary><span>
@@ -1898,7 +1901,7 @@ details.location-result {
                                                                 Below Discovery on Bonanza Creek near the spot...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="DAnvillesEncampmentNationalHistoricSite">
+                                                <details class="location-result nhs" id="DAnvillesEncampmentNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -1918,7 +1921,7 @@ details.location-result {
                                                                 France to recover Acadia.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="ElkIslandNationalPark">
+                                                <details class="location-result np" id="ElkIslandNationalPark" data-region-name="Alberta">
 
 
 <summary><span>
@@ -1938,7 +1941,7 @@ details.location-result {
                                                                 replenishes herds around the world.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nmca" id="FathomFiveNationalMarinePark">
+                                                <details class="location-result nmca" id="FathomFiveNationalMarinePark" data-region-name="Ontario">
 
 
 <summary><span>
@@ -1959,7 +1962,7 @@ details.location-result {
                                                                 Marine Park an awe-inspiring Great Lake escape.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FirstOilWellinWesternCanadaNationalHistoricSite">
+                                                <details class="location-result nhs" id="FirstOilWellinWesternCanadaNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -1980,7 +1983,7 @@ details.location-result {
                                                                 the passion to explore for oil in Alberta.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FisgardLighthouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="FisgardLighthouseNationalHistoricSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -1999,7 +2002,7 @@ details.location-result {
                                                                 and wander through a rare Garry Oak meadow.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="ForgesduSaintMauriceNationalHistoricSite">
+                                                <details class="location-result nhs" id="ForgesduSaintMauriceNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -2021,7 +2024,7 @@ details.location-result {
                                                                 first industrial community in Canada.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="ForillonNationalPark">
+                                                <details class="location-result np" id="ForillonNationalPark" data-region-name="Quebec">
 
 
 <summary><span>
@@ -2042,7 +2045,7 @@ details.location-result {
                                                                 creates colourful experiences and memories!
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FormerTerritorialCourtHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="FormerTerritorialCourtHouseNationalHistoricSite" data-region-name="Yukon">
 
 
 <summary><span>
@@ -2067,7 +2070,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortAnneNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortAnneNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -2089,7 +2092,7 @@ details.location-result {
                                                                 buildings speak to centuries of struggle.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortBattlefordNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortBattlefordNationalHistoricSite" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -2110,7 +2113,7 @@ details.location-result {
                                                                 times.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortBeausjourFortCumberlandNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortBeausjourFortCumberlandNationalHistoricSite" data-region-name="New Brunswick">
 
 
 <summary><span>
@@ -2131,7 +2134,7 @@ details.location-result {
                                                                 lived and died around the historic star-shaped fort.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortChamblyNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortChamblyNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -2152,7 +2155,7 @@ details.location-result {
                                                                 wooden forts.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortEdwardNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortEdwardNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -2174,7 +2177,7 @@ details.location-result {
                                                                 history.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortEspranceNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortEspranceNationalHistoricSite" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -2195,7 +2198,7 @@ details.location-result {
                                                                 in the West.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortGaspareauxNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortGaspareauxNationalHistoricSite" data-region-name="New Brunswick">
 
 
 <summary><span>
@@ -2215,7 +2218,7 @@ details.location-result {
                                                                 base for the forts of Acadia.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortGeorgeNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortGeorgeNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -2235,7 +2238,7 @@ details.location-result {
                                                                 George.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortHenryNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortHenryNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -2255,7 +2258,7 @@ details.location-result {
                                                                 natural harbour at the mouth of the Cataraqui River.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortLangleyNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortLangleyNationalHistoricSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -2276,7 +2279,7 @@ details.location-result {
                                                                 oTENTik.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortLennoxNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortLennoxNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -2298,7 +2301,7 @@ details.location-result {
                                                                 worth a visit.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortLivingstoneNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortLivingstoneNationalHistoricSite" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -2318,7 +2321,7 @@ details.location-result {
                                                                 West Mounted Police.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortMaldenNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortMaldenNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -2337,7 +2340,7 @@ details.location-result {
                                                                 historic buildings, and more at Fort Malden.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortMcNabNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortMcNabNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -2357,7 +2360,7 @@ details.location-result {
                                                                 then Canada’s) most significant naval stations.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortMississaugaNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortMississaugaNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -2378,7 +2381,7 @@ details.location-result {
                                                                 serve as a counterpoise to Fort Niagara.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortPellyNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortPellyNationalHistoricSite" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -2399,7 +2402,7 @@ details.location-result {
                                                                 development of western Canada.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortRoddHillNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortRoddHillNationalHistoricSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -2421,7 +2424,7 @@ details.location-result {
                                                                 overnight in a group-friendly oTENTik.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortSainteMariedeGraceNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortSainteMariedeGraceNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -2442,7 +2445,7 @@ details.location-result {
                                                                 situated near the original location of the fort.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortStJamesNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortStJamesNationalHistoricSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -2462,7 +2465,7 @@ details.location-result {
                                                                 Diner.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortStJosephNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortStJosephNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -2482,7 +2485,7 @@ details.location-result {
                                                                 British stronghold on Upper Canada’s western front.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortSteThrseNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortSteThrseNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -2503,7 +2506,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortWalshNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortWalshNationalHistoricSite" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -2523,7 +2526,7 @@ details.location-result {
                                                                 through the Cypress Hills.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortWellingtonNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortWellingtonNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -2544,7 +2547,7 @@ details.location-result {
                                                                 in the balance.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortificationsofQubecNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortificationsofQubecNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -2564,7 +2567,7 @@ details.location-result {
                                                                 through authentic buildings.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortressofLouisbourgNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortressofLouisbourgNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -2586,7 +2589,7 @@ details.location-result {
                                                                 in the French fortified town.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FortsRougeGarryandGibraltarNationalHistoricSite">
+                                                <details class="location-result nhs" id="FortsRougeGarryandGibraltarNationalHistoricSite" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -2609,7 +2612,7 @@ details.location-result {
                                                                 gate of Fort Garry II located in Upper Fort...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FrenchmanButteNationalHistoricSite">
+                                                <details class="location-result nhs" id="FrenchmanButteNationalHistoricSite" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -2629,7 +2632,7 @@ details.location-result {
                                                                 Northwest Rebellion/Resistance
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="FrogLakeNationalHistoricSite">
+                                                <details class="location-result nhs" id="FrogLakeNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -2652,7 +2655,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="FundyNationalPark">
+                                                <details class="location-result np" id="FundyNationalPark" data-region-name="New Brunswick">
 
 
 <summary><span>
@@ -2673,7 +2676,7 @@ details.location-result {
                                                                 Canada’s best-known national parks.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="GeorgesIslandNationalHistoricSite">
+                                                <details class="location-result nhs" id="GeorgesIslandNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -2693,7 +2696,7 @@ details.location-result {
                                                                 action for hundreds of years.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="GeorgianBayIslandsNationalPark">
+                                                <details class="location-result np" id="GeorgianBayIslandsNationalPark" data-region-name="Ontario">
 
 
 <summary><span>
@@ -2714,7 +2717,7 @@ details.location-result {
                                                                 Bay Islands National Park.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="GitwangakBattleHillNationalHistoricSite">
+                                                <details class="location-result nhs" id="GitwangakBattleHillNationalHistoricSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -2736,7 +2739,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="GlacierNationalPark">
+                                                <details class="location-result np" id="GlacierNationalPark" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -2778,7 +2781,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="GrandPrNationalHistoricSite">
+                                                <details class="location-result nhs" id="GrandPrNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -2800,7 +2803,7 @@ details.location-result {
                                                                 Site, monument to Acadian culture and deportation.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="GrasslandsNationalPark">
+                                                <details class="location-result np" id="GrasslandsNationalPark" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -2821,7 +2824,7 @@ details.location-result {
                                                                 intent on taming the prairie.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="GrassyIslandFortNationalHistoricSite">
+                                                <details class="location-result nhs" id="GrassyIslandFortNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -2841,7 +2844,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="GreenGablesHeritagePlace">
+                                                <details class="location-result nhs" id="GreenGablesHeritagePlace" data-region-name="Prince Edward Island">
 
 
 <summary><span>
@@ -2862,7 +2865,7 @@ details.location-result {
                                                                 Montgomery.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="GrosMorneNationalPark">
+                                                <details class="location-result np" id="GrosMorneNationalPark" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -2884,7 +2887,7 @@ details.location-result {
                                                                 communities.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="GrosseleandtheIrishMemorialNationalHistoricSite">
+                                                <details class="location-result nhs" id="GrosseleandtheIrishMemorialNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -2904,7 +2907,7 @@ details.location-result {
                                                                 port of Quebec from 1832 to 1937.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="GulfIslandsNationalParkReserve">
+                                                <details class="location-result np" id="GulfIslandsNationalParkReserve" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -2924,7 +2927,7 @@ details.location-result {
                                                                 hikers, campers, cyclists, boaters and kayakers.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="GulfofGeorgiaCanneryNationalHistoricSite">
+                                                <details class="location-result nhs" id="GulfofGeorgiaCanneryNationalHistoricSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -2946,7 +2949,7 @@ details.location-result {
                                                                 BC’s past.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nmca np" id="GwaiiHaanasNationalParkReserveNationalMarineConservationAreaReserveandHaidaHeritageSite">
+                                                <details class="location-result nmca np" id="GwaiiHaanasNationalParkReserveNationalMarineConservationAreaReserveandHaidaHeritageSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -2970,7 +2973,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="HMCSHaidaNationalHistoricSite">
+                                                <details class="location-result nhs" id="HMCSHaidaNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -2989,7 +2992,7 @@ details.location-result {
                                                                 the Second World War, the Korean Conflict and more.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="HalifaxCitadelNationalHistoricSite">
+                                                <details class="location-result nhs" id="HalifaxCitadelNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -3011,7 +3014,7 @@ details.location-result {
                                                                 promises engaging activities.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="HawthorneCottageNationalHistoricSite">
+                                                <details class="location-result nhs" id="HawthorneCottageNationalHistoricSite" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -3033,7 +3036,7 @@ details.location-result {
                                                                 Newfoundland.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="HopedaleMissionNationalHistoricSite">
+                                                <details class="location-result nhs" id="HopedaleMissionNationalHistoricSite" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -3072,7 +3075,7 @@ details.location-result {
                                                                 travelers.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="InverardenHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="InverardenHouseNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -3093,7 +3096,7 @@ details.location-result {
                                                                 &nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="IvvavikNationalPark">
+                                                <details class="location-result np" id="IvvavikNationalPark" data-region-name="Yukon">
 
 
 <summary><span>
@@ -3115,7 +3118,7 @@ details.location-result {
                                                                 hills untouched by the last Ice Age.&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="JasperHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="JasperHouseNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -3133,7 +3136,7 @@ details.location-result {
                                                                 post.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="JasperNationalPark">
+                                                <details class="location-result np" id="JasperNationalPark" data-region-name="Alberta">
 
 
 <summary><span>
@@ -3152,7 +3155,7 @@ details.location-result {
                                                                 wondrous place to visit year-round.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="JasperParkInformationCentreNationalHistoricSite">
+                                                <details class="location-result nhs" id="JasperParkInformationCentreNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -3172,7 +3175,7 @@ details.location-result {
                                                                 in Canada's national parks.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs np" id="KejimkujikNationalParkandNationalHistoricSite">
+                                                <details class="location-result nhs np" id="KejimkujikNationalParkandNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -3194,7 +3197,7 @@ details.location-result {
                                                                 can discover them all.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="KickingHorsePassNationalHistoricSite">
+                                                <details class="location-result nhs" id="KickingHorsePassNationalHistoricSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -3217,7 +3220,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="KingstonFortificationsNationalHistoricSite">
+                                                <details class="location-result nhs" id="KingstonFortificationsNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -3241,7 +3244,7 @@ details.location-result {
                                                                 military...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="KlondikeNationalHistoricSites">
+                                                <details class="location-result nhs" id="KlondikeNationalHistoricSites" data-region-name="Yukon">
 
 
 <summary><span>
@@ -3261,7 +3264,7 @@ details.location-result {
                                                                 mingles with everyday life.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="KluaneNationalParkandReserve">
+                                                <details class="location-result np" id="KluaneNationalParkandReserve" data-region-name="Yukon">
 
 
 <summary><span>
@@ -3282,7 +3285,7 @@ details.location-result {
                                                                 recreation.&nbsp;&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="KootenaeHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="KootenaeHouseNationalHistoricSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -3304,7 +3307,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="KootenayNationalPark">
+                                                <details class="location-result np" id="KootenayNationalPark" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -3325,7 +3328,7 @@ details.location-result {
                                                                 drive or stay and explore the park’s treasures.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="KouchibouguacNationalPark">
+                                                <details class="location-result np" id="KouchibouguacNationalPark" data-region-name="New Brunswick">
 
 
 <summary><span>
@@ -3346,7 +3349,7 @@ details.location-result {
                                                                 compelling tapestry of Kouchibouguac National Park.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="LAnseauxMeadowsNationalHistoricSite">
+                                                <details class="location-result nhs" id="LAnseauxMeadowsNationalHistoricSite" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -3367,7 +3370,7 @@ details.location-result {
                                                                 site.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="LMMontgomerysCavendishNationalHistoricSite">
+                                                <details class="location-result nhs" id="LMMontgomerysCavendishNationalHistoricSite" data-region-name="Prince Edward Island">
 
 
 <summary><span>
@@ -3391,7 +3394,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="LaMauricieNationalPark">
+                                                <details class="location-result np" id="LaMauricieNationalPark" data-region-name="Quebec">
 
 
 <summary><span>
@@ -3411,7 +3414,7 @@ details.location-result {
                                                                 year.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="LachineCanalNationalHistoricSite">
+                                                <details class="location-result nhs" id="LachineCanalNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -3432,7 +3435,7 @@ details.location-result {
                                                                 locks by boat, and enjoy an oasis in the city.&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nmca" id="LakeSuperiorNationalMarineConservationArea">
+                                                <details class="location-result nmca" id="LakeSuperiorNationalMarineConservationArea" data-region-name="Ontario">
 
 
 <summary><span>
@@ -3454,7 +3457,7 @@ details.location-result {
                                                                 snowshoeing and surfing.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="LaurierHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="LaurierHouseNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -3476,7 +3479,7 @@ details.location-result {
                                                                 business.&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="LinearMoundsNationalHistoricSite">
+                                                <details class="location-result nhs" id="LinearMoundsNationalHistoricSite" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -3499,7 +3502,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="LouisSStLaurentNationalHistoricSite">
+                                                <details class="location-result nhs" id="LouisSStLaurentNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -3519,7 +3522,7 @@ details.location-result {
                                                                 Minister Louis S. St. Laurent’s time.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="LouisJosephPapineauNationalHistoricSite">
+                                                <details class="location-result nhs" id="LouisJosephPapineauNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -3541,7 +3544,7 @@ details.location-result {
                                                                 to one of the most tormented times in Quebec and...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="LowerFortGarryNationalHistoricSite">
+                                                <details class="location-result nhs" id="LowerFortGarryNationalHistoricSite" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -3562,7 +3565,7 @@ details.location-result {
                                                                 the daily life of the Fort’s inhabitants.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="LvisFortsNationalHistoricSite">
+                                                <details class="location-result nhs" id="LvisFortsNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -3581,7 +3584,7 @@ details.location-result {
                                                                 remarkable technological innovations.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MaillouHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="MaillouHouseNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -3601,7 +3604,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MaligneLakeChaletandGuestHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="MaligneLakeChaletandGuestHouseNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -3621,7 +3624,7 @@ details.location-result {
                                                                 Maligne Lake.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="ManoirPapineauNationalHistoricSite">
+                                                <details class="location-result nhs" id="ManoirPapineauNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -3643,7 +3646,7 @@ details.location-result {
                                                                 to reflect in the funeral chapel.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MarconiNationalHistoricSite">
+                                                <details class="location-result nhs" id="MarconiNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -3664,7 +3667,7 @@ details.location-result {
                                                                 Scotia at the turn of 20th century.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MelansonSettlementNationalHistoricSite">
+                                                <details class="location-result nhs" id="MelansonSettlementNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -3686,7 +3689,7 @@ details.location-result {
                                                                 story.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MerrickvilleBlockhouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="MerrickvilleBlockhouseNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -3707,7 +3710,7 @@ details.location-result {
                                                                 second largest blockhouse surviving in Canada.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result" id="MietteHotSprings">
+                                                <details class="location-result" id="MietteHotSprings" data-region-name="Alberta">
 
 
 <summary><span>
@@ -3726,7 +3729,7 @@ details.location-result {
                                                                 the Canadian Rockies.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="MinganArchipelagoNationalParkReserve">
+                                                <details class="location-result np" id="MinganArchipelagoNationalParkReserve" data-region-name="Quebec">
 
 
 <summary><span>
@@ -3747,7 +3750,7 @@ details.location-result {
                                                                 and bird life, and the seductive sound of the sea.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MississaugaPointLighthouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="MississaugaPointLighthouseNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -3769,7 +3772,7 @@ details.location-result {
                                                                 1804.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MnjikaningFishWeirsNationalHistoricSite">
+                                                <details class="location-result nhs" id="MnjikaningFishWeirsNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -3789,7 +3792,7 @@ details.location-result {
                                                                 Trent-Severn Waterway.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MontmorencyParkNationalHistoricSite">
+                                                <details class="location-result nhs" id="MontmorencyParkNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -3809,7 +3812,7 @@ details.location-result {
                                                                 power, a strategic military site and an urban park.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MonumentLefebvreNationalHistoricSite">
+                                                <details class="location-result nhs" id="MonumentLefebvreNationalHistoricSite" data-region-name="New Brunswick">
 
 
 <summary><span>
@@ -3830,7 +3833,7 @@ details.location-result {
                                                                 – The Odyssey of the Acadian People.”
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MotherwellHomesteadNationalHistoricSite">
+                                                <details class="location-result nhs" id="MotherwellHomesteadNationalHistoricSite" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -3851,7 +3854,7 @@ details.location-result {
                                                                 outside.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="MountRevelstokeNationalPark">
+                                                <details class="location-result np" id="MountRevelstokeNationalPark" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -3871,7 +3874,7 @@ details.location-result {
                                                                 day’s drive at Mount Revelstoke National Park.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="MurneyTowerNationalHistoricSite">
+                                                <details class="location-result nhs" id="MurneyTowerNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -3892,7 +3895,7 @@ details.location-result {
                                                                 Kingston Fortifications National Historic Site.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="NahanniNationalParkReserve">
+                                                <details class="location-result np" id="NahanniNationalParkReserve" data-region-name="Northwest Territories">
 
 
 <summary><span>
@@ -3913,7 +3916,7 @@ details.location-result {
                                                                 visitors. &nbsp;&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="NavyIslandNationalHistoricSite">
+                                                <details class="location-result nhs" id="NavyIslandNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -3932,7 +3935,7 @@ details.location-result {
                                                                 the Niagara River just above Niagara Falls, Ontario.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="NtshchohNationalParkReserve">
+                                                <details class="location-result np" id="NtshchohNationalParkReserve" data-region-name="Northwest Territories">
 
 
 <summary><span>
@@ -3954,7 +3957,7 @@ details.location-result {
                                                                 experienced adventurers.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="ObadjiwanFortTmiscamingueNationalHistoricSite">
+                                                <details class="location-result nhs" id="ObadjiwanFortTmiscamingueNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -3975,7 +3978,7 @@ details.location-result {
                                                                 Témiscamingue.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="PacificRimNationalParkReserve">
+                                                <details class="location-result np" id="PacificRimNationalParkReserve" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -3996,7 +3999,7 @@ details.location-result {
                                                                 heritage of Canada’s west coast.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="PeterboroughLiftLockNationalHistoricSite">
+                                                <details class="location-result nhs" id="PeterboroughLiftLockNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4019,7 +4022,7 @@ details.location-result {
                                                                 metres.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="PingoCanadianLandmark">
+                                                <details class="location-result nhs" id="PingoCanadianLandmark" data-region-name="Northwest Territories">
 
 
 <summary><span>
@@ -4040,7 +4043,7 @@ details.location-result {
                                                                 Tuktoyaktuk, Northwest Territories.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="PointClarkLighthouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="PointClarkLighthouseNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4062,7 +4065,7 @@ details.location-result {
                                                                 sailors.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="PointPeleeNationalPark">
+                                                <details class="location-result np" id="PointPeleeNationalPark" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4081,7 +4084,7 @@ details.location-result {
                                                                 trails, paddling, birding, swimming and more.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="PointeauPreLighthouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="PointeauPreLighthouseNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -4104,7 +4107,7 @@ details.location-result {
                                                                 and the new exhibition River Sentinels are two...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="PortauChoixNationalHistoricSite">
+                                                <details class="location-result nhs" id="PortauChoixNationalHistoricSite" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -4126,7 +4129,7 @@ details.location-result {
                                                                 ivory daggers.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="PortRoyalNationalHistoricSite">
+                                                <details class="location-result nhs" id="PortRoyalNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -4149,7 +4152,7 @@ details.location-result {
                                                                 –...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="PrinceAlbertNationalPark">
+                                                <details class="location-result np" id="PrinceAlbertNationalPark" data-region-name="Saskatchewan">
 
 
 <summary><span>
@@ -4170,7 +4173,7 @@ details.location-result {
                                                                 town of Waskesiu as a convenient base.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="PrinceEdwardIslandNationalPark">
+                                                <details class="location-result np" id="PrinceEdwardIslandNationalPark" data-region-name="Prince Edward Island">
 
 
 <summary><span>
@@ -4191,7 +4194,7 @@ details.location-result {
                                                                 seaside escape, restful or active.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="PrinceofWalesFortNationalHistoricSite">
+                                                <details class="location-result nhs" id="PrinceofWalesFortNationalHistoricSite" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -4212,7 +4215,7 @@ details.location-result {
                                                                 polar bears, birds and beluga whales.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="PrinceofWalesTowerNationalHistoricSite">
+                                                <details class="location-result nhs" id="PrinceofWalesTowerNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -4233,7 +4236,7 @@ details.location-result {
                                                                 defensive structure.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="ProvinceHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="ProvinceHouseNationalHistoricSite" data-region-name="Prince Edward Island">
 
 
 <summary><span>
@@ -4256,7 +4259,7 @@ details.location-result {
                                                                 interpretive...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="PukaskwaNationalPark">
+                                                <details class="location-result np" id="PukaskwaNationalPark" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4278,7 +4281,7 @@ details.location-result {
                                                                 to iconic Canadian species like bald eagles,...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="QausuittuqNationalPark">
+                                                <details class="location-result np" id="QausuittuqNationalPark" data-region-name="Nunavut">
 
 
 <summary><span>
@@ -4297,7 +4300,7 @@ details.location-result {
                                                                 Bathurst Island in Nunavut’s High Arctic.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="QueenstonHeightsNationalHistoricSite">
+                                                <details class="location-result nhs" id="QueenstonHeightsNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4318,7 +4321,7 @@ details.location-result {
                                                                 warriors against an American invasion.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="QuttinirpaaqNationalPark">
+                                                <details class="location-result np" id="QuttinirpaaqNationalPark" data-region-name="Nunavut">
 
 
 <summary><span>
@@ -4337,7 +4340,7 @@ details.location-result {
                                                                 a vast arctic wilderness on Ellesmere Island.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="QubecGarrisonClubNationalHistoricSite">
+                                                <details class="location-result nhs" id="QubecGarrisonClubNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -4359,7 +4362,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result" id="RadiumHotSprings">
+                                                <details class="location-result" id="RadiumHotSprings" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -4380,7 +4383,7 @@ details.location-result {
                                                                 with the kids in the swimming pool.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="RedBayNationalHistoricSite">
+                                                <details class="location-result nhs" id="RedBayNationalHistoricSite" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -4401,7 +4404,7 @@ details.location-result {
                                                                 UNESCO World Heritage site.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="RideauCanalNationalHistoricSite">
+                                                <details class="location-result nhs" id="RideauCanalNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4423,7 +4426,7 @@ details.location-result {
                                                                 wooded pathways.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="RidgewayBattlefieldNationalHistoricSite">
+                                                <details class="location-result nhs" id="RidgewayBattlefieldNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4444,7 +4447,7 @@ details.location-result {
                                                                 Town of Fort Erie.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="RidingMountainNationalPark">
+                                                <details class="location-result np" id="RidingMountainNationalPark" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -4463,7 +4466,7 @@ details.location-result {
                                                                 forest, aspen parkland and fescue prairie meet.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="RidingMountainParkEastGateRegistrationComplexNationalHistoricSite">
+                                                <details class="location-result nhs" id="RidingMountainParkEastGateRegistrationComplexNationalHistoricSite" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -4484,7 +4487,7 @@ details.location-result {
                                                                 form of traditional architecture.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="RielHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="RielHouseNationalHistoricSite" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -4504,7 +4507,7 @@ details.location-result {
                                                                 Métis who lived along the banks of the Red River.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="RockyMountainHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="RockyMountainHouseNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -4523,7 +4526,7 @@ details.location-result {
                                                                 of Indigenous Peoples and legendary explorers.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="RogersPassNationalHistoricSite">
+                                                <details class="location-result nhs" id="RogersPassNationalHistoricSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -4544,7 +4547,7 @@ details.location-result {
                                                                 popular trails and climbing routes.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="RougeNationalUrbanPark">
+                                                <details class="location-result np" id="RougeNationalUrbanPark" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4567,7 +4570,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="RoyalBatteryNationalHistoricSite">
+                                                <details class="location-result nhs" id="RoyalBatteryNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -4589,7 +4592,7 @@ details.location-result {
                                                                 battery’s ditch and glacis are still evident,...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="RyanPremisesNationalHistoricSite">
+                                                <details class="location-result nhs" id="RyanPremisesNationalHistoricSite" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -4611,7 +4614,7 @@ details.location-result {
                                                                 dating back 500 years.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SSKenoNationalHistoricSite">
+                                                <details class="location-result nhs" id="SSKenoNationalHistoricSite" data-region-name="Yukon">
 
 
 <summary><span>
@@ -4633,7 +4636,7 @@ details.location-result {
                                                                 another half century, and the development of the...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SSKlondikeNationalHistoricSite">
+                                                <details class="location-result nhs" id="SSKlondikeNationalHistoricSite" data-region-name="Yukon">
 
 
 <summary><span>
@@ -4654,7 +4657,7 @@ details.location-result {
                                                                 the North.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SGangGwaayLlnagaayNanSdins">
+                                                <details class="location-result nhs" id="SGangGwaayLlnagaayNanSdins" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -4676,7 +4679,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="SableIslandNationalParkReserve">
+                                                <details class="location-result np" id="SableIslandNationalParkReserve" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -4695,7 +4698,7 @@ details.location-result {
                                                                 Park Reserve defines the word “remote.”
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nmca" id="SaguenayStLawrenceMarinePark">
+                                                <details class="location-result nmca" id="SaguenayStLawrenceMarinePark" data-region-name="Quebec">
 
 
 <summary><span>
@@ -4715,7 +4718,7 @@ details.location-result {
                                                                 world for whale watching.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SaintCroixIslandInternationalHistoricSite">
+                                                <details class="location-result nhs" id="SaintCroixIslandInternationalHistoricSite" data-region-name="New Brunswick">
 
 
 <summary><span>
@@ -4739,7 +4742,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SaintLouisFortsandChteauxNationalHistoricSite">
+                                                <details class="location-result nhs" id="SaintLouisFortsandChteauxNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -4759,7 +4762,7 @@ details.location-result {
                                                                 governors for over 200 years.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SaintLouisMissionNationalHistoricSite">
+                                                <details class="location-result nhs" id="SaintLouisMissionNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4776,7 +4779,7 @@ details.location-result {
                                                                 Site of Huron village destroyed by Iroquois in 1649.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SaintOursCanalNationalHistoricSite">
+                                                <details class="location-result nhs" id="SaintOursCanalNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -4797,7 +4800,7 @@ details.location-result {
                                                                 structure unlike anything else in the world.&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SainteAnnedeBellevueCanalNationalHistoricSite">
+                                                <details class="location-result nhs" id="SainteAnnedeBellevueCanalNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -4819,7 +4822,7 @@ details.location-result {
                                                                 watch the lock in operation.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SaoyehdachoNationalHistoricSite">
+                                                <details class="location-result nhs" id="SaoyehdachoNationalHistoricSite" data-region-name="Northwest Territories">
 
 
 <summary><span>
@@ -4841,7 +4844,7 @@ details.location-result {
                                                                 oral history.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SaultSteMarieCanalNationalHistoricSite">
+                                                <details class="location-result nhs" id="SaultSteMarieCanalNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4863,7 +4866,7 @@ details.location-result {
                                                                 Canada.&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="ShoalTowerNationalHistoricSite">
+                                                <details class="location-result nhs" id="ShoalTowerNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4884,7 +4887,7 @@ details.location-result {
                                                                 Battery in Kingston Ontario.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SignalHillNationalHistoricSite">
+                                                <details class="location-result nhs" id="SignalHillNationalHistoricSite" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -4906,7 +4909,7 @@ details.location-result {
                                                                 Tower.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SirGeorgetienneCartierNationalHistoricSite">
+                                                <details class="location-result nhs" id="SirGeorgetienneCartierNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -4927,7 +4930,7 @@ details.location-result {
                                                                 acquainted with one of the Fathers of Confederation.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SirJohnJohnsonHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="SirJohnJohnsonHouseNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -4947,7 +4950,7 @@ details.location-result {
                                                                 oldest buildings in the province.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SirWilfridLaurierNationalHistoricSite">
+                                                <details class="location-result nhs" id="SirWilfridLaurierNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -4968,7 +4971,7 @@ details.location-result {
                                                                 Lawrence Valley.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="SirmilikNationalPark">
+                                                <details class="location-result np" id="SirmilikNationalPark" data-region-name="Nunavut">
 
 
 <summary><span>
@@ -4987,7 +4990,7 @@ details.location-result {
                                                                 Island and Baffin Island’s Borden Peninsula.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SkmaqnPortlaJoyeFortAmherstNationalHistoricSite">
+                                                <details class="location-result nhs" id="SkmaqnPortlaJoyeFortAmherstNationalHistoricSite" data-region-name="Prince Edward Island">
 
 
 <summary><span>
@@ -5028,7 +5031,7 @@ details.location-result {
                                                                 of ski tourism in Canada. The lodge and its...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="SouthwoldEarthworksNationalHistoricSite">
+                                                <details class="location-result nhs" id="SouthwoldEarthworksNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -5047,7 +5050,7 @@ details.location-result {
                                                                 walls that once stood at Southwold Earthworks.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="StAndrewsBlockhouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="StAndrewsBlockhouseNationalHistoricSite" data-region-name="New Brunswick">
 
 
 <summary><span>
@@ -5069,7 +5072,7 @@ details.location-result {
                                                                 raiders.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="StAndrewsRectoryNationalHistoricSite">
+                                                <details class="location-result nhs" id="StAndrewsRectoryNationalHistoricSite" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -5090,7 +5093,7 @@ details.location-result {
                                                                 River settler parishioners in the 1800s.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="StPetersCanalNationalHistoricSite">
+                                                <details class="location-result nhs" id="StPetersCanalNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -5173,7 +5176,7 @@ details.location-result {
                                                                 Inuit communities and majestic fiords and glaciers.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="TerraNovaNationalPark">
+                                                <details class="location-result np" id="TerraNovaNationalPark" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -5195,7 +5198,7 @@ details.location-result {
                                                                 enthusiasts and nature-lovers of every age.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="ThaideneNnNationalParkReserve">
+                                                <details class="location-result np" id="ThaideneNnNationalParkReserve" data-region-name="Northwest Territories">
 
 
 <summary><span>
@@ -5217,7 +5220,7 @@ details.location-result {
                                                                 in the Dënesųłiné—or Chipewyan—language.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="TheForksNationalHistoricSite">
+                                                <details class="location-result nhs" id="TheForksNationalHistoricSite" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -5237,7 +5240,7 @@ details.location-result {
                                                                 the continent connected the prairies to the world.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="TheFurTradeatLachineNationalHistoricSite">
+                                                <details class="location-result nhs" id="TheFurTradeatLachineNationalHistoricSite" data-region-name="Quebec">
 
 
 <summary><span>
@@ -5259,7 +5262,7 @@ details.location-result {
                                                                 of the trade that helped shape Canada.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="ThousandIslandsNationalPark">
+                                                <details class="location-result np" id="ThousandIslandsNationalPark" data-region-name="Ontario">
 
 
 <summary><span>
@@ -5280,7 +5283,7 @@ details.location-result {
                                                                 awaits, a few hours from Toronto or Montreal.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="TorngatMountainsNationalPark">
+                                                <details class="location-result np" id="TorngatMountainsNationalPark" data-region-name="Newfoundland and Labrador">
 
 
 <summary><span>
@@ -5301,7 +5304,7 @@ details.location-result {
                                                                 where nature and culture meet.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="TrentSevernWaterwayNationalHistoricSite">
+                                                <details class="location-result nhs" id="TrentSevernWaterwayNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -5322,7 +5325,7 @@ details.location-result {
                                                                 string of canals and waterways.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="TuktutNogaitNationalPark">
+                                                <details class="location-result np" id="TuktutNogaitNationalPark" data-region-name="Northwest Territories">
 
 
 <summary><span>
@@ -5341,7 +5344,7 @@ details.location-result {
                                                                 wolves and other arctic species.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="TwinFallsTeaHouseNationalHistoricSite">
+                                                <details class="location-result nhs" id="TwinFallsTeaHouseNationalHistoricSite" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -5363,7 +5366,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="UkkusiksalikNationalPark">
+                                                <details class="location-result np" id="UkkusiksalikNationalPark" data-region-name="Nunavut">
 
 
 <summary><span>
@@ -5382,7 +5385,7 @@ details.location-result {
                                                                 landscape surrounding Wager Bay.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="VuntutNationalPark">
+                                                <details class="location-result np" id="VuntutNationalPark" data-region-name="Yukon">
 
 
 <summary><span>
@@ -5402,7 +5405,7 @@ details.location-result {
                                                                 Yukon.&nbsp;
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="WapuskNationalPark">
+                                                <details class="location-result np" id="WapuskNationalPark" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -5423,7 +5426,7 @@ details.location-result {
                                                                 arctic hare and foxes.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="WaterlooPioneersMemorialTower">
+                                                <details class="location-result nhs" id="WaterlooPioneersMemorialTower" data-region-name="Ontario">
 
 
 <summary><span>
@@ -5444,7 +5447,7 @@ details.location-result {
                                                                 honours.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="WatertonLakesNationalPark">
+                                                <details class="location-result np" id="WatertonLakesNationalPark" data-region-name="Alberta">
 
 
 <summary><span>
@@ -5462,7 +5465,7 @@ details.location-result {
                                                                 Mountains in Waterton Lakes National Park.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="WolfesLandingNationalHistoricSite">
+                                                <details class="location-result nhs" id="WolfesLandingNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
@@ -5484,7 +5487,7 @@ details.location-result {
                                                                 rolling landscape of grasses and forest...
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="WoodBuffaloNationalPark">
+                                                <details class="location-result np" id="WoodBuffaloNationalPark" data-region-name="Northwest Territories">
 
 
 <summary><span>
@@ -5504,7 +5507,7 @@ details.location-result {
                                                                 example of Canada's Northern Boreal Plains.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="WoodsideNationalHistoricSite">
+                                                <details class="location-result nhs" id="WoodsideNationalHistoricSite" data-region-name="Ontario">
 
 
 <summary><span>
@@ -5524,7 +5527,7 @@ details.location-result {
                                                                 Ontario.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="WrecksofHMSErebusandHMSTerrorNationalHistoricSite">
+                                                <details class="location-result nhs" id="WrecksofHMSErebusandHMSTerrorNationalHistoricSite" data-region-name="Nunavut">
 
 
 <summary><span>
@@ -5544,7 +5547,7 @@ details.location-result {
                                                                 discoveries of the shipwrecks.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="YellowheadPassNationalHistoricSite">
+                                                <details class="location-result nhs" id="YellowheadPassNationalHistoricSite" data-region-name="Alberta">
 
 
 <summary><span>
@@ -5563,7 +5566,7 @@ details.location-result {
                                                                 Mountains.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result np" id="YohoNationalPark">
+                                                <details class="location-result np" id="YohoNationalPark" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -5584,7 +5587,7 @@ details.location-result {
                                                                 continue to evolve today.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="YorkFactoryNationalHistoricSite">
+                                                <details class="location-result nhs" id="YorkFactoryNationalHistoricSite" data-region-name="Manitoba">
 
 
 <summary><span>
@@ -5606,7 +5609,7 @@ details.location-result {
                                                                 Canada’s founding days.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result nhs" id="YorkRedoubtNationalHistoricSite">
+                                                <details class="location-result nhs" id="YorkRedoubtNationalHistoricSite" data-region-name="Nova Scotia">
 
 
 <summary><span>
