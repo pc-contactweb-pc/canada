@@ -730,6 +730,18 @@ details.location-result {
     // get global geomap variable on page load
     $(document).on("wb-ready.wb-geomap", "#location_map", function(event, map ) {
         window.globalMap = map;
+
+        // --- Start: Disable map rotation ---
+        // Find and disable the map rotation interaction. This prevents the user from
+        // rotating the map with Alt+Shift+Drag or via touch gestures.
+        map.getInteractions().forEach(function(interaction) {
+            if (interaction instanceof ol.interaction.DragRotate ||
+                interaction instanceof ol.interaction.PinchRotate) {
+                interaction.setActive(false);
+            }
+        });
+        // --- End: Disable map rotation ---
+
         resetMap();
         $("#location_map_reset").on("click", resetMap);
     });
