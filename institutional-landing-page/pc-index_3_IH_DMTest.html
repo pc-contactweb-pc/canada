@@ -122,7 +122,7 @@
                 <div class="row">
                     <div class="col-xs-10 col-sm-7 col-md-6 col-lg-5" style="background-color: #2b4635; color:#fff; margin-top:80px; padding-bottom: 20px;">
 
-                        <h1 property="name" id="wb-cont" class="pc-h1-brass">Parks Canada!</h1>
+                        <h1 property="name" id="wb-cont" class="pc-h1-brass">Parks Canada?</h1>
                         <p>Parks Canada administers one of the finest and most extensive systems of natural and cultural
                             heritage places in the world.</p>
 
@@ -767,6 +767,9 @@
                             }
                         });
 
+                        // Pass event up to page for default behaviour (ie page scroll)
+                        event.preventDefault();
+                    
                     } else {
                         map.getInteractions().forEach(function (interaction) {
                             if (interaction instanceof ol.interaction.DragPan) {
@@ -775,7 +778,7 @@
                         });
                         return
                     }
-                });
+                }, { passive: true });
 
 
             });
