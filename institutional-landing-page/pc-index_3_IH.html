@@ -742,10 +742,7 @@ details.location-result {
         });
         // --- End: Disable map rotation ---
 
-        // --- Start: Disable single-finger panning ---
-        // Find and replace the default DragPan interaction to only allow
-        // panning with a mouse, not a single-finger touch. This prevents
-        // the map from panning when the user is trying to scroll the page.
+        // --- Start: Refine touch interactions (Corrected) ---
         var dragPan;
         map.getInteractions().forEach(function(interaction) {
             if (interaction instanceof ol.interaction.DragPan) {
@@ -755,12 +752,19 @@ details.location-result {
 
         if (dragPan) {
             map.removeInteraction(dragPan);
-            var newDragPan = new ol.interaction.DragPan({
-                condition: ol.events.condition.mouseOnly
-            });
+            var newDragPan = new ol.interaction.DragPan();
+
+            // The condition is set directly on the interaction instance to avoid
+            // any `this` context issues. It checks the number of active pointers
+            // to differentiate between a single-finger scroll and a multi-finger pan.
+            newDragPan.condition_ = function(mapBrowserEvent) {
+                // Allow panning with a mouse OR if there is already one pointer down.
+                return ol.events.condition.mouseOnly(mapBrowserEvent) || Object.keys(newDragPan.pointerData_).length > 0;
+            };
+
             map.addInteraction(newDragPan);
         }
-        // --- End: Disable single-finger panning ---
+        // --- End: Refine touch interactions (Corrected) ---
 
         resetMap();
         $("#location_map_reset").on("click", resetMap);
