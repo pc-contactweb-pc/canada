@@ -677,6 +677,17 @@ details.location-result {
 
     $(document).ready(function () {
 
+        // if user is on a small screen, reduce the zoom level of the map after 1 second
+        if (window.innerWidth < 768) {
+            setTimeout(() => {
+                const view = globalMap.getView();
+                view.animate({
+                    zoom: 1.7,
+                    duration: 1000
+                });
+            }, 1000);
+        }
+
         const allResults = $(".location-result").length;
         $("#all-results").text(allResults);
 
