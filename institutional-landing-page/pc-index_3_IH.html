@@ -632,8 +632,13 @@ details.location-result {
         if (layerDataRow) {
             const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
             if (locationCoordinates.length === 2 && !isNaN(locationCoordinates[0]) && !isNaN(locationCoordinates[1])) {
-                globalMap.getView().setCenter(ol.proj.transform(locationCoordinates, "EPSG:4326", "EPSG:3857"));
-                globalMap.getView().setZoom(12);
+                const view = globalMap.getView();
+                view.animate({
+                    center: ol.proj.transform(locationCoordinates, "EPSG:4326", "EPSG:3857"),
+                    zoom: 12,
+                    duration: 2000,
+    easing: ol.easing.easeOut
+                });
             }
         }
 
@@ -662,8 +667,12 @@ details.location-result {
     }
 
     function resetMap() {
-        globalMap.getView().setCenter( ol.proj.transform( [-100.48, 70.25], "EPSG:4326", "EPSG:3857" ) );
-        globalMap.getView().setZoom(2.3);
+        const view = globalMap.getView();
+        view.animate({
+            center: ol.proj.transform( [-100.48, 70.25], "EPSG:4326", "EPSG:3857" ),
+            zoom: 2.3,
+            duration: 1000 // Animation duration in milliseconds
+        });
     }
 
     $(document).ready(function () {
