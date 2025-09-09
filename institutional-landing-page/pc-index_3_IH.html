@@ -742,6 +742,26 @@ details.location-result {
         });
         // --- End: Disable map rotation ---
 
+        // --- Start: Disable single-finger panning ---
+        // Find and replace the default DragPan interaction to only allow
+        // panning with a mouse, not a single-finger touch. This prevents
+        // the map from panning when the user is trying to scroll the page.
+        var dragPan;
+        map.getInteractions().forEach(function(interaction) {
+            if (interaction instanceof ol.interaction.DragPan) {
+                dragPan = interaction;
+            }
+        });
+
+        if (dragPan) {
+            map.removeInteraction(dragPan);
+            var newDragPan = new ol.interaction.DragPan({
+                condition: ol.events.condition.mouseOnly
+            });
+            map.addInteraction(newDragPan);
+        }
+        // --- End: Disable single-finger panning ---
+
         resetMap();
         $("#location_map_reset").on("click", resetMap);
     });
