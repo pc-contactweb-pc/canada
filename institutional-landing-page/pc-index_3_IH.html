@@ -531,6 +531,18 @@ details.location-result {
     display: none;
     border-radius: 3px 3px 0 0;
 }
+button#expand-location-list:after {
+    content: "›";
+    font-size: 30px;
+    font-weight:bold;
+    line-height: 0;
+    transform: rotate(90deg);
+    display: inline-block;
+    margin-left: 5px;
+    padding-left: 15px;
+    background: #fff;
+    width: 30px;
+}
 
             @media screen and (max-width: 1200px){
                 form.wb-geomap-filter {
@@ -1021,7 +1033,7 @@ details.location-result {
                                             </div>
 
                                         <!-- end site name search field -->
-<button id="expand-location-list" class="btn btn-primary full-width">Show all location details</button>
+<button id="expand-location-list" class="btn btn-primary full-width">Browse all locations</button>
 <div id="location-results">
 
                                                 <details class="location-result nhs" id="5763StLouisStreetNationalHistoricSite" data-region-name="Quebec">
