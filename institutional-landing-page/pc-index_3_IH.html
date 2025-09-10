@@ -671,7 +671,6 @@ button#expand-location-list:after {
         }
 
         const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:nth-last-child(2)`);
-        console.log(layerDataRow);
         if (layerDataRow) {
             const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
             if (locationCoordinates.length === 2 && !isNaN(locationCoordinates[0]) && !isNaN(locationCoordinates[1])) {
