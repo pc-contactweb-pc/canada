@@ -724,12 +724,20 @@ button#expand-location-list:after {
     }
 
     $(document).ready(function () {
-        
+
+        // set default map zoom level per screen size
         if (window.innerWidth < 768) {
 window.zoomLevel = 1.7;
         } else {
 window.zoomLevel = 2.3;
         }
+
+        // add region icons to location result descriptions
+        $(".location-result").each( function() {
+let region = $(this).attr("data-region-name");
+    let destination = $(this).find(".location-description");
+    $(`<p class="location-region"><span class="glyphicon-map-marker glyphicon"></span> ${region}</p>`).insertBefore(destination)
+})
 
         const allResults = $(".location-result").length;
         $("#all-results").text(allResults);
