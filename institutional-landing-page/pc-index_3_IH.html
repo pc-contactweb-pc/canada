@@ -713,7 +713,7 @@ button#expand-location-list:after {
         const view = globalMap.getView();
         view.animate({
             center: ol.proj.transform( [-100.48, 70.25], "EPSG:4326", "EPSG:3857" ),
-            zoom: 2.3,
+            zoom: window.zoomLevel,
             duration: 1000 // Animation duration in milliseconds
         });
     }
@@ -724,16 +724,11 @@ button#expand-location-list:after {
     }
 
     $(document).ready(function () {
-
-        // if user is on a small screen, reduce the zoom level of the map after 1 second
+        
         if (window.innerWidth < 768) {
-            setTimeout(() => {
-                const view = globalMap.getView();
-                view.animate({
-                    zoom: 1.7,
-                    duration: 1000
-                });
-            }, 1000);
+window.zoomLevel = 1.7;
+        } else {
+window.zoomLevel = 2.3;
         }
 
         const allResults = $(".location-result").length;
