@@ -246,6 +246,10 @@
         <style>
 html { scroll-behavior: smooth; }
 
+#searchByName {
+    padding-left: 40px;
+}
+
             #locationSearch .legendLabel {
                 padding-left: 0;
                 float: left;
@@ -514,6 +518,14 @@ details.location-result {
     display: none;
 }
 
+/* search icon */
+#siteNameSearch .glyphicon-search {
+    position: absolute;
+    top: 56px;
+    padding-left: 12px;
+    color: #999;
+}
+
             @media screen and (max-width: 1200px){
                 form.wb-geomap-filter {
                     width: 66%;
@@ -521,6 +533,9 @@ details.location-result {
             }
 
             @media screen and (max-width: 992px){
+                #siteNameSearch .glyphicon-search {
+    top: 51px!important;
+}
                 .result-text {
                     top: 0px;
                     right: 16px;
@@ -553,6 +568,10 @@ details.location-result {
                 }
             }
             @media screen and (max-width: 768px){
+#siteNameSearch .glyphicon-search {
+    top: 47px!important;
+}
+
 #location-results, .wb-geomap-map {
     height: 40vh!important;
 }
@@ -691,6 +710,31 @@ details.location-result {
         const allResults = $(".location-result").length;
         $("#all-results").text(allResults);
 
+        // When the user mouses over a .location-result, select it on the map
+        $("#location-results").on("mouseenter", ".location-result", function() {
+            const $locationResult = $(this);
+            if (!$locationResult.hasClass("active")) {
+                const locationId = $locationResult.attr("id");
+                if (locationId) {
+                    const $checkbox = $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`);
+                    if ($checkbox.length && !$checkbox.is(':checked')) {
+                        $checkbox.trigger("click");
+                    }
+                }
+            }
+        });
+
+        // When the user's pointer is removed, deselect it
+        $("#location-results").on("mouseleave", ".location-result", function() {
+            const locationId = $(this).attr("id");
+            if (locationId) {
+                const $checkbox = $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`);
+                if ($checkbox.length && $checkbox.is(':checked')) {
+                    $checkbox.trigger("click");
+                }
+            }
+        });
+
         $("#location-results").on("click", ".location-result summary", function (e) {
             e.preventDefault();
 
@@ -700,9 +744,12 @@ details.location-result {
             if ($locationResult.hasClass("active")) {
                 collapseLocation();
             } else {
+                // Clear any selections from hover before expanding
+                const $activeCheckbox = $(".locationTable .geomap-cbx:checked");
+                if ($activeCheckbox.length) {
+                    $activeCheckbox.trigger("click");
+                }
                 expandLocation(locationId, true);
-
-
             }
         });
 
@@ -793,7 +840,18 @@ details.location-result {
 
                     let visibleIndexes;
                     if (query) {
-                        visibleIndexes = new Set(fuse.search(query).map(r => r.item.idx));
+                        // Break the search query into individual words and create a logical AND query.
+                        // This ensures that all words must be present in the results.
+                        const words = query.split(/\s+/).filter(Boolean); // filter out empty strings
+                        const fuseQuery = {
+                            $and: words.map(word => ({
+                                $or: [
+                                    { text: word },
+                                    { region: word }
+                                ]
+                            }))
+                        };
+                        visibleIndexes = new Set(fuse.search(fuseQuery).map(r => r.item.idx));
                         $("#searchByName").addClass("clear-search");
                         $(".result-text").removeClass("negative").addClass("positive");
                     } else {
@@ -802,6 +860,7 @@ details.location-result {
                         $("#searchByName").removeClass("clear-search");
                                     $("#visible-results").text("");
             $(".result-text").removeClass("positive negative");
+            resetMap();
                     }
 
                     results.forEach((result, idx) => {
@@ -812,15 +871,21 @@ details.location-result {
                     const visibleResults = $(".location-result:visible").length;
                     $("#visible-results").text(visibleResults + " of ");
 
-                    // update result text styling
+                    // if no results, update result text styling and reset map
                     if(visibleResults === 0){
                         $(".result-text").removeClass("positive").addClass("negative");
+                        resetMap();
                     }
 
+                    // if only one result, expand it and zoom in on the map
                     if(visibleResults === 1){
-                        // if only one result, expand it
                         const onlyResultId = $(".location-result:visible").attr("id");
                         expandLocation(onlyResultId, true);
+                    }
+
+                    // if more than one result is visible, reset map
+                    if(visibleResults > 1){
+                        resetMap();
                     }
 
                 });
@@ -919,6 +984,7 @@ details.location-result {
                                                                                     <div id="siteNameSearch" class="mrgn-tp-sm mrgn-bttm-md">
                                                 <div class="form-group">
                                                     <label for="searchByName">Search by name</label>
+                                                    <span class="glyphicon-search glyphicon"></span>
                                                     <input class="form-control" type="search" id="searchByName"
                                                         name="searchByName" list="searchByNames"
                                                         placeholder="Type a location name"
@@ -1124,7 +1190,7 @@ details.location-result {
                                                                 birds and bees.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result" id="BanffUpperHotSprings" data-region-name="Alberta">
+                                                <details class="location-result nhs" id="BanffUpperHotSprings" data-region-name="Alberta">
 
 
 <summary><span>
@@ -3742,7 +3808,7 @@ details.location-result {
                                                                 second largest blockhouse surviving in Canada.
                                                             </p></div></div>
 </details>
-                                                <details class="location-result" id="MietteHotSprings" data-region-name="Alberta">
+                                                <details class="location-result nhs" id="MietteHotSprings" data-region-name="Alberta">
 
 
 <summary><span>
@@ -4394,7 +4460,7 @@ details.location-result {
 
                                                             </p></div></div>
 </details>
-                                                <details class="location-result" id="RadiumHotSprings" data-region-name="British Columbia">
+                                                <details class="location-result nhs" id="RadiumHotSprings" data-region-name="British Columbia">
 
 
 <summary><span>
@@ -5701,7 +5767,7 @@ details.location-result {
                                         <!-- start province zoom field -->
                                             <div id="region-finder" class="mrgn-bttm-sm">
                                                 
-                                                    <label for="searchByName">Zoom to province or territory on
+                                                    <label for="searchByName">Zoom to region on
                                                         map</label>
                                                     <!-- province areas of interest and map reset -->
                                                     <form class="wb-geomap-filter" data-bind-to="location_map">
