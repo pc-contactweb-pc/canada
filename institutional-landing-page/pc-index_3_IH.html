@@ -526,6 +526,12 @@ details.location-result {
     color: #999;
 }
 
+/* expand location list button */
+#expand-location-list {
+    display: none;
+    border-radius: 3px 3px 0 0;
+}
+
             @media screen and (max-width: 1200px){
                 form.wb-geomap-filter {
                     width: 66%;
@@ -568,6 +574,13 @@ details.location-result {
                 }
             }
             @media screen and (max-width: 768px){
+#expand-location-list {
+    display: block;
+}
+#location-results {
+    display: none;
+}
+
 #siteNameSearch .glyphicon-search {
     top: 47px!important;
 }
@@ -694,6 +707,11 @@ details.location-result {
         });
     }
 
+    function showLocationDetails() {
+        $("#location-results").slideDown();
+        $("#expand-location-list").hide();
+    }
+
     $(document).ready(function () {
 
         // if user is on a small screen, reduce the zoom level of the map after 1 second
@@ -759,6 +777,7 @@ details.location-result {
                 const selectedRowCheckbox = $(".locationTable tr.active input[type='checkbox']");
                 const selectedRow = $(".locationTable tr.active").attr("locationTarget");
                 if (selectedRow) {
+                    showLocationDetails();
                     expandLocation(selectedRow, true);
                     selectedRowCheckbox.trigger("click");
                     // Scroll to the location results if on a small screen
@@ -781,6 +800,10 @@ details.location-result {
             $(".location-result").removeClass("hidden").show();
             $("#visible-results").text("");
             $(".result-text").removeClass("positive negative");
+        });
+
+        $("#expand-location-list").on("click", function() {
+            showLocationDetails();
         });
 
     });
@@ -833,6 +856,9 @@ details.location-result {
                 const input = document.querySelector("#searchByName");
                 input.addEventListener("input", e => {
                     const query = e.target.value.trim();
+
+                    // Show the location results list when the user starts typing
+                    showLocationDetails();
 
                     collapseLocation();
 
@@ -996,7 +1022,7 @@ details.location-result {
                                             </div>
 
                                         <!-- end site name search field -->
-
+<button id="expand-location-list" class="btn btn-primary full-width">Show all location details</button>
 <div id="location-results">
 
                                                 <details class="location-result nhs" id="5763StLouisStreetNationalHistoricSite" data-region-name="Quebec">
