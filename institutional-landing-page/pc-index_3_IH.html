@@ -370,6 +370,17 @@ details.location-result {
                 z-index: 99;
             }
 
+.location-result .label-default {
+    border-left: 0;
+    border-radius: 30px;
+    padding: 8px 15px;
+    font-weight: normal;
+    color: #555;
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
             .geomap-lgnd-layer {
                 display: flex;
                 align-items: center;
@@ -753,14 +764,21 @@ window.zoomLevel = 1.7;
 window.zoomLevel = 2.3;
         }
 
-        // add region icons to location result descriptions
+        // add region tags to location result descriptions
         $(".location-result").each( function() {
 let region = $(this).attr("data-region-name");
+if (region) {
     let destination = $(this).find(".location-description");
-    $(`<p class="location-region"><span class="label label-default">${region}</span></p>`).insertBefore(destination)
-
-// add zoom on map button to location details
-$(this).find("a.btn").after(`<button class="zoom-on-map btn btn-link full-width mrgn-bttm-md"><span class="glyphicon-map-marker glyphicon"></span>&nbsp;&nbsp;Zoom on map</button>`);
+    $(`<p class="location-region"><span class="label label-default">${region}</span></p>`).insertAfter(destination)
+}
+// add zoom on map button to location details if it has a matching row in locationTable
+let locationId = $(this).attr("id");
+if (locationId) {
+    let $matchingRow = $(`.locationTable tr[locationtarget="${locationId}"]`);
+    if ($matchingRow.length) {
+        $(this).find("a.btn").after(`<button class="zoom-on-map btn btn-link full-width mrgn-bttm-md"><span class="glyphicon-map-marker glyphicon"></span>&nbsp;&nbsp;Zoom on map</button>`);
+    }
+}
 
 })
 
@@ -1618,7 +1636,7 @@ $(this).find("a.btn").after(`<button class="zoom-on-map btn btn-link full-width 
                                                             </span></summary>
                                                             <div class="row"><div class="location-thumbnail col-sm-6 pull-right">
                                                                 <img class="img-responsive" alt="" src="https://pcweb2.azureedge.net/-/media/WET4/proximite-nearby/on/Bois-Blanc-640x360.jpg?modified=20221126215934" loading="lazy">
-                                                            <a class="btn btn-primary full-width mrgn-tp-md mrgn-bttm-md" href="undefined">Learn more</a></div>
+                                                            <a class="btn btn-primary full-width mrgn-tp-md mrgn-bttm-md" href="https://parks.canada.ca/lhn-nhs/on/malden/culture/boisblanc2020">Learn more</a></div>
                                                             <div class="col-sm-6"><p class="location-description">
                                                                 On the shores of Lake Erie, the Bois Blanc
                                                                 Lighthouse, a classic limestone tower, guided
@@ -3236,7 +3254,7 @@ $(this).find("a.btn").after(`<button class="zoom-on-map btn btn-link full-width 
                                                             </span></summary>
                                                             <div class="row"><div class="location-thumbnail col-sm-6 pull-right">
                                                                 <img class="img-responsive" alt="" src="https://pcweb2.azureedge.net/-/media/WET4/proximite-nearby/default/pc-castor-default-beaver-640x360.png?modified=20221126221528" loading="lazy">
-                                                            <a class="btn btn-primary full-width mrgn-tp-md mrgn-bttm-md" href="undefined">Learn more</a></div>
+                                                            <a class="btn btn-primary full-width mrgn-tp-md mrgn-bttm-md" href="https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=27">Learn more</a></div>
                                                             <div class="col-sm-6"><p class="location-description">
                                                                 Used by generations of First Nations as a route east
                                                                 from the Columbia River Valley through the rugged
@@ -5190,7 +5208,7 @@ $(this).find("a.btn").after(`<button class="zoom-on-map btn btn-link full-width 
                                                             </span></summary>
                                                             <div class="row"><div class="location-thumbnail col-sm-6 pull-right">
                                                                 <img class="img-responsive" alt="" src="https://pcweb2.azureedge.net/-/media/WET4/proximite-nearby/default/pc-castor-default-beaver-640x360.png?modified=20221126221528" loading="lazy">
-                                                            <a class="btn btn-primary full-width mrgn-tp-md mrgn-bttm-md" href="undefined">Learn more</a></div>
+                                                            <a class="btn btn-primary full-width mrgn-tp-md mrgn-bttm-md" href="https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=4">Learn more</a></div>
                                                             <div class="col-sm-6"><p class="location-description">
                                                                 Skoki Ski Lodge has been welcoming skiers and hikers
                                                                 to the idyllic Skoki Valley for nearly a century.
@@ -5313,7 +5331,7 @@ $(this).find("a.btn").after(`<button class="zoom-on-map btn btn-link full-width 
                                                             </span></summary>
                                                             <div class="row"><div class="location-thumbnail col-sm-6 pull-right">
                                                                 <img class="img-responsive" alt="" src="https://pcweb2.azureedge.net/-/media/WET4/proximite-nearby/ab/ab-sulphur-lhn-nhs-640x360.jpg?modified=20221126221034" loading="lazy">
-                                                            <a class="btn btn-primary full-width mrgn-tp-md mrgn-bttm-md" href="undefined">Learn more</a></div>
+                                                            <a class="btn btn-primary full-width mrgn-tp-md mrgn-bttm-md" href="https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=5">Learn more</a></div>
                                                             <div class="col-sm-6"><p class="location-description">
                                                                 A cosmic ray station was built on Sulphur Mountain
                                                                 as part of the International Geophysical Year in
