@@ -653,6 +653,22 @@ button#expand-location-list:after {
         }
     }
 
+function zoomToLocation(locationId) {
+        const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:nth-last-child(2)`);
+        if (layerDataRow) {
+            const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
+            if (locationCoordinates.length === 2 && !isNaN(locationCoordinates[0]) && !isNaN(locationCoordinates[1])) {
+                const view = globalMap.getView();
+                view.animate({
+                    center: ol.proj.transform(locationCoordinates, "EPSG:4326", "EPSG:3857"),
+                    zoom: 12,
+                    duration: 2000,
+    easing: ol.easing.easeOut
+                });
+            }
+        }
+    }
+
     function expandLocation(locationId, scroll = false) {
         const $location = $(`#${locationId}`);
         if (!$location.length) return;
@@ -670,7 +686,15 @@ button#expand-location-list:after {
             }
         }
 
-        const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:nth-last-child(2)`);
+        // check input of matching checkbox in the locationTable
+
+                    const $checkbox = $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`);
+                    if ($checkbox.length && !$checkbox.is(':checked')) {
+                        $checkbox.trigger("click");
+                    }
+
+
+        /*const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:nth-last-child(2)`);
         if (layerDataRow) {
             const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
             if (locationCoordinates.length === 2 && !isNaN(locationCoordinates[0]) && !isNaN(locationCoordinates[1])) {
@@ -682,7 +706,7 @@ button#expand-location-list:after {
     easing: ol.easing.easeOut
                 });
             }
-        }
+        }*/
 
     }
 
@@ -696,8 +720,6 @@ button#expand-location-list:after {
         $(".location-result").removeClass("hidden").attr("open", null);
         // Deactivate the current location
         $location.removeClass("active");
-        // reset map
-        document.querySelector('#location_map_reset').click();
         // Scroll the (now collapsed) location to the top of the container
         if (resultsContainer) {
             const locationEl = $location[0];
@@ -705,7 +727,7 @@ button#expand-location-list:after {
             const locationRect = locationEl.getBoundingClientRect();
             resultsContainer.scrollTop += locationRect.top - containerRect.top;
         }
-        resetMap();
+        //resetMap();
     }
 
     function resetMap() {
@@ -735,7 +757,11 @@ window.zoomLevel = 2.3;
         $(".location-result").each( function() {
 let region = $(this).attr("data-region-name");
     let destination = $(this).find(".location-description");
-    $(`<p class="location-region"><span class="glyphicon-map-marker glyphicon"></span> ${region}</p>`).insertBefore(destination)
+    $(`<p class="location-region"><span class="label label-default">${region}</span></p>`).insertBefore(destination)
+
+// add zoom on map button to location details
+$(this).find("a.btn").after(`<button class="zoom-on-map btn btn-link full-width mrgn-bttm-md"><span class="glyphicon-map-marker glyphicon"></span>&nbsp;&nbsp;Zoom on map</button>`);
+
 })
 
         const allResults = $(".location-result").length;
@@ -756,7 +782,7 @@ let region = $(this).attr("data-region-name");
         });
 
         // When the user's pointer is removed, deselect it
-        $("#location-results").on("mouseleave", ".location-result", function() {
+        $("#location-results").on("mouseleave", ".location-result:not(.active)", function() {
             const locationId = $(this).attr("id");
             if (locationId) {
                 const $checkbox = $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`);
@@ -784,6 +810,12 @@ let region = $(this).attr("data-region-name");
             }
         });
 
+        // when zoom on map button is clicked, zoom to location on map
+        $("#location-results").on("click", ".zoom-on-map", function() {
+            const locationId = $(this).closest(".location-result").attr("id");
+           zoomToLocation(locationId); 
+        });
+
         // when a map marker is clicked, expand the corresponding location result
         $(".wb-geomap-map").on("click", function() {
             setTimeout(() => {
@@ -792,7 +824,7 @@ let region = $(this).attr("data-region-name");
                 if (selectedRow) {
                     showLocationDetails();
                     expandLocation(selectedRow, true);
-                    selectedRowCheckbox.trigger("click");
+                    //selectedRowCheckbox.trigger("click");
                     // Scroll to the location results if on a small screen
                     if (window.innerWidth < 768) {
                         const locationSearch = document.querySelector("#siteNameSearch");
