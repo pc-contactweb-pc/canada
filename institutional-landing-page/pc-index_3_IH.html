@@ -755,6 +755,17 @@ function zoomToLocation(locationId) {
         $("#expand-location-list").hide();
     }
 
+    function deselectActiveFeature() {
+        const geomap = wb.getMap("location_map");
+        if (geomap && geomap.map) {
+            const selectInteraction = geomap.map.getInteractions().getArray().find(i => i instanceof ol.interaction.Select);
+            if (selectInteraction) {
+                selectInteraction.getFeatures().clear();
+            }
+        }
+        collapseLocation();
+    }
+
     $(document).ready(function () {
 
         // set default map zoom level per screen size
@@ -863,6 +874,7 @@ if (locationId) {
             $(".location-result").removeClass("hidden").show();
             $("#visible-results").text("");
             $(".result-text").removeClass("positive negative");
+            deselectActiveFeature();
         });
 
         $("#expand-location-list").on("click", function() {
@@ -974,6 +986,7 @@ if (locationId) {
                                     $("#visible-results").text("");
             $(".result-text").removeClass("positive negative");
             resetMap();
+            deselectActiveFeature();
                     }
 
                     results.forEach((result, idx) => {
@@ -999,6 +1012,7 @@ if (locationId) {
                     // if more than one result is visible, reset map
                     if(visibleResults > 1){
                         resetMap();
+                        deselectActiveFeature();
                     }
 
                 });
