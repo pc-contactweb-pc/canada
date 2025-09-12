@@ -246,6 +246,14 @@
         <style>
 html { scroll-behavior: smooth; }
 
+/* start map styles */
+
+.ol-zoom-extent {
+    display: none;
+}
+
+/* end map styles */
+
 #searchByName {
     padding-left: 40px;
 }
@@ -640,12 +648,7 @@ button#expand-location-list:after {
         </style>
 
 <script>
-    /**
-     * Scrolls a container to bring a specific element into the visible area.
-     * This is useful for ensuring that a selected item in a scrollable list is visible to the user.
-     * @param {HTMLElement} element The element to scroll into view.
-     * @param {HTMLElement} container The scrollable container element.
-     */
+    // Scrolls a container to bring a selected result into the visible area.
     function scrollElementIntoParentView(element, container) {
         // Get the position and dimensions of the element and its container.
         const elRect = element.getBoundingClientRect();
@@ -704,21 +707,6 @@ function zoomToLocation(locationId) {
                         $checkbox.trigger("click");
                     }
 
-
-        /*const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:nth-last-child(2)`);
-        if (layerDataRow) {
-            const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
-            if (locationCoordinates.length === 2 && !isNaN(locationCoordinates[0]) && !isNaN(locationCoordinates[1])) {
-                const view = globalMap.getView();
-                view.animate({
-                    center: ol.proj.transform(locationCoordinates, "EPSG:4326", "EPSG:3857"),
-                    zoom: 12,
-                    duration: 2000,
-    easing: ol.easing.easeOut
-                });
-            }
-        }*/
-
     }
 
     function collapseLocation() {
@@ -738,7 +726,7 @@ function zoomToLocation(locationId) {
             const locationRect = locationEl.getBoundingClientRect();
             resultsContainer.scrollTop += locationRect.top - containerRect.top;
         }
-        //resetMap();
+        
     }
 
     function resetMap() {
@@ -748,6 +736,7 @@ function zoomToLocation(locationId) {
             zoom: window.zoomLevel,
             duration: 1000 // Animation duration in milliseconds
         });
+        $("#gm_province option").removeAttr("selected");
     }
 
     function showLocationDetails() {
@@ -5936,7 +5925,7 @@ if (locationId) {
                                                         </select>
                                                         <button id="location_map_submit" class="btn btn-primary hidden" aria-controls="location_map" type="submit">Zoom map</button>
                                                         </form>
-                                                        <button id="location_map_reset" class="mrgn-tp-sm btn btn-link pull-right" type="reset">Reset map view</button>
+                                                        <button id="location_map_reset" class="mrgn-tp-sm btn btn-link pull-right" type="reset"><span class="glyphicon-refresh glyphicon"></span> Reset map</button>
                                                 
                                             </div>
                                         <!-- end province zoom field -->
