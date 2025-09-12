@@ -878,16 +878,40 @@ if (locationId) {
         // --- Start: Disable map rotation ---
         // Find and disable the map rotation interaction. This prevents the user from
         // rotating the map with Alt+Shift+Drag or via touch gestures.
-        map.getInteractions().forEach(function(interaction) {
-            if (interaction instanceof ol.interaction.DragRotate ||
-                interaction instanceof ol.interaction.PinchRotate) {
+        map.getInteractions().forEach(function (interaction) {
+            if (interaction instanceof ol.interaction.DragRotate || interaction instanceof ol.interaction.PinchRotate) {
                 interaction.setActive(false);
             }
         });
         // --- End: Disable map rotation ---
 
+		// --- Start: Apply custom select style to all features ---
+		// This ensures that any feature, when selected, will use your custom icon.
+		// This works for both map clicks and programmatic selections from your list
+		// by using the `feature.selectStyle` property hook from the wb-geomap plugin.
+		var newSelectStyle = new ol.style.Style({
+				image: new ol.style.Icon({
+					src: "https://parks.canada.ca/-/media/WET4/iconographie-icons/carte-map/geomatic/geomap_location-brass.png",
+					size: [35, 35],
+					anchor: [0.5, 0.5]
+				})
+			});
+		
+		map.getLayers().forEach(function (layer) {
+			if (layer instanceof ol.layer.Vector) {
+				var source = layer.getSource();
+				source.getFeatures().forEach(function (feature) {
+					feature.selectStyle = newSelectStyle;
+				});
+			}
+		});
+		// --- End: Apply custom select style ---
+
         resetMap();
         $("#location_map_reset").on("click", resetMap);
+
+
+
     });
 
 </script>
@@ -1059,7 +1083,27 @@ if (locationId) {
                 "type": "rule",
                 "rule": [ { "field": "Type", "value": [2], "filter": "EQUAL_TO", "name": " ", "init": { "externalGraphic": "https://parks.canada.ca/-/media/Images/Location-Search/lhnnhs-svg5-png", "graphicWidth": 25,"graphicHeight": 40, "fillOpacity": 1}} ]
                 }
-                }]
+                }],
+                  "selectStyle": {
+    "stroke": {
+      "color": "rgba(255, 0, 0, 1)",
+      "width": 3
+    },
+    "fill": {
+      "color": "rgba(255, 0, 0, 0.4)"
+    },
+    "image": {
+      "type": "circle",
+      "radius": 8,
+      "fill": {
+        "color": "rgba(255, 0, 0, 1)"
+      },
+      "stroke": {
+        "color": "rgba(255, 255, 255, 1)",
+        "width": 2
+      }
+    }
+  }
                 }'>
 
 
