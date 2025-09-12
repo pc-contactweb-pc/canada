@@ -405,6 +405,13 @@ details.location-result {
             .wb-geomap-legend {
                 float: left;
             }
+.wb-geomap-legend label {
+    padding-left: 0;
+    pointer-events: none;
+}
+.wb-geomap-legend input {
+    display: none;
+}
 
             .location-result.active {
                 display: block !important;
@@ -5940,7 +5947,7 @@ if (locationId) {
                                     <div class="row">
                                         <!-- start geomap legend -->
                                         <section class="col-md-12 form-group mrgn-tp-md">
-                                            <label class="legendLabel" for="wb-geomap-legend">Display on map:</label>
+                                            <label class="legendLabel" for="wb-geomap-legend">Map legend</label>
                                             <div class="wb-geomap-legend"></div>
                                         </section>
                                         <!-- end geomap legend -->
