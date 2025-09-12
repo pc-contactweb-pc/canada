@@ -793,26 +793,26 @@ if (locationId) {
         $("#all-results").text(allResults);
 
         // When the user mouses over a .location-result, select it on the map
-        $("#location-results").on("mouseenter", ".location-result", function() {
+        $("#location-results").on("mouseenter focusin", ".location-result", function() {
             const $locationResult = $(this);
             if (!$locationResult.hasClass("active")) {
                 const locationId = $locationResult.attr("id");
                 if (locationId) {
                     const $checkbox = $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`);
                     if ($checkbox.length && !$checkbox.is(':checked')) {
-                        $checkbox.trigger("click");
+                        $checkbox.trigger("click"); // This triggers the selectInteraction and applies newSelectStyle
                     }
                 }
             }
         });
 
         // When the user's pointer is removed, deselect it
-        $("#location-results").on("mouseleave", ".location-result:not(.active)", function() {
+        $("#location-results").on("mouseleave focusout", ".location-result:not(.active)", function() {
             const locationId = $(this).attr("id");
             if (locationId) {
                 const $checkbox = $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`);
                 if ($checkbox.length && $checkbox.is(':checked')) {
-                    $checkbox.trigger("click");
+                    $checkbox.trigger("click"); // This triggers the selectInteraction and removes newSelectStyle
                 }
             }
         });
