@@ -923,10 +923,25 @@ if (locationId) {
 		});
 		// --- End: Apply custom select style ---
 
+        // Set zoom constraints
+        // Get the current view.
+        var oldView = map.getView();
+        var currentCenter = oldView.getCenter();
+        var currentZoom = oldView.getZoom();
+
+        // Create a new view with the desired zoom constraints.
+        var newView = new ol.View({
+            center: currentCenter,
+            zoom: window.zoomLevel,
+            minZoom: window.zoomLevel, // Your desired minimum zoom level
+            maxZoom: 18, // Your desired maximum zoom level
+        });
+
+        // Set the new view on the map.
+        map.setView(newView);
+
         resetMap();
         $("#location_map_reset").on("click", resetMap);
-
-
 
     });
 
@@ -1042,6 +1057,7 @@ if (locationId) {
 
                                 <div id="location_map" class="wb-geomap" data-wb-geomap='{
                      "layersFile" : "./index_files/locationSearch.js",
+                     "minZoom" : 4,
                      "tables" : [{
                      "id" : "locationsParks" ,
                      "zoom" : true,
