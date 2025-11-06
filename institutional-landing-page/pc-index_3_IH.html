@@ -947,6 +947,62 @@ if (locationId) {
 
     });
 
+    // Radius search test
+
+    function performRadiusSearch(map, lat, lon, radiusMeters) {
+        
+        // 1. Define your center point in lat/lon
+        var centerLonLat = [lon, lat];
+
+        // 2. Transform it to the map's projection (usually 'EPSG:3857')
+        var centerMapProj = ol.proj.fromLonLat(centerLonLat, 'EPSG:3857');
+
+        // 3. Create the circular polygon (the buffer)
+        // This creates a circle with 64 vertices
+        var circleGeometry = new ol.geom.Polygon.circular(
+            centerMapProj,
+            radiusMeters,
+            64
+        );
+
+        // 4. Get the layer you want to search (e.g., by its title)
+        var vectorLayerToSearch = null;
+        map.getLayers().forEach(function(layer) {
+            if (layer.get('title') === 'National parks') {
+            vectorLayerToSearch = layer;
+            }
+        });
+
+        if (!vectorLayerToSearch) {
+            console.error("Could not find the layer to search.");
+            return;
+        }
+
+        // 5. Find features inside the circle
+        var featuresInRadius = [];
+        var vectorSource = vectorLayerToSearch.getSource();
+
+        // Get the bounding box of the circle for an initial, fast check
+        var circleExtent = circleGeometry.getExtent();
+
+        // 'forEachFeatureIntersectingExtent' is a fast way to get
+        // features in the general area (the bounding box of the circle)
+        vectorSource.forEachFeatureIntersectingExtent(circleExtent, function(feature) {
+            
+            // This gives features in the *square*. You must do a second,
+            // more precise check to see if it's actually in the *circle*.
+            var point = feature.getGeometry().getCoordinates();
+            if (circleGeometry.intersectsCoordinate(point)) {
+            featuresInRadius.push(feature);
+            }
+        });
+
+        // 'featuresInRadius' now contains all features within the radius
+        console.log(featuresInRadius);
+        
+        // You can now select them, display them in a list, etc.
+    }
+
 </script>
 
         <!-- Fuse fuzzy filtering for location search -->
