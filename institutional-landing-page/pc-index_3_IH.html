@@ -957,13 +957,10 @@ if (locationId) {
         // 2. Transform it to the map's projection (usually 'EPSG:3857')
         var centerMapProj = ol.proj.fromLonLat(centerLonLat, 'EPSG:3857');
 
-        // 3. Create the circular polygon (the buffer)
-        // This creates a circle with 64 vertices
-        var circleGeometry = new ol.geom.Polygon.circular(
-            centerMapProj,
-            radiusMeters,
-            64
-        );
+        // 3. Create a circle geometry
+        var circle = new ol.geom.Circle(centerMapProj, radiusMeters);
+        // Convert the circle into a polygon to check for intersections
+        var circleGeometry = ol.geom.Polygon.fromCircle(circle, 64);
 
         // 4. Get the layer you want to search (e.g., by its title)
         var vectorLayerToSearch = null;
