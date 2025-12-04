@@ -961,20 +961,16 @@
                 $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
                     window.globalMap = map;
 
-                    // --- Start: Disable map rotation ---
-                    // Find and disable the map rotation interaction. This prevents the user from
-                    // rotating the map with Alt+Shift+Drag or via touch gestures.
+                    // --- Disable map rotation ---
+                    // Find and disable the map rotation interaction.
                     map.getInteractions().forEach(function (interaction) {
                         if (interaction instanceof ol.interaction.DragRotate || interaction instanceof ol.interaction.PinchRotate) {
                             interaction.setActive(false);
                         }
                     });
-                    // --- End: Disable map rotation ---
 
-                    // --- Start: Apply custom select style to all features ---
-                    // This ensures that any feature, when selected, will use your custom icon.
-                    // This works for both map clicks and programmatic selections from your list
-                    // by using the `feature.selectStyle` property hook from the wb-geomap plugin.
+                    // --- Apply custom select style to all features ---
+                    // This ensures that any feature, when selected, will use the custom icon
                     var newSelectStyle = new ol.style.Style({
                         image: new ol.style.Icon({
                             src: "https://parks.canada.ca/-/media/WET4/iconographie-icons/carte-map/geomatic/geomap_location-brass.png",
@@ -991,9 +987,7 @@
                             });
                         }
                     });
-                    // --- End: Apply custom select style ---
 
-                    // Set zoom constraints
                     // Get the current view.
                     var oldView = map.getView();
                     var currentCenter = oldView.getCenter();
