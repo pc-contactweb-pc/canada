@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (visibleResults === 0) {
             $(".result-text").removeClass("positive").addClass("negative");
             resetMap();
+            // show no results text
+            $("#no-results").show();
         }
 
         // if only one result, expand it and zoom in on the map
@@ -82,6 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (visibleResults > 1) {
             resetMap();
             deselectActiveFeature();
+        }
+
+        // if any results are visible, hide no results text
+        if (visibleResults > 0) {
+            $("#no-results").hide();
         }
 
     });
@@ -200,6 +207,9 @@ function deselectActiveFeature() {
 }
 
 $(document).ready(function () {
+
+    // hide no results
+    $("#no-results").hide();
 
     // set default map zoom level per screen size
     if (window.innerWidth < 768) {

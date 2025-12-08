@@ -41,7 +41,8 @@ outline: 1px solid #ccc;
 background: #fafafa;
 }
 
-#location-results>p {
+#location-results>p,
+#no-results {
 color: #777;
 font-size: 80%;
 margin: 15px;
