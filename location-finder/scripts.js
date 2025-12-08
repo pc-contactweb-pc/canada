@@ -70,8 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (visibleResults === 0) {
             $(".result-text").removeClass("positive").addClass("negative");
             resetMap();
-            // show no results text
+            // show no results text and hide end of results text
             $("#no-results").show();
+            $("#end-results").hide();
         }
 
         // if only one result, expand it and zoom in on the map
@@ -86,9 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
             deselectActiveFeature();
         }
 
-        // if any results are visible, hide no results text
+        // if any results are visible, hide no results text and show end of results text
         if (visibleResults > 0) {
             $("#no-results").hide();
+            $("#end-results").show();
         }
 
     });
