@@ -150,28 +150,26 @@
 
                                     <div class="row">
 
-                                        <!-- Start Park Result List -->
+                                        <!-- start location result list -->
                                         <section id="location-results-container" class="col-md-6 mrgn-tp-lg">
 
-                                            <!-- start site name search field -->
-                                            <div id="siteNameSearch" class="mrgn-tp-sm mrgn-bttm-md">
+                                            <!-- start location name search field -->
+                                            <div id="locationNameSearch" class="mrgn-tp-sm mrgn-bttm-md">
                                                 <div class="form-group">
                                                     <label for="searchByName">Search by name</label>
                                                     <span class="glyphicon-search glyphicon"></span>
                                                     <input class="form-control" type="search" id="searchByName"
                                                         name="searchByName" list="searchByNames"
-                                                        placeholder="Type a location name"
-                                                        style="margin-top: 7px;height: 43px;">
+                                                        placeholder="Type a location name">
                                                     <span id="clear-search" aria-label="Clear search">×</span>
                                                     <p aria-live="assertive"
                                                         class="bg-success text-success result-text"><small><span
                                                                 id="visible-results"></span><span
                                                                 id="all-results">0</span> results</small></p>
                                                 </div>
-
                                             </div>
+                                            <!-- end location name search field -->
 
-                                            <!-- end site name search field -->
                                             <button id="expand-location-list" class="btn btn-primary full-width">Browse
                                                 all locations</button>
                                             <div id="location-results">
@@ -9330,7 +9328,34 @@
 
         <!-- End of location finder -->
 
+        <h2>Location results template</h2>
 
+        <code>
+            <div id="location-results">
+                <details class="location-result [np/nhs/nmca]"
+                id="[LOCATION NAME, NO WHITESPACE]"
+                data-region-name="[PROVINCE OR TERRITORY]">
+                    <summary><span>[LOCATION NAME]</span></summary>
+                <div class="row">
+                    <div class="location-thumbnail col-sm-6 pull-right">
+                        <a href="[LOCATION URL]">
+                            <img class="img-responsive" alt=""
+                                src="[LOCATION THUMBNAIL]"
+                                loading="lazy">
+                        </a>
+                        <a class="btn btn-primary full-width mrgn-tp-md mrgn-bttm-md"
+                            href="[LOCATION URL]">Learn
+                            more</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="location-description">
+                            [LOCATION DESCRIPTION]
+                        </p>
+                    </div>
+                </div>
+                </details>
+            </div>
+        </code>
 
     </main>
     <!-- End Page Layout -->

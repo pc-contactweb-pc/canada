@@ -12,6 +12,8 @@ display: none;
 
 #searchByName {
 padding-left: 40px;
+margin-top: 7px;
+height: 43px;
 }
 
 #locationSearch .legendLabel {
@@ -204,7 +206,7 @@ border-bottom: 0;
 }
 }
 
-#siteNameSearch .form-group label {
+#locationNameSearch .form-group label {
 font-size: inherit;
 line-height: inherit;
 }
@@ -341,7 +343,7 @@ display: none;
 }
 
 /* search icon */
-#siteNameSearch .glyphicon-search {
+#locationNameSearch .glyphicon-search {
 position: absolute;
 top: 56px;
 padding-left: 12px;
@@ -374,7 +376,7 @@ form.wb-geomap-filter {
 }
 
 @media screen and (max-width: 992px) {
-#siteNameSearch .glyphicon-search {
+#locationNameSearch .glyphicon-search {
     top: 51px !important;
 }
 
@@ -430,7 +432,7 @@ form.wb-geomap-filter {
     display: none;
 }
 
-#siteNameSearch .glyphicon-search {
+#locationNameSearch .glyphicon-search {
     top: 50px !important;
 }
 
