@@ -360,12 +360,12 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
     });
 
     // Get the current view.
-    var oldView = map.getView();
-    var currentCenter = oldView.getCenter();
-    var currentZoom = oldView.getZoom();
+    let oldView = map.getView();
+    let currentCenter = oldView.getCenter();
+    let currentZoom = oldView.getZoom();
 
     // Create a new view with the desired zoom constraints.
-    var newView = new ol.View({
+    let newView = new ol.View({
         center: currentCenter,
         zoom: window.zoomLevel,
         minZoom: window.zoomLevel, // Your desired minimum zoom level
