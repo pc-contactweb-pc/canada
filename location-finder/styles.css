@@ -10,6 +10,10 @@ display: none;
 
 /* end map styles */
 
+#location-finder {
+    background-color: #eee;
+}
+
 #searchByName {
 padding-left: 40px;
 margin-top: 7px;
