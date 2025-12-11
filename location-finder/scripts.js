@@ -1,47 +1,49 @@
-// Fuse fuzzy search setup
+// START Fuse fuzzy search setup
 
 document.addEventListener("DOMContentLoaded", () => {
-    // use fuse to search the <summary> element text content as well as the data-region-name attribute for each .location-result
     const results = Array.from(document.querySelectorAll(".location-result"));
+    
+    // 1. Extract the new attribute
     const regions = results.map(result => result.getAttribute("data-region-name"));
+    const altNames = results.map(result => result.getAttribute("data-alt-names")); 
+
     const titles = results.map((result, idx) => {
         const titleEl = result.querySelector(".location-result summary");
         return {
             idx,
             text: titleEl ? titleEl.textContent.trim() : "",
-            region: regions[idx] ? regions[idx].trim() : ""
+            region: regions[idx] ? regions[idx].trim() : "",
+            // 2. Add it to the data object
+            altNames: altNames[idx] ? altNames[idx].trim() : "" 
         };
     });
 
     // Set up Fuse
     const fuse = new Fuse(titles, {
-        keys: ["text", "region"],
-        threshold: 0.2, // lower = stricter matching
-        ignoreLocation: true, // allows matches anywhere in the string
-        ignoreDiacritics: true // ignore accents
+        // 3. Add "altNames" to the searchable keys
+        keys: ["text", "region", "altNames"], 
+        threshold: 0.2,
+        ignoreLocation: true,
+        ignoreDiacritics: true
     });
 
     const input = document.querySelector("#searchByName");
     input.addEventListener("input", e => {
         const query = e.target.value.trim();
 
-        // Show the location results list when the user starts typing
         showLocationDetails();
-
         collapseLocation();
-
-        const visibleTotal = $(".location-result:visible").length;
 
         let visibleIndexes;
         if (query) {
-            // Break the search query into individual words and create a logical AND query.
-            // This ensures that all words must be present in the results.
-            const words = query.split(/\s+/).filter(Boolean); // filter out empty strings
+            const words = query.split(/\s+/).filter(Boolean);
             const fuseQuery = {
                 $and: words.map(word => ({
                     $or: [
                         { text: word },
-                        { region: word }
+                        { region: word },
+                        // 4. Add "altNames" to the query logic
+                        { altNames: word } 
                     ]
                 }))
             };
@@ -49,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
             $("#searchByName").addClass("clear-search");
             $(".result-text").removeClass("negative").addClass("positive");
         } else {
-            // If empty query, show all
             visibleIndexes = new Set(titles.map((_, idx) => idx));
             $("#searchByName").removeClass("clear-search");
             $("#visible-results").text("");
@@ -62,39 +63,34 @@ document.addEventListener("DOMContentLoaded", () => {
             result.style.display = visibleIndexes.has(idx) ? "" : "none";
         });
 
-        // update visible results count
         const visibleResults = $(".location-result:visible").length;
         $("#visible-results").text(visibleResults + " of ");
 
-        // if no results, update result text styling and reset map
         if (visibleResults === 0) {
             $(".result-text").removeClass("positive").addClass("negative");
             resetMap();
-            // show no results text and hide end of results text
             $("#no-results").show();
             $("#end-results").hide();
         }
 
-        // if only one result, expand it and zoom in on the map
         if (visibleResults === 1) {
             const onlyResultId = $(".location-result:visible").attr("id");
             expandLocation(onlyResultId, true);
         }
 
-        // if more than one result is visible, reset map
         if (visibleResults > 1) {
             resetMap();
             deselectActiveFeature();
         }
 
-        // if any results are visible, hide no results text and show end of results text
         if (visibleResults > 0) {
             $("#no-results").hide();
             $("#end-results").show();
         }
-
     });
 });
+
+// END Fuse fuzzy search setup
 
 // Scrolls a container to bring a selected result into the visible area.
 function scrollElementIntoParentView(element, container) {
