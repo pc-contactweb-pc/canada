@@ -3,7 +3,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const results = Array.from(document.querySelectorAll(".location-result"));
     
-    // 1. Extract the new attribute
     const regions = results.map(result => result.getAttribute("data-region-name"));
     const altNames = results.map(result => result.getAttribute("data-alt-names")); 
 
@@ -13,14 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
             idx,
             text: titleEl ? titleEl.textContent.trim() : "",
             region: regions[idx] ? regions[idx].trim() : "",
-            // 2. Add it to the data object
             altNames: altNames[idx] ? altNames[idx].trim() : "" 
         };
     });
 
     // Set up Fuse
     const fuse = new Fuse(titles, {
-        // 3. Add "altNames" to the searchable keys
         keys: ["text", "region", "altNames"], 
         threshold: 0.2,
         ignoreLocation: true,
@@ -34,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
         showLocationDetails();
         collapseLocation();
 
+        // fix tab focus
+        $(".location-result summary[tabindex='0']").attr("tabindex", "-1");
+        $(".location-result summary:visible:first").attr("tabindex", "0");
+
         let visibleIndexes;
         if (query) {
             const words = query.split(/\s+/).filter(Boolean);
@@ -42,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     $or: [
                         { text: word },
                         { region: word },
-                        // 4. Add "altNames" to the query logic
                         { altNames: word } 
                     ]
                 }))
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // END Fuse fuzzy search setup
 
-// Scrolls a container to bring a selected result into the visible area.
+// Scrolls the location result list to bring a selected result into the visible area.
 function scrollElementIntoParentView(element, container) {
     // Get the position and dimensions of the element and its container.
     const elRect = element.getBoundingClientRect();
@@ -111,6 +111,8 @@ function scrollElementIntoParentView(element, container) {
     }
 }
 
+// Zoom geomap to specific location helper function
+
 function zoomToLocation(locationId) {
     const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:nth-last-child(2)`);
     if (layerDataRow) {
@@ -127,6 +129,8 @@ function zoomToLocation(locationId) {
     }
 }
 
+// Expand location result
+
 function expandLocation(locationId, scroll = false) {
     const $location = $(`#${locationId}`);
     if (!$location.length) return;
@@ -135,7 +139,7 @@ function expandLocation(locationId, scroll = false) {
     $(".location-result").not($location).addClass("hidden").removeClass("active");
 
     // Show and activate the target location and its details
-    $location.addClass("active").attr("open", "open");;
+    $location.addClass("active").attr("open", "open");
 
     if (scroll) {
         const resultsContainer = document.querySelector("#location-results");
@@ -154,6 +158,8 @@ function expandLocation(locationId, scroll = false) {
     document.getElementById("end-results").style.display = 'none';
 
 }
+
+// Collapse location result
 
 function collapseLocation() {
     const $location = $(`.location-result.active`);
