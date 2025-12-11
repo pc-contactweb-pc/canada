@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+    const tabs = Array.from(tablist.querySelectorAll('summary'));
     let focusedTab = 0;
 
     // Make the first tab focusable
