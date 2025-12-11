@@ -1,5 +1,11 @@
 // START Fuse fuzzy search setup
 
+function fixTabFocus() {
+    // fix tab focus
+    $(".location-result summary[tabindex='0']").attr("tabindex", "-1");
+    $(".location-result summary:visible:first").attr("tabindex", "0");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const results = Array.from(document.querySelectorAll(".location-result"));
     
@@ -31,10 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         showLocationDetails();
         collapseLocation();
 
-        // fix tab focus
-        $(".location-result summary[tabindex='0']").attr("tabindex", "-1");
-        $(".location-result summary:visible:first").attr("tabindex", "0");
-
         let visibleIndexes;
         if (query) {
             const words = query.split(/\s+/).filter(Boolean);
@@ -62,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
         results.forEach((result, idx) => {
             result.style.display = visibleIndexes.has(idx) ? "" : "none";
         });
+
+        fixTabFocus();
 
         const visibleResults = $(".location-result:visible").length;
         $("#visible-results").text(visibleResults + " of ");
@@ -390,6 +394,7 @@ $(document).ready(function () {
         $("#visible-results").text("");
         $(".result-text").removeClass("positive negative");
         deselectActiveFeature();
+        fixTabFocus();
     });
 
     $("#expand-location-list").on("click", function () {
