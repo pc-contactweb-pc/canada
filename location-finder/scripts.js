@@ -196,59 +196,64 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const tabs = Array.from(tablist.querySelectorAll('summary'));
-    let focusedTab = 0;
+    // Helper: dynamic fetch of currently visible tabs
+    // offsetParent is null if an element (or its parent) has display: none
+    const getVisibleTabs = () => {
+        return Array.from(tablist.querySelectorAll('summary')).filter(
+            (tab) => tab.offsetParent !== null
+        );
+    };
 
-    // Make the first tab focusable
-    if (tabs.length > 0) {
-        tabs[0].setAttribute('tabindex', '0');
+    // Initialize: Ensure the first *visible* tab is focusable on load
+    const initialVisibleTabs = getVisibleTabs();
+    if (initialVisibleTabs.length > 0) {
+        initialVisibleTabs[0].setAttribute('tabindex', '0');
     }
 
-    // Function to change focus
-    const setFocus = (newIndex) => {
-        // Constrain index to the list of tabs
+    // Function to change focus based on the *current* visible list
+    const setFocus = (currentTab, newIndex, visibleTabs) => {
+        // Constrain index to the list of visible tabs
         if (newIndex < 0) {
-            newIndex = tabs.length - 1;
-        } else if (newIndex >= tabs.length) {
+            newIndex = visibleTabs.length - 1;
+        } else if (newIndex >= visibleTabs.length) {
             newIndex = 0;
         }
 
-        // Get the current and next tabs
-        const currentTab = tabs[focusedTab];
-        const nextTab = tabs[newIndex];
+        const nextTab = visibleTabs[newIndex];
 
-        // Update tabindex to manage focus
+        // Update tabindex to manage focus (Roving Tabindex)
         currentTab.setAttribute('tabindex', '-1');
         nextTab.setAttribute('tabindex', '0');
         nextTab.focus();
-
-        focusedTab = newIndex;
     };
 
     tablist.addEventListener('keydown', (e) => {
-        // Find the currently focused tab's index
-        const currentIndex = tabs.indexOf(document.activeElement);
+        // 1. Get the fresh list of visible items
+        const visibleTabs = getVisibleTabs();
+        
+        // 2. Find where we are in *that* specific list
+        const currentIndex = visibleTabs.indexOf(document.activeElement);
+
         if (currentIndex === -1) {
-            return; // Focus is not on a tab item
+            return; // Focus is not on a visible tab item
         }
-        focusedTab = currentIndex;
 
         switch (e.key) {
             case 'ArrowDown':
                 e.preventDefault();
-                setFocus(focusedTab + 1);
+                setFocus(document.activeElement, currentIndex + 1, visibleTabs);
                 break;
             case 'ArrowUp':
                 e.preventDefault();
-                setFocus(focusedTab - 1);
+                setFocus(document.activeElement, currentIndex - 1, visibleTabs);
                 break;
             case 'Home':
                 e.preventDefault();
-                setFocus(0);
+                setFocus(document.activeElement, 0, visibleTabs);
                 break;
             case 'End':
                 e.preventDefault();
-                setFocus(tabs.length - 1);
+                setFocus(document.activeElement, visibleTabs.length - 1, visibleTabs);
                 break;
         }
     });
