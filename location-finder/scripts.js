@@ -182,6 +182,74 @@ function collapseLocation() {
 
 }
 
+// START keyboard accessibility for location list
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tablist = document.getElementById('location-results');
+    if (!tablist) {
+        return;
+    }
+
+    const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+    let focusedTab = 0;
+
+    // Make the first tab focusable
+    if (tabs.length > 0) {
+        tabs[0].setAttribute('tabindex', '0');
+    }
+
+    // Function to change focus
+    const setFocus = (newIndex) => {
+        // Constrain index to the list of tabs
+        if (newIndex < 0) {
+            newIndex = tabs.length - 1;
+        } else if (newIndex >= tabs.length) {
+            newIndex = 0;
+        }
+
+        // Get the current and next tabs
+        const currentTab = tabs[focusedTab];
+        const nextTab = tabs[newIndex];
+
+        // Update tabindex to manage focus
+        currentTab.setAttribute('tabindex', '-1');
+        nextTab.setAttribute('tabindex', '0');
+        nextTab.focus();
+
+        focusedTab = newIndex;
+    };
+
+    tablist.addEventListener('keydown', (e) => {
+        // Find the currently focused tab's index
+        const currentIndex = tabs.indexOf(document.activeElement);
+        if (currentIndex === -1) {
+            return; // Focus is not on a tab item
+        }
+        focusedTab = currentIndex;
+
+        switch (e.key) {
+            case 'ArrowDown':
+                e.preventDefault();
+                setFocus(focusedTab + 1);
+                break;
+            case 'ArrowUp':
+                e.preventDefault();
+                setFocus(focusedTab - 1);
+                break;
+            case 'Home':
+                e.preventDefault();
+                setFocus(0);
+                break;
+            case 'End':
+                e.preventDefault();
+                setFocus(tabs.length - 1);
+                break;
+        }
+    });
+});
+
+// END keyboard accessibility for location list
+
 function resetMap() {
     const view = globalMap.getView();
     view.animate({
