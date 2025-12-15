@@ -10,7 +10,7 @@ display: none;
 
 /* end map styles */
 
-#location-finder {
+#map {
     background-color: #eee;
 }
 
@@ -21,14 +21,14 @@ height: 43px;
 width: 100%;
 }
 
-#locationSearch .legendLabel {
+#location-search .legendLabel {
 padding-left: 0;
 float: left;
 line-height: 60px;
 margin-right: 10px;
 }
 
-#locationSearch .geomap-lgnd-layer div {
+#location-search .geomap-lgnd-layer div {
 display: inline-block !important;
 }
 
@@ -212,7 +212,7 @@ border-bottom: 0;
 }
 }
 
-#locationNameSearch .form-group label {
+#location-name-search .form-group label {
 font-size: inherit;
 line-height: inherit;
 }
@@ -349,7 +349,7 @@ display: none;
 }
 
 /* search icon */
-#locationNameSearch .glyphicon-search {
+#location-name-search .glyphicon-search {
 position: absolute;
 top: 56px;
 padding-left: 12px;
@@ -382,7 +382,7 @@ form.wb-geomap-filter {
 }
 
 @media screen and (max-width: 992px) {
-#locationNameSearch .glyphicon-search {
+#location-name-search .glyphicon-search {
     top: 51px !important;
 }
 
@@ -414,7 +414,7 @@ form.wb-geomap-filter {
     margin-left: 0;
 }
 
-#locationSearch .legendLabel {
+#location-search .legendLabel {
     line-height: 20px;
 }
 
@@ -438,7 +438,7 @@ form.wb-geomap-filter {
     display: none;
 }
 
-#locationNameSearch .glyphicon-search {
+#location-name-search .glyphicon-search {
     top: 50px !important;
 }
 

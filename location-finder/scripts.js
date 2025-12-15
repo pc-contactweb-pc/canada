@@ -380,7 +380,7 @@ $(document).ready(function () {
                 //selectedRowCheckbox.trigger("click");
                 // Scroll to the location results if on a small screen
                 if (window.innerWidth < 768) {
-                    const locationSearch = document.querySelector("#locationNameSearch");
+                    const locationSearch = document.querySelector("#location-name-search");
                     locationSearch.scrollIntoView();
                 }
             }
