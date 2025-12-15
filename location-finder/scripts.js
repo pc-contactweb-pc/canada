@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ignoreDiacritics: true
     });
 
-    const input = document.querySelector("#searchByName");
+    const input = document.querySelector("#find-by-name");
     input.addEventListener("input", e => {
         const query = e.target.value.trim();
 
@@ -50,11 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }))
             };
             visibleIndexes = new Set(fuse.search(fuseQuery).map(r => r.item.idx));
-            $("#searchByName").addClass("clear-search");
+            $("#find-by-name").addClass("clear-search");
             $(".result-text").removeClass("negative").addClass("positive");
         } else {
             visibleIndexes = new Set(titles.map((_, idx) => idx));
-            $("#searchByName").removeClass("clear-search");
+            $("#find-by-name").removeClass("clear-search");
             $("#visible-results").text("");
             $(".result-text").removeClass("positive negative");
             resetMap();
@@ -394,7 +394,7 @@ $(document).ready(function () {
     });
 
     $("#clear-search").on("click", function () {
-        $("#searchByName").val("").removeClass("clear-search");
+        $("#find-by-name").val("").removeClass("clear-search");
         $(".location-result").removeClass("hidden").show();
         $("#visible-results").text("");
         $(".result-text").removeClass("positive negative");

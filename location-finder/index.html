@@ -267,7 +267,7 @@
 
                 /* end map styles */
 
-                #searchByName {
+                #find-by-name {
                     padding-left: 40px;
                 }
 
@@ -537,7 +537,7 @@
                     transition: .2s;
                 }
 
-                #searchByName.clear-search~.result-text {
+                #find-by-name.clear-search~.result-text {
                     right: 55px;
                 }
 
@@ -579,11 +579,11 @@
                     font-size: 24px;
                 }
 
-                #searchByName.clear-search+span#clear-search {
+                #find-by-name.clear-search+span#clear-search {
                     display: inline-block !important;
                 }
 
-                label[for="searchByName"] {
+                label[for="find-by-name"] {
                     display: block;
                 }
 
@@ -641,7 +641,7 @@
                         background: #e5e5e5;
                     }
 
-                    #searchByName.clear-search~.result-text {
+                    #find-by-name.clear-search~.result-text {
                         right: 16px;
                     }
 
@@ -944,7 +944,7 @@
                     });
 
                     $("#clear-search").on("click", function () {
-                        $("#searchByName").val("").removeClass("clear-search");
+                        $("#find-by-name").val("").removeClass("clear-search");
                         $(".location-result").removeClass("hidden").show();
                         $("#visible-results").text("");
                         $(".result-text").removeClass("positive negative");
@@ -1035,7 +1035,7 @@
                         ignoreDiacritics: true // ignore accents
                     });
 
-                    const input = document.querySelector("#searchByName");
+                    const input = document.querySelector("#find-by-name");
                     input.addEventListener("input", e => {
                         const query = e.target.value.trim();
 
@@ -1060,12 +1060,12 @@
                                 }))
                             };
                             visibleIndexes = new Set(fuse.search(fuseQuery).map(r => r.item.idx));
-                            $("#searchByName").addClass("clear-search");
+                            $("#find-by-name").addClass("clear-search");
                             $(".result-text").removeClass("negative").addClass("positive");
                         } else {
                             // If empty query, show all
                             visibleIndexes = new Set(titles.map((_, idx) => idx));
-                            $("#searchByName").removeClass("clear-search");
+                            $("#find-by-name").removeClass("clear-search");
                             $("#visible-results").text("");
                             $(".result-text").removeClass("positive negative");
                             resetMap();
@@ -1212,10 +1212,10 @@
                                             <!-- start site name search field -->
                                             <div id="siteNameSearch" class="mrgn-tp-sm mrgn-bttm-md">
                                                 <div class="form-group">
-                                                    <label for="searchByName">Find by name</label>
+                                                    <label for="find-by-name">Find by name</label>
                                                     <span class="glyphicon-search glyphicon"></span>
-                                                    <input class="form-control" type="search" id="searchByName"
-                                                        name="searchByName" list="searchByNames"
+                                                    <input class="form-control" type="search" id="find-by-name"
+                                                        name="find-by-name" list="find-by-names"
                                                         placeholder="Type a location name"
                                                         style="margin-top: 7px;height: 43px;">
                                                     <span id="clear-search" aria-label="Clear search">×</span>
@@ -8402,7 +8402,7 @@
                                             <!-- start province zoom field -->
                                             <div id="region-finder" class="mrgn-bttm-sm">
 
-                                                <label for="searchByName">Zoom to region on
+                                                <label for="find-by-name">Zoom to region on
                                                     map</label>
                                                 <!-- province areas of interest and map reset -->
                                                 <form class="wb-geomap-filter" data-bind-to="location_map">

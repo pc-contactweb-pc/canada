@@ -14,7 +14,7 @@ display: none;
     background-color: #eee;
 }
 
-#searchByName {
+#find-by-name {
 padding-left: 40px;
 margin-top: 7px;
 height: 43px;
@@ -288,7 +288,7 @@ color: #777;
 transition: .2s;
 }
 
-#searchByName.clear-search~.result-text {
+#find-by-name.clear-search~.result-text {
 right: 55px;
 }
 
@@ -330,11 +330,11 @@ display: none;
 font-size: 24px;
 }
 
-#searchByName.clear-search+span#clear-search {
+#find-by-name.clear-search+span#clear-search {
 display: inline-block !important;
 }
 
-label[for="searchByName"] {
+label[for="find-by-name"] {
 display: block;
 }
 
@@ -392,7 +392,7 @@ form.wb-geomap-filter {
     background: #e5e5e5;
 }
 
-#searchByName.clear-search~.result-text {
+#find-by-name.clear-search~.result-text {
     right: 16px;
 }
 
