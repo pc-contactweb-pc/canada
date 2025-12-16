@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Find the first visible summary in the results
             // Note: offsetParent checks if it's actually visible (handles display: none)
-            const allSummaries = Array.from(tabList.querySelectorAll('summary'));
+            const allSummaries = Array.from(tablist.querySelectorAll('summary'));
             const firstVisible = allSummaries.find(el => el.offsetParent !== null);
 
             if (firstVisible) {
