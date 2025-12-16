@@ -190,32 +190,32 @@ function collapseLocation() {
 
 // START keyboard accessibility for location list
 
-// move focus to results on enter
-const searchInput = document.getElementById('find-by-name'); 
-const resultsContainer = document.getElementById('location-results');
-
-searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-        e.preventDefault();
-
-        // Find the first visible summary in the results
-        // Note: offsetParent checks if it's actually visible (handles display: none)
-        const allSummaries = Array.from(resultsContainer.querySelectorAll('summary'));
-        const firstVisible = allSummaries.find(el => el.offsetParent !== null);
-
-        if (firstVisible) {
-            // Ensure it is focusable before moving focus
-            firstVisible.setAttribute('tabindex', '0'); 
-            firstVisible.focus();
-        }
-    }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
+    
     const tablist = document.getElementById('location-results');
     if (!tablist) {
         return;
     }
+
+    // move focus to results on enter
+    const searchInput = document.getElementById('find-by-name'); 
+
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+
+            // Find the first visible summary in the results
+            // Note: offsetParent checks if it's actually visible (handles display: none)
+            const allSummaries = Array.from(tablist.querySelectorAll('summary'));
+            const firstVisible = allSummaries.find(el => el.offsetParent !== null);
+
+            if (firstVisible) {
+                // Ensure it is focusable before moving focus
+                firstVisible.setAttribute('tabindex', '0'); 
+                firstVisible.focus();
+            }
+        }
+    });
 
     // Helper: dynamic fetch of currently visible tabs
     // offsetParent is null if an element (or its parent) has display: none
