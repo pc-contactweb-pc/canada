@@ -25,7 +25,8 @@ width: 100%;
 padding-left: 0;
 float: left;
 line-height: 60px;
-margin-right: 10px;
+margin-right: 20px;
+font-size:90%;
 }
 
 #location-search .geomap-lgnd-layer div {
