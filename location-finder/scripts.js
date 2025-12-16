@@ -197,7 +197,24 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    const searchInput = document.getElementById('find-by-name'); // Replace with your ID
 
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault(); // Prevents form submission (if inside a <form>)
+
+            // Find the first visible summary in the results
+            // Note: offsetParent checks if it's actually visible (handles display: none)
+            const allSummaries = Array.from(tabList.querySelectorAll('summary'));
+            const firstVisible = allSummaries.find(el => el.offsetParent !== null);
+
+            if (firstVisible) {
+                // Ensure it is focusable before moving focus
+                firstVisible.setAttribute('tabindex', '0'); 
+                firstVisible.focus();
+            }
+        }
+    });
 
     // Helper: dynamic fetch of currently visible tabs
     // offsetParent is null if an element (or its parent) has display: none
