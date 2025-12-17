@@ -153,8 +153,10 @@ document.addEventListener("DOMContentLoaded", () => {
             result.style.display = visibleIndexes.has(idx) ? "" : "none";
         });
 
-        // Update map features visibility based on filtered results
-        updateMapFeatureVisibility();
+        // Defer the map update slightly to ensure the DOM has finished rendering the visibility changes
+        // to the search results. This prevents a race condition where the map is updated before
+        // the list of ':visible' elements is accurate.
+        setTimeout(updateMapFeatureVisibility, 0);
 
         fixTabFocus();
 
