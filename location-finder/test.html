@@ -119,6 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         showLocationDetails();
         collapseLocation();
+        // Clear any existing map selections to prevent style conflicts before updating visibility.
+        // This ensures that the selectInteraction doesn't override our explicit style changes.
+        deselectActiveFeature();
 
         let visibleIndexes;
         if (query) {
