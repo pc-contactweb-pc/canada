@@ -582,8 +582,13 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
             var source = layer.getSource();
             source.getFeatures().forEach(function (feature) {
                 feature.selectStyle = newSelectStyle;
-                // Store the locationTarget ID directly on the feature for easy access
-                feature.set('locationTarget', feature.get('info').locationTarget);
+                // Safely retrieve locationTarget from either the 'info' object (for data-wb-geomap-info)
+                // or directly from the feature's properties (for locationTarget attribute).
+                const locationId = (feature.get('info') && feature.get('info').locationTarget)
+                    ? feature.get('info').locationTarget
+                    : feature.get('locationTarget');
+                // Ensure all features have a consistent 'locationTarget' property for later use
+                feature.set('locationTarget', locationId);
             });
         }
     });
@@ -9749,40 +9754,7 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
         </section>
 
         <!-- End of location finder -->
-        <div class="container">
-            <div class="col-md-12">
-                <h2>Location results template</h2>
 
-                <pre>
-&lt;div id="location-results">
-    &lt;details class="location-result [LOCATION TYPE ABBREVIATED: np/nhs/nmca]"
-    id="[FULL LOCATION NAME, NO WHITESPACE]"
-    data-alt-names="[STRING FROM NEW FIELD]"
-    data-region-name="[FULL PROVINCE/TERRITORY NAME]">
-        &lt;summary tabindex="-1">&lt;span>[FULL LOCATION NAME]&lt;/span>&lt;/summary>
-    &lt;div class="row">
-        &lt;div class="location-thumbnail col-sm-6 pull-right">
-            &lt;a href="[LOCATION URL]">
-                &lt;img class="img-responsive" alt=""
-                    src="[LOCATION THUMBNAIL]"
-                    loading="lazy">
-            &lt;span class="btn btn-primary full-width mrgn-tp-md mrgn-bttm-md"
-                href="[LOCATION URL]">Learn more&lt;span class="wb-inv"> - [FULL LOCATION NAME]&lt;/span>
-            &lt;/span>&lt;/a>
-        &lt;/div>
-        &lt;div class="col-sm-6">
-            &lt;p class="location-description">
-                [LOCATION DESCRIPTION]
-            &lt;/p>
-            &lt;p class="location-region">
-                &lt;span class="label label-default">[FULL PROVINCE/TERRITORY NAME]&lt;/span>
-            &lt;/p>
-        &lt;/div>
-    &lt;/div>
-    &lt;/details>
-&lt;/div></pre>
-            </div>
-        </div>
         <!-- End Page Layout -->
     </main>
 
