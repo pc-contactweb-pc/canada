@@ -147,7 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
             $("#visible-results").text("");
             $(".result-text").removeClass("positive negative");
             resetMap();
-            deselectActiveFeature();
             // Show all map features when search is cleared
             updateMapFeatureVisibility();
         }
@@ -210,7 +209,7 @@ function updateMapFeatureVisibility() {
             source.getFeatures().forEach(function (feature) {
                 const locationId = feature.get('locationTarget');
                 if (visibleResultIds.has(locationId)) {
-                    feature.setStyle(null); // Reset to layer's default style
+                    feature.setStyle(window.defaultStyle); // Explicitly set the default style
                 } else {
                     feature.setStyle(window.hiddenStyle); // Apply hidden style
                 }
@@ -582,6 +581,15 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
         image: new ol.style.Icon({
             src: "https://parks.canada.ca/-/media/WET4/iconographie-icons/carte-map/geomatic/geomap_location-brass.png",
             opacity: 0
+        })
+    });
+
+    // --- Create a default style for visible features ---
+    window.defaultStyle = new ol.style.Style({
+        image: new ol.style.Icon({
+            src: "https://parks.canada.ca/-/media/Images/Location-Search/pnnp-svg5-png",
+            size: [35, 35],
+            anchor: [0.5, 0.5]
         })
     });
 
