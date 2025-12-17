@@ -331,12 +331,8 @@ $(document).ready(function () {
         if (locationId) {
             let $matchingRow = $(`.locationTable tr[locationtarget="${locationId}"]`);
             if ($matchingRow.length) {
-                $(this).find("a.btn").after(`<button class="zoom-on-map btn btn-link full-width mrgn-bttm-md"><span class="glyphicon-zoom-in glyphicon"></span>&nbsp;&nbsp;Zoom on map</button>`);
-            } else {
-                console.log("couldn't find matching table row, no zoom button added");
+                $(this).find(".location-thumbnail a").after(`<button class="zoom-on-map btn btn-link full-width mrgn-bttm-md"><span class="glyphicon-zoom-in glyphicon"></span>&nbsp;&nbsp;Zoom on map</button>`);
             }
-        } else {
-            console.log("couldn't find location id for table row");
         }
 
     })
