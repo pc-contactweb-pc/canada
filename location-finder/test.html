@@ -193,8 +193,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function updateMapFeatureVisibility() {
     if (!window.globalMap || !window.hiddenStyle) return;
 
+    // Use jQuery to correctly handle the `:visible` selector, which is not a standard CSS selector.
     const visibleResultIds = new Set(
-        Array.from(document.querySelectorAll(".location-result:visible")).map(el => el.id)
+        $(".location-result:visible").map(function() { return this.id; }).get()
     );
 
     const layers = window.globalMap.getLayers();
