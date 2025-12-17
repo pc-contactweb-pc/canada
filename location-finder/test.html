@@ -210,6 +210,8 @@ function updateMapFeatureVisibility() {
                     feature.setStyle(window.hiddenStyle); // Apply hidden style
                 }
             });
+            // Force the layer source to refresh and redraw the features on the map.
+            source.changed();
         }
     });
 }
