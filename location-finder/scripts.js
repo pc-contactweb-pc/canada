@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             idx,
             text: titleEl ? titleEl.textContent.trim() : "",
             region: regions[idx] ? regions[idx].trim() : "",
-            altNames: altNames[idx] ? altNames[idx].trim() : "" 
+            altNames: altNames[idx] ? altNames[idx].split(',').map(name => name.trim()) : []
         };
     });
 
@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let visibleIndexes;
         if (query) {
-            const words = query.split(/\s+/).filter(Boolean);
+            const cleanedQuery = query.replace(/,/g, '');
+            const words = cleanedQuery.split(/\s+/).filter(Boolean);
             const fuseQuery = {
                 $and: words.map(word => ({
                     $or: [
