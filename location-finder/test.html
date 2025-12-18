@@ -154,22 +154,15 @@ document.addEventListener("DOMContentLoaded", () => {
             $(".result-text").removeClass("positive negative");
             resetMap();
             deselectActiveFeature();
-            // Show all map features when search is cleared
-            updateMapFeatureVisibility();
         }
 
         results.forEach((result, idx) => {
             result.style.display = visibleIndexes.has(idx) ? "" : "none";
         });
 
-        // Defer the map update slightly to ensure the DOM has finished rendering the visibility changes
-        // to the search results. This prevents a race condition where the map is updated before
-        // the list of ':visible' elements is accurate.
-        setTimeout(updateMapFeatureVisibility, 0);
-
+        // Hide non visible features and reset styles for visible features
+        updateMapFeatureVisibility();
         fixTabFocus();
-
-        refreshFeatureStyles();
 
         const visibleResults = $(".location-result:visible").length;
         $("#visible-results").text(visibleResults + " of ");
