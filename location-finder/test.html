@@ -153,6 +153,13 @@ document.addEventListener("DOMContentLoaded", () => {
             result.style.display = visibleIndexes.has(idx) ? "" : "none";
         });
 
+        // Defer the map update slightly to ensure the DOM has finished rendering the visibility changes
+        // to the search results. This prevents a race condition where the map is updated before
+        // the list of ':visible' elements is accurate.
+        setTimeout(updateMapFeatureVisibility, 0);
+
+        fixTabFocus();
+
         // Per your suggestion: For each newly visible result, trigger a double-click on its
         // corresponding checkbox. This forces the geomap plugin to refresh the feature's style
         // to the default state, ensuring it's visible before the final visibility filter runs.
@@ -162,13 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`).trigger("click").trigger("click");
             }
         });
-
-        // Defer the map update slightly to ensure the DOM has finished rendering the visibility changes
-        // to the search results. This prevents a race condition where the map is updated before
-        // the list of ':visible' elements is accurate.
-        setTimeout(updateMapFeatureVisibility, 0);
-
-        fixTabFocus();
 
         const visibleResults = $(".location-result:visible").length;
         $("#visible-results").text(visibleResults + " of ");
