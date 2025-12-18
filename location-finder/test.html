@@ -89,8 +89,7 @@ function fixTabFocus() {
 
 function refreshFeatureStyles() {
     window.requestAnimationFrame(() => {
-        
-        /* OLD METHOD - ALL TABLE ROWS
+
         // Collect all target IDs first
         const targetIds = $(".location-result:visible").map(function() {
             return $(this).attr("id");
@@ -108,10 +107,6 @@ function refreshFeatureStyles() {
             this.checked = !this.checked;
             $(this).trigger('change');
         });
-        */
-
-        // NEW METHOD - LEGEND CHECKBOXES
-        $(".location-result:visible").trigger("mouseover").trigger("mouseout");
 
     });
 }
