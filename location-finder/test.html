@@ -88,11 +88,24 @@ function fixTabFocus() {
 }
 
 function refreshFeatureStyles() {
-    $(".location-result:visible").each(function() {
-        const locationId = $(this).attr("id");
-        if (locationId) {
-            $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`).trigger("click").trigger("click");
-        }
+    window.requestAnimationFrame(() => {
+        // Collect all target IDs first
+        const targetIds = $(".location-result:visible").map(function() {
+            return $(this).attr("id");
+        }).get();
+
+        // Perform one scoped search for all matching checkboxes
+        const $checkboxes = $(`.locationTable`).find(
+            targetIds.map(id => `tr[locationtarget="${id}"] .geomap-cbx`).join(',')
+        );
+
+        // Use a simpler toggle or native click
+        $checkboxes.each(function() {
+            this.checked = !this.checked;
+            $(this).trigger('change');
+            this.checked = !this.checked;
+            $(this).trigger('change');
+        });
     });
 }
 
