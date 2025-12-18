@@ -87,6 +87,15 @@ function fixTabFocus() {
     $(".location-result summary:visible:first").attr("tabindex", "0");
 }
 
+function refreshFeatureStyles() {
+    $(".location-result:visible").each(function() {
+        const locationId = $(this).attr("id");
+        if (locationId) {
+            $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`).trigger("click").trigger("click");
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const results = Array.from(document.querySelectorAll(".location-result"));
     
@@ -160,15 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fixTabFocus();
 
-        // Per your suggestion: For each newly visible result, trigger a double-click on its
-        // corresponding checkbox. This forces the geomap plugin to refresh the feature's style
-        // to the default state, ensuring it's visible before the final visibility filter runs.
-        $(".location-result:visible").each(function() {
-            const locationId = $(this).attr("id");
-            if (locationId) {
-                $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`).trigger("click").trigger("click");
-            }
-        });
+        refreshFeatureStyles();
 
         const visibleResults = $(".location-result:visible").length;
         $("#visible-results").text(visibleResults + " of ");
@@ -223,7 +224,7 @@ function updateMapFeatureVisibility() {
                 }
             });
             // Force the layer source to refresh and redraw the features on the map.
-            source.changed();
+            refreshFeatureStyles();
         }
     });
 }
