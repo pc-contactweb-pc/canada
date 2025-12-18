@@ -119,9 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         showLocationDetails();
         collapseLocation();
-        // Clear any existing map selections to prevent style conflicts before updating visibility.
-        // This ensures that the selectInteraction doesn't override our explicit style changes.
-        deselectActiveFeature();
 
         let visibleIndexes;
         if (query) {
@@ -147,12 +144,23 @@ document.addEventListener("DOMContentLoaded", () => {
             $("#visible-results").text("");
             $(".result-text").removeClass("positive negative");
             resetMap();
+            deselectActiveFeature();
             // Show all map features when search is cleared
             updateMapFeatureVisibility();
         }
 
         results.forEach((result, idx) => {
             result.style.display = visibleIndexes.has(idx) ? "" : "none";
+        });
+
+        // Per your suggestion: For each newly visible result, trigger a double-click on its
+        // corresponding checkbox. This forces the geomap plugin to refresh the feature's style
+        // to the default state, ensuring it's visible before the final visibility filter runs.
+        $(".location-result:visible").each(function() {
+            const locationId = $(this).attr("id");
+            if (locationId) {
+                $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`).trigger("click").trigger("click");
+            }
         });
 
         // Defer the map update slightly to ensure the DOM has finished rendering the visibility changes
