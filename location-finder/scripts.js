@@ -1,12 +1,20 @@
-// START Fuse fuzzy search setup
-
-function fixTabFocus() {
-    // fix tab focus
-    $(".location-result summary[tabindex='0']").attr("tabindex", "-1");
-    $(".location-result summary:visible:first").attr("tabindex", "0");
-}
+// START Fuse search config
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Initialize default zoom level immediately to ensure availability
+    window.zoomLevel = window.innerWidth < 768 ? 1.7 : 2.3;
+
+    /**
+     * Debounce utility to limit function execution rate
+     */
+    const debounce = (func, delay) => {
+        let timeoutId;
+        return (...args) => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => func.apply(this, args), delay);
+        };
+    };
+
     const results = Array.from(document.querySelectorAll(".location-result"));
     
     const regions = results.map(result => result.getAttribute("data-region-name"));
@@ -31,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const input = document.querySelector("#find-by-name");
-    input.addEventListener("input", e => {
+    input.addEventListener("input", debounce(e => {
         const query = e.target.value.trim();
 
         showLocationDetails();
@@ -68,37 +76,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fixTabFocus();
 
-        const visibleResults = $(".location-result:visible").length;
-        $("#visible-results").text(visibleResults + " of ");
+        // Optimization: Calculate count from data set instead of querying DOM (:visible)
+        const visibleCount = visibleIndexes.size;
+        $("#visible-results").text(visibleCount + " of ");
 
-        if (visibleResults === 0) {
+        if (visibleCount === 0) {
             $(".result-text").removeClass("positive").addClass("negative");
             resetMap();
             $("#no-results").show();
             $("#end-results").hide();
         }
 
-        if (visibleResults === 1) {
-            const onlyResultId = $(".location-result:visible").attr("id");
+        if (visibleCount === 1) {
+            const idx = visibleIndexes.values().next().value;
+            const onlyResultId = results[idx].id;
             expandLocation(onlyResultId, true);
         }
 
-        if (visibleResults > 1) {
+        if (visibleCount > 1) {
             resetMap();
             deselectActiveFeature();
         }
 
-        if (visibleResults > 0) {
+        if (visibleCount > 0) {
             $("#no-results").hide();
             $("#end-results").show();
         }
-    });
+    }, 300)); // 300ms debounce delay
 });
 
-// END Fuse fuzzy search setup
+// END Fuse search config
 
-// Scrolls the location result list to bring a selected result into the visible area.
+// START location results helper functions
+
+/**
+ * Manages tabindex for location results to ensure keyboard accessibility.
+ * Sets the first visible result to be focusable.
+ */
+function fixTabFocus() {
+    // used when location results are hidden after search input
+    // ensures the first visible location result has an accessible tabindex
+    $(".location-result summary[tabindex='0']").attr("tabindex", "-1");
+    $(".location-result summary:visible:first").attr("tabindex", "0");
+}
+
+/**
+ * Scrolls a container to ensure a specific element is visible.
+ * @param {HTMLElement} element - The target element.
+ * @param {HTMLElement} container - The scrollable container.
+ */
 function scrollElementIntoParentView(element, container) {
+    // Scrolls the location result list to bring a selected result into the visible area.
     // Get the position and dimensions of the element and its container.
     const elRect = element.getBoundingClientRect();
     const containerRect = container.getBoundingClientRect();
@@ -116,27 +144,13 @@ function scrollElementIntoParentView(element, container) {
     }
 }
 
-// Zoom geomap to specific location helper function
-
-function zoomToLocation(locationId) {
-    const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:nth-last-child(2)`);
-    if (layerDataRow) {
-        const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
-        if (locationCoordinates.length === 2 && !isNaN(locationCoordinates[0]) && !isNaN(locationCoordinates[1])) {
-            const view = globalMap.getView();
-            view.animate({
-                center: ol.proj.transform(locationCoordinates, "EPSG:4326", "EPSG:3857"),
-                zoom: 12,
-                duration: 2000,
-                easing: ol.easing.easeOut
-            });
-        }
-    }
-}
-
-// Expand location result
-
+/**
+ * Expands a specific location result and updates the UI state.
+ * @param {string} locationId - The ID of the location element.
+ * @param {boolean} [scroll=false] - Whether to scroll the element into view.
+ */
 function expandLocation(locationId, scroll = false) {
+    // Expand location result
     const $location = $(`#${locationId}`);
     if (!$location.length) return;
 
@@ -164,9 +178,11 @@ function expandLocation(locationId, scroll = false) {
 
 }
 
-// Collapse location result
-
+/**
+ * Collapses the currently active location result.
+ */
 function collapseLocation() {
+    // Collapse location result
     const $location = $(`.location-result.active`);
     if (!$location.length) return;
 
@@ -189,10 +205,15 @@ function collapseLocation() {
 
 }
 
+function showLocationDetails() {
+    // for mobile: show location list when expand button is tapped
+    $("#location-results").slideDown();
+    $("#expand-location-list").hide();
+}
+
 // START keyboard accessibility for location list
 
-document.addEventListener('DOMContentLoaded', () => {
-    
+document.addEventListener('DOMContentLoaded', () => {   
     const tablist = document.getElementById('location-results');
     if (!tablist) {
         return;
@@ -225,13 +246,13 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     };
 
-    // Initialize: Ensure the first *visible* tab is focusable on load
+    // Initialize: Ensure the first visible tab is focusable on load
     const initialVisibleTabs = getVisibleTabs();
     if (initialVisibleTabs.length > 0) {
         initialVisibleTabs[0].setAttribute('tabindex', '0');
     }
 
-    // Function to change focus based on the *current* visible list
+    // Function to change focus based on the current visible list
     const setFocus = (currentTab, newIndex, visibleTabs) => {
         // Constrain index to the list of visible tabs
         if (newIndex < 0) {
@@ -252,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. Get the fresh list of visible items
         const visibleTabs = getVisibleTabs();
         
-        // 2. Find where we are in *that* specific list
+        // 2. Find where we are in that specific list
         const currentIndex = visibleTabs.indexOf(document.activeElement);
 
         if (currentIndex === -1) {
@@ -282,43 +303,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // END keyboard accessibility for location list
 
-function resetMap() {
-    const view = globalMap.getView();
-    view.animate({
-        center: ol.proj.transform([-100.48, 70.25], "EPSG:4326", "EPSG:3857"),
-        zoom: window.zoomLevel,
-        duration: 1000 // Animation duration in milliseconds
-    });
-    $("#gm_province option").removeAttr("selected");
-}
+// END location results helper functions
 
-function showLocationDetails() {
-    $("#location-results").slideDown();
-    $("#expand-location-list").hide();
-}
-
-function deselectActiveFeature() {
-    const geomap = wb.getMap("location_map");
-    if (geomap && geomap.map) {
-        const selectInteraction = geomap.map.getInteractions().getArray().find(i => i instanceof ol.interaction.Select);
-        if (selectInteraction) {
-            selectInteraction.getFeatures().clear();
-        }
-    }
-    collapseLocation();
-}
+// START Location results / geomap interactions
 
 $(document).ready(function () {
 
     // hide no results
     $("#no-results").hide();
-
-    // set default map zoom level per screen size
-    if (window.innerWidth < 768) {
-        window.zoomLevel = 1.7;
-    } else {
-        window.zoomLevel = 2.3;
-    }
 
     // add region tags to location result descriptions
     $(".location-result").each(function () {
@@ -338,10 +330,11 @@ $(document).ready(function () {
 
     })
 
+    // calculate number of location results and display in search input
     const allResults = $(".location-result").length;
     $("#all-results").text(allResults);
 
-    // When the user mouses over a .location-result, select it on the map
+    // When location result moused over, highlight it on the map with a selected style
     $("#location-results").on("mouseenter focusin", ".location-result", function () {
         const $locationResult = $(this);
         if (!$locationResult.hasClass("active")) {
@@ -355,7 +348,7 @@ $(document).ready(function () {
         }
     });
 
-    // When the user's pointer is removed, deselect it
+    // When mouse leaves location result, remove the selected style on the map
     $("#location-results").on("mouseleave focusout", ".location-result:not(.active)", function () {
         const locationId = $(this).attr("id");
         if (locationId) {
@@ -366,6 +359,7 @@ $(document).ready(function () {
         }
     });
 
+    // when location result clicked, expand description and highlight on map with selected style
     $("#location-results").on("click", ".location-result summary", function (e) {
         e.preventDefault();
 
@@ -384,13 +378,13 @@ $(document).ready(function () {
         }
     });
 
-    // when zoom on map button is clicked, zoom to location on map
+    // when zoom on map button clicked within a location result, zoom to that location on map
     $("#location-results").on("click", ".zoom-on-map", function () {
         const locationId = $(this).closest(".location-result").attr("id");
         zoomToLocation(locationId);
     });
 
-    // when a map marker is clicked, expand the corresponding location result
+    // when map marker clicked, expand corresponding location result
     $(".wb-geomap-map").on("click", function () {
         setTimeout(() => {
             const selectedRowCheckbox = $(".locationTable tr.active input[type='checkbox']");
@@ -398,22 +392,21 @@ $(document).ready(function () {
             if (selectedRow) {
                 showLocationDetails();
                 expandLocation(selectedRow, true);
-                //selectedRowCheckbox.trigger("click");
                 // Scroll to the location results if on a small screen
                 if (window.innerWidth < 768) {
                     const locationSearch = document.querySelector("#location-name-search");
                     locationSearch.scrollIntoView();
                 }
             }
-
-        }, 500);
+        }, 300);
     });
 
+    // trigger region zoom when select input changed
     $("#gm_province").on("change", function () {
-        // auto-submit the form when a province is selected
         $(this).closest("form").submit();
     });
 
+    // clear search functionality
     $("#clear-search").on("click", function () {
         $("#find-by-name").val("").removeClass("clear-search");
         $(".location-result").removeClass("hidden").show();
@@ -423,17 +416,75 @@ $(document).ready(function () {
         fixTabFocus();
     });
 
+    // mobile: show hidden location results list
     $("#expand-location-list").on("click", function () {
         showLocationDetails();
     });
 
 });
 
+// END Location results / geomap interactions
+
+// START Geomap helper functions
+
+/**
+ * Zooms the map to the coordinates associated with a location ID.
+ * @param {string} locationId - The ID of the location.
+ */
+function zoomToLocation(locationId) {
+    // Zoom geomap to specific location helper function when 'zoom on map' is clicked
+    const layerDataRow = document.querySelector(`.locationTable tr[locationTarget="${locationId}"] td:nth-last-child(2)`);
+    if (layerDataRow) {
+        const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
+        if (locationCoordinates.length === 2 && !isNaN(locationCoordinates[0]) && !isNaN(locationCoordinates[1])) {
+            const view = globalMap.getView();
+            view.animate({
+                center: ol.proj.transform(locationCoordinates, "EPSG:4326", "EPSG:3857"),
+                zoom: 12,
+                duration: 2000,
+                easing: ol.easing.easeOut
+            });
+        }
+    }
+}
+
+/**
+ * Resets the map view to default center and zoom.
+ */
+function resetMap() {
+    // reposition map to default view and remove zoom area selection
+    const view = globalMap.getView();
+    view.animate({
+        center: ol.proj.transform([-100.48, 70.25], "EPSG:4326", "EPSG:3857"),
+        zoom: window.zoomLevel,
+        duration: 1000 // Animation duration in milliseconds
+    });
+    $("#gm_province option").removeAttr("selected");
+}
+
+function deselectActiveFeature() {
+    // remove map icon select style when location result is collapsed
+    const geomap = wb.getMap("location_map");
+    if (geomap && geomap.map) {
+        const selectInteraction = geomap.map.getInteractions().getArray().find(i => i instanceof ol.interaction.Select);
+        if (selectInteraction) {
+            selectInteraction.getFeatures().clear();
+        }
+    }
+    collapseLocation();
+}
+
+// END Geomap helper functions
+
+// START geomap setup modifications
+// disable map rotation
+// define custom select styles
+// reset view
+
 // get global geomap variable on page load
 $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
     window.globalMap = map;
 
-    // --- Disable map rotation ---
     // Find and disable the map rotation interaction.
     map.getInteractions().forEach(function (interaction) {
         if (interaction instanceof ol.interaction.DragRotate || interaction instanceof ol.interaction.PinchRotate) {
@@ -441,7 +492,6 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
         }
     });
 
-    // --- Apply custom select style to all features ---
     // This ensures that any feature, when selected, will use the custom icon
     var newSelectStyle = new ol.style.Style({
         image: new ol.style.Icon({
@@ -469,14 +519,17 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
     let newView = new ol.View({
         center: currentCenter,
         zoom: window.zoomLevel,
-        minZoom: window.zoomLevel, // Your desired minimum zoom level
-        maxZoom: 18, // Your desired maximum zoom level
+        minZoom: window.zoomLevel,
+        maxZoom: 18,
     });
 
     // Set the new view on the map.
     map.setView(newView);
 
     resetMap();
+
     $("#location_map_reset").on("click", resetMap);
 
 });
+
+// END geomap setup modifications
