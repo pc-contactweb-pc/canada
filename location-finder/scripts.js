@@ -385,7 +385,7 @@ $(document).ready(function () {
     });
 
     // when map marker clicked, expand corresponding location result
-    $(".wb-geomap-map").on("click", function () {
+    $("#geomap-map-location_map").on("click", function () {
         setTimeout(() => {
             const selectedRowCheckbox = $(".locationTable tr.active input[type='checkbox']");
             const selectedRow = $(".locationTable tr.active").attr("locationTarget");
