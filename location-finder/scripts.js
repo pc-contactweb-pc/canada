@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
             $("#no-results").hide();
             $("#end-results").show();
         }
-    }, 300)); // 300ms debounce delay
+    }, 200)); // 200ms debounce delay
 });
 
 // END Fuse search config
