@@ -151,7 +151,7 @@
                     <div id="page1">
                         <section class="panel panel-primary">
                             <header class="panel-heading">
-                                <h2 class="panel-title">Expression of interest</h2>
+                                <h2 class="panel-title">Expression of interest - Page 1 of 3</h2>
                             </header>
                             <div class="panel-body">
                                 <gcds-checkboxes data-json-name="eligibility" name="checkbox" legend="Legend 1" required options='[
@@ -168,7 +168,7 @@
                                     ]' errorMessage="Please review the required resources above"></gcds-checkboxes>
                             </div>
                         </section>
-                        <button type="button" id="nextBtn1"></button>
+                        <button type="button" id="nextBtn1">Go to page 2</button>
                     </div>
                     <div id="page2" class="hidden">
                         <p>Ta dah!</p>
@@ -177,7 +177,7 @@
             </div>
         </section>
         <script>
-            document.getElementById("nextBtn").addEventListener("click", () => {
+            document.getElementById("nextBtn1").addEventListener("click", () => {
                 const form = document.getElementById("myForm");
 
                 if (form.checkValidity()) {
