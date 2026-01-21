@@ -38,7 +38,7 @@
 
 </head>
 
-<body vocab="http://schema.org/" class="" typeof="WebPage" resource="#wb-webpage" contenteditable="true">
+<body vocab="http://schema.org/" class="" typeof="WebPage" resource="#wb-webpage" >
     <nav>
         <ul id="wb-tphp" class="wb-init wb-disable-inited">
             <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
@@ -132,7 +132,7 @@
     <!-- Start main  -->
     <main role="main" property="mainContentOfPage">
         <section class="container">
-            <h1 property="name" id="wb-cont" class="pc-h1-brass">REST basemap</h1>
+            <h1 property="name" id="wb-cont" class="pc-h1-brass">Form example</h1>
 
             <link rel="stylesheet" href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@latest/dist/gcds/gcds.css">
             <script type="module" src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@latest/dist/gcds/gcds.esm.js"></script>
@@ -141,7 +141,7 @@
                     font-size: 1rem;
                 }
             </style>
-            <p>Intro</p>
+            <p>Intro 1</p>
 
 
             <div id="status-message" class="wb-inv" aria-live="polite" aria-atomic="true"></div>
@@ -156,16 +156,16 @@
                             <div class="panel-body">
                                 <gcds-checkboxes name="Condition-1" legend="Legend 1" required options='[
                                     { "label": "I am... Condition 1.", "id": "confirm-1", "value":"yes-condition-1"}
-                                    ]' errorMessage="This program is only available to..."></gcds-checkboxes>
+                                    ]' error-message="This program is only available to..."></gcds-checkboxes>
                                 <gcds-checkboxes name="Condition-2" legend="Legend 2" required options='[
                                     { "label": "I have read.. Condition 2.", "id": "confirm-2", "value":"yes-condition-2"}
-                                    ]' errorMessage="Please review the required resources above"></gcds-checkboxes>
+                                    ]' error-message="Please review the required resources above"></gcds-checkboxes>
                                 <gcds-checkboxes name="Condition-3" legend="Legend 1" required options='[
                                     { "label": "I have visited... Condition 3.", "id": "confirm-3", "value":"yes-condition-3"}
-                                    ]' errorMessage="Please review the required resources above"></gcds-checkboxes>
+                                    ]' error-message="Please review the required resources above"></gcds-checkboxes>
                                 <gcds-checkboxes name="Condition-4" legend="Legend 1" required options='[
                                     { "label": "I have... Condition 1.", "id": "confirm-1", "value":"yes-condition-1"}
-                                    ]' errorMessage="Please review the required resources above"></gcds-checkboxes>
+                                    ]' error-message="Please review the required resources above"></gcds-checkboxes>
                             </div>
                         </section>
                         <button type="button" id="nextBtn1">Go to page 2</button>
