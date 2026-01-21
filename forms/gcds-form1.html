@@ -192,10 +192,14 @@
 
                 if (form.checkValidity()) {
                     // Hide step 1, show step 2
+                    console.log("Valid");
+                    
                     document.getElementById("page1").hidden = true;
                     document.getElementById("page2").hidden = false;
                 } else {
                     // Trigger native + GCDS error messages
+                    console.log("Not valid");
+                    
                     form.reportValidity();
                 }
             });
