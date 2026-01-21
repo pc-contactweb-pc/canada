@@ -176,7 +176,7 @@
                                 <h2 class="panel-title">Expression of interest - Page 2 of 3</h2>
                             </header>
                             <div class="panel-body">
-                               
+
                             </div>
                             <button type="button" id="nextBtn2">Go to page 3</button>
                         </section>
@@ -187,25 +187,27 @@
             </div>
         </section>
         <script>
+            $(document).on("wb-ready.wb", function (event) {
 
+                document.getElementById("nextBtn1").addEventListener("click", () => {
+                    const form = document.getElementById("formrouter");
+                    console.log("Clicked");
 
-            document.getElementById("nextBtn1").addEventListener("click", () => {
-                const form = document.getElementById("formrouter");
-                console.log("Clicked");
-                
-                if (form.checkValidity()) {
-                    // Hide step 1, show step 2
-                    console.log("Valid");
-                    
-                    document.getElementById("page1").hidden = true;
-                    document.getElementById("page2").hidden = false;
-                } else {
-                    // Trigger native + GCDS error messages
-                    console.log("Not valid");
-                    
-                    form.reportValidity();
-                }
+                    if (form.checkValidity()) {
+                        // Hide step 1, show step 2
+                        console.log("Valid");
+
+                        document.getElementById("page1").hidden = true;
+                        document.getElementById("page2").hidden = false;
+                    } else {
+                        // Trigger native + GCDS error messages
+                        console.log("Not valid");
+
+                        form.reportValidity();
+                    }
+                });
             });
+
         </script>
 
         <!-- End main content -->
