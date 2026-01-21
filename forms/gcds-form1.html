@@ -178,7 +178,7 @@
                             <div class="panel-body">
                                
                             </div>
-                            <button type="button" id="nextBtn2">Go to page 2</button>
+                            <button type="button" id="nextBtn2">Go to page 3</button>
                         </section>
 
                         <p>Ta dah!</p>
@@ -191,7 +191,8 @@
 
             document.getElementById("nextBtn1").addEventListener("click", () => {
                 const form = document.getElementById("formrouter");
-
+                console.log("Clicked");
+                
                 if (form.checkValidity()) {
                     // Hide step 1, show step 2
                     console.log("Valid");
