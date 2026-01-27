@@ -400,6 +400,11 @@ $(document).ready(function () {
         $(this).closest("form").submit();
     });
 
+    // reset map button functionality
+    $("#location_map_reset").on("click", function () {
+        resetMap();
+    });
+
     // clear search functionality
     $("#clear-search").on("click", function () {
         $("#find-by-name").val("").removeClass("clear-search");
