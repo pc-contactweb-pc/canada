@@ -201,7 +201,11 @@ function collapseLocation() {
 
 function showLocationDetails() {
     // for mobile: show location list when expand button is tapped
-    $("#location-results").slideDown();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        $("#location-results").show();
+    } else {
+        $("#location-results").slideDown();
+    }
     $("#expand-location-list").hide();
 }
 
@@ -437,10 +441,11 @@ function zoomToLocation(locationId) {
         const locationCoordinates = layerDataRow.textContent.trim().split(/\s+/).map(Number);
         if (locationCoordinates.length === 2 && !isNaN(locationCoordinates[0]) && !isNaN(locationCoordinates[1])) {
             const view = globalMap.getView();
+            const duration = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 2000;
             view.animate({
                 center: ol.proj.transform(locationCoordinates, "EPSG:4326", "EPSG:3857"),
                 zoom: 12,
-                duration: 2000,
+                duration: duration,
                 easing: ol.easing.easeOut
             });
         }
@@ -453,10 +458,11 @@ function zoomToLocation(locationId) {
 function resetMap() {
     // reposition map to default view and remove zoom area selection
     const view = globalMap.getView();
+    const duration = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1000;
     view.animate({
         center: ol.proj.transform([-100.48, 70.25], "EPSG:4326", "EPSG:3857"),
         zoom: window.zoomLevel,
-        duration: 1000 // Animation duration in milliseconds
+        duration: duration // Animation duration in milliseconds
     });
     $("#gm_province option").removeAttr("selected");
 }
@@ -535,7 +541,7 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
 
 // END location finder functionality
 
-// START fuse.min.js inclusion
+// START fuse.min.js library
 
 /**
  * Fuse.js v7.1.0 - Lightweight fuzzy-search (http://fusejs.io)
