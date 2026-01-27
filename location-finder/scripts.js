@@ -1,6 +1,9 @@
+// START location finder functionality
+
 // START Fuse search config
 
 document.addEventListener("DOMContentLoaded", () => {
+    if (!document.getElementById("location-search")) return;
     // Initialize default zoom level immediately to ensure availability
     window.zoomLevel = window.innerWidth < 768 ? 1.7 : 2.3;
 
@@ -76,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fixTabFocus();
 
-        // Optimization: Calculate count from data set instead of querying DOM (:visible)
         const visibleCount = visibleIndexes.size;
         $("#visible-results").text(visibleCount + " of ");
 
@@ -114,8 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
  * Sets the first visible result to be focusable.
  */
 function fixTabFocus() {
-    // used when location results are hidden after search input
-    // ensures the first visible location result has an accessible tabindex
     $(".location-result summary[tabindex='0']").attr("tabindex", "-1");
     $(".location-result summary:visible:first").attr("tabindex", "0");
 }
@@ -126,20 +126,15 @@ function fixTabFocus() {
  * @param {HTMLElement} container - The scrollable container.
  */
 function scrollElementIntoParentView(element, container) {
-    // Scrolls the location result list to bring a selected result into the visible area.
-    // Get the position and dimensions of the element and its container.
     const elRect = element.getBoundingClientRect();
     const containerRect = container.getBoundingClientRect();
 
-    // Calculate how far the element is outside the top or bottom of the container's visible area.
     const overScroll = elRect.top - containerRect.top;
     const underScroll = elRect.bottom - containerRect.bottom;
 
     if (overScroll < 0) {
-        // If the element is above the visible area, scroll up to bring it into view.
         container.scrollTop += overScroll;
     } else if (underScroll > 0) {
-        // If the element is below the visible area, scroll down to bring it into view.
         container.scrollTop += underScroll;
     }
 }
@@ -150,7 +145,6 @@ function scrollElementIntoParentView(element, container) {
  * @param {boolean} [scroll=false] - Whether to scroll the element into view.
  */
 function expandLocation(locationId, scroll = false) {
-    // Expand location result
     const $location = $(`#${locationId}`);
     if (!$location.length) return;
 
@@ -167,13 +161,13 @@ function expandLocation(locationId, scroll = false) {
         }
     }
 
-    // check input of matching checkbox in the locationTable
+    // check input of matching checkbox in the locationTable to change icon selected state on map
     const $checkbox = $(`.locationTable tr[locationtarget="${locationId}"] .geomap-cbx`);
     if ($checkbox.length && !$checkbox.is(':checked')) {
         $checkbox.trigger("click");
     }
 
-    // hide end of results
+    // hide end of results text
     document.getElementById("end-results").style.display = 'none';
 
 }
@@ -200,7 +194,7 @@ function collapseLocation() {
         resultsContainer.scrollTop += locationRect.top - containerRect.top;
     }
 
-    // show end of results
+    // show end of results text
     document.getElementById("end-results").style.display = 'block';
 
 }
@@ -214,6 +208,7 @@ function showLocationDetails() {
 // START keyboard accessibility for location list
 
 document.addEventListener('DOMContentLoaded', () => {   
+    if (!document.getElementById("location-search")) return;
     const tablist = document.getElementById('location-results');
     if (!tablist) {
         return;
@@ -223,10 +218,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
-            e.preventDefault(); // Prevents form submission (if inside a <form>)
+            e.preventDefault();
 
             // Find the first visible summary in the results
-            // Note: offsetParent checks if it's actually visible (handles display: none)
             const allSummaries = Array.from(tablist.querySelectorAll('summary'));
             const firstVisible = allSummaries.find(el => el.offsetParent !== null);
 
@@ -238,21 +232,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Helper: dynamic fetch of currently visible tabs
-    // offsetParent is null if an element (or its parent) has display: none
+    // Dynamic fetch of currently visible tabs
     const getVisibleTabs = () => {
         return Array.from(tablist.querySelectorAll('summary')).filter(
             (tab) => tab.offsetParent !== null
         );
     };
 
-    // Initialize: Ensure the first visible tab is focusable on load
+    // Ensure the first visible tab is focusable on load
     const initialVisibleTabs = getVisibleTabs();
     if (initialVisibleTabs.length > 0) {
         initialVisibleTabs[0].setAttribute('tabindex', '0');
     }
 
-    // Function to change focus based on the current visible list
+    // Change focus based on the current visible list
     const setFocus = (currentTab, newIndex, visibleTabs) => {
         // Constrain index to the list of visible tabs
         if (newIndex < 0) {
@@ -308,6 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // START Location results / geomap interactions
 
 $(document).ready(function () {
+    if (!document.getElementById("location-search")) return;
 
     // hide no results
     $("#no-results").hide();
@@ -483,6 +477,7 @@ function deselectActiveFeature() {
 
 // get global geomap variable on page load
 $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
+    if (!document.getElementById("location-search")) return;
     window.globalMap = map;
 
     // Find and disable the map rotation interaction.
@@ -528,11 +523,12 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
 
     resetMap();
 
-    $("#location_map_reset").on("click", resetMap);
-
+    $("#location_map_reset")
 });
 
 // END geomap setup modifications
+
+// END location finder functionality
 
 // START fuse.min.js inclusion
 
