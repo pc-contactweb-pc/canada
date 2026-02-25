@@ -530,11 +530,10 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
     });
 
     // Set the new view on the map.
-    map.setView(newView);
+    //map.setView(newView);
 
-    resetMap();
+    //resetMap();
 
-    $("#location_map_reset")
 });
 
 // END geomap setup modifications
