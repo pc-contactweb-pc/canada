@@ -516,24 +516,6 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
         }
     });
 
-    // Get the current view.
-    let oldView = map.getView();
-    let currentCenter = oldView.getCenter();
-    let currentZoom = oldView.getZoom();
-
-    // Create a new view with the desired zoom constraints.
-    let newView = new ol.View({
-        center: currentCenter,
-        zoom: window.zoomLevel,
-        minZoom: window.zoomLevel,
-        maxZoom: 18,
-    });
-
-    // Set the new view on the map.
-    //map.setView(newView);
-
-    //resetMap();
-
 });
 
 // END geomap setup modifications
