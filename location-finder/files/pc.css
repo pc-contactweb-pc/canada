@@ -913,7 +913,7 @@ form.wb-geomap-filter {
 
 #location-results,
 #location-search .wb-geomap-map {
-    height: 60vh !important;
+    height: 60vh;
 }
 
 #location-results {
