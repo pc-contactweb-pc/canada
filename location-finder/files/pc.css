@@ -1073,8 +1073,9 @@ button#expand-location-list:after {
 
     #region-finder button {
         grid-row-start: 3;
+        background: #fff;
         border: 1px solid #ddd;
-        border-radius: 3px;
+        border-radius: 5px;
     }
     #region-finder button,
     #region-finder form {
