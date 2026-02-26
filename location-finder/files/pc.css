@@ -871,7 +871,7 @@ form.wb-geomap-filter {
 }
 
 .location-result:not(.np, .nhs, .nmca) summary:before {
-    background-image: url(https://parks.canada.ca/-/media/Images/Location-Search/autreother-svg5-png);
+    background-image: url(https://parks.canada.ca/-/media/Images/Location-Search/autreother-svg5);
 }
 
 .result-text {
