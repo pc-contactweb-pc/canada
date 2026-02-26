@@ -992,11 +992,9 @@ button#expand-location-list:after {
         }
     }
 
-    #locationSearch form.wb-geomap-filter {
-    }
-
     #location-results,
-    #locationSearch .wb-geomap-map {
+    #locationSearch .wb-geomap-map,
+    #location-search .wb-geomap-map {
         margin-right: 0;
         margin-left: 0;
     }
