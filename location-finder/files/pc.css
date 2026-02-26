@@ -846,43 +846,32 @@ form.wb-geomap-filter {
 }
 
 /* location icons */
-.location-result.nhs summary:before {
+.location-result summary:before {
     content: " ";
     width: 30px;
     height: 30px;
     display: inline-block;
     position: absolute;
-    background: url(https://parks.canada.ca/-/media/Images/Location-Search/lhnnhs-svg5-png);
     background-repeat: no-repeat;
     background-size: contain;
     top: 10px;
     left: 10px;
+}
+
+.location-result.nhs summary:before {
+    background: url(https://parks.canada.ca/-/media/Images/Location-Search/lhnnhs-svg5-png);
 }
 
 .location-result.np summary:before {
-    content: " ";
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    position: absolute;
     background: url(https://parks.canada.ca/-/media/Images/Location-Search/pnnp-svg5-png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 10px;
-    left: 10px;
 }
 
 .location-result.nmca summary:before {
-    content: " ";
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    position: absolute;
     background: url(https://parks.canada.ca/-/media/Images/Location-Search/amcnmca-svg4-png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 10px;
-    left: 10px;
+}
+
+.location-result:not(.np, .nhs, .nmca) summary:before {
+    background: url(https://parks.canada.ca/-/media/WET4/iconographie-icons/carte-map/geomatic/geomap_location-cobblestone.png);
 }
 
 .result-text {
