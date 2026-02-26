@@ -1043,7 +1043,8 @@ button#expand-location-list:after {
     }
 
     #location-results,
-    #locationSearch .wb-geomap-map {
+    #locationSearch .wb-geomap-map,
+    #location-search .wb-geomap-map {
         height: 50vh !important;
     }
 
