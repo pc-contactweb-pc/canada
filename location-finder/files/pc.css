@@ -859,15 +859,15 @@ form.wb-geomap-filter {
 }
 
 .location-result.nhs summary:before {
-    background-image: url(https://parks.canada.ca/-/media/Images/Location-Search/lhnnhs-svg5-png);
+    background-image: url(https://parks.canada.ca/-/media/wet4/iconographie-icons/carte-map/geomatic/geomap_location-nhs);
 }
 
 .location-result.np summary:before {
-    background-image: url(https://parks.canada.ca/-/media/Images/Location-Search/pnnp-svg5-png);
+    background-image: url(https://parks.canada.ca/-/media/wet4/iconographie-icons/carte-map/geomatic/geomap_location-np);
 }
 
 .location-result.nmca summary:before {
-    background-image: url(https://parks.canada.ca/-/media/Images/Location-Search/amcnmca-svg4-png);
+    background-image: url(https://parks.canada.ca/-/media/wet4/iconographie-icons/carte-map/geomatic/geomap_location-nmca);
 }
 
 .location-result:not(.np, .nhs, .nmca) summary:before {
