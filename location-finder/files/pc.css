@@ -992,6 +992,7 @@ button#expand-location-list:after {
     #location-search .wb-geomap-map {
         margin-right: 0;
         margin-left: 0;
+        height: 50vh!important;
     }
 
     #location-search .legendLabel {
@@ -1033,12 +1034,6 @@ button#expand-location-list:after {
 
     #location-name-search .glyphicon-search {
         top: 46px !important;
-    }
-
-    #location-results,
-    #locationSearch .wb-geomap-map,
-    #location-search .wb-geomap-map {
-        height: 50vh !important;
     }
 
     #clear-search {
