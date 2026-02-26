@@ -127,16 +127,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const idx = visibleIndexes.values().next().value;
             const onlyResultId = results[idx].id;
             expandLocation(onlyResultId, true);
+            $("#end-results").hide();
         }
 
         if (visibleCount > 1) {
             resetMap();
             deselectActiveFeature();
+            $("#end-results").show();
         }
 
         if (visibleCount > 0) {
             $("#no-results").hide();
-            $("#end-results").show();
         }
     }, 50)); // 50ms debounce delay
 });

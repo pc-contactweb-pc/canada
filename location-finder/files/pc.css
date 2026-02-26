@@ -965,11 +965,6 @@ button#expand-location-list:after {
     width: 30px;
 }
 
-@media screen and (max-width: 1200px) {
-    #locationSearch form.wb-geomap-filter {
-    }
-}
-
 @media screen and (max-width: 992px) {
     #location-name-search .glyphicon-search {
         top: 47px !important;
