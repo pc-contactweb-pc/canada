@@ -920,8 +920,8 @@ form.wb-geomap-filter {
 span#clear-search {
     font-weight: bold;
     position: absolute;
-    right: 20px;
-    top: 49px;
+    right: 19px;
+    top: 45px;
     cursor: pointer;
     width: 33px;
     height: 33px;
@@ -1000,7 +1000,7 @@ button#expand-location-list:after {
     }
 
     #clear-search {
-        top: 43px !important;
+        top: 40px !important;
         font-size: 26px;
     }
 
@@ -1037,8 +1037,6 @@ button#expand-location-list:after {
     }
 
     #clear-search {
-        top: 42px !important;
-        right: 32px !important;
     }
 
     /* temp map container fix */
