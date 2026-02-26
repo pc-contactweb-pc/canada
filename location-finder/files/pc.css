@@ -859,19 +859,19 @@ form.wb-geomap-filter {
 }
 
 .location-result.nhs summary:before {
-    background: url(https://parks.canada.ca/-/media/Images/Location-Search/lhnnhs-svg5-png);
+    background-image: url(https://parks.canada.ca/-/media/Images/Location-Search/lhnnhs-svg5-png);
 }
 
 .location-result.np summary:before {
-    background: url(https://parks.canada.ca/-/media/Images/Location-Search/pnnp-svg5-png);
+    background-image: url(https://parks.canada.ca/-/media/Images/Location-Search/pnnp-svg5-png);
 }
 
 .location-result.nmca summary:before {
-    background: url(https://parks.canada.ca/-/media/Images/Location-Search/amcnmca-svg4-png);
+    background-image: url(https://parks.canada.ca/-/media/Images/Location-Search/amcnmca-svg4-png);
 }
 
 .location-result:not(.np, .nhs, .nmca) summary:before {
-    background: url(https://parks.canada.ca/-/media/WET4/iconographie-icons/carte-map/geomatic/geomap_location-cobblestone.png);
+    background-image: url(https://parks.canada.ca/-/media/WET4/iconographie-icons/carte-map/geomatic/geomap_location-cobblestone.png);
 }
 
 .result-text {
@@ -902,7 +902,7 @@ form.wb-geomap-filter {
 
 #location-results,
 #location-search .wb-geomap-map {
-    height: 60vh;
+    height: 60vh!important;
 }
 
 #location-results {
@@ -993,7 +993,6 @@ button#expand-location-list:after {
 
     #location-results,
     #locationSearch .wb-geomap-map {
-        height: 60vh!important;
         margin-right: 0;
         margin-left: 0;
     }
@@ -1060,9 +1059,6 @@ button#expand-location-list:after {
     #locationSearch #location-results,
     #locationSearch #map-container {
         margin: 0 15px
-    }
-    #locationSearch #expand-location-list {
-        
     }
     
 }
