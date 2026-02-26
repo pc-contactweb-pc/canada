@@ -719,6 +719,10 @@ details.location-result {
     margin-bottom: 0 !important;
 }
 
+details.location-result:not([open]) summary {
+    border-right: 1px solid #eee !important;
+}
+
 .location-result summary:hover,
 .location-result summary:active,
 .location-result summary:focus {
