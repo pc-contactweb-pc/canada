@@ -1011,7 +1011,7 @@ button#expand-location-list:after {
     /* reorder map and region finder on a small screen */
     #map-container {
         display: grid;
-        margin-top: 0;
+        margin-top: 2px;
     }
 
     #region-finder {
