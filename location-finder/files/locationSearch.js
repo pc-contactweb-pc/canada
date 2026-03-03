@@ -3,9 +3,8 @@
 		title: "MapQuest OSM Map",
 			type: "xyz",
 			mapOptions: {
-				projection: "EPSG:900913",
-				//center: [-90.7222765, 62.5410882],
-				//zoomLevel: 3
+				maxExtent: '-3000000.0, -800000.0, 4000000.0, 3900000.0',
+				projection: "EPSG:3857",
 			}
 		}
 };
