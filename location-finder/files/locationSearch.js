@@ -8,7 +8,7 @@
 				"https://c.tile.openstreetmap.org/${z}/${x}/${y}.png"
 			],
 			mapOptions: {
-				projection: "EPSG:3857",
+				projection: "EPSG:3857"
 			}
 		}
 };
