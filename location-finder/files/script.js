@@ -1,8 +1,8 @@
 ﻿/** 
 * @file Implements additional custom JS to supplenent WET/GCWeb
 * @author ContactWeb <contactweb@pc.gc.ca>
-* @version 1.6
-* @changelog 1.6 - Added code and fuse.js lib to support new location finder tool
+* @version 1.61
+* @changelog 1.61 - Added auto fit extent function for geomaps
 */
 
 const docLang = document.documentElement.lang; //Save document language for localization use
@@ -31,6 +31,66 @@ $(document).ready(function () {
         $("#mb-pnl .srch-pnl").removeClass('hide');
     });
 });
+
+// START WET helper functions
+
+// START geomap auto fit helper
+
+/**
+ * Adjusts the map view to fit all vector features from all vector layers.
+ * Can handle a single point by centering and zooming, or fit to a larger extent.
+ * This function is designed to work with WET-BOEW geomaps and OpenLayers 3.
+ * @param {string|ol.Map} map - The map object or the CSS ID of the map element (e.g., "#my-map").
+ */
+function geomapFit(map) {
+    // If a string is passed, try to retrieve the map object from the element
+    if (typeof map === "string") {
+        var selector = map.indexOf("#") === 0 ? map : "#" + map;
+        var $el = $(selector);
+        if ($el.length && $el.get(0).geomap) {
+            map = $el.get(0).geomap.map;
+        }
+    }
+
+    if (!map || typeof map.getView !== 'function') {
+        console.error("geomapFit was called without a valid map object.");
+        return;
+    }
+
+    var view = map.getView();
+    var totalExtent = ol.extent.createEmpty();
+    var found = false;
+
+    // Gather extent
+    map.getLayers().forEach(function(layer) {
+        if (layer instanceof ol.layer.Vector) {
+            var source = layer.getSource();
+            if (source && source.getFeatures().length > 0) {
+                ol.extent.extend(totalExtent, source.getExtent());
+                found = true;
+            }
+        }
+    });
+
+    if (found) {
+        // Check if the extent is just a single point (width/height = 0)
+        var size = ol.extent.getSize(totalExtent);
+        var isPoint = size[0] === 0 && size[1] === 0;
+
+        if (isPoint) {
+            // If it's just one spot, center and pick a mid zoom
+            view.setCenter(ol.extent.getCenter(totalExtent));
+            view.setZoom(10); 
+        } else {
+            // In older OL3, fit takes (extent, mapSize)
+            view.fit(totalExtent, map.getSize());
+        }
+    }
+}
+
+// END geomap auto fit helper
+
+// END WET helper functions
 
 // START location finder functionality
 
@@ -491,14 +551,10 @@ function zoomToLocation(locationId) {
  * Resets the map view to default center and zoom.
  */
 function resetMap() {
-    // reposition map to default view and remove zoom area selection
-    const view = globalMap.getView();
-    const duration = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1000;
-    view.animate({
-        center: ol.proj.transform([-100.48, 70.25], "EPSG:4326", "EPSG:3857"),
-        zoom: window.zoomLevel,
-        duration: duration // Animation duration in milliseconds
-    });
+    // auto fit map to extent and remove zoom area selection
+    let mapObj = $( "#location_map" ).get( 0 ).geomap.map;
+    geomapFit(mapObj);
+    
     $("#gm_province option").removeAttr("selected");
 }
 
@@ -516,7 +572,7 @@ function deselectActiveFeature() {
 
 // END Geomap helper functions
 
-// START geomap setup modifications
+// START location finder geomap setup
 // disable map rotation
 // define custom select styles
 // reset view
@@ -567,9 +623,11 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
     // Set the new view on the map.
     map.setView(newView);
 
+    geomapFit(map);
+    
 });
 
-// END geomap setup modifications
+// END location finder geomap setup
 
 // END location finder functionality
 

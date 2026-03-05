@@ -1,4 +1,4 @@
-/* pc.css updated Feb 16 2026 */
+/* pc.css updated March 5 2026 */
 /* START Indigenous languages */
 /* Added 2025-12-04 */
 :lang(iu) {
@@ -883,7 +883,7 @@ form.wb-geomap-filter {
     padding: 0px 10px;
     display: inline-block;
     position: absolute;
-    right: 20px;
+    right: 21px;
     top: 48px;
     background-color: #eee;
     color: #777;
@@ -992,7 +992,6 @@ button#expand-location-list:after {
     #location-search .wb-geomap-map {
         margin-right: 0;
         margin-left: 0;
-        height: 50vh!important;
     }
 
     #location-search .legendLabel {
@@ -1036,6 +1035,12 @@ button#expand-location-list:after {
         top: 46px !important;
     }
 
+    #location-results,
+    #locationSearch .wb-geomap-map,
+    #location-search .wb-geomap-map {
+        height: 50vh !important;
+    }
+
     /* temp map container fix */
     
     #locationSearch {
@@ -1066,7 +1071,7 @@ button#expand-location-list:after {
         grid-column-start: 1;
         grid-column-end: 3;
     }
-    
+
 }
 
 /* temp map container inheritance fix */
