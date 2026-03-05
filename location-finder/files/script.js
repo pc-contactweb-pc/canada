@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // START Location results / geomap interactions
 
-$(document).ready(function () {
+$(function () {
     if (!document.getElementById("location-search")) return;
 
     // hide no results
