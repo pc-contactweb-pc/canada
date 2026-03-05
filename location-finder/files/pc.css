@@ -648,7 +648,8 @@ ul.events-calendar-wrapper li {
 Added January 20, 2026
 ====================================== */
 
-#map {
+main > #map,
+main > #carte {
     background-color: #eee;
 }
 
