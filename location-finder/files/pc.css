@@ -693,7 +693,7 @@ main > #carte {
 }
 
 .location-result {
-    font-size: 1.6rem;
+    font-size: 16px;
     line-height: 1.6;
     border-right: 1px solid #eee;
     position: relative;
@@ -718,10 +718,6 @@ main > #carte {
 
 details.location-result {
     margin-bottom: 0 !important;
-}
-
-details.location-result:not([open]) summary {
-    border-right: 1px solid #eee !important;
 }
 
 .location-result summary:hover,
@@ -884,8 +880,8 @@ form.wb-geomap-filter {
     padding: 0px 10px;
     display: inline-block;
     position: absolute;
-    right: 21px;
-    top: 48px;
+    right: 20px;
+    top: 49px;
     background-color: #eee;
     color: #777;
     transition: .2s;
