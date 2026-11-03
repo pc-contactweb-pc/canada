@@ -1057,6 +1057,14 @@ button#expand-location-list:after {
 
 @media screen and (max-width: 600px) {
 
+    #location-results,
+    #locationSearch .wb-geomap-map,
+    #location-search .wb-geomap-map {
+        height: 40vh !important;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
     #region-finder button {
         grid-row-start: 3;
         background: #fff;
