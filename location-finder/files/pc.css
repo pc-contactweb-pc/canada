@@ -939,7 +939,7 @@ label[for="find-by-name"] {
 /* search icon */
 #location-name-search .glyphicon-search {
     position: absolute;
-    top: 52px;
+    top: 55px;
     padding-left: 12px;
     color: #999;
 }
@@ -996,7 +996,7 @@ button#expand-location-list:after {
     }
 
     #clear-search {
-        top: 40px !important;
+        top: 35px !important;
         font-size: 26px;
     }
 
