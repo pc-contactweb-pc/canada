@@ -1085,5 +1085,11 @@ button#expand-location-list:after {
     box-shadow: none!important;
 }
 
+/* hide home button on geomap */
+
+#location-search .wb-geomap .ol-zoom-extent {
+    display: none;
+}
+
 /* END NEW LOCATION FINDER
 ====================================== */

@@ -556,6 +556,10 @@ function resetMap() {
     geomapFit(mapObj);
     
     $("#gm_province option").removeAttr("selected");
+
+    var view = globalMap.getView();
+    view.setZoom(2.4) // adjust map to avoid clipping
+
 }
 
 function deselectActiveFeature() {
@@ -624,6 +628,8 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
     map.setView(newView);
 
     geomapFit(map);
+
+    map.setZoom(2.4); // adjust map to avoid clipping edge
     
 });
 
