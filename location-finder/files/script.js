@@ -629,7 +629,8 @@ $(document).on("wb-ready.wb-geomap", "#location_map", function (event, map) {
 
     geomapFit(map);
 
-    map.setZoom(2.4); // adjust map to avoid clipping edge
+    let viewTweak = map.getView();
+    viewTweak.setZoom(2.4); // adjust map to avoid clipping edge
     
 });
 
